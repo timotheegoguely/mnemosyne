@@ -1,7 +1,7 @@
 class Thesis < ApplicationRecord
   belongs_to :user
   # belongs_to :diploma
-  # belongs_to :school
+  belongs_to :school
 
   # Validations
   validates :title, presence: true, allow_blank: false
