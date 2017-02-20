@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="372" y="151" name="thesis">
+</datatypes><table x="353" y="152" name="thesis">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -81,7 +81,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="576" y="102" name="users">
+<table x="690" y="57" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -177,7 +177,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="811" y="195" name="diplomas">
+<table x="816" y="286" name="diplomas">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -191,7 +191,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="730" y="479" name="schools_subcategories">
+<table x="729" y="545" name="schools_subcategories">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -207,7 +207,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="733" y="340" name="schools_diplomas">
+<table x="734" y="417" name="schools_diplomas">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -223,7 +223,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="176" y="412" name="thesis_tags">
+<table x="160" y="414" name="thesis_tags">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -250,6 +250,22 @@
 <row name="subcategory_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default><relation table="subcategories" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="503" y="223" name="bookmarks">
+<row name="id" null="1" autoincrement="1">
+<datatype>TINYINT</datatype>
+<default>NULL</default></row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="users" row="id" />
+</row>
+<row name="thesis_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="thesis" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
