@@ -60,9 +60,6 @@
 <row name="resume" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
-<row name="tag_id" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
 <row name="license" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -81,7 +78,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="690" y="57" name="users">
+<table x="542" y="108" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -114,7 +111,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="538" y="428" name="schools">
+<table x="541" y="416" name="schools">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -124,7 +121,10 @@
 <row name="acronym" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
-<row name="address" null="1" autoincrement="0">
+<row name="address_1" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="address_2" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="zipcode" null="1" autoincrement="0">
@@ -134,6 +134,12 @@
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <row name="country" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="website" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="phone_number" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
@@ -250,22 +256,6 @@
 <row name="subcategory_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default><relation table="subcategories" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="503" y="223" name="bookmarks">
-<row name="id" null="1" autoincrement="1">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><relation table="users" row="id" />
-</row>
-<row name="thesis_id" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><relation table="thesis" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
