@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # belongs_to :schools
+  belongs_to :schools
   # has_many :thesis, through: :bookmarks
   validates :email, :password, presence: true
 end
