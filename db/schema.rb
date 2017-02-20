@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220172612) do
+ActiveRecord::Schema.define(version: 20170220172807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,12 @@ ActiveRecord::Schema.define(version: 20170220172612) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "theses", force: :cascade do |t|
     t.string   "title"
     t.string   "subtitle"
@@ -63,6 +69,15 @@ ActiveRecord::Schema.define(version: 20170220172612) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_theses_on_user_id", using: :btree
+  end
+
+  create_table "thesis_tags", force: :cascade do |t|
+    t.integer  "thesis_id"
+    t.integer  "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tag_id"], name: "index_thesis_tags_on_tag_id", using: :btree
+    t.index ["thesis_id"], name: "index_thesis_tags_on_thesis_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -91,4 +106,6 @@ ActiveRecord::Schema.define(version: 20170220172612) do
   add_foreign_key "school_diplomas", "diplomas"
   add_foreign_key "school_diplomas", "schools"
   add_foreign_key "theses", "users"
+  add_foreign_key "thesis_tags", "tags"
+  add_foreign_key "thesis_tags", "theses"
 end
