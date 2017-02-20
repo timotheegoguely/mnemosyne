@@ -1,4 +1,4 @@
 class DiplomaSubcategory < ApplicationRecord
   belongs_to :diploma
-  # belongs_to :subcategory
+  belongs_to :subcategory
 end
