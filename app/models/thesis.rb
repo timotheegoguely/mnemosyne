@@ -1,6 +1,6 @@
 class Thesis < ApplicationRecord
   belongs_to :user
-  # belongs_to :diploma
+  belongs_to :diploma
   belongs_to :school
 
   # Validations
