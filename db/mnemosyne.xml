@@ -37,7 +37,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="353" y="152" name="thesis">
+</datatypes><table x="353" y="152" name="theses">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -190,6 +190,9 @@
 <row name="name" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
+<row name="acronym" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
 <row name="degree" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
@@ -235,7 +238,7 @@
 <default>NULL</default></row>
 <row name="thesis_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
-<default>NULL</default><relation table="thesis" row="id" />
+<default>NULL</default><relation table="theses" row="id" />
 </row>
 <row name="tags_id" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
