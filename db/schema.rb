@@ -147,6 +147,7 @@ ActiveRecord::Schema.define(version: 20170221165206) do
     t.date     "birthdate"
     t.string   "website"
     t.integer  "school_id"
+    t.boolean  "admin"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["school_id"], name: "index_users_on_school_id", using: :btree
