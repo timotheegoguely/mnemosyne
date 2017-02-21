@@ -8,7 +8,12 @@ class User < ApplicationRecord
   acts_as_votable
 
   belongs_to :school
+  # has_and_belongs_to_many :schools
   has_many :theses
   # Validations
   validates :email, :password, presence: true
+
+  def school(thesis)
+    thesis.school
+  end
 end
