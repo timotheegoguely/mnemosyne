@@ -1,8 +1,9 @@
 # Destroy all
-School.destroy_all
-User.destroy_all
-Diploma.destroy_all
 Thesis.destroy_all
+User.destroy_all
+SchoolDiploma.destroy_all
+School.destroy_all
+Diploma.destroy_all
 Subcategory.destroy_all
 Category.destroy_all
 Tag.destroy_all
@@ -59,42 +60,47 @@ school4 = School.create!(
 # Diplomas
 dna = Diploma.create!(
   name: "Diplôme national d’art",
-  #acronym: "DNA",
+  acronym: "DNA",
   degree: "license"
 )
 dnap = Diploma.create!(
   name: "Diplôme national d’art plastique",
-  #acronym: "DNAP",
+  acronym: "DNAP",
   degree: "license"
 )
 dnat = Diploma.create!(
   name: "Diplôme national d’arts et techniques",
-  #acronym: "DNAT",
+  acronym: "DNAT",
   degree: "license"
 )
 dnsep = Diploma.create!(
   name: "Diplôme national supérieur d’expression plastique",
-  #acronym: "DNSEP",
+  acronym: "DNSEP",
   degree: "master"
 )
 ensba = Diploma.create!(
   name: "Diplôme d’école ENSBA",
-  #acronym: "",
+  acronym: "",
   degree: "master"
 )
 ensad = Diploma.create!(
   name: "Diplôme d’école ENSAD",
-  #acronym: "",
+  acronym: "",
   degree: "master"
 )
 enspArles = Diploma.create!(
   name: "Diplôme d’école ENSP Arles",
-  #acronym: "",
+  acronym: "",
   degree: "master"
 )
 ensci = Diploma.create!(
   name: "Diplôme d’école ENSCI",
-  #acronym: "",
+  acronym: "",
+  degree: "master"
+)
+dsaa = Diploma.create!(
+  name: "Diplôme supérieur d’arts appliqués",
+  acronym: "DSAA",
   degree: "master"
 )
 
@@ -216,23 +222,12 @@ thesis1 = Thesis.create!(
   title: "Mixing Culture",
   subtitle: "",
   year: Date.new(2014),
-  resume: "Où se situe la frontière entre la curation et la pratique du mix ?
-    Mixer peut-il être considéré comme une forme de création originale ?
-    En quoi la culture et la pratique du mix ont-elles influencé nos rapports
-    et nos comportements vis-à-vis des produits médiatiques (images, sons,
-    vidéos, textes, jeux, etc.) issus de notre société actuelle ? \n\n
-    Pour répondre à ces questions, je me suis attaché dans un premier temps à
-    deux figures emblématiques du mix : le DJ et le curateur. J’ai tenté de
-    comprendre au travers d’une approche à la fois historique et comparative
-    quels sont les enjeux et quelles ont été les évolutions de leurs pratiques
-    respectives depuis leur apparition jusqu’à nos jours. J’ai établi ensuite
-    dans un second temps une analyse détaillée du processus créatif lié à la
-    pratique du mix, analyse qui me permit enfin d’essayer de voir en quoi cette
-    pratique et ses différentes manifestations artistiques induisent un certain
-    rapport au monde et aux objets culturels qui nous entourent.",
+  resume: "Où se situe la frontière entre la curation et la pratique du mix ? Mixer peut-il être considéré comme une forme de création originale ? En quoi la culture et la pratique du mix ont-elles influencé nos rapports et nos comportements vis-à-vis des produits médiatiques (images, sons, vidéos, textes, jeux, etc.) issus de notre société actuelle ?
+
+    Pour répondre à ces questions, je me suis attaché dans un premier temps à deux figures emblématiques du mix : le DJ et le curateur. J’ai tenté de comprendre au travers d’une approche à la fois historique et comparative quels sont les enjeux et quelles ont été les évolutions de leurs pratiques respectives depuis leur apparition jusqu’à nos jours. J’ai établi ensuite dans un second temps une analyse détaillée du processus créatif lié à la pratique du mix, analyse qui me permit enfin d’essayer de voir en quoi cette pratique et ses différentes manifestations artistiques induisent un certain rapport au monde et aux objets culturels qui nous entourent.",
   license: "CC BY-SA 4.0",
   link: "https://github.com/timotheegoguely/mixing-culture",
-  diploma_id: diploma1.id,
+  diploma_id: dnsep.id,
   school_id: school1.id
 )
 thesis2 = Thesis.create!(
@@ -240,22 +235,9 @@ thesis2 = Thesis.create!(
   title: "Expression Écrite",
   subtitle: "Potentiel et limite du langage écrit normé dans la traduction d’une émotion",
   year: Date.new(2014),
-  resume: "Sous couvert de ne pas avoir la bouche pleine et de faire quelques efforts de syntaxe,
-    s’exprimer oralement nous permet une communication plutôt efficace.
-    Le corps tout entier accompagne l’énonciation : en plus d’une bonne utilisation du langage,
-    l’intonation, la gestuelle et l’expression, fournissent des indices de compréhension.
-    Si le débit de parole d’un émetteur est intense, s’il parle fort et fronce les sourcils,
-    aucun doute, il n’est pas de bonne humeur et ce qu’il dit ne doit pas être positif. \n\n
+  resume: "Sous couvert de ne pas avoir la bouche pleine et de faire quelques efforts de syntaxe, s’exprimer oralement nous permet une communication plutôt efficace. Le corps tout entier accompagne l’énonciation : en plus d’une bonne utilisation du langage, l’intonation, la gestuelle et l’expression, fournissent des indices de compréhension. Si le débit de parole d’un émetteur est intense, s’il parle fort et fronce les sourcils, aucun doute, il n’est pas de bonne humeur et ce qu’il dit ne doit pas être positif.
 
-    Que se passe-t-il si cet émetteur en colère communique à l’écrit ?
-    Quel est son champ d’action pour exposer ses idées et signifier qu’il est irrité ?
-    Comment peut-il retranscrire son rythme, ses intonations, son empressement pour se
-    faire comprendre ? Imaginons que notre émetteur soit l’auteur des mots d’une poésie,
-    le personnage d’un texte de théâtre ou encore un ami qui nous envoie un texto ?
-    Comment peut-on lire sa colère ? Le choix lexical est-il suffisant pour traduire
-    une émotion ? L’utilisation de l’alphabet latin, répondant aux exigences orthographiques,
-    permet-il une transcription écrite fidèle de propos oraux ou de propos voués
-    à une interprétation orale ? […]",
+    Que se passe-t-il si cet émetteur en colère communique à l’écrit ? Quel est son champ d’action pour exposer ses idées et signifier qu’il est irrité ? Comment peut-il retranscrire son rythme, ses intonations, son empressement pour se faire comprendre ? Imaginons que notre émetteur soit l’auteur des mots d’une poésie, le personnage d’un texte de théâtre ou encore un ami qui nous envoie un texto ? Comment peut-on lire sa colère ? Le choix lexical est-il suffisant pour traduire une émotion ? L’utilisation de l’alphabet latin, répondant aux exigences orthographiques, permet-il une transcription écrite fidèle de propos oraux ou de propos voués à une interprétation orale ? […]",
   license: "",
   link: "http://margotcannizzo.tumblr.com/post/68452213577/expression-%C3%A9crite-potentiel-et-limite-du-langage",
   diploma_id: dnsep.id,
@@ -277,8 +259,7 @@ thesis4 = Thesis.create!(
   title: "La cour des mirages",
   subtitle: "Le paysage des l’espace construit",
   year: Date.new(2014),
-  resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature
-    dans les espaces architecturaux. Questionnement sur l'image et la simulation.",
+  resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature dans les espaces architecturaux. Questionnement sur l'image et la simulation.",
   license: "",
   link: "http://www.lulu.com/shop/quentin-schmerber/la-cour-des-mirages/paperback/product-21458084.html",
   diploma_id: dnsep.id,
@@ -300,29 +281,10 @@ thesis6 = Thesis.create!(
   title: "Points, Zig-zag, Double-ligne",
   subtitle: "Nouveaux modes de lecture et poétique du réseau Internet dans le livre imprimé",
   year: Date.new(2015),
-  resume: "Comment, et à quel point, la lecture et l’accès à l’information sur Internet
-    confèrent aux lecteurs de nouvelles habitudes ? Et comment le graphiste et l’auteur,
-    qui sont eux aussi des lecteurs, peuvent révéler ces nouveaux codes dans leur pratique ?
-    Il ne s’agira pas de faire une analyse du folklore visuel du net.
-    Mais plutôt d’étudier la façon dont l’information nous y est délivrée : sa structure et sa lecture.
-    D’en saisir les codes et de voir qu’une fois intégrés à notre pratique quotidienne de la lecture,
-    ils peuvent se retrouver, lointains cousins, dans le livre papier.
-    Il s’agira de déceler cette poétique de l’Internet au travers de quelques objets d’étude,
-    quelques spécimens que j’aurai tenté de recenser, faisant partie d’une espèce plutôt méconnue
-    et encore peu documentée car manifestement contemporaine. \n\n
+  resume: "Comment, et à quel point, la lecture et l’accès à l’information sur Internet confèrent aux lecteurs de nouvelles habitudes ? Et comment le graphiste et l’auteur, qui sont eux aussi des lecteurs, peuvent révéler ces nouveaux codes dans leur pratique ? Il ne s’agira pas de faire une analyse du folklore visuel du net. Mais plutôt d’étudier la façon dont l’information nous y est délivrée : sa structure et sa lecture. D’en saisir les codes et de voir qu’une fois intégrés à notre pratique quotidienne de la lecture, ils peuvent se retrouver, lointains cousins, dans le livre papier. Il s’agira de déceler cette poétique de l’Internet au travers de quelques objets d’étude, quelques spécimens que j’aurai tenté de recenser, faisant partie d’une espèce plutôt méconnue et encore peu documentée car manifestement contemporaine.
 
-    On tentera de comprendre comment la notion de réseau s’est ancrée dans notre
-    imaginaire collectif, du fait particulier d’Internet. \n
-    Nous verrons quelles sont les particularités que ce média d’information possède
-    et comment il re-façonne nos modes de lecture. Il sera nécessaire de revenir
-    sur des expérimentations littéraires et graphiques avant-gardistes pour voir
-    comment le livre a pu être modifié lorsque son contenu n’est pas linéaire,
-    mais de l’ordre du fragment. Enfin, nous étudierons les quelques spécimens annoncés,
-    résultat de transpositions incessantes entre la lecture sur papier et celle
-    sur Internet et agissent en tant que «prototypes» (objets prospectifs).
-    Ces objets témoignent des mutations que connait la lecture et sont des objets hybrides,
-    nourris des pratiques du lecteur et de l’internaute qui voyage désormais dans le livre,
-    comme il voyage déjà sur la toile.",
+    On tentera de comprendre comment la notion de réseau s’est ancrée dans notre imaginaire collectif, du fait particulier d’Internet.
+    Nous verrons quelles sont les particularités que ce média d’information possède et comment il re-façonne nos modes de lecture. Il sera nécessaire de revenir sur des expérimentations littéraires et graphiques avant-gardistes pour voir comment le livre a pu être modifié lorsque son contenu n’est pas linéaire, mais de l’ordre du fragment. Enfin, nous étudierons les quelques spécimens annoncés, résultat de transpositions incessantes entre la lecture sur papier et celle sur Internet et agissent en tant que «prototypes» (objets prospectifs). Ces objets témoignent des mutations que connait la lecture et sont des objets hybrides, nourris des pratiques du lecteur et de l’internaute qui voyage désormais dans le livre, comme il voyage déjà sur la toile.",
   license: "",
   link: "https://issuu.com/lenarobin/docs/le__narobin_me__moire6",
   diploma_id: dnsep.id,
@@ -333,8 +295,8 @@ thesis7 = Thesis.create!(
   title: "Exhibitionnisme",
   subtitle: "La culture de l’exhibition et de la confession",
   year: Date.new(2012),
-  resume: "- Comment se définit l’exhibitionnisme par rapport aux normes du monde actuel ? \n
-    - L’exhibitionnisme est-il un phénomène de culture globale/mondiale ? \n
+  resume: "- Comment se définit l’exhibitionnisme par rapport aux normes du monde actuel ?
+    - L’exhibitionnisme est-il un phénomène de culture globale/mondiale ?
     - Quels facteurs déterminent le champ des actions considérées comme exhibitionnistes ?",
   license: "",
   link: "",
@@ -346,15 +308,9 @@ thesis8 = Thesis.create!(
   title: "Simulations",
   subtitle: "Pour un graphisme-fiction",
   year: Date.new(2012),
-  resume: "Comme toute hypothèse, celle que je propose ici évoquera des possibilités,
-    développera une perception sur une réalité, en s’appuyant sur des exemples réels.
-    Mais pour matérialiser une hypothèse, il faut une part de simulation : un « si », et un « donc ».
-    Il faut matérialiser le « si » pour pouvoir imaginer le « donc ». \n\n
+  resume: "Comme toute hypothèse, celle que je propose ici évoquera des possibilités, développera une perception sur une réalité, en s’appuyant sur des exemples réels. Mais pour matérialiser une hypothèse, il faut une part de simulation : un « si », et un « donc ». Il faut matérialiser le « si » pour pouvoir imaginer le « donc ».
 
-    D’une certaine manière, ce texte prend une valeur fictive, en matérialisant
-    l’existence d’une possible ligne de conduite par des règles de création graphique.
-    Et c’est bien du terme « fiction » dont nous allons parler, en tant que procédé expérimental
-    à différents niveaux, qui pourrait s’associer à une pratique du graphisme fuyant sa réalité actuelle : \n
+    D’une certaine manière, ce texte prend une valeur fictive, en matérialisant l’existence d’une possible ligne de conduite par des règles de création graphique. Et c’est bien du terme « fiction » dont nous allons parler, en tant que procédé expérimental à différents niveaux, qui pourrait s’associer à une pratique du graphisme fuyant sa réalité actuelle :
     le graphisme-fiction.",
   license: "",
   link: "",
@@ -366,44 +322,16 @@ thesis9 = Thesis.create!(
   title: "Un atlas du film d’action",
   subtitle: "",
   year: Date.new(2012),
-  resume: "Au-delà du simple divertissement, le film d’action véhicule un ensemble
-    d’idées et de croyances politiques, économiques, sociales, propres à une époque,
-    une société, une classe. Cet ensemble peut être qualifié d’idéologie. \n\n
+  resume: "Au-delà du simple divertissement, le film d’action véhicule un ensemble d’idées et de croyances politiques, économiques, sociales, propres à une époque, une société, une classe. Cet ensemble peut être qualifié d’idéologie.
 
-    Il est une pratique qui observe le cinéma comme la manifestation des manières
-    dont une société tente de s’inscrire dans l’Histoire. Cette pratique,
-    la sociologie du cinéma, développe ainsi l’idée que le film dévoile les efforts
-    d’une société dans sa représentation d’elle-même et donne à voir – non pas
-    la société – mais ce qu’elle juge représentable à un moment donné de son histoire. \n
-    Ainsi, les films d’action réalisés dans les années 1980 à Hollywood,
-    parce qu’ils privilégient sur fond d’esthétique publicitaire des thèmes
-    comme la revanche sur la guerre du Vietnam, la condamnation des déviances
-    de la société américaine ou les figures manichéennes de guerriers victorieux
-    sur les ennemis de la Nation, sont considérés comme les “porte-avions” de la
-    propagande reaganienne. \n
-    Les toutes récentes sorties de Conan 3, Die Hard 4, Rambo 4 ou encore du
-    sixième opus de Rocky – séries dont les premiers épisodes ont été produits
-    par Hollywood il y a plus d’une vingtaine d’années – interrogent la survivance,
-    voire le renouvellement, d’un modèle idéologique possédant ses propres codes esthétiques.
-    Au sein des études sociologiques sur le cinéma d’action américain,
-    le traitement de l’espace opéré dans le film n’est pas spécifiquement observé.
-    J’ai pourtant l’intuition que le traitement spatial du film d’action est une
-    manifestation singulière de la représentation d’une société à une époque donnée.
-    Et je présume que le support cartographique peut servir particulièrement ce
-    questionnement spatial et le restituer sous une forme graphique pertinente. \n
-    Mon projet consiste en la création d’un atlas du film d’action qui observe le
-    traitement spatial opéré par ce genre cinématographique, et ceci dans le
-    but d’identifier les significations qu’il porte. \n\n
+    Il est une pratique qui observe le cinéma comme la manifestation des manières dont une société tente de s’inscrire dans l’Histoire. Cette pratique, la sociologie du cinéma, développe ainsi l’idée que le film dévoile les efforts d’une société dans sa représentation d’elle-même et donne à voir – non pas la société – mais ce qu’elle juge représentable à un moment donné de son histoire.
+    Ainsi, les films d’action réalisés dans les années 1980 à Hollywood, parce qu’ils privilégient sur fond d’esthétique publicitaire des thèmes comme la revanche sur la guerre du Vietnam, la condamnation des déviances de la société américaine ou les figures manichéennes de guerriers victorieux sur les ennemis de la Nation, sont considérés comme les “porte-avions” de la propagande reaganienne.
+    Les toutes récentes sorties de Conan 3, Die Hard 4, Rambo 4 ou encore du sixième opus de Rocky – séries dont les premiers épisodes ont été produits par Hollywood il y a plus d’une vingtaine d’années – interrogent la survivance, voire le renouvellement, d’un modèle idéologique possédant ses propres codes esthétiques. Au sein des études sociologiques sur le cinéma d’action américain, le traitement de l’espace opéré dans le film n’est pas spécifiquement observé. J’ai pourtant l’intuition que le traitement spatial du film d’action est une manifestation singulière de la représentation d’une société à une époque donnée. Et je présume que le support cartographique peut servir particulièrement ce questionnement spatial et le restituer sous une forme graphique pertinente.
+    Mon projet consiste en la création d’un atlas du film d’action qui observe le traitement spatial opéré par ce genre cinématographique, et ceci dans le but d’identifier les significations qu’il porte.
 
-    Dans quelle mesure la carte peut-elle dire, non pas autrement la même chose,
-    mais autre chose que l’étude textuelle ? Et de quelle manière le langage
-    visuel de la carte, appuyé par celui plus global du signe, peut-il échapper
-    à certaines des limites du langage verbal ? \n\n
+    Dans quelle mesure la carte peut-elle dire, non pas autrement la même chose, mais autre chose que l’étude textuelle ? Et de quelle manière le langage visuel de la carte, appuyé par celui plus global du signe, peut-il échapper à certaines des limites du langage verbal ?
 
-    À ce titre, la typographie, dans son acception large, peut s’avèrer un outil
-    précieux pour la création d’un langage cartographique singulier, la carte et
-    la typographie ayant un enjeu commun, celui de construire un langage conventionnel,
-    à la fois global et particulier, cherchant sa cohérence dans la diversité.",
+    À ce titre, la typographie, dans son acception large, peut s’avèrer un outil précieux pour la création d’un langage cartographique singulier, la carte et la typographie ayant un enjeu commun, celui de construire un langage conventionnel, à la fois global et particulier, cherchant sa cohérence dans la diversité.",
   license: "",
   link: "",
   diploma_id: dsaa.id,
@@ -423,42 +351,41 @@ category8 = Category.create!(name: "gestion et médiation")
 
 
 # Subcategories
-sybcategories2a = Subcategory.create!( categorie_id: category2.id, name: "musées" )
-sybcategories2b = Subcategory.create!( categorie_id: category2.id, name: "archéologie" )
-sybcategories2c = Subcategory.create!( categorie_id: category2.id, name: "archives" )
-sybcategories2d = Subcategory.create!( categorie_id: category2.id, name: "monuments historiques" )
+sybcategories2a = Subcategory.create!( category_id: category2.id, name: "musées" )
+sybcategories2b = Subcategory.create!( category_id: category2.id, name: "archéologie" )
+sybcategories2c = Subcategory.create!( category_id: category2.id, name: "archives" )
+sybcategories2d = Subcategory.create!( category_id: category2.id, name: "monuments historiques" )
 
-sybcategories3a = Subcategory.create!( categorie_id: category3.id, name: "art" )
-sybcategories3b = Subcategory.create!( categorie_id: category3.id, name: "design" )
-sybcategories3c = Subcategory.create!( categorie_id: category3.id, name: "communication" )
-sybcategories3d = Subcategory.create!( categorie_id: category3.id, name: "métiers d’art" )
+sybcategories3a = Subcategory.create!( category_id: category3.id, name: "art" )
+sybcategories3b = Subcategory.create!( category_id: category3.id, name: "design" )
+sybcategories3c = Subcategory.create!( category_id: category3.id, name: "communication" )
+sybcategories3d = Subcategory.create!( category_id: category3.id, name: "métiers d’art" )
 
-sybcategories4a = Subcategory.create!( categorie_id: category4.id, name: "musique" )
-sybcategories4b = Subcategory.create!( categorie_id: category4.id, name: "danse" )
-sybcategories4c = Subcategory.create!( categorie_id: category4.id, name: "théâtre" )
-sybcategories4d = Subcategory.create!( categorie_id: category4.id, name: "spectacles" )
+sybcategories4a = Subcategory.create!( category_id: category4.id, name: "musique" )
+sybcategories4b = Subcategory.create!( category_id: category4.id, name: "danse" )
+sybcategories4c = Subcategory.create!( category_id: category4.id, name: "théâtre" )
+sybcategories4d = Subcategory.create!( category_id: category4.id, name: "spectacles" )
 
-sybcategories5a = Subcategory.create!( categorie_id: category5.id, name: "cinéma" )
-sybcategories5b = Subcategory.create!( categorie_id: category5.id, name: "audiovisuel" )
-sybcategories5c = Subcategory.create!( categorie_id: category5.id, name: "multimédia" )
+sybcategories5a = Subcategory.create!( category_id: category5.id, name: "cinéma" )
+sybcategories5b = Subcategory.create!( category_id: category5.id, name: "audiovisuel" )
+sybcategories5c = Subcategory.create!( category_id: category5.id, name: "multimédia" )
 
-sybcategories6a = Subcategory.create!( categorie_id: category6.id, name: "bibliothèques" )
-sybcategories6b = Subcategory.create!( categorie_id: category6.id, name: "édition" )
-sybcategories6c = Subcategory.create!( categorie_id: category6.id, name: "documentation" )
-sybcategories6d = Subcategory.create!( categorie_id: category6.id, name: "librairie" )
+sybcategories6a = Subcategory.create!( category_id: category6.id, name: "bibliothèques" )
+sybcategories6b = Subcategory.create!( category_id: category6.id, name: "édition" )
+sybcategories6c = Subcategory.create!( category_id: category6.id, name: "documentation" )
+sybcategories6d = Subcategory.create!( category_id: category6.id, name: "librairie" )
 
-sybcategories7a = Subcategory.create!( categorie_id: category7.id, name: "presse" )
-sybcategories7b = Subcategory.create!( categorie_id: category7.id, name: "journalisme" )
-sybcategories7c = Subcategory.create!( categorie_id: category7.id, name: "photographie" )
-sybcategories7d = Subcategory.create!( categorie_id: category7.id, name: "librairie" )
+sybcategories7a = Subcategory.create!( category_id: category7.id, name: "presse" )
+sybcategories7b = Subcategory.create!( category_id: category7.id, name: "journalisme" )
+sybcategories7c = Subcategory.create!( category_id: category7.id, name: "photographie" )
 
-sybcategories8a = Subcategory.create!( categorie_id: category8.id, name: "gestion" )
-sybcategories8b = Subcategory.create!( categorie_id: category8.id, name: "médiation" )
+sybcategories8a = Subcategory.create!( category_id: category8.id, name: "gestion" )
+sybcategories8b = Subcategory.create!( category_id: category8.id, name: "médiation" )
 
 
 # School diplomas
-school1_diploma1 = SchoolDiplomas.create!(school_id: school1.id, diploma_id: dnap.id )
-school1_diploma2 = SchoolDiplomas.create!(school_id: school1.id, diploma_id: dnsep.id )
+school1_diploma1 = SchoolDiploma.create!(school_id: school1.id, diploma_id: dnap.id )
+school1_diploma2 = SchoolDiploma.create!(school_id: school1.id, diploma_id: dnsep.id )
 
 
 # Tags
