@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221153038) do
+ActiveRecord::Schema.define(version: 20170221165206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,24 @@ ActiveRecord::Schema.define(version: 20170221153038) do
     t.index ["user_id"], name: "index_theses_on_user_id", using: :btree
   end
 
+  create_table "thesis_diploma_subcategories", force: :cascade do |t|
+    t.integer  "thesis_diploma_id"
+    t.integer  "subcategory_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["subcategory_id"], name: "index_thesis_diploma_subcategories_on_subcategory_id", using: :btree
+    t.index ["thesis_diploma_id"], name: "index_thesis_diploma_subcategories_on_thesis_diploma_id", using: :btree
+  end
+
+  create_table "thesis_diplomas", force: :cascade do |t|
+    t.integer  "thesis_id"
+    t.integer  "diploma_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["diploma_id"], name: "index_thesis_diplomas_on_diploma_id", using: :btree
+    t.index ["thesis_id"], name: "index_thesis_diplomas_on_thesis_id", using: :btree
+  end
+
   create_table "thesis_tags", force: :cascade do |t|
     t.integer  "thesis_id"
     t.integer  "tag_id"
@@ -159,6 +177,10 @@ ActiveRecord::Schema.define(version: 20170221153038) do
   add_foreign_key "theses", "diplomas"
   add_foreign_key "theses", "schools"
   add_foreign_key "theses", "users"
+  add_foreign_key "thesis_diploma_subcategories", "subcategories"
+  add_foreign_key "thesis_diploma_subcategories", "thesis_diplomas"
+  add_foreign_key "thesis_diplomas", "diplomas"
+  add_foreign_key "thesis_diplomas", "theses"
   add_foreign_key "thesis_tags", "tags"
   add_foreign_key "thesis_tags", "theses"
   add_foreign_key "users", "schools"

@@ -64,4 +64,9 @@ fr:
       profile: Profil
       sign_in: Se connecter
       sign_out: Se déconnecter
-      top_call_to_action: Top call to action
+      search: Rechercher…
+      top_call_to_action: Uploader
+
+  theses:
+    index:
+      title: "Liste des mémoires"
