@@ -3,11 +3,10 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /fr|en/ do
     root to: 'pages#home'
-    resources :users
+    resources :users do
+      resources :theses
+    end
+    resources :theses, only: :index
+    resources :schools, only: [ :index, :show ]
   end
-
-  resources :theses, only: [ :index, :show, :new, :edit ]
-  resources :users, only: [ :index, :show ]
-  resources :schools, only: [ :index, :show ]
-
 end
