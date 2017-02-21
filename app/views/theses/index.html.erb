@@ -1,0 +1,13 @@
+<% content_for(:title_tag) do %>
+  <%= t('.title') %>
+<% end %>
+
+<h1><%= t('.title') %></h1>
+
+<ul>
+  <% @theses.each do |thesis| %>
+    <li>
+      <strong>"<%= thesis.title %>"</strong> (<%= thesis.year.year %>), <%= thesis.user.first_name %> <%= thesis.user.last_name %> <%= thesis.school.acronym.blank? ? '' : '(' + thesis.school.acronym + ')' %>
+    </li>
+  <% end %>
+</ul>
