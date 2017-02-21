@@ -15,6 +15,94 @@ ActiveRecord::Schema.define(version: 20170220172807) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "diploma_subcategories", force: :cascade do |t|
+    t.integer  "diploma_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["diploma_id"], name: "index_diploma_subcategories_on_diploma_id", using: :btree
+  end
+
+  create_table "diplomas", force: :cascade do |t|
+    t.string   "name"
+    t.string   "degree"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "school_diplomas", force: :cascade do |t|
+    t.integer  "school_id"
+    t.integer  "diploma_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["diploma_id"], name: "index_school_diplomas_on_diploma_id", using: :btree
+    t.index ["school_id"], name: "index_school_diplomas_on_school_id", using: :btree
+  end
+
+  create_table "school_subcategories", force: :cascade do |t|
+    t.integer  "school_id"
+    t.integer  "subcategory_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["school_id"], name: "index_school_subcategories_on_school_id", using: :btree
+    t.index ["subcategory_id"], name: "index_school_subcategories_on_subcategory_id", using: :btree
+  end
+
+  create_table "schools", force: :cascade do |t|
+    t.string   "name"
+    t.string   "acronym"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "zipcode"
+    t.string   "city"
+    t.string   "country"
+    t.string   "website"
+    t.string   "phone_number"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "subcategories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_subcategories_on_category_id", using: :btree
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "theses", force: :cascade do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.date     "year"
+    t.string   "resume"
+    t.string   "license"
+    t.string   "link"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_theses_on_user_id", using: :btree
+  end
+
+  create_table "thesis_tags", force: :cascade do |t|
+    t.integer  "thesis_id"
+    t.integer  "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tag_id"], name: "index_thesis_tags_on_tag_id", using: :btree
+    t.index ["thesis_id"], name: "index_thesis_tags_on_thesis_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -36,99 +124,13 @@ ActiveRecord::Schema.define(version: 20170220172807) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
-  
-  create_table "theses", force: :cascade do |t|
-    t.string   "title"
-    t.string   "subtitle"
-    t.date     "year"
-    t.string   "resume"
-    t.string   "license"
-    t.string   "link"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_theses_on_user_id", using: :btree
-  end
-  
-  create_table "tags", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
-  create_table "thesis_tags", force: :cascade do |t|
-    t.integer  "thesis_id"
-    t.integer  "tag_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["tag_id"], name: "index_thesis_tags_on_tag_id", using: :btree
-    t.index ["thesis_id"], name: "index_thesis_tags_on_thesis_id", using: :btree
-  end
-  
-  create_table "schools", force: :cascade do |t|
-    t.string   "name"
-    t.string   "acronym"
-    t.string   "address_1"
-    t.string   "address_2"
-    t.string   "zipcode"
-    t.string   "city"
-    t.string   "country"
-    t.string   "website"
-    t.string   "phone_number"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-  
-  create_table "categories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-  
-  create_table "subcategories", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["category_id"], name: "index_subcategories_on_category_id", using: :btree
-  end
-  
-  create_table "school_subcategories", force: :cascade do |t|
-    t.integer  "school_id"
-    t.integer  "subcategory_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["school_id"], name: "index_school_subcategories_on_school_id", using: :btree
-    t.index ["subcategory_id"], name: "index_school_subcategories_on_subcategory_id", using: :btree
-  end
-  
-  create_table "diplomas", force: :cascade do |t|
-    t.string   "name"
-    t.string   "degree"
-  end
-
-  create_table "diploma_subcategories", force: :cascade do |t|
-    t.integer  "diploma_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["diploma_id"], name: "index_diploma_subcategories_on_diploma_id", using: :btree
-  end
-  
-  create_table "school_diplomas", force: :cascade do |t|
-    t.integer  "school_id"
-    t.integer  "diploma_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["diploma_id"], name: "index_school_diplomas_on_diploma_id", using: :btree
-    t.index ["school_id"], name: "index_school_diplomas_on_school_id", using: :btree
-  end
-
-  add_foreign_key "school_subcategories", "schools"
-  add_foreign_key "school_subcategories", "subcategories"
-  add_foreign_key "subcategories", "categories"
   add_foreign_key "diploma_subcategories", "diplomas"
   add_foreign_key "school_diplomas", "diplomas"
   add_foreign_key "school_diplomas", "schools"
+  add_foreign_key "school_subcategories", "schools"
+  add_foreign_key "school_subcategories", "subcategories"
+  add_foreign_key "subcategories", "categories"
   add_foreign_key "theses", "users"
   add_foreign_key "thesis_tags", "tags"
   add_foreign_key "thesis_tags", "theses"

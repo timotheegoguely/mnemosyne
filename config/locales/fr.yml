@@ -1,0 +1,67 @@
+---
+fr:
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: Renvoyer les instructions de confirmation
+    mailer:
+      confirmation_instructions:
+        action: Action
+        greeting: Bienvenue
+        instruction: Instruction
+      password_change:
+        greeting: Bienvenue
+        message: Message
+      reset_password_instructions:
+        action: Action
+        greeting: Bienvenue
+        instruction: Instruction
+        instruction_2: Instruction 2
+        instruction_3: Instruction 3
+      unlock_instructions:
+        action: Action
+        greeting: Bienvenue
+        instruction: Instruction
+        message: Message
+    passwords:
+      edit:
+        change_my_password: Changer mon mot-de-passe
+        change_your_password: Changer votre mot-de-passe
+        confirm_new_password: Confirmer le nouveau mot-de-passe
+        new_password: Nouveau mot-de-passe
+      new:
+        forgot_your_password: Mot-de-passe oublié
+        send_me_reset_password_instructions: Envoyez-moi les instructions de réinitialisation de mot de passe
+    registrations:
+      edit:
+        are_you_sure: Êtes-vous sûr ?
+        cancel_my_account: Annuler mon compte
+        currently_waiting_confirmation_for_email: En attente de confirmation de votre addresse mail
+        leave_blank_if_you_don_t_want_to_change_it: Laissez vide si vous ne voulez pas le changer
+        title: Titre
+        unhappy: Malheureux
+        update: Mettre à jour
+        we_need_your_current_password_to_confirm_your_changes: Nous avons besoin de votre mot de passe pour confirmer vos modifications
+      new:
+        sign_up: Créer un compte
+    sessions:
+      new:
+        sign_in: Se connecter
+    shared:
+      links:
+        back: Retour
+        didn_t_receive_confirmation_instructions: Aucune instruction de confirmation reçue
+        didn_t_receive_unlock_instructions: Aucune instructions de déverrouillage reçue
+        forgot_your_password: Mot de passe oublié
+        sign_in: Se connecter
+        sign_in_with_provider: Se connecter avec un fournisseur
+        sign_up: Créer un compte
+    unlocks:
+      new:
+        resend_unlock_instructions: Renvoyer les instructions de déverrouillage
+  shared:
+    navbar:
+      profile: Profil
+      sign_in: Se connecter
+      sign_out: Se déconnecter
+      top_call_to_action: Top call to action
