@@ -1,2 +1,10 @@
 <h1>Schools#index</h1>
-<p>Find me in app/views/schools/index.html.erb</p>
+
+<ul>
+  <% @schools.each do |school| %>
+    <li><%= school.name %></li>
+    <% if policy(school).edit? %>
+      <%= link_to "Update", edit_school_path(school) %>
+    <% end %>
+  <% end %>
+</ul>

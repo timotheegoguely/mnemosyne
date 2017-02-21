@@ -1,24 +1,14 @@
 Rails.application.routes.draw do
-  get 'users/show'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/destroy'
-
-  get 'schools/index'
-
-  get 'schools/show'
+  get 'theses/index'
 
   devise_for :users
 
   scope '(:locale)', locale: /fr|en/ do
-    root to: 'pages#home'
-    resources :users
+    root to: 'theses#index' # pages#home
+    resources :users do
+      resources :theses
+    end
+    resources :theses, only: :index
+    resources :schools, only: [ :index, :show, :edit, :update ]
   end
 end
