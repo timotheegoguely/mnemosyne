@@ -56,53 +56,71 @@ school4 = School.create!(
   phone_number: "+33 1 55 43 47 47"
 )
 
+puts "✓ Seed schools"
+
 
 # Diplomas
 dna = Diploma.create!(
   name: "Diplôme national d’art",
   acronym: "DNA",
-  degree: "license"
+  degree: "1"
 )
 dnap = Diploma.create!(
   name: "Diplôme national d’art plastique",
   acronym: "DNAP",
-  degree: "license"
+  degree: "1"
 )
 dnat = Diploma.create!(
   name: "Diplôme national d’arts et techniques",
   acronym: "DNAT",
-  degree: "license"
+  degree: "1"
 )
 dnsep = Diploma.create!(
   name: "Diplôme national supérieur d’expression plastique",
   acronym: "DNSEP",
-  degree: "master"
+  degree: "2"
 )
 ensba = Diploma.create!(
   name: "Diplôme d’école ENSBA",
   acronym: "",
-  degree: "master"
+  degree: "2"
 )
 ensad = Diploma.create!(
   name: "Diplôme d’école ENSAD",
   acronym: "",
-  degree: "master"
+  degree: "2"
 )
 enspArles = Diploma.create!(
   name: "Diplôme d’école ENSP Arles",
   acronym: "",
-  degree: "master"
+  degree: "2"
 )
 ensci = Diploma.create!(
   name: "Diplôme d’école ENSCI",
   acronym: "",
-  degree: "master"
+  degree: "2"
 )
 dsaa = Diploma.create!(
   name: "Diplôme supérieur d’arts appliqués",
   acronym: "DSAA",
-  degree: "master"
+  degree: "2"
 )
+cim1 = Diploma.create!(
+  name: "Composition et interprétation musicale",
+  acronym: "CIM",
+  degree: "1"
+)
+cim2 = Diploma.create!(
+  name: "Composition et interprétation musicale",
+  acronym: "CIM",
+  degree: "2"
+)
+de = Diploma.create!(
+  name: "Diplôme d’état",
+  acronym: "DE",
+  degree: "1"
+)
+
 
 
 # Users
@@ -214,6 +232,8 @@ user9 = User.create!(
 #   birthdate: DateTime.new(1988,1,1),
 #   website: "https://www.instagram.com/maxime_leblanc_jewellery/"
 # )
+
+puts "✓ Seed users"
 
 
 # Theses
@@ -338,6 +358,8 @@ thesis9 = Thesis.create!(
   school_id: school4.id,
 )
 
+puts "✓ Seed thesis"
+
 
 # Categories
 category1 = Category.create!(name: "architecture")
@@ -349,43 +371,55 @@ category6 = Category.create!(name: "livre")
 category7 = Category.create!(name: "presse")
 category8 = Category.create!(name: "gestion et médiation")
 
+puts "✓ Seed categories"
+
 
 # Subcategories
-sybcategories2a = Subcategory.create!( category_id: category2.id, name: "musées" )
-sybcategories2b = Subcategory.create!( category_id: category2.id, name: "archéologie" )
-sybcategories2c = Subcategory.create!( category_id: category2.id, name: "archives" )
-sybcategories2d = Subcategory.create!( category_id: category2.id, name: "monuments historiques" )
+subcategories2a = Subcategory.create!( category_id: category2.id, name: "musées" )
+subcategories2b = Subcategory.create!( category_id: category2.id, name: "archéologie" )
+subcategories2c = Subcategory.create!( category_id: category2.id, name: "archives" )
+subcategories2d = Subcategory.create!( category_id: category2.id, name: "monuments historiques" )
 
-sybcategories3a = Subcategory.create!( category_id: category3.id, name: "art" )
-sybcategories3b = Subcategory.create!( category_id: category3.id, name: "design" )
-sybcategories3c = Subcategory.create!( category_id: category3.id, name: "communication" )
-sybcategories3d = Subcategory.create!( category_id: category3.id, name: "métiers d’art" )
+subcategories3a = Subcategory.create!( category_id: category3.id, name: "art" )
+subcategories3b = Subcategory.create!( category_id: category3.id, name: "design" )
+subcategories3c = Subcategory.create!( category_id: category3.id, name: "communication" )
+subcategories3d = Subcategory.create!( category_id: category3.id, name: "métiers d’art" )
 
-sybcategories4a = Subcategory.create!( category_id: category4.id, name: "musique" )
-sybcategories4b = Subcategory.create!( category_id: category4.id, name: "danse" )
-sybcategories4c = Subcategory.create!( category_id: category4.id, name: "théâtre" )
-sybcategories4d = Subcategory.create!( category_id: category4.id, name: "spectacles" )
+subcategories4a = Subcategory.create!( category_id: category4.id, name: "musique" )
+subcategories4b = Subcategory.create!( category_id: category4.id, name: "danse" )
+subcategories4c = Subcategory.create!( category_id: category4.id, name: "théâtre" )
+subcategories4d = Subcategory.create!( category_id: category4.id, name: "spectacles" )
 
-sybcategories5a = Subcategory.create!( category_id: category5.id, name: "cinéma" )
-sybcategories5b = Subcategory.create!( category_id: category5.id, name: "audiovisuel" )
-sybcategories5c = Subcategory.create!( category_id: category5.id, name: "multimédia" )
+subcategories5a = Subcategory.create!( category_id: category5.id, name: "cinéma" )
+subcategories5b = Subcategory.create!( category_id: category5.id, name: "audiovisuel" )
+subcategories5c = Subcategory.create!( category_id: category5.id, name: "multimédia" )
 
-sybcategories6a = Subcategory.create!( category_id: category6.id, name: "bibliothèques" )
-sybcategories6b = Subcategory.create!( category_id: category6.id, name: "édition" )
-sybcategories6c = Subcategory.create!( category_id: category6.id, name: "documentation" )
-sybcategories6d = Subcategory.create!( category_id: category6.id, name: "librairie" )
+subcategories6a = Subcategory.create!( category_id: category6.id, name: "bibliothèques" )
+subcategories6b = Subcategory.create!( category_id: category6.id, name: "édition" )
+subcategories6c = Subcategory.create!( category_id: category6.id, name: "documentation" )
+subcategories6d = Subcategory.create!( category_id: category6.id, name: "librairie" )
 
-sybcategories7a = Subcategory.create!( category_id: category7.id, name: "presse" )
-sybcategories7b = Subcategory.create!( category_id: category7.id, name: "journalisme" )
-sybcategories7c = Subcategory.create!( category_id: category7.id, name: "photographie" )
+subcategories7a = Subcategory.create!( category_id: category7.id, name: "presse" )
+subcategories7b = Subcategory.create!( category_id: category7.id, name: "journalisme" )
+subcategories7c = Subcategory.create!( category_id: category7.id, name: "photographie" )
 
-sybcategories8a = Subcategory.create!( category_id: category8.id, name: "gestion" )
-sybcategories8b = Subcategory.create!( category_id: category8.id, name: "médiation" )
+subcategories8a = Subcategory.create!( category_id: category8.id, name: "gestion" )
+subcategories8b = Subcategory.create!( category_id: category8.id, name: "médiation" )
+
+puts "✓ Seed subcategories"
 
 
 # School diplomas
 school1_diploma1 = SchoolDiploma.create!(school_id: school1.id, diploma_id: dnap.id )
 school1_diploma2 = SchoolDiploma.create!(school_id: school1.id, diploma_id: dnsep.id )
+
+school2_diploma1 = SchoolDiploma.create!(school_id: school2.id, diploma_id: dnap.id )
+school2_diploma2 = SchoolDiploma.create!(school_id: school2.id, diploma_id: dnsep.id )
+school2_diploma3 = SchoolDiploma.create!(school_id: school2.id, diploma_id: de.id )
+school2_diploma4 = SchoolDiploma.create!(school_id: school2.id, diploma_id: cim1.id )
+school2_diploma5 = SchoolDiploma.create!(school_id: school2.id, diploma_id: cim2.id )
+
+puts "✓ Seed schools diplomas"
 
 
 # Tags
@@ -412,9 +446,68 @@ tag20 = Tag.create!(name: "sérendipité")
 tag21 = Tag.create!(name: "média")
 tag22 = Tag.create!(name: "art contemporain")
 
-tag23 = Tag.create!(name: "lecture")
-tag24 = Tag.create!(name: "poésie")
-tag25 = Tag.create!(name: "réseau")
-tag26 = Tag.create!(name: "livre")
-tag27 = Tag.create!(name: "rhizome")
+tag23 = Tag.create!(name: "comportement")
+tag24 = Tag.create!(name: "lecture")
+tag25 = Tag.create!(name: "traduction")
+tag26 = Tag.create!(name: "écrit")
+tag27 = Tag.create!(name: "langage")
+tag28 = Tag.create!(name: "ponctuation")
+tag29 = Tag.create!(name: "communication")
+
+tag30 = Tag.create!(name: "poésie")
+tag31 = Tag.create!(name: "réseau")
+tag32 = Tag.create!(name: "livre")
+tag33 = Tag.create!(name: "rhizome")
+
+puts "✓ Seed tags"
+
+
+# Tehsis tags
+thesis1_tag1  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag1.id )
+thesis1_tag2  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag2.id )
+thesis1_tag3  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag3.id )
+thesis1_tag4  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag4.id )
+thesis1_tag5  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag5.id )
+thesis1_tag6  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag6.id )
+thesis1_tag7  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag7.id )
+thesis1_tag8  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag8.id )
+thesis1_tag9  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag9.id )
+thesis1_tag10 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag10.id )
+thesis1_tag11 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag11.id )
+thesis1_tag12 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag12.id )
+thesis1_tag13 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag13.id )
+thesis1_tag14 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag14.id )
+thesis1_tag15 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag15.id )
+thesis1_tag16 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag16.id )
+thesis1_tag17 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag17.id )
+thesis1_tag18 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag18.id )
+thesis1_tag19 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag19.id )
+thesis1_tag20 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag20.id )
+thesis1_tag21 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag21.id )
+thesis1_tag22 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag22.id )
+
+thesis2_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag23.id )
+thesis2_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
+thesis2_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag25.id )
+thesis2_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag26.id )
+thesis2_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag27.id )
+thesis2_tag6 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag28.id )
+thesis2_tag7 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag29.id )
+
+thesis6_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
+thesis6_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag30.id )
+thesis6_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag31.id )
+thesis6_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag32.id )
+thesis6_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag33.id )
+
+puts "✓ Seed theses tags"
+
+
+# Diploma subcategories
+# dnsep_subcategory1 = DiplomaSubcategory.create!(diploma_id: dnsep.id, category_id: subcategories3a.id )
+# dnsep_subcategory2 = DiplomaSubcategory.create!(diploma_id: dnsep.id, category_id: subcategories3b.id )
+# dnsep_subcategory3 = DiplomaSubcategory.create!(diploma_id: dnsep.id, category_id: subcategories3c.id )
+# dnsep_subcategory4 = DiplomaSubcategory.create!(diploma_id: dnsep.id, category_id: subcategories3b.id )
+
+# puts "✓ Seed diplomas subcategories"
 

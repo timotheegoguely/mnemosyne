@@ -37,7 +37,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="49" y="134" name="theses">
+</datatypes><table x="308" y="170" name="theses">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -70,15 +70,11 @@
 <datatype>TINYINT</datatype>
 <default>NULL</default><relation table="schools" row="id" />
 </row>
-<row name="diploma_id" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><relation table="diplomas" row="id" />
-</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="639" y="196" name="schools">
+<table x="728" y="224" name="schools">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -113,7 +109,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="221" y="381" name="diplomas">
+<table x="483" y="460" name="diplomas">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -130,7 +126,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="654" y="475" name="subcategories">
+<table x="954" y="580" name="subcategories">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -145,7 +141,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="844" y="18" name="users">
+<table x="482" y="58" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -178,7 +174,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="877" y="317" name="school_subcategories">
+<table x="966" y="304" name="school_subcategories">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -194,7 +190,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="412" y="302" name="school_diplomas">
+<table x="485" y="328" name="school_diplomas">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -210,7 +206,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="223" y="12" name="thesis_tags">
+<table x="122" y="124" name="thesis_tags">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -226,7 +222,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="391" y="461" name="diploma_subcategories">
+<table x="665" y="504" name="diploma_subcategories">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -242,7 +238,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="876" y="443" name="categories">
+<table x="1035" y="476" name="categories">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -253,7 +249,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="459" y="15" name="tags">
+<table x="72" y="237" name="tags">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -264,7 +260,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="226" y="126" name="votes">
+<table x="940" y="40" name="votes">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
@@ -293,5 +289,37 @@
 <part>id</part>
 </key>
 <comment>created from acts_as_votable gem</comment>
+</table>
+<table x="92" y="415" name="thesis_diploma">
+<row name="id" null="1" autoincrement="1">
+<datatype>TINYINT</datatype>
+<default>NULL</default></row>
+<row name="thesis_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="theses" row="id" />
+</row>
+<row name="diploma_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="diplomas" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="366" y="606" name="thesis_diploma_subcategories">
+<row name="id" null="1" autoincrement="1">
+<datatype>TINYINT</datatype>
+<default>NULL</default></row>
+<row name="thesis_diploma_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="thesis_diploma" row="id" />
+</row>
+<row name="subcategory_id" null="1" autoincrement="0">
+<datatype>TINYINT</datatype>
+<default>NULL</default><relation table="subcategories" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
 </table>
 </sql>

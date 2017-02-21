@@ -3,5 +3,5 @@ class Tag < ApplicationRecord
   has_many :theses, through: :thesis_tags
 
   # Validations
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 end
