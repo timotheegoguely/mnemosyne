@@ -8,8 +8,6 @@ class CreateTheses < ActiveRecord::Migration[5.0]
       t.string :license
       t.string :link
       t.references :user, foreign_key: true
-      t.references :diploma, foreign_key: true
-      t.references :school, foreign_key: true
 
       t.timestamps
     end
