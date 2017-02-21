@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'theses/index'
+
   devise_for :users
 
   scope '(:locale)', locale: /fr|en/ do
