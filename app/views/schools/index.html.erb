@@ -7,8 +7,10 @@
 </ul>
 
 <div id='map'></div>
+
 <script>
-L.mapbox.accessToken = '<pk.eyJ1IjoicmlpcGgiLCJhIjoiY2l6Z3V5NWVwMDAxMTJ3cjRsdHF2Zmw2YSJ9.AfV6Npz5QZ_IEBXjIe45DA>';
+L.mapbox.accessToken = 'pk.eyJ1IjoicmlpcGgiLCJhIjoiY2l6Z3V5NWVwMDAxMTJ3cjRsdHF2Zmw2YSJ9.AfV6Npz5QZ_IEBXjIe45DA';
+// ENV['MAPBOX_API_KEY']
 var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([40, -74.50], 9);
 </script>
@@ -22,4 +24,5 @@ var map = L.mapbox.map('map', 'mapbox.streets')
     });
   <% end %>
 <% end %>
+
 
