@@ -14,13 +14,20 @@
 	right: 8px;
 }
 .offcanvas-left {
-    border-right: 1px solid rgba(0, 0, 0, .1);
+  border-right: 1px solid rgba(0, 0, 0, .1);
 }
 .offcanvas-right {
-    left: auto;
-    right: 0;
+  left: auto;
+  right: 0;
 	border-left: 1px solid rgba(0, 0, 0, .1);
 }
 .offcanvas-push-body {
-    position: relative;
+  position: relative;
+}
+
+#filters {
+  position: relative;
+  top: 24px;
+  left: 32px;
+  margin-bottom: 0;
 }
