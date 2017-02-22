@@ -1,9 +1,27 @@
 .container {
-  padding: 32px;
+  padding: 24px 32px;
 }
-
 .table {
   td {
     vertical-align: middle;
+  }
+}
+
+#top {
+  margin-bottom: 24px;
+  #filters {
+    margin-bottom: 0;
+  }
+  #views-options {
+    a {
+      color: rgba(0,0,0,.2);
+      &.active,
+      &:active {
+        color: rgba(0,0,0,.7);
+      }
+      &:hover {
+        color: rgba(0,0,0,.8);
+      }
+    }
   }
 }

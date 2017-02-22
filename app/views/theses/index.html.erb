@@ -3,8 +3,21 @@
 <% end %>
 
 <main class="container">
+
+  <header class="row" id="top">
+    <div class="col col-2">
+      <%= link_to "<i class='material-icons md-18'>filter_list</i> Filtres".html_safe, "#", class: "button outline secondary", id: "filters", "data-component" => "offcanvas", "data-target" => "#offcanvas-left" %>
+    </div>
+    <div class="col push-right" id="views-options">
+      <%= link_to "<i class='material-icons md-36'>view_module</i>".html_safe, "#" %>
+      <%= link_to "<i class='material-icons md-36'>list</i>".html_safe, "#", class: "active" %>
+      <%= link_to "<i class='material-icons md-36'>map</i>".html_safe, "#" %>
+    </div>
+  </header>
+
   <table class="table table-striped">
     <tr>
+      <th></th>
       <th>Thesis</th>
       <th>Author</th>
       <th>Year</th>
@@ -15,7 +28,12 @@
     <tr>
       <td>
         <%= link_to "#" do %>
-          <em><%= thesis.title %></em><br>
+          <%= image_tag "http://placehold.it/32x48", class: "thumbnail" %>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to "#" do %>
+          <em><strong><%= thesis.title %></strong></em><br>
           <small><%= thesis.subtitle if thesis.subtitle %></small>
         <% end %>
       </td>
