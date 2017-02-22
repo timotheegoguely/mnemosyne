@@ -133,7 +133,8 @@ user1 = User.create!(
   bio: "Freelance UI/UX designer",
   birthdate: DateTime.new(1991,8,12),
   website: "http://timothee.goguely.com",
-  school_id: school1.id
+  school_id: school1.id,
+  admin: true
 )
 user2 = User.create!(
   email: "margotcannizzo@gmail.com",

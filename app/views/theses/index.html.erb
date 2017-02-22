@@ -2,35 +2,75 @@
   <%= t('.title') %>
 <% end %>
 
-<h1><%= t('.title') %></h1>
+<main class="container">
 
-<table class="striped">
-  <tr>
-    <th>bookmark_symbol</th>
-    <th>thesis_cover_thumbnail</th>
-    <th><%= t('.thesis_title_header') %></th>
-    <th><%= t('.author_name_header') %></th>
-    <th><%= t('.school_acronym_header') %></th>
-    <th><%= t('.city_header') %></th>
-    <th><%= t('.year_header') %></th>
-    <th><%= t('.categories_header') %></th>
-  </tr>
-<% @theses.each do |thesis| %>
-  <tr>
-    <td><%= thesis.get_likes.size %></td>
-    <td></td>
-    <td><%= thesis.title %></td>
-    <td><%= thesis.user.first_name.capitalize %> <%= thesis.user.last_name.capitalize %></td>
-    <td><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
-    <td><%= thesis.school.city %></td>
-    <td><%= thesis.year.year %></td>
-    <td>
-      <% subcategories = [] %>
-      <% thesis.subcategories.each do |subcategory| %>
-        <% subcategories << subcategory.name %>
+  <header class="row" id="top">
+    <div class="col col-2">
+      <%= link_to "<i class='material-icons md-18'>filter_list</i> Filtres".html_safe, "#", class: "button outline secondary", id: "filters", "data-component" => "offcanvas", "data-target" => "#offcanvas-left" %>
+    </div>
+    <nav class="col push-right tabs" data-component="tabs">
+      <ul>
+        <li>
+          <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
+        </li>
+        <li class="active">
+          <%= link_to "<i class='material-icons'>list</i>".html_safe, "#list" %>
+        </li>
+        <li>
+          <%= link_to "<i class='material-icons'>map</i>".html_safe, "#map" %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cards -->
+  <div id="cards" class="cards">
+    <% 16.times do %>
+      <%= link_to "#", class: "card" do %>
+        <figure class="card-cover">
+          <%= image_tag "http://placehold.it/#{rand(288..320)}x#{rand(384..512)}" %>
+        </figure>
       <% end %>
-      <%= subcategories.join(', ') %>
-    </td>
-  </tr>
-<% end %>
-</table>
+    <% end %>
+  </div>
+
+  <!-- List -->
+  <div id="list">
+    <table class="table">
+      <tr>
+        <th></th>
+        <th>Thesis</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>School</th>
+        <th>Bookmarks</th>
+      </tr>
+      <% @theses.each do |thesis| %>
+        <tr>
+          <td>
+            <%= link_to "#" do %>
+              <%= image_tag "http://placehold.it/32x48", class: "thumbnail" %>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to "#" do %>
+              <em><strong><%= thesis.title %></strong></em><br>
+              <small><%= thesis.subtitle if thesis.subtitle %></small>
+            <% end %>
+          </td>
+          <td><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
+          <td><%= thesis.year.year %></td>
+          <td><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
+          <td><%= thesis.get_likes.size %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+
+  <!-- Map -->
+  <div id="map">
+    <h2>Map</h2>
+  </div>
+
+</main>
