@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   scope '(:locale)', locale: /fr|en/ do
-    root to: 'theses#index' # pages#home
+    root to: 'pages#home' # theses#index
     resources :users do
       resources :theses
     end
