@@ -73,3 +73,9 @@ en:
   theses:
     index:
       title: "All theses"
+      thesis_title_header: "Title"
+      author_name_header: "Author"
+      school_acronym_header: "School"
+      city_header: "City"
+      year_header: "Year"
+      categories_header: "Categories"
