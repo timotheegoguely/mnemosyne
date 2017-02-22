@@ -8,40 +8,69 @@
     <div class="col col-2">
       <%= link_to "<i class='material-icons md-18'>filter_list</i> Filtres".html_safe, "#", class: "button outline secondary", id: "filters", "data-component" => "offcanvas", "data-target" => "#offcanvas-left" %>
     </div>
-    <div class="col push-right" id="views-options">
-      <%= link_to "<i class='material-icons md-36'>view_module</i>".html_safe, "#" %>
-      <%= link_to "<i class='material-icons md-36'>list</i>".html_safe, "#", class: "active" %>
-      <%= link_to "<i class='material-icons md-36'>map</i>".html_safe, "#" %>
-    </div>
+    <nav class="col push-right tabs" data-component="tabs">
+      <ul>
+        <li>
+          <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
+        </li>
+        <li class="active">
+          <%= link_to "<i class='material-icons'>list</i>".html_safe, "#list" %>
+        </li>
+        <li>
+          <%= link_to "<i class='material-icons'>map</i>".html_safe, "#map" %>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <table class="table table-striped">
-    <tr>
-      <th></th>
-      <th>Thesis</th>
-      <th>Author</th>
-      <th>Year</th>
-      <th>School</th>
-      <th>Bookmarks</th>
-    </tr>
-  <% @theses.each do |thesis| %>
-    <tr>
-      <td>
-        <%= link_to "#" do %>
-          <%= image_tag "http://placehold.it/32x48", class: "thumbnail" %>
-        <% end %>
-      </td>
-      <td>
-        <%= link_to "#" do %>
-          <em><strong><%= thesis.title %></strong></em><br>
-          <small><%= thesis.subtitle if thesis.subtitle %></small>
-        <% end %>
-      </td>
-      <td><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
-      <td><%= thesis.year.year %></td>
-      <td><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
-      <td><%= thesis.get_likes.size %></td>
-    </tr>
-  <% end %>
-  </table>
+  <!-- Cards -->
+  <div id="cards" class="cards">
+    <% 16.times do %>
+      <%= link_to "#", class: "card" do %>
+        <figure class="card-cover">
+          <%= image_tag "http://placehold.it/#{rand(288..320)}x#{rand(384..512)}" %>
+        </figure>
+      <% end %>
+    <% end %>
+  </div>
+
+  <!-- List -->
+  <div id="list">
+    <table class="table">
+      <tr>
+        <th></th>
+        <th>Thesis</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>School</th>
+        <th>Bookmarks</th>
+      </tr>
+      <% @theses.each do |thesis| %>
+        <tr>
+          <td>
+            <%= link_to "#" do %>
+              <%= image_tag "http://placehold.it/32x48", class: "thumbnail" %>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to "#" do %>
+              <em><strong><%= thesis.title %></strong></em><br>
+              <small><%= thesis.subtitle if thesis.subtitle %></small>
+            <% end %>
+          </td>
+          <td><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
+          <td><%= thesis.year.year %></td>
+          <td><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
+          <td><%= thesis.get_likes.size %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+
+  <!-- Map -->
+  <div id="map">
+    <h2>Map</h2>
+  </div>
+
 </main>
