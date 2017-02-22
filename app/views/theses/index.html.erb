@@ -2,12 +2,25 @@
   <%= t('.title') %>
 <% end %>
 
+<div class="container">
 <h1><%= t('.title') %></h1>
 
-<ul>
+  <table class="table table-striped">
+    <tr>
+      <th>Bookmarks</th>
+      <th>Thesis</th>
+      <th>Year</th>
+      <th>Author</th>
+      <th>School</th>
+    </tr>
   <% @theses.each do |thesis| %>
-    <li>
-      <strong>"<%= thesis.title %>"</strong> (<%= thesis.year.year %>), <%= thesis.user.first_name %> <%= thesis.user.last_name %> <%= thesis.school.acronym.blank? ? '' : '(' + thesis.school.acronym + ')' %>
-    </li>
+    <tr>
+      <td><%= thesis.get_likes.size %></td>
+      <td><%= thesis.title %></td>
+      <td><%= thesis.year.year %></td>
+      <td><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
+      <td><%= thesis.school.acronym.blank? ? '' : '(' + thesis.school.acronym + ')' %></td>
+    </tr>
   <% end %>
-</ul>
+  </table>
+</div>
