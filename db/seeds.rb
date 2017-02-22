@@ -1,4 +1,5 @@
 # Destroy all
+ThesisTag.destroy_all
 Thesis.destroy_all
 User.destroy_all
 SchoolDiploma.destroy_all

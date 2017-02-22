@@ -1,12 +1,22 @@
 <% if notice %>
-  <div class="alert alert-info alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <div class="message" data-component="message">
     <%= notice %>
+    <span class="close small"></span>
   </div>
-<% end %>
-<% if alert %>
-  <div class="alert alert-warning alert-dismissible" role="alert">
+  <!-- <div class="alert alert-info alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <#%= notice %>
+  </div> -->
+<% end %>
+
+<% if alert %>
+  <div class="message warning" data-component="message" role="alert">
+    <h5>Warning</h5>
     <%= alert %>
+    <span class="close small"></span>
   </div>
+  <!-- <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <#%= alert %>
+  </div> -->
 <% end %>

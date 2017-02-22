@@ -1,12 +1,14 @@
+// Reset
+@import "vendor/reset";
+
 // Graphical variables
-@import "config/variables";
-@import "config/bootstrap_variables";
+@import "config/kube_variables";
 
 // External libraries
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
 
 // Your CSS
 @import "layout/index";
