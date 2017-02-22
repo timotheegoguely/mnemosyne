@@ -15,6 +15,21 @@ ActiveRecord::Schema.define(version: 20170222150831) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "attachinary_files", force: :cascade do |t|
+    t.string   "attachinariable_type"
+    t.integer  "attachinariable_id"
+    t.string   "scope"
+    t.string   "public_id"
+    t.string   "version"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "format"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -68,6 +83,8 @@ ActiveRecord::Schema.define(version: 20170222150831) do
     t.string   "phone_number"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "subcategories", force: :cascade do |t|
@@ -95,6 +112,7 @@ ActiveRecord::Schema.define(version: 20170222150831) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "school_id"
+    t.string   "document"
     t.index ["school_id"], name: "index_theses_on_school_id", using: :btree
     t.index ["user_id"], name: "index_theses_on_user_id", using: :btree
   end

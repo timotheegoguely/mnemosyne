@@ -1,0 +1,11 @@
+.cards {
+  @include flex;
+  @include flex-items-bottom;
+  overflow-x: scroll;
+  height: calc(100vh - 256px);
+  .card {
+    @include flex-items-wrap;
+    @include flex-item-shrink(0);
+    margin-right: 32px;
+  }
+}

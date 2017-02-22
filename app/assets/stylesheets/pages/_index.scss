@@ -1,1 +1,33 @@
-@import "home";
+.container {
+  padding: 24px 32px;
+}
+.table {
+  td {
+    vertical-align: middle;
+  }
+}
+
+#top {
+  margin-bottom: 24px;
+  #filters {
+    margin-bottom: 0;
+  }
+  #livetabs {
+    @include flex;
+    @include flex-items-middle;
+    li {
+      display: inline-block;
+      margin-right: 16px;
+      a {
+        color: rgba(0,0,0,.2);
+      }
+      &.active a,
+      & a:active {
+        color: rgba(0,0,0,.7);
+      }
+      & a:hover {
+        color: rgba(0,0,0,.8);
+      }
+    }
+  }
+}

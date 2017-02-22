@@ -11,7 +11,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 gem 'pundit'
-
+gem 'cloudinary', '1.1.0'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -23,6 +26,9 @@ gem 'autoprefixer-rails'
 #admin
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
+
+#geocoding
+gem 'geocoder'
 
 gem 'acts_as_votable', '~> 0.10.0'
 
