@@ -3,8 +3,5 @@
 <ul>
   <% @schools.each do |school| %>
     <li><%= school.name %></li>
-    <% if policy(school).edit? %>
-      <%= link_to "Update", edit_school_path(school) %>
-    <% end %>
   <% end %>
 </ul>
