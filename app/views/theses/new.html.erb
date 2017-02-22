@@ -1,0 +1,15 @@
+<%= simple_form_for @theses do |f| %>
+
+  <%= f.input :title %>
+  <%= f.input :year,
+              start_year: 1980,
+              end_year: Date.today.year,
+              order: [:year]
+              %>
+  <%= f.input :school, collection: School.all %>
+  <%= f.input :diploma, collection: Diploma.all%>
+  <%= f.input :document, as: :attachinary %>
+  <%= f.button :submit %>
+<% end %>
+
+
