@@ -17,7 +17,6 @@ class SchoolsController < ApplicationController
   # end
 
   def show
-    # @alert_message = "You are viewing #{@school.name}"
     # @school_coordinates = { lat: @school.latitude, lng: @school.longitude }
   end
 
