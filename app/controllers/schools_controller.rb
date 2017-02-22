@@ -5,9 +5,19 @@ class SchoolsController < ApplicationController
     @schools = policy_scope(School)
   end
 
+  # respond_to do |format|
+  #   format.html
+  #   format.json { render json: }
+  # end
+
+  # def build_geojson(schools, geojson)
+  #   schools.each do |school|
+  #     geojson << GeojsonBuilder.build_school(school)
+  #   end
+  # end
+
   def show
-    @alert_message = "You are viewing #{@school.name}"
-    @school_coordinates = { lat: @school.latitude, lng: @school.longitude }
+    # @school_coordinates = { lat: @school.latitude, lng: @school.longitude }
   end
 
   def edit
