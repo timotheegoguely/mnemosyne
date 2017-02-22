@@ -15,7 +15,10 @@
     </tr>
   <% @theses.each do |thesis| %>
     <tr>
-      <td><%= thesis.get_likes.size %></td>
+      <td>
+        <%= thesis.get_likes.size %>
+        <%= link_to 'bookmark',  %>
+      </td>
       <td><%= thesis.title %></td>
       <td><%= thesis.year.year %></td>
       <td><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
