@@ -5,10 +5,14 @@ class ThesisPolicy < ApplicationPolicy
     end
   end
 
-  def new?
+  def show?
     true
   end
+
+  def new?
+    record.user == user
+  end
   def create?
-    true
+    record.user == user
   end
 end

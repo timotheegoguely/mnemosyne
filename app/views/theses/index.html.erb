@@ -39,11 +39,11 @@
     <table class="table">
       <tr>
         <th></th>
-        <th>Thesis</th>
-        <th>Author</th>
-        <th>Year</th>
-        <th>School</th>
-        <th>Bookmarks</th>
+        <th><%= t('.thesis_title_header') %></th>
+        <th><%= t('.author_name_header') %></th>
+        <th><%= t('.year_header') %></th>
+        <th><%= t('.school_acronym_header') %></th>
+        <th><%= t('.bookmarks') %></th>
       </tr>
       <% @theses.each do |thesis| %>
         <tr>
@@ -53,7 +53,7 @@
             <% end %>
           </td>
           <td>
-            <%= link_to "#" do %>
+            <%= link_to user_thesis_path(thesis.user, thesis) do %>
               <em><strong><%= thesis.title %></strong></em><br>
               <small><%= thesis.subtitle if thesis.subtitle %></small>
             <% end %>
