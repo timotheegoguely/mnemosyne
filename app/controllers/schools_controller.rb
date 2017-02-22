@@ -1,13 +1,13 @@
 class SchoolsController < ApplicationController
-  before_action :set_school, only: [:index, :show, :edit, :update]
+  before_action :set_school, only: [:show, :edit, :update]
 
   def index
     @schools = policy_scope(School)
-    @alert_message = "You are viewing #{@school.name}"
-    @school_coordinates = { lat: @school.latitude, lng: @school.longitude }
   end
 
   def show
+    @alert_message = "You are viewing #{@school.name}"
+    @school_coordinates = { lat: @school.latitude, lng: @school.longitude }
   end
 
   def edit
