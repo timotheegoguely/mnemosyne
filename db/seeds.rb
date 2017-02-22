@@ -1,17 +1,21 @@
-# Destroy all
+# Destroy_all
+ThesisDiplomaSubcategory.destroy_all
+DiplomaSubcategory.destroy_all
+SchoolSubcategory.destroy_all
+ThesisDiploma.destroy_all
+SchoolDiploma.destroy_all
 ThesisTag.destroy_all
+Subcategory.destroy_all
 Thesis.destroy_all
 User.destroy_all
-SchoolDiploma.destroy_all
 School.destroy_all
-Diploma.destroy_all
-Subcategory.destroy_all
 Category.destroy_all
+Diploma.destroy_all
 Tag.destroy_all
-#Bookmark.destroy_all
 
 
-# Schools
+# schools table
+
 school1 = School.create!(
   name: "École Supérieure d’Art et de Design d’Amiens",
   acronym: "ÉSAD",
@@ -57,10 +61,11 @@ school4 = School.create!(
   phone_number: "+33 1 55 43 47 47"
 )
 
-puts "✓ Seed schools"
+puts "✓ schools table seeded"
 
 
-# Diplomas
+# diplomas table
+
 dna = Diploma.create!(
   name: "Diplôme national d’art",
   acronym: "DNA",
@@ -122,22 +127,80 @@ de = Diploma.create!(
   degree: "1"
 )
 
+puts "✓ diplomas table seeded"
 
 
-# Users
+# categories table
+
+category1 = Category.create!(name: "architecture")
+category2 = Category.create!(name: "patrimoines")
+category3 = Category.create!(name: "arts plastiques")
+category4 = Category.create!(name: "spectacle vivant")
+category5 = Category.create!(name: "cinéma et audiovisuel")
+category6 = Category.create!(name: "livre")
+category7 = Category.create!(name: "presse")
+category8 = Category.create!(name: "gestion et médiation")
+
+puts "✓ categories table seede"
+
+
+# tags table
+
+tag1  = Tag.create!(name: "mix")
+tag2  = Tag.create!(name: "culture")
+tag3  = Tag.create!(name: "DJing")
+tag4  = Tag.create!(name: "radio")
+tag5  = Tag.create!(name: "curating")
+tag6  = Tag.create!(name: "commissaire d’exposition")
+tag7  = Tag.create!(name: "processus créatif")
+tag8  = Tag.create!(name: "editing")
+tag9  = Tag.create!(name: "montage")
+tag10 = Tag.create!(name: "cut")
+tag11 = Tag.create!(name: "ellipse")
+tag12 = Tag.create!(name: "cinéma")
+tag13 = Tag.create!(name: "BD")
+tag14 = Tag.create!(name: "narration")
+tag15 = Tag.create!(name: "éclectisme")
+tag16 = Tag.create!(name: "internet")
+tag17 = Tag.create!(name: "web")
+tag18 = Tag.create!(name: "folksonomie")
+tag19 = Tag.create!(name: "Google")
+tag20 = Tag.create!(name: "sérendipité")
+tag21 = Tag.create!(name: "média")
+tag22 = Tag.create!(name: "art contemporain")
+tag23 = Tag.create!(name: "comportement")
+tag24 = Tag.create!(name: "lecture")
+tag25 = Tag.create!(name: "traduction")
+tag26 = Tag.create!(name: "écrit")
+tag27 = Tag.create!(name: "langage")
+tag28 = Tag.create!(name: "ponctuation")
+tag29 = Tag.create!(name: "communication")
+tag30 = Tag.create!(name: "poésie")
+tag31 = Tag.create!(name: "réseau")
+tag32 = Tag.create!(name: "livre")
+tag33 = Tag.create!(name: "rhizome")
+
+puts "✓ tags table seeded"
+
+
+# users table
+
 user1 = User.create!(
   email: "timotheegoguely@gmail.com",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Timothée",
   last_name: "Goguely",
   bio: "Freelance UI/UX designer",
   birthdate: DateTime.new(1991,8,12),
   website: "http://timothee.goguely.com",
-  school_id: school1.id
+  school_id: school1.id,
+  admin: true
 )
 user2 = User.create!(
   email: "margotcannizzo@gmail.com",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Margot",
   last_name: "Cannizzo",
   bio: "Graphiste / scénographe chez agnès b.",
@@ -148,6 +211,7 @@ user2 = User.create!(
 user3 = User.create!(
   email: "stmartin.geoffrey@gmail.com",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Geoffrey",
   last_name: "Saint-Martin",
   bio: "Graphiste freelance",
@@ -158,6 +222,7 @@ user3 = User.create!(
 user4 = User.create!(
   email: "quentin.schmerber@gmail.com",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Quentin",
   last_name: "Schmerber",
   bio: "Hello I’m Quentin. I design books, lettering and typefaces.",
@@ -168,6 +233,7 @@ user4 = User.create!(
 user5 = User.create!(
   email: "antoine.omerin@gmail.com",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Antoine",
   last_name: "Omerin",
   bio: "Photographe",
@@ -178,6 +244,7 @@ user5 = User.create!(
 user6 = User.create!(
   email: "hello@lenarobin.com",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Lena",
   last_name: "Robin",
   bio: "Hello! My name is Léna Robin, I am an independent graphic designer.
@@ -197,6 +264,7 @@ user6 = User.create!(
 user7 = User.create!(
   email: "martawajszczyk@gmail.com",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Marta",
   last_name: "Wajszczyk",
   bio: "Graphic Designer / Art Director w MOVE-PICTURE",
@@ -207,6 +275,7 @@ user7 = User.create!(
 user8 = User.create!(
   email: "morgannlechat@gmail.com",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Antoine",
   last_name: "Stevenot",
   bio: "Designer graphique",
@@ -217,6 +286,7 @@ user8 = User.create!(
 user9 = User.create!(
   email: "contact@spassky-fischer.fr",
   password: "123456",
+  password_confirmation: "123456",
   first_name: "Antoine",
   last_name: "Stevenot",
   bio: "",
@@ -234,10 +304,11 @@ user9 = User.create!(
 #   website: "https://www.instagram.com/maxime_leblanc_jewellery/"
 # )
 
-puts "✓ Seed users"
+puts "✓ users table seeded"
 
 
-# Theses
+# theses table
+
 thesis1 = Thesis.create!(
   user_id: user1.id,
   title: "Mixing Culture",
@@ -248,7 +319,6 @@ thesis1 = Thesis.create!(
     Pour répondre à ces questions, je me suis attaché dans un premier temps à deux figures emblématiques du mix : le DJ et le curateur. J’ai tenté de comprendre au travers d’une approche à la fois historique et comparative quels sont les enjeux et quelles ont été les évolutions de leurs pratiques respectives depuis leur apparition jusqu’à nos jours. J’ai établi ensuite dans un second temps une analyse détaillée du processus créatif lié à la pratique du mix, analyse qui me permit enfin d’essayer de voir en quoi cette pratique et ses différentes manifestations artistiques induisent un certain rapport au monde et aux objets culturels qui nous entourent.",
   license: "CC BY-SA 4.0",
   link: "https://github.com/timotheegoguely/mixing-culture",
-  diploma_id: dnsep.id,
   school_id: school1.id
 )
 thesis2 = Thesis.create!(
@@ -261,7 +331,6 @@ thesis2 = Thesis.create!(
     Que se passe-t-il si cet émetteur en colère communique à l’écrit ? Quel est son champ d’action pour exposer ses idées et signifier qu’il est irrité ? Comment peut-il retranscrire son rythme, ses intonations, son empressement pour se faire comprendre ? Imaginons que notre émetteur soit l’auteur des mots d’une poésie, le personnage d’un texte de théâtre ou encore un ami qui nous envoie un texto ? Comment peut-on lire sa colère ? Le choix lexical est-il suffisant pour traduire une émotion ? L’utilisation de l’alphabet latin, répondant aux exigences orthographiques, permet-il une transcription écrite fidèle de propos oraux ou de propos voués à une interprétation orale ? […]",
   license: "",
   link: "http://margotcannizzo.tumblr.com/post/68452213577/expression-%C3%A9crite-potentiel-et-limite-du-langage",
-  diploma_id: dnsep.id,
   school_id: school2.id,
 )
 thesis3 = Thesis.create!(
@@ -272,7 +341,6 @@ thesis3 = Thesis.create!(
   resume: "",
   license: "",
   link: "",
-  diploma_id: dnsep.id,
   school_id: school1.id,
 )
 thesis4 = Thesis.create!(
@@ -283,7 +351,6 @@ thesis4 = Thesis.create!(
   resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature dans les espaces architecturaux. Questionnement sur l'image et la simulation.",
   license: "",
   link: "http://www.lulu.com/shop/quentin-schmerber/la-cour-des-mirages/paperback/product-21458084.html",
-  diploma_id: dnsep.id,
   school_id: school1.id,
 )
 thesis5 = Thesis.create!(
@@ -294,7 +361,6 @@ thesis5 = Thesis.create!(
   resume: "",
   license: "",
   link: "",
-  diploma_id: ensad.id,
   school_id: school3.id,
 )
 thesis6 = Thesis.create!(
@@ -308,7 +374,6 @@ thesis6 = Thesis.create!(
     Nous verrons quelles sont les particularités que ce média d’information possède et comment il re-façonne nos modes de lecture. Il sera nécessaire de revenir sur des expérimentations littéraires et graphiques avant-gardistes pour voir comment le livre a pu être modifié lorsque son contenu n’est pas linéaire, mais de l’ordre du fragment. Enfin, nous étudierons les quelques spécimens annoncés, résultat de transpositions incessantes entre la lecture sur papier et celle sur Internet et agissent en tant que «prototypes» (objets prospectifs). Ces objets témoignent des mutations que connait la lecture et sont des objets hybrides, nourris des pratiques du lecteur et de l’internaute qui voyage désormais dans le livre, comme il voyage déjà sur la toile.",
   license: "",
   link: "https://issuu.com/lenarobin/docs/le__narobin_me__moire6",
-  diploma_id: dnsep.id,
   school_id: school2.id,
 )
 thesis7 = Thesis.create!(
@@ -321,7 +386,6 @@ thesis7 = Thesis.create!(
     - Quels facteurs déterminent le champ des actions considérées comme exhibitionnistes ?",
   license: "",
   link: "",
-  diploma_id: dnsep.id,
   school_id: school2.id,
 )
 thesis8 = Thesis.create!(
@@ -335,7 +399,6 @@ thesis8 = Thesis.create!(
     le graphisme-fiction.",
   license: "",
   link: "",
-  diploma_id: dnsep.id,
   school_id: school2.id,
 )
 thesis9 = Thesis.create!(
@@ -355,27 +418,14 @@ thesis9 = Thesis.create!(
     À ce titre, la typographie, dans son acception large, peut s’avèrer un outil précieux pour la création d’un langage cartographique singulier, la carte et la typographie ayant un enjeu commun, celui de construire un langage conventionnel, à la fois global et particulier, cherchant sa cohérence dans la diversité.",
   license: "",
   link: "",
-  diploma_id: dsaa.id,
   school_id: school4.id,
 )
 
-puts "✓ Seed thesis"
+puts "✓ theses table seeded"
 
 
-# Categories
-category1 = Category.create!(name: "architecture")
-category2 = Category.create!(name: "patrimoines")
-category3 = Category.create!(name: "arts plastiques")
-category4 = Category.create!(name: "spectacle vivant")
-category5 = Category.create!(name: "cinéma et audiovisuel")
-category6 = Category.create!(name: "livre")
-category7 = Category.create!(name: "presse")
-category8 = Category.create!(name: "gestion et médiation")
+# subcategories table
 
-puts "✓ Seed categories"
-
-
-# Subcategories
 subcategories2a = Subcategory.create!( category_id: category2.id, name: "musées" )
 subcategories2b = Subcategory.create!( category_id: category2.id, name: "archéologie" )
 subcategories2c = Subcategory.create!( category_id: category2.id, name: "archives" )
@@ -407,10 +457,11 @@ subcategories7c = Subcategory.create!( category_id: category7.id, name: "photogr
 subcategories8a = Subcategory.create!( category_id: category8.id, name: "gestion" )
 subcategories8b = Subcategory.create!( category_id: category8.id, name: "médiation" )
 
-puts "✓ Seed subcategories"
+puts "✓ subcategories table seeded"
 
 
-# School diplomas
+# school_diplomas table
+
 school1_diploma1 = SchoolDiploma.create!(school_id: school1.id, diploma_id: dnap.id )
 school1_diploma2 = SchoolDiploma.create!(school_id: school1.id, diploma_id: dnsep.id )
 
@@ -420,50 +471,11 @@ school2_diploma3 = SchoolDiploma.create!(school_id: school2.id, diploma_id: de.i
 school2_diploma4 = SchoolDiploma.create!(school_id: school2.id, diploma_id: cim1.id )
 school2_diploma5 = SchoolDiploma.create!(school_id: school2.id, diploma_id: cim2.id )
 
-puts "✓ Seed schools diplomas"
+puts "✓ school_diplomas table seeded"
 
 
-# Tags
-tag1  = Tag.create!(name: "mix")
-tag2  = Tag.create!(name: "culture")
-tag3  = Tag.create!(name: "DJing")
-tag4  = Tag.create!(name: "radio")
-tag5  = Tag.create!(name: "curating")
-tag6  = Tag.create!(name: "commissaire d’exposition")
-tag7  = Tag.create!(name: "processus créatif")
-tag8  = Tag.create!(name: "editing")
-tag9  = Tag.create!(name: "montage")
-tag10 = Tag.create!(name: "cut")
-tag11 = Tag.create!(name: "ellipse")
-tag12 = Tag.create!(name: "cinéma")
-tag13 = Tag.create!(name: "BD")
-tag14 = Tag.create!(name: "narration")
-tag15 = Tag.create!(name: "éclectisme")
-tag16 = Tag.create!(name: "internet")
-tag17 = Tag.create!(name: "web")
-tag18 = Tag.create!(name: "folksonomie")
-tag19 = Tag.create!(name: "Google")
-tag20 = Tag.create!(name: "sérendipité")
-tag21 = Tag.create!(name: "média")
-tag22 = Tag.create!(name: "art contemporain")
+# thesis_tags table
 
-tag23 = Tag.create!(name: "comportement")
-tag24 = Tag.create!(name: "lecture")
-tag25 = Tag.create!(name: "traduction")
-tag26 = Tag.create!(name: "écrit")
-tag27 = Tag.create!(name: "langage")
-tag28 = Tag.create!(name: "ponctuation")
-tag29 = Tag.create!(name: "communication")
-
-tag30 = Tag.create!(name: "poésie")
-tag31 = Tag.create!(name: "réseau")
-tag32 = Tag.create!(name: "livre")
-tag33 = Tag.create!(name: "rhizome")
-
-puts "✓ Seed tags"
-
-
-# Tehsis tags
 thesis1_tag1  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag1.id )
 thesis1_tag2  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag2.id )
 thesis1_tag3  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag3.id )
@@ -486,7 +498,6 @@ thesis1_tag19 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag19.id )
 thesis1_tag20 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag20.id )
 thesis1_tag21 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag21.id )
 thesis1_tag22 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag22.id )
-
 thesis2_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag23.id )
 thesis2_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
 thesis2_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag25.id )
@@ -494,21 +505,66 @@ thesis2_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag26.id )
 thesis2_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag27.id )
 thesis2_tag6 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag28.id )
 thesis2_tag7 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag29.id )
-
 thesis6_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
 thesis6_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag30.id )
 thesis6_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag31.id )
 thesis6_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag32.id )
 thesis6_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag33.id )
 
-puts "✓ Seed theses tags"
+puts "✓ thesis_tags table seeded"
 
 
-# Diploma subcategories
-# dnsep_subcategory1 = DiplomaSubcategory.create!(diploma_id: dnsep.id, category_id: subcategories3a.id )
-# dnsep_subcategory2 = DiplomaSubcategory.create!(diploma_id: dnsep.id, category_id: subcategories3b.id )
-# dnsep_subcategory3 = DiplomaSubcategory.create!(diploma_id: dnsep.id, category_id: subcategories3c.id )
-# dnsep_subcategory4 = DiplomaSubcategory.create!(diploma_id: dnsep.id, category_id: subcategories3b.id )
+# diploma_subcategories table
 
-# puts "✓ Seed diplomas subcategories"
+dna_subcategory1   = DiplomaSubcategory.create!(diploma_id: dna.id, subcategory_id: subcategories3a.id)
+dna_subcategory2   = DiplomaSubcategory.create!(diploma_id: dna.id, subcategory_id: subcategories3b.id)
+dna_subcategory3   = DiplomaSubcategory.create!(diploma_id: dna.id, subcategory_id: subcategories3d.id)
+cim1_subcategory1  = DiplomaSubcategory.create!(diploma_id: cim1.id, subcategory_id: subcategories3d.id)
+dnsep_subcategory1 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategory_id: subcategories3a.id)
+dnsep_subcategory2 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategory_id: subcategories3b.id)
+dnsep_subcategory3 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategory_id: subcategories3c.id)
+dnsep_subcategory4 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategory_id: subcategories3b.id)
 
+puts "✓ diploma_subcategories table seeded"
+
+
+# school_subcategories table
+
+school1_subcategories3a = SchoolSubcategory.create!(school_id: school1.id, subcategory_id: subcategories3a.id)
+school1_subcategories3b = SchoolSubcategory.create!(school_id: school1.id, subcategory_id: subcategories3b.id)
+school1_subcategories3d = SchoolSubcategory.create!(school_id: school1.id, subcategory_id: subcategories3a.id)
+school3_subcategories5a = SchoolSubcategory.create!(school_id: school3.id, subcategory_id: subcategories5a.id)
+school3_subcategories3b = SchoolSubcategory.create!(school_id: school3.id, subcategory_id: subcategories3b.id)
+school4_subcategories6b = SchoolSubcategory.create!(school_id: school4.id, subcategory_id: subcategories6b.id)
+school4_subcategories6d = SchoolSubcategory.create!(school_id: school4.id, subcategory_id: subcategories6d.id)
+
+puts "✓ school_subcategories table seeded"
+
+
+# thesis_diplomas table
+
+thesis1_dnsep = ThesisDiploma.create!(thesis_id: thesis1.id, diploma_id: dnsep.id)
+thesis2_dnsep = ThesisDiploma.create!(thesis_id: thesis2.id, diploma_id: dnsep.id)
+thesis3_dnsep = ThesisDiploma.create!(thesis_id: thesis3.id, diploma_id: dnsep.id)
+thesis4_dnsep = ThesisDiploma.create!(thesis_id: thesis4.id, diploma_id: dnsep.id)
+thesis5_ensad = ThesisDiploma.create!(thesis_id: thesis5.id, diploma_id: ensad.id)
+thesis6_dnat  = ThesisDiploma.create!(thesis_id: thesis6.id, diploma_id: dnat.id)
+thesis7_dnat  = ThesisDiploma.create!(thesis_id: thesis7.id, diploma_id: dnat.id)
+thesis8_dnsep = ThesisDiploma.create!(thesis_id: thesis8.id, diploma_id: dnsep.id)
+thesis9_dsaa  = ThesisDiploma.create!(thesis_id: thesis9.id, diploma_id: dsaa.id)
+
+puts "✓ thesis_diplomas table seeded"
+
+
+# thesis_diploma_subcategories table
+
+thesis1_dnsep_subcategories2a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories2a.id)
+thesis1_dnsep_subcategories2b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories2b.id)
+thesis1_dnsep_subcategories2c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories2c.id)
+thesis2_dnsep_subcategories6a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis2_dnsep.id, subcategory_id: subcategories6a.id)
+thesis2_dnsep_subcategories6c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis2_dnsep.id, subcategory_id: subcategories6c.id)
+thesis9_dsaa_subcategories5a  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5a.id)
+thesis9_dsaa_subcategories5b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5b.id)
+thesis9_dsaa_subcategories5c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5c.id)
+
+puts "✓ thesis_diploma_subcategories table seeded"
