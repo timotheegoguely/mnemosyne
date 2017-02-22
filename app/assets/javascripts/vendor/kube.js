@@ -607,23 +607,23 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
     Kube.Utils = function() {};
 
     Kube.Utils.prototype = {
-        disableBodyScroll: function()
-    	{
-    		var $body = $('html');
-    		var windowWidth = window.innerWidth;
+     //  disableBodyScroll: function()
+    	// {
+    	// 	var $body = $('html');
+    	// 	var windowWidth = window.innerWidth;
 
-    		if (!windowWidth)
-    		{
-    			var documentElementRect = document.documentElement.getBoundingClientRect();
-    			windowWidth = documentElementRect.right - Math.abs(documentElementRect.left);
-    		}
+    	// 	if (!windowWidth)
+    	// 	{
+    	// 		var documentElementRect = document.documentElement.getBoundingClientRect();
+    	// 		windowWidth = documentElementRect.right - Math.abs(documentElementRect.left);
+    	// 	}
 
-    		var isOverflowing = document.body.clientWidth < windowWidth;
-    		var scrollbarWidth = this.measureScrollbar();
+    	// 	var isOverflowing = document.body.clientWidth < windowWidth;
+    	// 	var scrollbarWidth = this.measureScrollbar();
 
-    		$body.css('overflow', 'hidden');
-    		if (isOverflowing) $body.css('padding-right', scrollbarWidth);
-    	},
+    	// 	$body.css('overflow', 'hidden');
+    	// 	if (isOverflowing) $body.css('padding-right', scrollbarWidth);
+    	// },
     	measureScrollbar: function()
     	{
     		var $body = $('body');
@@ -635,10 +635,10 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
     		$body[0].removeChild(scrollDiv);
     		return scrollbarWidth;
     	},
-    	enableBodyScroll: function()
-    	{
-    		$('html').css({ 'overflow': '', 'padding-right': '' });
-    	}
+    	// enableBodyScroll: function()
+    	// {
+    	// 	$('html').css({ 'overflow': '', 'padding-right': '' });
+    	// }
     };
 
 
@@ -652,20 +652,20 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
 {
     Kube.Message = function(element, options)
     {
-        this.namespace = 'message';
-        this.defaults = {
-            closeSelector: '.close',
-            closeEvent: 'click',
-            animationOpen: 'fadeIn',
-            animationClose: 'fadeOut',
-            callbacks: ['open', 'opened', 'close', 'closed']
-        };
+      this.namespace = 'message';
+      this.defaults = {
+        closeSelector: '.close',
+        closeEvent: 'click',
+        animationOpen: 'fadeIn',
+        animationClose: 'fadeOut',
+        callbacks: ['open', 'opened', 'close', 'closed']
+      };
 
-        // Parent Constructor
-        Kube.apply(this, arguments);
+      // Parent Constructor
+      Kube.apply(this, arguments);
 
-        // Initialization
-        this.start();
+      // Initialization
+      this.start();
     };
 
     // Functionality
@@ -909,71 +909,71 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
 {
     Kube.Offcanvas = function(element, options)
     {
-        this.namespace = 'offcanvas';
-        this.defaults = {
-    		target: null, // selector
-    		push: true, // boolean
-    		width: '250px', // string
-    		direction: 'left', // string: left or right
-    		toggleEvent: 'click',
-    		clickOutside: true, // boolean
-    		animationOpen: 'slideInLeft',
-    		animationClose: 'slideOutLeft',
-    		callbacks: ['open', 'opened', 'close', 'closed']
-        };
+      this.namespace = 'offcanvas';
+      this.defaults = {
+    	target: null, // selector
+    	push: true, // boolean
+    	width: '256px', // string
+    	direction: 'left', // string: left or right
+    	toggleEvent: 'click',
+    	clickOutside: false, // boolean
+    	animationOpen: 'slideInLeft',
+    	animationClose: 'slideOutLeft',
+    	callbacks: ['open', 'opened', 'close', 'closed']
+      };
 
-        // Parent Constructor
-        Kube.apply(this, arguments);
+      // Parent Constructor
+      Kube.apply(this, arguments);
 
-        // Services
-        this.utils = new Kube.Utils();
-        this.detect = new Kube.Detect();
+      // Services
+      this.utils = new Kube.Utils();
+      this.detect = new Kube.Detect();
 
-        // Initialization
-        this.start();
+      // Initialization
+      this.start();
     };
 
     // Functionality
     Kube.Offcanvas.prototype = {
         start: function()
         {
-            if (!this.hasTarget()) return;
+          if (!this.hasTarget()) return;
 
-            this.buildTargetWidth();
-            this.buildAnimationDirection();
+          this.buildTargetWidth();
+          this.buildAnimationDirection();
 
-            this.$close = this.getCloseLink();
-            this.$element.on(this.opts.toggleEvent + '.' + this.namespace, $.proxy(this.toggle, this));
-            this.$target.addClass('offcanvas');
+          this.$close = this.getCloseLink();
+          this.$element.on(this.opts.toggleEvent + '.' + this.namespace, $.proxy(this.toggle, this));
+          this.$target.addClass('offcanvas');
     	},
     	stop: function()
     	{
-        	this.closeAll();
+        this.closeAll();
 
-            this.$element.off('.' + this.namespace);
-            this.$close.off('.' + this.namespace);
-            $(document).off('.' + this.namespace);
+        this.$element.off('.' + this.namespace);
+        this.$close.off('.' + this.namespace);
+        $(document).off('.' + this.namespace);
     	},
     	toggle: function(e)
     	{
-        	if (this.isOpened()) this.close(e);
-        	else                 this.open(e);
-        },
+        if (this.isOpened()) this.close(e);
+        else                 this.open(e);
+      },
     	buildTargetWidth: function()
     	{
-            this.opts.width = ($(window).width() < parseInt(this.opts.width)) ? '100%' : this.opts.width;
+        this.opts.width = ($(window).width() < parseInt(this.opts.width)) ? '100%' : this.opts.width;
     	},
     	buildAnimationDirection: function()
     	{
-            if (this.opts.direction === 'right')
-            {
-                this.opts.animationOpen = 'slideInRight';
+        if (this.opts.direction === 'right')
+        {
+          this.opts.animationOpen = 'slideInRight';
     			this.opts.animationClose = 'slideOutRight';
-            }
+        }
     	},
     	getCloseLink: function()
     	{
-            return this.$target.find('.close');
+        return this.$target.find('.close');
     	},
     	open: function(e)
     	{
@@ -1010,7 +1010,7 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
                 });
 
                 $(document).off('.' + this.namespace);
-                $('body').css('left', '');
+                $('.container').css('left', '');
     		}
     	},
     	close: function(e)
@@ -1029,9 +1029,9 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
 
             if (this.isOpened())
         	{
-        		this.utils.enableBodyScroll();
+        		// this.utils.enableBodyScroll();
         		this.callback('close');
-                this.pullBody();
+            this.pullBody();
         		this.$target.animation(this.opts.animationClose, $.proxy(this.onClosed, this));
     		}
     	},
@@ -1042,25 +1042,25 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
     	onOpened: function()
     	{
     		if (this.opts.clickOutside) $(document).on('click.' + this.namespace, $.proxy(this.close, this));
-    		if (this.detect.isMobileScreen()) $('html').addClass('no-scroll');
+    		// if (this.detect.isMobileScreen()) $('html').addClass('no-scroll');
 
-            $(document).on('keyup.' + this.namespace, $.proxy(this.handleKeyboard, this));
-            this.$close.on('click.' + this.namespace, $.proxy(this.close, this));
+        $(document).on('keyup.' + this.namespace, $.proxy(this.handleKeyboard, this));
+        this.$close.on('click.' + this.namespace, $.proxy(this.close, this));
 
-    		this.utils.disableBodyScroll();
-            this.$target.addClass('open');
-            this.callback('opened');
+    		// this.utils.disableBodyScroll();
+        this.$target.addClass('open');
+        this.callback('opened');
     	},
     	onClosed: function()
     	{
-    		if (this.detect.isMobileScreen()) $('html').removeClass('no-scroll');
+    		// if (this.detect.isMobileScreen()) $('html').removeClass('no-scroll');
 
-            this.$target.css('width', '').removeClass('offcanvas-' + this.opts.direction);
+        this.$target.css('width', '').removeClass('offcanvas-' + this.opts.direction);
 
-            this.$close.off('.' + this.namespace);
+        this.$close.off('.' + this.namespace);
     		$(document).off('.' + this.namespace);
 
-            this.$target.removeClass('open');
+        this.$target.removeClass('open');
     		this.callback('closed');
     	},
     	handleKeyboard: function(e)
@@ -1071,7 +1071,7 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
     	{
             if (this.opts.push)
             {
-                $('body').animate({ left: 0 }, 350, function() { $(this).removeClass('offcanvas-push-body'); });
+                $('.container').animate({ left: 0 }, 350, function() { $(this).removeClass('offcanvas-push-body'); });
             }
     	},
     	pushBody: function()
@@ -1079,7 +1079,7 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
             if (this.opts.push)
             {
                 var properties = (this.opts.direction === 'left') ? { 'left': this.opts.width } : { 'left': '-' + this.opts.width };
-                $('body').addClass('offcanvas-push-body').animate(properties, 200);
+                $('.container').addClass('offcanvas-push-body').animate(properties, 200);
             }
     	}
     };

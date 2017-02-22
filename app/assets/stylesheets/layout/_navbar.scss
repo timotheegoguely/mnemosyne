@@ -1,10 +1,15 @@
 .navbar {
   @include flex;
   @include flex-items-middle;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 0 36px;
   height: 88px;
   width: 100vw;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: #fff;
   > * {
     @include flex;
     @include flex-items-middle;
