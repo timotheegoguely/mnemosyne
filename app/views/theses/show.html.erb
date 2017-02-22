@@ -1,5 +1,12 @@
 <% content_for(:title_tag) do %>
-  <%= t('.title') %>
+  <%= @thesis.title %>
 <% end %>
 
-<h1><%= @thesis.title %></h1>
+
+
+<main class="container">
+  <h1><%= @thesis.title %></h1>
+  <h2><%= @thesis.subtitle if @thesis.subtitle %></h2>
+  <h3><%= @thesis.user.first_name %> <%= @thesis.user.last_name %></h3>
+
+</main>

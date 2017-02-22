@@ -76,3 +76,5 @@ fr:
       city_header: "Ville"
       year_header: "Année"
       categories_header: "Catégories"
+      bookmarks: "Favoris"
+    show:

@@ -13,7 +13,11 @@ class User < ApplicationRecord
   # Validations
   validates :email, :password, presence: true
 
-  def school(thesis)
-    thesis.school
-  end
+  # def school_thesis(thesis)
+  #   self.thesis.school
+  # end
+
+  extend FriendlyId
+  friendly_id :first_name, use: :slugged
+
 end

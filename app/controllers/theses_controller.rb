@@ -1,17 +1,18 @@
 class ThesesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create]
-  
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)
   end
-  
+
   def show
     @thesis = Thesis.find(params[:id])
+    authorize @thesis
   end
 
   def new
-    @theses = Thesis.new
-    authorize @theses
+    @thesis = Thesis.new
+    authorize @thesis
   end
 
   def create
@@ -20,10 +21,10 @@ class ThesesController < ApplicationController
     @title = params[:thesis][:title]
     @year = params[:thesis]['year(1i)'].to_i
     date = Date.new(@year)
-    @theses = current_user.theses.new(title: @title, year: date, diploma: @diploma, school: @school )
-    authorize @theses
+    @thesis = current_user.thesis.new(title: @title, year: date, diploma: @diploma, school: @school )
+    authorize @thesis
 
-    @theses.save
+    @thesis.save
     redirect_to theses_path
   end
 

@@ -79,3 +79,6 @@ en:
       city_header: "City"
       year_header: "Year"
       categories_header: "Categories"
+      bookmarks: "Bookmarks"
+    show:
+
