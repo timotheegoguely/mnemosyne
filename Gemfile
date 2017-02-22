@@ -20,6 +20,10 @@ gem 'uglifier'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+#admin
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
 gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
