@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 gem 'pundit'
-
+gem 'cloudinary', '1.1.0'
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
