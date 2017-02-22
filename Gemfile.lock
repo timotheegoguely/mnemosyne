@@ -81,6 +81,7 @@ GEM
       thor (~> 0.14)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -229,6 +230,7 @@ DEPENDENCIES
   devise
   devise-i18n
   figaro
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)

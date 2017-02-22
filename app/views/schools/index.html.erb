@@ -5,3 +5,13 @@
     <li><%= school.name %></li>
   <% end %>
 </ul>
+
+<!-- alert javascript -->
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var coord = <%= raw @school_coordinates.to_json %>;
+      alert('School coordinates are ' + coord.lat + ', ' + coord.lng);
+    });
+  <% end %>
+<% end %>
