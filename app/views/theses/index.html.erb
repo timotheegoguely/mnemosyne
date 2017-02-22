@@ -2,28 +2,35 @@
   <%= t('.title') %>
 <% end %>
 
-<div class="container">
 <h1><%= t('.title') %></h1>
 
-  <table class="table table-striped">
-    <tr>
-      <th>Bookmarks</th>
-      <th>Thesis</th>
-      <th>Year</th>
-      <th>Author</th>
-      <th>School</th>
-    </tr>
-  <% @theses.each do |thesis| %>
-    <tr>
-      <td>
-        <%= thesis.get_likes.size %>
-        <%= link_to 'bookmark',  %>
-      </td>
-      <td><%= thesis.title %></td>
-      <td><%= thesis.year.year %></td>
-      <td><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
-      <td><%= thesis.school.acronym.blank? ? '' : '(' + thesis.school.acronym + ')' %></td>
-    </tr>
-  <% end %>
-  </table>
-</div>
+<table class="striped">
+  <tr>
+    <th>bookmark_symbol</th>
+    <th>thesis_cover_thumbnail</th>
+    <th><%= t('.thesis_title_header') %></th>
+    <th><%= t('.author_name_header') %></th>
+    <th><%= t('.school_acronym_header') %></th>
+    <th><%= t('.city_header') %></th>
+    <th><%= t('.year_header') %></th>
+    <th><%= t('.categories_header') %></th>
+  </tr>
+<% @theses.each do |thesis| %>
+  <tr>
+    <td><%= thesis.get_likes.size %></td>
+    <td></td>
+    <td><%= thesis.title %></td>
+    <td><%= thesis.user.first_name.capitalize %> <%= thesis.user.last_name.capitalize %></td>
+    <td><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
+    <td><%= thesis.school.city %></td>
+    <td><%= thesis.year.year %></td>
+    <td>
+      <% subcategories = [] %>
+      <% thesis.subcategories.each do |subcategory| %>
+        <% subcategories << subcategory.name %>
+      <% end %>
+      <%= subcategories.join(', ') %>
+    </td>
+  </tr>
+<% end %>
+</table>
