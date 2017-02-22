@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222100026) do
+ActiveRecord::Schema.define(version: 20170222100306) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachinary_files", force: :cascade do |t|
+    t.string   "attachinariable_type"
+    t.integer  "attachinariable_id"
+    t.string   "scope"
+    t.string   "public_id"
+    t.string   "version"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "format"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -98,6 +113,7 @@ ActiveRecord::Schema.define(version: 20170222100026) do
     t.datetime "updated_at", null: false
     t.integer  "diploma_id"
     t.integer  "school_id"
+    t.string   "document"
     t.index ["diploma_id"], name: "index_theses_on_diploma_id", using: :btree
     t.index ["school_id"], name: "index_theses_on_school_id", using: :btree
     t.index ["user_id"], name: "index_theses_on_user_id", using: :btree
