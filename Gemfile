@@ -24,6 +24,9 @@ gem 'autoprefixer-rails'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
+#geocoding
+gem 'geocoder'
+
 gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
