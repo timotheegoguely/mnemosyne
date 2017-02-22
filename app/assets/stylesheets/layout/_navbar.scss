@@ -1,7 +1,6 @@
 .navbar {
   @include flex;
   @include flex-items-middle;
-  margin-bottom: 24px;
   padding: 0 36px;
   height: 88px;
   width: 100vw;
