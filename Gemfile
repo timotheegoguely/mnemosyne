@@ -23,8 +23,6 @@ gem 'uglifier'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
-gem 'friendly_id', '~> 5.1.0'
-
 #admin
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
