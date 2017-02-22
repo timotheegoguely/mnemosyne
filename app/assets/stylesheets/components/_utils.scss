@@ -5,15 +5,15 @@
 
 // Flex
 .flex {
-    @include flex;
+  @include flex;
 }
 @include breakpoint(sm) {
-    .flex-column-sm {
-        @include flex-items-column;
-    }
-    .flex-w100-sm {
-        @include flex-item-width(100%);
-    }
+  .flex-column-sm {
+    @include flex-items-column;
+  }
+  .flex-w100-sm {
+    @include flex-item-width(100%);
+  }
 }
 
 // Visibility
@@ -26,7 +26,7 @@
 
 // Display
 .display-block {
-    display: block;
+  display: block;
 }
 .hide {
 	display: none !important;
@@ -37,8 +37,8 @@
 	}
 }
 @include breakpoint($min: $sm) {
-    .show-sm {
-    	display: none !important;
+  .show-sm {
+    display: none !important;
 	}
 }
 
@@ -91,52 +91,59 @@
 // Close
 .close {
 
-    display: inline-block;
-    min-height: 16px;
-    min-width: 16px;
-    line-height: 16px;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 12px;
-    opacity: .6;
+  display: inline-block;
+  min-height: 16px;
+  min-width: 16px;
+  line-height: 16px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12px;
+  opacity: .6;
 
-    &:hover {
-        opacity: 1;
-    }
-    &.small {
-        font-size: 8px;
-    }
-    &.big {
-        font-size: 18px;
-    }
-    &.white {
-        color: #fff;
-    }
+  &:hover {
+      opacity: 1;
+  }
+  &.small {
+      font-size: 8px;
+  }
+  &.big {
+      font-size: 18px;
+  }
+  &.white {
+      color: #fff;
+  }
 }
 
 // Caret
 .caret {
-    display: inline-block;
+  display: inline-block;
 }
 .button {
-    & .caret {
-        margin-right: -8px;
-    }
+  & .caret {
+    margin-right: -8px;
+  }
 }
 
 // Overlay
 .overlay {
-    position: fixed;
-    z-index: $z-over-control;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $overlay-background-color;
+  position: fixed;
+  z-index: $z-over-control;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $overlay-background-color;
 
-    & > .close {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-    }
+  & > .close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
 }
+
+// Z-index
+.z100 { z-index: $z-over-content; }
+.z200 { z-index: $z-over-control; }
+.z300 { z-index: $z-over-page; }
+.z400 { z-index: $z-over-screen; }
+.z500 { z-index: $z-over-all; }

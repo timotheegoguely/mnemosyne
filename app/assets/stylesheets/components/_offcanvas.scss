@@ -1,12 +1,15 @@
 .offcanvas {
-    background: #fff;
-    position: fixed;
-    padding: $base-line;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: $z-over-page;
-    overflow-y: scroll;
+  background: #fff;
+  position: fixed;
+  padding: 192px 32px 32px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: $z-over-page;
+  overflow-y: scroll;
+  ul {
+    margin-left: 0px;
+  }
 }
 .offcanvas .close {
 	position: absolute;
@@ -23,4 +26,12 @@
 }
 .offcanvas-push-body {
   position: relative;
+}
+
+#filters {
+  position: fixed;
+  top: 112px;
+  left: 32px;
+  background-color: #fff;
+  margin-bottom: 0;
 }
