@@ -1,9 +1,14 @@
 class ThesesController < ApplicationController
-
   skip_before_action :authenticate_user!, only: [:new, :create]
+  
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)
   end
+  
+  def show
+    @thesis = Thesis.find(params[:id])
+  end
+
   def new
     @theses = Thesis.new
     authorize @theses
@@ -20,9 +25,7 @@ class ThesesController < ApplicationController
 
     @theses.save
     redirect_to theses_path
-
   end
-
 
   private
 

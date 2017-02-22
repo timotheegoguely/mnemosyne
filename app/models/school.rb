@@ -11,4 +11,8 @@ class School < ApplicationRecord
   validates :address_1, presence: true
   validates :city, presence: true
   validates :country, presence: true
+
+  # Geocoding
+  geocoded_by :address_1
+  after_validation :geocode, if: :address_1_changed?
 end
