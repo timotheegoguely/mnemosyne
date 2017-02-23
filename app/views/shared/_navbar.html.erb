@@ -1,6 +1,6 @@
 <nav class="navbar z500">
   <div class="navbar-left">
-    <h6 class="navbar-brand"><%= link_to "mnémosyne", root_path %></h6>
+    <h5 class="navbar-brand"><%= link_to "mnémosyne", root_path %></h5>
   </div>
 
   <div class="navbar-middle">
@@ -23,26 +23,37 @@
       <!-- Profile picture and dropdown -->
       <div class="navbar-item">
         <div id="navbar-dropdown">
-          <!-- Toggle -->
-          <%= link_to "#", id: "user-avatar" do %>
-            <%= image_tag "http://placehold.it/48x48", class: "avatar avatar-large", "data-component" => "dropdown", "data-target" => "#dropdown" %>
+          <!-- Dropdown toggle -->
+          <%= link_to "#", id: "user-avatar", "data-component" => "dropdown", "data-target" => "#dropdown" do %>
+            <%= image_tag "http://placehold.it/48x48", class: "avatar avatar-large" %>
           <% end %>
 
-          <!-- Notification -->
+          <!-- Notifications -->
           <%= link_to "#", class: "badge-container" do %>
             <span class="badge badge-blue">3</span>
           <% end %>
 
           <div class="dropdown hide" id="dropdown">
+            <a href="" class="close show-sm"></a>
             <ul>
               <li>
-                <%= link_to "#" do %>
-                  <%= t(".profile", default: "Profile") %>
+                <%= link_to user_path(current_user) do %>
+                  <%= t(".profile") %>
                 <% end %>
               </li>
               <li>
-                <%= link_to "#" do %>
-                  <%= t(".profile", default: "Home") %>
+                <%= link_to user_path(current_user) do %>
+                  <%= t(".my_thesis") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to user_path(current_user) do %>
+                  <%= t(".my_bookmarks") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to user_path(current_user) do %>
+                  <%= t(".settings") %>
                 <% end %>
               </li>
               <li>
