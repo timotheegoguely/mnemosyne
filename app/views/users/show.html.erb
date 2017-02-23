@@ -7,18 +7,22 @@
     <% if @user.photo? %>
       <%= cl_image_tag @user.photo.path, width: 200, height: 300, crop: :fill %>
     <% end %>
-  </div>
-
-  <div class="col col-4">
     <%= user.first_name %>
     <%= user.last_name %>
     <%= user.email %>
     <%= user.website %>
+    <%= user.bio %>
   </div>
 
   <div class="col col-4">
-    <%= user.bio %>
   </div>
 </div>
 
+<nav id="tabs" class="tabs" data-component="tabs">
+  <ul>
+    <li><a href="#tab1">Profil</a></li>
+    <li><a href="#tab2">Mon Mémoire</a></li>
+    <li><a href="#tab3">Paramètres & Confidentialité</a></li>
+  </ul>
+</nav>
 
