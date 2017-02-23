@@ -1,7 +1,7 @@
 class ThesesController < ApplicationController
   before_action :set_thesis, only: [ :show, :bookmark ]
   skip_before_action :authenticate_user!, only: [ :index, :show, :new, :create ]
-  layout "basic", only: [ :new ]
+  layout "basic", only: [ :new, :show, :edit, :update ]
 
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)

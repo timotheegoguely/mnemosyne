@@ -4,62 +4,62 @@
 
 <main class="container full">
 
-  <div class="row">
+  <div id="thesis-cover-wrapper">
+    <%= image_tag "http://placehold.it/350x500", id:"thesis-cover" %>
+  </div>
 
-    <div class="col col-5" style="background-color: #EEE;">
-        <%= image_tag "http://placehold.it/350x500", id:"thesis-cover", class:"col col-10 push middle push-center" %>
+  <div id="thesis-content-wrapper">
+
+    <!-- Bookmark -->
+    <div id="bookmark-wrapper">
+      <% if current_user %>
+        <%= link_to bookmark_user_thesis_path, method: :post, remote: true, id:"bookmark" do %>
+          <% if current_user.voted_for?(@thesis) %>
+            <i class='material-icons md-36'>turned_in</i>
+          <% else %>
+            <i class='material-icons md-36'>turned_in_not</i>
+          <% end %>
+        <% end %>
+      <% else %>
+        <%= link_to bookmark_user_thesis_path, method: :post, id:"bookmark" do %>
+          <i class='material-icons'>turned_in_not</i>
+        <% end %>
+      <% end %>
     </div>
 
-    <div class="col col-7" id="thesis-content">
-      <div class="row">
-
-        <!-- bookmark begin -->
-
-        <div class="col col-1">
-          <% if current_user %>
-            <%= link_to bookmark_user_thesis_path, method: :post, remote: true, id:"bookmark" do %>
-              <% if current_user.voted_for?(@thesis) %>
-                <i class='material-icons'>turned_in</i>
-              <% else %>
-                <i class='material-icons'>turned_in_not</i>
-              <% end %>
-            <% end %>
-          <% else %>
-            <%= link_to bookmark_user_thesis_path, method: :post, id:"bookmark" do %>
-              <i class='material-icons'>turned_in_not</i>
-            <% end %>
-          <% end %>
-        </div>
-
-        <!-- bookmark end -->
-
-        <div class="col col-11">
-          <h2 class="title"><%= @thesis.title %></h2>
-          <h4><%= @thesis.user.first_name %> <%= @thesis.user.last_name %></h4>
-          <p class="big"><%= @thesis.subtitle if @thesis.subtitle %></p>
-          <div class="row">
-            <div>
-              <p><%= @thesis.school.acronym.blank? ? @thesis.school.name : @thesis.school.acronym %>, <%= @thesis.school.city %></p>
-            </div>
-            <div class="push-right">
-              <p><%= @thesis.year.year %></p>
-            </div>
-          </div>
-          <span class="category"><%= @thesis.subcategories.first.category.name %></span><br>
-          <p class="subcategories">
-            <% @thesis.subcategories.each do |subcategory| %>
-              <span class="subcategory"><%= subcategory.name %></span>
-            <% end %>
+    <div id="thesis-content">
+      <h1 class="title"><%= @thesis.title %></h1>
+      <% if @thesis.subtitle %>
+        <h2 class="subtitle big"><%= @thesis.subtitle if @thesis.subtitle %></h2>
+      <% end %>
+      <hr>
+      <div class="row" id="meta">
+        <div class="col col-12">
+          <p>
+            <span class="year"><%= @thesis.year.year %></span>
+            <span class="author"><%= @thesis.user.first_name %> <%= @thesis.user.last_name %></span>
+            <span class="school"><%= @thesis.school.acronym.blank? ? @thesis.school.name : @thesis.school.acronym %>, <%= @thesis.school.city %></span>
           </p>
-          <div class="resume">
-            <p><%= @thesis.resume %></p>
-          </div>
-          <div class="tags">
-            <% @thesis.thesis_tags.each do |thesis_tag| %>
-              <%= link_to "#" + thesis_tag.tag.name %>
-            <% end %>
-          </div>
         </div>
+      </div>
+      <span class="category"><%= @thesis.subcategories.first.category.name %></span><br>
+      <p class="subcategories">
+        <% @thesis.subcategories.each do |subcategory| %>
+          <span class="subcategory"><%= subcategory.name %></span>
+        <% end %>
+      </p>
+      <hr>
+
+      <div class="resume">
+        <p><%= @thesis.resume %></p>
+      </div>
+
+      <div class="tags">
+        <% if @thesis.thesis_tags %>
+          <% @thesis.thesis_tags.each do |thesis_tag| %>
+            <%= link_to "#" + thesis_tag.tag.name %>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
