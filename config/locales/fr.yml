@@ -67,6 +67,12 @@ fr:
       search: Rechercher…
       top_call_to_action: Uploader
 
+  pages:
+    home:
+      tagline_1: Plateforme de partage de mémoires
+      tagline_2: d’étudiants en école supérieure Culture
+      button_theses_index: Explorer
+
   theses:
     index:
       title: "Liste des mémoires"
