@@ -1,0 +1,5 @@
+<% if current_user && current_user.voted_for?(@thesis) %>
+  $('#bookmark').html("<i class='material-icons'>turned_in</i>");
+<% else %>
+  $('#bookmark').html("<i class='material-icons'>turned_in_not</i>");
+<% end %>

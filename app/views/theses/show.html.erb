@@ -9,7 +9,19 @@
       <%= image_tag "http://placehold.it/350x500", class:"push-middle push-center" %>
     </div>
     <div class="col col-1">
-      <%= link_to "<i class='material-icons'>turned_in_not</i>".html_safe, @thesis.liked_by(current_user), remote: true %>
+      <% if current_user %>
+        <%= link_to bookmark_user_thesis_path, method: :post, remote: true, id:"bookmark" do %>
+          <% if current_user.voted_for?(@thesis) %>
+            <i class='material-icons'>turned_in</i>
+          <% else %>
+            <i class='material-icons'>turned_in_not</i>
+          <% end %>
+        <% end %>
+      <% else %>
+        <%= link_to bookmark_user_thesis_path, method: :post, id:"bookmark" do %>
+          <i class='material-icons'>turned_in_not</i>
+        <% end %>
+      <% end %>
     </div>
     <div class="col col-6">
       <h2 class="title"><%= @thesis.title %></h2>
