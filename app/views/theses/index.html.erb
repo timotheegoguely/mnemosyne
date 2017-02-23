@@ -5,15 +5,12 @@
 <main class="container">
 
   <header class="row" id="top">
-    <div class="col col-2">
-      <%= link_to "<i class='material-icons md-18'>filter_list</i> Filtres".html_safe, "#", class: "button outline secondary", id: "filters", "data-component" => "offcanvas", "data-target" => "#offcanvas-left" %>
-    </div>
     <nav class="col push-right tabs" data-component="tabs">
       <ul>
-        <li>
+        <li class="active">
           <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
         </li>
-        <li class="active">
+        <li>
           <%= link_to "<i class='material-icons'>list</i>".html_safe, "#list" %>
         </li>
         <li>
@@ -39,21 +36,21 @@
     <table class="table">
       <tr>
         <th></th>
-        <th>Thesis</th>
-        <th>Author</th>
-        <th>Year</th>
-        <th>School</th>
-        <th>Bookmarks</th>
+        <th><%= t('.thesis_title_header') %></th>
+        <th><%= t('.author_name_header') %></th>
+        <th><%= t('.year_header') %></th>
+        <th><%= t('.school_acronym_header') %></th>
+        <th><%= t('.bookmarks') %></th>
       </tr>
       <% @theses.each do |thesis| %>
         <tr>
-          <td>
+          <td class="thumbnail">
             <%= link_to "#" do %>
-              <%= image_tag "http://placehold.it/32x48", class: "thumbnail" %>
+              <%= image_tag "http://placehold.it/32x48" %>
             <% end %>
           </td>
           <td>
-            <%= link_to "#" do %>
+            <%= link_to user_thesis_path(thesis.user, thesis) do %>
               <em><strong><%= thesis.title %></strong></em><br>
               <small><%= thesis.subtitle if thesis.subtitle %></small>
             <% end %>

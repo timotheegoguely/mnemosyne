@@ -1,30 +1,43 @@
 class ThesesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create]
-  
+  skip_before_action :authenticate_user!, only: [ :index, :show, :new, :create ]
+  layout "home", only: [ :new ]
+
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)
   end
-  
+
   def show
     @thesis = Thesis.find(params[:id])
+    authorize @thesis
   end
 
   def new
-    @theses = Thesis.new
-    authorize @theses
+    @thesis = Thesis.new
+    authorize @thesis
   end
 
   def create
-    @school = School.find(params[:thesis][:school])
-    @diploma =Diploma.find(params[:thesis][:diploma])
     @title = params[:thesis][:title]
+    session[:thesis_title] = @title
+
+    @school = School.find(params[:thesis][:school])
+    session[:thesis_school_id] = params[:thesis][:school]
+
+    # @thesis_diploma = ThesisDiploma.find(params[:thesis][:thesis_diploma])
+    session[:thesis_diploma_id] = params[:thesis][:thesis_diploma]
+
     @year = params[:thesis]['year(1i)'].to_i
     date = Date.new(@year)
-    @theses = current_user.theses.new(title: @title, year: date, diploma: @diploma, school: @school )
-    authorize @theses
-
-    @theses.save
-    redirect_to theses_path
+    session[:thesis_year] = date
+    @thesis = Thesis.new(title: @title, year: date, thesis_diploma: @thesis_diploma, school: @school )
+    if current_user
+      current_user.thesis = @thesis
+      @thesis.save
+      redirect_to theses_path
+    else
+      redirect_to new_user_session_path
+    end
+    authorize @thesis
   end
 
   private
