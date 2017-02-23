@@ -1,28 +1,38 @@
-<% content_for(:title_tag) do %>
-  <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="row gutters">
+      <div class="profil">
+        <div class="col col-4">
+          <%= image_tag "timothee.jpg", class:"avatar" %>
+        </div>
 
-<div class="row">
-  <div class="col col-4">
-    <% if @user.photo? %>
-      <%= cl_image_tag @user.photo.path, width: 200, height: 300, crop: :fill %>
-    <% end %>
-    <%= user.first_name %>
-    <%= user.last_name %>
-    <%= user.email %>
-    <%= user.website %>
-    <%= user.bio %>
-  </div>
+        <div class="user-data">
+          <%= @user.first_name %> <br>
+          <%= @user.last_name %> <br>
+          <%= @user.email %> <br>
+          <%= @user.website %> <br>
+          <%= @user.bio %>
+        </div>
+      </div>
+    </div>
 
-  <div class="col col-4">
+    <div class="row">
+      <nav class="tabs" data-component="tabs">
+        <ul>
+          <div class="col col-3">
+            <li><a href="#my_thesis">Mon Mémoire</a></li>
+          </div>
+          <div class="col col-3">
+            <li><a href="#my_bookmarks">Mes favoris</a></li>
+          </div>
+          <div class="col col-3">
+            <li><a href="#settings">Paramètres et Confidentialité</a></li>
+          </div>
+        </ul>
+          <div id="my_thesis">Mémoire display test</div>
+          <div id="my_bookmarks">Mes Favoris display test</div>
+          <div id="settings">Paramètres display test</div>
+      </nav>
+    </div>
   </div>
 </div>
-
-<nav id="tabs" class="tabs" data-component="tabs">
-  <ul>
-    <li><a href="#tab1">Profil</a></li>
-    <li><a href="#tab2">Mon Mémoire</a></li>
-    <li><a href="#tab3">Paramètres & Confidentialité</a></li>
-  </ul>
-</nav>
-
