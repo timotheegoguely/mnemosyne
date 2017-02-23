@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   # Bookmarks : voter
-  acts_as_votable
+  acts_as_voter
 
   belongs_to :school
   # has_and_belongs_to_many :schools
