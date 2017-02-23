@@ -1,16 +1,17 @@
 <div class="container">
   <div class="row gutters">
+
     <div class="col col-3 profil">
       <div id="user-avatar">
-        <%= image_tag "timothee.jpg", class:"avatar-full" %>
+        <%= image_tag "timothee.jpg", class:"avatar-large" %>
       </div>
 
       <div class="user-data">
-        <%= @user.first_name %> <br>
-        <%= @user.last_name %> <br>
-        <%= @user.email %> <br>
-        <%= @user.website %> <br>
-        <%= @user.bio %>
+        <p class="user-name"><%= @user.first_name %> <%= @user.last_name %></p>
+        <p class="user-website">
+          <%= link_to @user.website, @user.website %>
+        </p>
+        <p class="user-bio"><%= @user.bio %></p>
       </div>
     </div>
 

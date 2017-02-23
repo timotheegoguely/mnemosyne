@@ -11,9 +11,12 @@
   left: 0;
   right: 0;
   width: 100vw;
-  height: calc(100vh - $navbar-height);
+  height: calc(100vh - 88px);
   padding: 0px 176px;
   #intro {
+    h1 {
+      font-weight: bold;
+    }
     h2 {
       font-family: "Thesaurus Display Regular", sans-serif;
       margin-bottom: 32px;
