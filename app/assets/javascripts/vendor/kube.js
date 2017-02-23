@@ -635,10 +635,10 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
     		$body[0].removeChild(scrollDiv);
     		return scrollbarWidth;
     	},
-    	// enableBodyScroll: function()
-    	// {
-    	// 	$('html').css({ 'overflow': '', 'padding-right': '' });
-    	// }
+    	enableBodyScroll: function()
+    	{
+    		$('html').css({ 'overflow': '', 'padding-right': '' });
+    	}
     };
 
 

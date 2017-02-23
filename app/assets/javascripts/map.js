@@ -1,12 +1,12 @@
 $(document).on("ready", function() {
-  L.mapbox.accessToken = 'your access token';
-  var map = L.mapbox.map('map', 'Your map layer', { zoomControl: false })
-  .setView([39.739, -104.990], 12);
+//   L.mapbox.accessToken = 'your access token';
+//   var map = L.mapbox.map('map', 'Your map layer', { zoomControl: false })
+//   .setView([39.739, -104.990], 12);
 
-  map.featureLayer.on("ready", function(e) {
-    getSchools(map);
-  });
-});
+//   map.featureLayer.on("ready", function(e) {
+//     getSchools(map);
+//   });
+ });
 
 function getSchools(map) {
   var $loading_wheel = $("#spinning-wheel")
