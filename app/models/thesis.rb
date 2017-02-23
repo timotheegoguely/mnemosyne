@@ -1,5 +1,5 @@
 class Thesis < ApplicationRecord
-  has_attachment :document
+  # has_attachment :document
   # Bookmark
   acts_as_votable
 
