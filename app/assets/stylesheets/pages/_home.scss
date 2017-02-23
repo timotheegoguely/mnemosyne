@@ -1,6 +1,22 @@
 #main {
-  @include flex;
   margin: auto;
   max-width: 1080px;
   padding-top: 88px;
+}
+
+.hero {
+  @include flex;
+  @include flex-items-middle;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: calc(100vh - 88px);
+  padding: 0px 176px;
+  #intro {
+    h3 {
+      margin-bottom: 32px;
+    }
+    margin-bottom: 64px;
+  }
 }
