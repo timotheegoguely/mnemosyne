@@ -72,8 +72,8 @@ en:
 
   pages:
     home:
-      introduction_line1: Sharing platform of students theses
-      introduction_line2: from France's High School Colleges in Culture
+      tagline_1: Sharing platform of students theses
+      tagline_2: from High School Colleges in Culture
       button_theses_index: Explore
 
   theses:

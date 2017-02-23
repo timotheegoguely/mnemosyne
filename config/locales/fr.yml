@@ -69,8 +69,8 @@ fr:
 
   pages:
     home:
-      introduction_line1: Plateforme de partage de mémoires
-      introduction_line2: d’étudiants en école supérieure Culture
+      tagline_1: Plateforme de partage de mémoires
+      tagline_2: d’étudiants en école supérieure Culture
       button_theses_index: Explorer
 
   theses:

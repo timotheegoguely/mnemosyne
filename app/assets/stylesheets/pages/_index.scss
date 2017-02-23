@@ -19,3 +19,12 @@
 #top {
   margin-bottom: 16px;
 }
+
+#list {
+  td {
+    font-family: $headings-font-family;
+    font-feature-settings: 'tnum';
+    -webkit-font-feature-settings: 'tnum';
+    -moz-font-feature-settings: 'tnum';
+  }
+}
