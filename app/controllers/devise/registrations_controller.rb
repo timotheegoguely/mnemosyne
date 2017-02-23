@@ -17,15 +17,17 @@ class Devise::RegistrationsController < DeviseController
     resource.save
     yield resource if block_given?
 
-    title = session[:thesis_title]
-    subtitle = session[:thesis_subtitle]
-    school = session[:thesis_school_id]
-    diploma = session[:thesis_diploma_id]
-    year = session[:thesis_year]
-    thesis = Thesis.new(title: title, subtitle: subtitle, year: year, school: School.find(session[:thesis_school_id]) )
-    thesis.user = resource
-    thesis.save
-    thesis.update(diploma: Diploma.find(session[:thesis_diploma_id]))
+    if session[:thesis_title]
+      title = session[:thesis_title]
+      subtitle = session[:thesis_subtitle]
+      school = session[:thesis_school_id]
+      diploma = session[:thesis_diploma_id]
+      year = session[:thesis_year]
+      thesis = Thesis.new(title: title, subtitle: subtitle, year: year, school: School.find(session[:thesis_school_id]) )
+      thesis.user = resource
+      thesis.save
+      thesis.update(diploma: Diploma.find(session[:thesis_diploma_id]))
+    end
 
     if resource.persisted?
       if resource.active_for_authentication?
@@ -157,3 +159,4 @@ class Devise::RegistrationsController < DeviseController
     'devise.registrations'
   end
 end
+
