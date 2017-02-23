@@ -2,9 +2,10 @@
 
   <header>
     <h1>mnémosyne</h1>
-    <h2>Plateforme de partage de mémoires <br> d’étudiants en école supérieure Culture</h2>
+    <h2 style="margin-bottom: 0px"><%= t('.introduction_line1') %></h2><h2><%= t('.introduction_line2') %></h2>
+    <br>
   </header>
 
-  <%= link_to "Afficher toutes les thèses", theses_path, class: "button outline secondary" %>
+  <%= link_to t('.button_theses_index'), theses_path, class: "button outline secondary" %>
 
 </main>
