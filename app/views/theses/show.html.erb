@@ -33,7 +33,7 @@
 
         <!-- bookmark end -->
 
-        <div class="col col-11 push-left">
+        <div class="col col-11">
           <h2 class="title"><%= @thesis.title %></h2>
           <h4><%= @thesis.user.first_name %> <%= @thesis.user.last_name %></h4>
           <p class="big"><%= @thesis.subtitle if @thesis.subtitle %></p>
@@ -45,9 +45,21 @@
               <p><%= @thesis.year.year %></p>
             </div>
           </div>
-          <p><%= @thesis.resume %></p>
+          <span class="category"><%= @thesis.subcategories.first.category.name %></span><br>
+          <p class="subcategories">
+            <% @thesis.subcategories.each do |subcategory| %>
+              <span class="subcategory"><%= subcategory.name %></span>
+            <% end %>
+          </p>
+          <div class="resume">
+            <p><%= @thesis.resume %></p>
+          </div>
+          <div class="tags">
+            <% @thesis.thesis_tags.each do |thesis_tag| %>
+              <%= link_to "#" + thesis_tag.tag.name %>
+            <% end %>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
