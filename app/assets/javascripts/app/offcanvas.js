@@ -1,9 +1,9 @@
 $( document ).ready(function() {
-  $( '#offcanvas-left' ).offcanvas({
-    // push: true, // boolean
-    width: '150px', // string
-    // direction: 'left', // string: left or right
-    // toggleEvent: 'click',
-    // clickOutside: true, // boolean
+  $('#offcanvas-left').on('open.offcanvas', function() {
+    $('.container').addClass('offcanvas-is-open');
+  });
+
+  $('#offcanvas-left').on('close.offcanvas', function() {
+    $('.container').removeClass('offcanvas-is-open');
   });
 });

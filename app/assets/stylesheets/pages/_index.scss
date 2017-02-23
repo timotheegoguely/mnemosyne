@@ -1,33 +1,30 @@
 .container {
+  margin-top: 88px;
   padding: 24px 32px;
+  max-width: 100vw;
+  //@include transition(all .5s ease);
+}
+.offcanvas-is-open {
+  max-width: calc(100vw - 256px);
 }
 .table {
   td {
     vertical-align: middle;
   }
+  .thumbnail {
+    min-width: 48px;
+  }
 }
 
 #top {
-  margin-bottom: 24px;
-  #filters {
-    margin-bottom: 0;
-  }
-  #livetabs {
-    @include flex;
-    @include flex-items-middle;
-    li {
-      display: inline-block;
-      margin-right: 16px;
-      a {
-        color: rgba(0,0,0,.2);
-      }
-      &.active a,
-      & a:active {
-        color: rgba(0,0,0,.7);
-      }
-      & a:hover {
-        color: rgba(0,0,0,.8);
-      }
-    }
+  margin-bottom: 16px;
+}
+
+#list {
+  td {
+    font-family: $headings-font-family;
+    font-feature-settings: 'tnum';
+    -webkit-font-feature-settings: 'tnum';
+    -moz-font-feature-settings: 'tnum';
   }
 }

@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   # Bookmarks : voter
-  acts_as_votable
+  acts_as_voter
 
   belongs_to :school
   # has_and_belongs_to_many :schools
@@ -13,7 +13,8 @@ class User < ApplicationRecord
   # Validations
   validates :email, :password, presence: true
 
-  def school(thesis)
-    thesis.school
-  end
+  # def school_thesis(thesis)
+  #   self.thesis.school
+  # end
+
 end

@@ -8,6 +8,7 @@ class Thesis < ApplicationRecord
   has_many :thesis_tags
   has_many :tags, through: :thesis_tags
   has_one :thesis_diploma
+  has_one :diploma, through: :thesis_diploma
   has_many :thesis_diploma_subcategories, through: :thesis_diploma
 
   # Validations

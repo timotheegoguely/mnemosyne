@@ -26,12 +26,14 @@ h1.title, h1, h2, h3, h4, h5, h6 {
   margin-bottom: $heading-margin-bottom;
 }
 h1.title {
+  font-family: "Thesaurus Display Medium", serif;
   font-size: $heading-font-size-title;
   line-height: $heading-base-line-title;
   margin-bottom: $heading-margin-bottom/2;
 }
 h1,
 .h1 {
+  font-family: $text-font-family;
   font-size: $heading-font-size-1;
   line-height: $heading-base-line-1;
 }
@@ -39,6 +41,7 @@ h2,
 .h2 {
   font-size: $heading-font-size-2;
   line-height: $heading-base-line-2;
+  letter-spacing: 0.01em;
 }
 h3,
 .h3 {
@@ -54,6 +57,7 @@ h5,
 .h5 {
   font-size: $heading-font-size-5;
   line-height: $heading-base-line-5;
+  margin-bottom: 0;
 }
 h6,
 .h6 {
@@ -266,10 +270,17 @@ ul.unstyled {
   text-transform: lowercase;
 }
 em, .italic {
-  font-style: italic !important;
+  font-family: "Thesaurus Regular Italic", serif;
+  // font-style: italic !important;
 }
 strong, .strong {
-  font-weight: bold !important;
+  font-family: "Thesaurus Bold", serif;
+  // font-weight: bold !important;
+}
+strong em,
+em strong,
+.italic.strong {
+  font-family: "Thesaurus Bold Italic", serif;
 }
 .normal {
   font-weight: normal !important;

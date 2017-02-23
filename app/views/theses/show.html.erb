@@ -1,5 +1,26 @@
 <% content_for(:title_tag) do %>
-  <%= t('.title') %>
+  <%= @thesis.title %>
 <% end %>
 
-<h1><%= @thesis.title %></h1>
+<main class="container">
+
+  <div class="row between">
+    <div class="col col-4" style="background-color: #EEE;">
+      <%= image_tag "http://placehold.it/350x500", class:"push-middle push-center" %>
+    </div>
+    <div class="col col-1">
+      <%= link_to "<i class='material-icons'>turned_in_not</i>".html_safe, @thesis.liked_by(current_user), remote: true %>
+    </div>
+    <div class="col col-6">
+      <h2 class="title"><%= @thesis.title %></h2>
+      <h4><%= @thesis.user.first_name %> <%= @thesis.user.last_name %></h4>
+      <p class="big"><%= @thesis.subtitle if @thesis.subtitle %></p>
+      <p><%= @thesis.school.acronym.blank? ? @thesis.school.name : @thesis.school.acronym %>, <%= @thesis.school.city %></p>
+      <p><%= @thesis.year.year %></p>
+      <p><%= @thesis.resume %></p>
+    </div>
+  </div>
+
+</main>
+
+
