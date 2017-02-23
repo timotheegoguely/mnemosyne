@@ -18,12 +18,14 @@
                       order: [:year],
                       input_html: { class: 'big' }
                       %>
+                             <%= f.input :document %>
+          <%= f.input :document_cache, as: :hidden %>
+          </div>
         </div>
+
       </div>
-      <%= f.input :document, as: :attachinary, label: 'PDF' %>
-    </div>
-    <div class="form-actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
-</div>
+      <div class="form-actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+  </div>

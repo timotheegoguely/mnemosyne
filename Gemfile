@@ -14,10 +14,7 @@ gem 'pundit'
 
 
 gem 'cloudinary', '1.1.7'
-gem 'attachinary'
-gem 'jquery-fileupload-rails'
-gem 'coffee-rails'
-
+gem 'carrierwave', '~> 1.0'
 
 gem 'sass-rails'
 gem 'jquery-rails'

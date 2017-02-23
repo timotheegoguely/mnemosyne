@@ -1,8 +1,7 @@
 class Thesis < ApplicationRecord
-  has_attachment :document
   # Bookmark
   acts_as_votable
-
+  mount_uploader :document, DocumentUploader
   belongs_to :user
   belongs_to :school
   has_many :thesis_tags

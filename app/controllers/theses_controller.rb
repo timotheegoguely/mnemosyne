@@ -46,7 +46,7 @@ class ThesesController < ApplicationController
   private
 
   def theses_params
-    params.require(:thesis).permit(:title, :year, :school, :diploma, :document)
+    params.require(:thesis).permit(:title, :year, :school, :diploma, :document, :document_cache)
   end
 
 end

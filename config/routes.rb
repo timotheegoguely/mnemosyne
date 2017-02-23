@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount Attachinary::Engine => "/attachinary"
-  
+
+
   get 'theses/index'
 
   devise_for :users
