@@ -4,8 +4,7 @@
     <div id="intro">
       <h1>mnémosyne</h1>
       <h3 style="margin-bottom: 0px"><%= t('.introduction_line1') %></h3><h3><%= t('.introduction_line2') %></h3>
-
-      <%= link_to t('.button_theses_index'), theses_path, class: "button outline secondary large" %>
+      <%= link_to t('.button_theses_index'), theses_path(anchor: "list"), class: "button outline secondary large" %>
     </div>
   </div>
 
