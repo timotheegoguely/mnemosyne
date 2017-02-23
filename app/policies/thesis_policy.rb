@@ -15,4 +15,8 @@ class ThesisPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def bookmark?
+    true
+  end
 end

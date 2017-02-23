@@ -25,40 +25,62 @@
     <% 16.times do %>
       <%= link_to "#", class: "card" do %>
         <figure class="card-cover">
-          <%= image_tag "http://placehold.it/#{rand(288..320)}x#{rand(384..512)}" %>
+          <%= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
         </figure>
       <% end %>
     <% end %>
+
+    <footer id="preview">
+      <table class="table">
+        <tr>
+          <td class="thesis-thumbnail">
+            <%= link_to "#" do %>
+              <%= image_tag "http://placehold.it/32x48" %>
+            <% end %>
+          </td>
+          <td class="thesis-title">
+            <%= link_to "#" do %>
+              <h5>Titre</h5>
+              <small>Sous-titre</small>
+            <% end %>
+          </td>
+          <td class="thesis-author">Prénom Nom</td>
+          <td class="thesis-school">École</td>
+          <td class="thesis-year">Year</td>
+          <td class="thesis-bookmarks">0</td>
+        </tr>
+      </table>
+    </footer>
   </div>
 
   <!-- List -->
-  <div id="list">
+  <div id="list" class="hide">
     <table class="table">
       <tr>
         <th></th>
         <th><%= t('.thesis_title_header') %></th>
         <th><%= t('.author_name_header') %></th>
-        <th><%= t('.year_header') %></th>
         <th><%= t('.school_acronym_header') %></th>
+        <th><%= t('.year_header') %></th>
         <th><%= t('.bookmarks') %></th>
       </tr>
       <% @theses.each do |thesis| %>
         <tr>
-          <td class="thumbnail">
+          <td class="thesis-thumbnail">
             <%= link_to "#" do %>
               <%= image_tag "http://placehold.it/32x48" %>
             <% end %>
           </td>
-          <td>
+          <td class="thesis-title">
             <%= link_to user_thesis_path(thesis.user, thesis) do %>
               <h5><%= thesis.title %></h5>
-              <small><%= thesis.subtitle if thesis.subtitle %></small>
+              <span class="thesis-subtitle"><small><%= thesis.subtitle if thesis.subtitle %></small></span>
             <% end %>
           </td>
-          <td><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
-          <td><%= thesis.year.year %></td>
-          <td><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
-          <td><%= thesis.get_likes.size %></td>
+          <td class="thesis-author"><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
+          <td class="thesis-school"><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
+          <td class="thesis-year"><%= thesis.year.year %></td>
+          <td class="thesis-bookmarks"><%= thesis.get_likes.size %></td>
         </tr>
       <% end %>
     </table>
@@ -66,7 +88,7 @@
 
 
   <!-- Map -->
-  <div id="map">
+  <div id="map" class="hide">
     <h2>Map</h2>
   </div>
 

@@ -62,6 +62,9 @@ fr:
   shared:
     navbar:
       profile: Profil
+      my_thesis: Mon mémoire
+      my_bookmarks: Mes favoris
+      settings: Paramètres & confidentialité
       sign_in: Se connecter
       sign_out: Se déconnecter
       search: Rechercher…
