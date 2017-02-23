@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
   $('#offcanvas-left').on('open.offcanvas', function() {
     $('.container').addClass('offcanvas-is-open');
   });
