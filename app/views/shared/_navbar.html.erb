@@ -1,4 +1,4 @@
-<nav class="navbar">
+ <nav class="navbar">
   <div class="navbar-left">
     <h6 class="navbar-brand"><%= link_to "mnémosyne", root_path %></h6>
   </div>
@@ -35,6 +35,11 @@
 
           <div class="dropdown hide" id="dropdown">
             <ul>
+              <!-- <li> -->
+                <%#= link_to "#" do %>
+                  <%#= t(".profile", default: "Profile") %>
+                <#% end %>
+              <!-- </li> -->
               <li>
                 <%= link_to "#" do %>
                   <%= t(".profile", default: "Profile") %>

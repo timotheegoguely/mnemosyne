@@ -1,2 +1,22 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<% content_for(:title_tag) do %>
+  <%= @user.first_name ? @user.first_name : 'anonymous' %> <%= @user.last_name ? @user.last_name : '' %>
+<% end %>
+
+<div class="row">
+  <div class="col col-4">
+    <% if @user.photo? %>
+      <%= cl_image_tag @user.photo.path, width: 200, height: 300, crop: :fill %>
+    <% end %>
+  </div>
+
+  <div class="col col-4">
+    <%= user.first_name %>
+    <%= user.last_name %>
+    <%= user.email %>
+    <%= user.website %>
+  </div>
+
+  <div class="col col-4">
+
+  </div>
+</div>
