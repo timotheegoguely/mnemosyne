@@ -1,22 +1,20 @@
 <div class="container">
-  <div class="row">
-    <div class="row gutters">
-      <div class="profil">
-        <div class="col col-4">
-          <%= image_tag "timothee.jpg", class:"avatar" %>
-        </div>
+  <div class="row gutters">
+    <div class="col col-3 profil">
+      <div id="user-avatar">
+        <%= image_tag "timothee.jpg", class:"avatar-full" %>
+      </div>
 
-        <div class="user-data">
-          <%= @user.first_name %> <br>
-          <%= @user.last_name %> <br>
-          <%= @user.email %> <br>
-          <%= @user.website %> <br>
-          <%= @user.bio %>
-        </div>
+      <div class="user-data">
+        <%= @user.first_name %> <br>
+        <%= @user.last_name %> <br>
+        <%= @user.email %> <br>
+        <%= @user.website %> <br>
+        <%= @user.bio %>
       </div>
     </div>
 
-    <div class="row">
+    <div class="col col-9">
       <nav class="tabs" data-component="tabs">
         <ul>
           <div class="col col-3">
@@ -29,10 +27,13 @@
             <li><a href="#settings">Paramètres et Confidentialité</a></li>
           </div>
         </ul>
-          <div id="my_thesis">Mémoire display test</div>
-          <div id="my_bookmarks">Mes Favoris display test</div>
-          <div id="settings">Paramètres display test</div>
       </nav>
+
+      <div id="my_thesis">Mémoire display test</div>
+      <div id="my_bookmarks">Mes Favoris display test</div>
+      <div id="settings">Paramètres display test</div>
+
     </div>
   </div>
+
 </div>
