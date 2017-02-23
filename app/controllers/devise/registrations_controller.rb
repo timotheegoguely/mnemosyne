@@ -2,7 +2,6 @@ class Devise::RegistrationsController < DeviseController
 
   # POST /resource
   def create
-    raise
     build_resource(sign_up_params)
 
     resource.save
@@ -27,7 +26,6 @@ class Devise::RegistrationsController < DeviseController
   protected
 
   def after_sign_up_path_for(resource)
-    raise
   end
 
 end

@@ -31,7 +31,7 @@ class ThesesController < ApplicationController
     session[:thesis_year] = date
     @thesis = Thesis.new(title: @title, year: date, thesis_diploma: @thesis_diploma, school: @school )
     if current_user
-      current_user.thesis = @thesis
+      @thesis.user = current_user
       @thesis.save
       redirect_to theses_path
     else
