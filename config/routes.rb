@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d1abc2a077079bc87b6646b8bf490aa8484fda7e
   get 'theses/index'
 
   devise_for :users
