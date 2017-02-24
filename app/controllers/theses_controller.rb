@@ -1,7 +1,8 @@
 class ThesesController < ApplicationController
-  before_action :set_thesis, only: [ :show, :bookmark ]
-  before_action :get_search_params, only: [ :search ]
+  before_action :set_thesis, only: [ :show, :edit, :destroy, :bookmark ]
   skip_before_action :authenticate_user!, only: [ :search, :index, :show, :new, :create ]
+  before_action :get_search_params, only: [ :search ]
+
   layout "basic", only: [ :new, :show, :edit, :update ]
 
   def search
@@ -54,6 +55,21 @@ class ThesesController < ApplicationController
       redirect_to new_user_session_path
     end
     authorize @thesis
+  end
+
+  def edit
+  end
+
+  def update
+    @thesis = thesis.find(params[:id])
+    @thesis.update(thesis_params)
+    redirect_to theses_path(@thesis)
+  end
+
+  def destroy
+    @thesis = Thesis.find(params[:id])
+    @thesis.destroy
+    redirect_to theses_path(@thesis)
   end
 
   def bookmark
