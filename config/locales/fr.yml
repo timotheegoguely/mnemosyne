@@ -86,6 +86,8 @@ fr:
       year_header: Année
       categories_header: Catégories
       bookmarks: Favoris
+    show:
+      edit: Éditer
     search:
       title: "Résultats de recherche"
       search_result_begin: "résultat"
