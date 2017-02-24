@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'theses/index'
 
+
   devise_for :users
 
   scope '(:locale)', locale: /fr|en/ do
@@ -14,7 +15,8 @@ Rails.application.routes.draw do
         end
       end
     end
-    resources :theses, only: [:index, :new, :create]
+    get 'search', to: 'theses#search'
+    resources :theses, only: [:index, :new, :create, :search]
     resources :schools, only: [ :index, :show, :edit, :update ]
   end
 

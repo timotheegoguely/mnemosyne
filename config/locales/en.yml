@@ -81,13 +81,15 @@ en:
 
   theses:
     index:
-      title: "All theses"
-      thesis_title_header: "Title"
-      author_name_header: "Author"
-      school_acronym_header: "School"
-      city_header: "City"
-      year_header: "Year"
-      categories_header: "Categories"
-      bookmarks: "Bookmarks"
-    show:
-
+      title: All theses
+      thesis_title_header: Title
+      author_name_header: Author
+      school_acronym_header: School
+      city_header: City
+      year_header: Year
+      categories_header: Categories
+      bookmarks: Bookmarks
+    search:
+      title: "Search results"
+      search_result_begin: "result"
+      search_result_end: "for:"
