@@ -79,6 +79,7 @@ fr:
   theses:
     index:
       title: Liste des mémoires
+    list:
       thesis_title_header: Titre
       author_name_header: Auteur
       school_acronym_header: École
