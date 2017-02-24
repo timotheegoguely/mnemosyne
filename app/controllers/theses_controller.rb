@@ -30,8 +30,16 @@ class ThesesController < ApplicationController
     @year = params[:thesis]['year(1i)'].to_i
     date = Date.new(@year)
     session[:thesis_year] = date
+
+    @subcategories = params[:thesis][:subcategories]
+    session[:thesis_subcategories] = @subcategories
+
+    @resume = params[:thesis][:resume]
+    session[:thesis_resume] = @resume
+
     @thesis = Thesis.new(theses_params)
     @thesis.thesis_diploma = @thesis_diploma
+
     if current_user
       @thesis.user = current_user
       @thesis.save
@@ -66,7 +74,7 @@ class ThesesController < ApplicationController
   end
 
   def theses_params
-    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :document, :document_cache)
+    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache)
   end
 
 end
