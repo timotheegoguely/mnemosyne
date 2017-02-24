@@ -5,7 +5,7 @@
 <main class="container full">
 
   <div id="thesis-cover-wrapper">
-    <%= image_tag "http://placehold.it/350x500", id:"thesis-cover" %>
+    <%= image_tag asset_path("file.svg"), id:"drop-pdf" %>
   </div>
 
   <div id="thesis-content-wrapper">
@@ -36,7 +36,7 @@
 
           <div class="row">
             <div class="col col-12">
-              <%= f.input :subcategories, as: :check_boxes, collection: Subcategory.all, label: 'Catégories', input_html: { class: 'subcategories big' } %>
+              <%= f.input :subcategories, as: :check_boxes, collection: Subcategory.all, label: 'Sous-catégories' %>
             </div>
           </div>
 
@@ -44,7 +44,7 @@
 
           <div class="row">
             <div class="col col-12">
-              <%= f.input :resume, as: :text, label: 'Résumé', input_html: { class: "resume"} %>
+              <%= f.input :resume, as: :text, label: 'Résumé', input_html: { class: "resume", rows:"6"} %>
             </div>
           </div>
 

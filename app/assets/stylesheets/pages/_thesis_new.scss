@@ -1,3 +1,11 @@
+#thesis-cover-wrapper {
+  #drop-pdf {
+    margin: auto;
+    height: 50%;
+    opacity: 0.1;
+  }
+}
+
 .form {
   .thesis_title {
     margin-bottom: 0px;
@@ -8,9 +16,34 @@
     border: none;
   }
   #thesis_title {
-    height: 1.5em;
+    height: 80px;
+    margin-top: -8px;
     margin-bottom: 0 !important;
   }
-  #thesis_year {
+  #thesis_year_1i {
     width: 100%;
+  }
+  .thesis_subcategories {
+    margin-bottom: 8px;
+    .checkbox > label {
+      display: inline-block;
+      font-family: $text-font-family, sans-serif;
+      border: 2px solid $color-success;
+      color: $color-success;
+      padding: 0.5em 1.25em;
+      border-radius: 21px;
+      margin: 0 4px 8px 0;
+      font-size: 12px;
+      letter-spacing: 0.025em;
+      cursor: pointer;
+      > input[type=checkbox] {
+        display: none;
+      }
+    }
+  }
+}
+
+.checked {
+  background-color: $color-success;
+  color: #fff !important;
 }
