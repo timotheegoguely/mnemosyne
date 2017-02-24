@@ -14,6 +14,7 @@ gem 'pundit'
 gem "simple_token_authentication"
 
 gem 'cloudinary', '1.1.7'
+gem 'carrierwave', '~> 1.0'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 
