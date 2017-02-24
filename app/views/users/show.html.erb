@@ -19,10 +19,10 @@
       <nav class="tabs" data-component="tabs">
         <ul>
           <div class="col col-3">
-            <li><a href="#my_thesis">Mon Mémoire</a></li>
+            <li><a href="#theses">Mon Mémoire</a></li>
           </div>
           <div class="col col-3">
-            <li><a href="#my_bookmarks">Mes favoris</a></li>
+            <li><a href="#bookmarks">Mes favoris</a></li>
           </div>
           <div class="col col-3">
             <li><a href="#settings">Paramètres et Confidentialité</a></li>
@@ -30,20 +30,26 @@
         </ul>
       </nav>
 
-      <div class="tab-content" id="my_thesis">
+      <!-- My theses -->
+      <div class="tab-content" id="theses">
       <% @theses.each do |thesis| %>
-        <h1><strong><%= thesis.title %></strong></h1>
-        <h2><%= thesis.subtitle %></h2>
-        <p><%= thesis.resume %></p>
-        <p><%= thesis.school.name %></p>
-        <p><%= thesis.year %></p>
+        <%= link_to user_thesis_path(thesis) do %>
+          <h1><strong><%= thesis.title %></strong></h1>
+          <h2><%= thesis.subtitle %></h2>
+          <p><%= thesis.resume %></p>
+          <p><%= thesis.school.name %></p>
+          <p><%= thesis.year %></p>
+        <% end %>
+        <hr>
       <% end %>
       </div>
 
-      <div class="tab-content" id="my_bookmarks">
+      <!-- My bookmarks -->
+      <div class="tab-content" id="bookmarks">
         My bookmarks
       </div>
 
+      <!-- Settings & privacy -->
       <div class="tab-content" id="settings">Paramètres display test</div>
 
     </div>

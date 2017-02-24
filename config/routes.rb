@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  get 'theses/index'
-
   devise_for :users
 
   scope '(:locale)', locale: /fr|en/ do

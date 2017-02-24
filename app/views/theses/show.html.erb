@@ -42,11 +42,13 @@
           </p>
         </div>
       </div>
-      <span class="category"><%= @thesis.subcategories.first.category.name %></span><br>
-      <p class="subcategories">
-        <% @thesis.subcategories.each do |subcategory| %>
-          <span class="subcategory"><%= subcategory.name %></span>
+      <% if @thesis.subcategories.first %>
+        <span class="category"><%= @thesis.subcategories.first.category.name %></span><br>
+        <p class="subcategories">
+          <% @thesis.subcategories.each do |subcategory| %>
+            <span class="subcategory"><%= subcategory.name %></span>
         <% end %>
+      <% end %>
       </p>
       <hr>
 

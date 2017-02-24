@@ -12,8 +12,13 @@ class ThesisPolicy < ApplicationPolicy
   def new?
     true
   end
+
   def create?
     true
+  end
+
+  def edit?
+    record.user == user
   end
 
   def bookmark?
