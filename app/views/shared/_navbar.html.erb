@@ -42,17 +42,17 @@
                 <% end %>
               </li>
               <li>
-                <%= link_to user_path(current_user) do %>
+                <%= link_to user_path(current_user, anchor: "theses") do %>
                   <%= t(".my_thesis") %>
                 <% end %>
               </li>
               <li>
-                <%= link_to user_path(current_user) do %>
+                <%= link_to user_path(current_user, anchor: "bookmarks") do %>
                   <%= t(".my_bookmarks") %>
                 <% end %>
               </li>
               <li>
-                <%= link_to user_path(current_user) do %>
+                <%= link_to user_path(current_user, anchor: "settings") do %>
                   <%= t(".settings") %>
                 <% end %>
               </li>

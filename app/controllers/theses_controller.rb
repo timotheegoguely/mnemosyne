@@ -61,9 +61,10 @@ class ThesesController < ApplicationController
   end
 
   def update
-    @thesis = thesis.find(params[:id])
-    @thesis.update(thesis_params)
-    redirect_to theses_path(@thesis)
+    @thesis = Thesis.find(params[:id])
+    @thesis.update(theses_params)
+    redirect_to user_thesis_path(@thesis)
+    authorize @thesis
   end
 
   def destroy

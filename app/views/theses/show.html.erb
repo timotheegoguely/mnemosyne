@@ -29,6 +29,9 @@
 
     <div id="thesis-content">
       <h1 class="title"><%= @thesis.title %></h1>
+      <% if policy(@thesis).edit? %>
+        <%= link_to t('.edit') , edit_user_thesis_path(@thesis), id: "edit", class: "button small secondary" %>
+      <% end %>
       <% if @thesis.subtitle %>
         <h2 class="subtitle big"><%= @thesis.subtitle if @thesis.subtitle %></h2>
       <% end %>
@@ -51,7 +54,7 @@
           <% end %>
         </p>
       <% end %>
-      
+
       <hr>
 
       <div class="resume">

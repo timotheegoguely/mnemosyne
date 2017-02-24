@@ -28,4 +28,8 @@ class ThesisPolicy < ApplicationPolicy
   def bookmark?
     true
   end
+
+  def update?
+    edit?
+  end
 end

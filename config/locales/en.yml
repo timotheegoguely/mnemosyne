@@ -89,6 +89,8 @@ en:
       year_header: Year
       categories_header: Categories
       bookmarks: Bookmarks
+    show:
+      edit: Edit
     search:
       title: "Search results"
       search_result_begin: "result"
