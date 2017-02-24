@@ -22,16 +22,24 @@ class ThesesController < ApplicationController
     @subtitle = params[:thesis][:subtitle]
     session[:thesis_subtitle] = @subtitle
 
-    @school = School.find(params[:thesis][:school])
-    session[:thesis_school_id] = params[:thesis][:school]
+    session[:thesis_school_id] = params[:thesis][:school_id]
 
-    # @thesis_diploma = ThesisDiploma.find(params[:thesis][:thesis_diploma])
-    session[:thesis_diploma_id] = params[:thesis][:thesis_diploma]
+    @thesis_diploma = ThesisDiploma.find(params[:thesis][:thesis_diploma])
+    session[:thesis_diploma_id] = params[:thesis][:thesis_diploma_id]
 
     @year = params[:thesis]['year(1i)'].to_i
     date = Date.new(@year)
     session[:thesis_year] = date
-    @thesis = Thesis.new(title: @title, subtitle: @subtitle, year: date, thesis_diploma: @thesis_diploma, school: @school )
+
+    @subcategories = params[:thesis][:subcategories]
+    session[:thesis_subcategories] = @subcategories
+
+    @resume = params[:thesis][:resume]
+    session[:thesis_resume] = @resume
+
+    @thesis = Thesis.new(theses_params)
+    @thesis.thesis_diploma = @thesis_diploma
+
     if current_user
       @thesis.user = current_user
       @thesis.save
@@ -66,7 +74,7 @@ class ThesesController < ApplicationController
   end
 
   def theses_params
-    params.require(:thesis).permit(:title, :year, :school, :diploma, :document)
+    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache)
   end
 
 end

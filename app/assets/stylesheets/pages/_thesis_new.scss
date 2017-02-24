@@ -1,5 +1,16 @@
 .form {
-  #thesis_year_1i {
-    width: 100%;
+  .thesis_title {
+    margin-bottom: 0px;
   }
+  #thesis_title,
+  #thesis_subtitle {
+    padding: 0;
+    border: none;
+  }
+  #thesis_title {
+    height: 1.5em;
+    margin-bottom: 0 !important;
+  }
+  #thesis_year {
+    width: 100%;
 }

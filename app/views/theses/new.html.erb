@@ -1,29 +1,81 @@
-<div class="container">
-  <h2>Mon mémoire</h2>
-  <%= simple_form_for @thesis, defaults: { wrapper_html: { class: 'form-item'} }, html: { class: "form" } do |f| %>
-    <div class="form-inputs">
-      <%= f.input :title, input_html: { class: 'big' } %>
-      <%= f.input :subtitle %>
-      <div class="row gutters">
-        <div class="col col-6">
-          <%= f.input :school, collection: School.all, input_html: { class: 'big' } %>
+<% content_for(:title_tag) do %>
+  <%= @thesis.title %>
+<% end %>
+
+<main class="container full">
+
+  <div id="thesis-cover-wrapper">
+    <%= image_tag "http://placehold.it/350x500", id:"thesis-cover" %>
+  </div>
+
+  <div id="thesis-content-wrapper">
+
+    <div id="thesis-content">
+      <%= simple_form_for @thesis, defaults: { wrapper_html: { class: 'form-item'} }, html: { class: "form" } do |f| %>
+        <div class="form-inputs">
+          <%= f.input :title, label: false, placeholder: "Titre", input_html: { class: 'title big' } %>
+          <%= f.input :subtitle, label: false, placeholder: "Sous-titre", input_html: { class: 'subtitle' } %>
+          <hr>
+
+          <div class="row gutters" id="meta">
+            <div class="col col-6">
+              <%= f.input :school_id, collection: School.all, label: 'École', input_html: { class: 'school big' } %>
+            </div>
+            <div class="col col-4">
+              <%= f.input :thesis_diploma, collection: Diploma.all, label: 'Diplôme', input_html: { class: 'diploma big' } %>
+            </div>
+            <div class="col col-2">
+              <%= f.input :year,
+                          start_year: 1980,
+                          end_year: Date.today.year,
+                          order: [:year],
+                          input_html: { class: 'year big' }
+                          %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-12">
+              <%= f.input :subcategories, as: :check_boxes, collection: Subcategory.all, label: 'Catégories', input_html: { class: 'subcategories big' } %>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="col col-12">
+              <%= f.input :resume, as: :text, label: 'Résumé', input_html: { class: "resume"} %>
+            </div>
+          </div>
+
+          <!-- <div class="row">
+            <div class="col col-12">
+              <#%= f.input :tags, label: 'Tags', input_html: { class: 'tags' } %>
+            </div>
+          </div> -->
+
+          <div class="row gutters">
+            <div class="col col-4">
+              <%= f.input :license, label: 'License', input_html: { class: 'license' } %>
+            </div>
+            <div class="col col-8">
+              <%= f.input :link, label: 'Lien', input_html: { class: 'link' } %>
+            </div>
+          </div>
+
+          <%= f.input :document, label: 'PDF' %>
+          <%= f.input :document_cache, as: :hidden %>
+
+          <%#= f.input :download, as: :radio_buttons, label: 'Autoriser le téléchargement au format PDF de mémoire ?', input_html: { class: 'link' } %>
         </div>
-        <div class="col col-4">
-          <%= f.input :thesis_diploma, collection: Diploma.all, label: 'Diplôme', input_html: { class: 'big' } %>
+
+
+        <div class="form-actions">
+          <%= f.submit "Valider", class: "button big secondary" %>
         </div>
-        <div class="col col-2">
-          <%= f.input :year,
-                      start_year: 1980,
-                      end_year: Date.today.year,
-                      order: [:year],
-                      input_html: { class: 'big' }
-                      %>
-        </div>
-      </div>
-      <%= f.input :document, label: 'PDF' %>
+      <% end %>
+
     </div>
-    <div class="form-actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
-</div>
+  </div>
+
+</main>
