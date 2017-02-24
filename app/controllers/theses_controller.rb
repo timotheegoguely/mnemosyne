@@ -74,11 +74,7 @@ class ThesesController < ApplicationController
   end
 
   def theses_params
-<<<<<<< HEAD
     params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache)
-=======
-    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :document, :document_cache)
->>>>>>> master
   end
 
 end
