@@ -1,7 +1,12 @@
 class ThesesController < ApplicationController
   before_action :set_thesis, only: [ :show, :bookmark ]
+  before_action :get_search_params, only: [ :search, :show ]
   skip_before_action :authenticate_user!, only: [ :index, :show, :new, :create ]
   layout "basic", only: [ :new ]
+
+  def search
+    @theses = Thesis.where("title LIKE ?", params[:title])
+  end
 
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)
@@ -59,6 +64,12 @@ class ThesesController < ApplicationController
   end
 
   private
+
+  def get_search_params
+    @title = params["title"]
+    @subtitle = params["subtitle"]
+    @resume = params["resume"]
+  end
 
   def set_thesis
     @thesis = Thesis.find(params[:id])

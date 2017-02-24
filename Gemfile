@@ -17,6 +17,7 @@ gem 'cloudinary', '1.1.7'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 
+gem 'pg_search'
 
 gem 'sass-rails'
 gem 'jquery-rails'

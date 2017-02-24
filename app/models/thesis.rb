@@ -3,6 +3,16 @@ class Thesis < ApplicationRecord
   # Bookmark
   acts_as_votable
 
+  include PgSearch
+    multisearchable against: {
+      title: 'A',
+      subtitle: 'B',
+      resume: 'C'
+    },
+    associated_against: {
+      user: [ :first_name, :last_name ]
+    }
+
   belongs_to :user
   belongs_to :school
   has_many :thesis_tags
