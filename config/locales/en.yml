@@ -82,6 +82,7 @@ en:
   theses:
     index:
       title: All theses
+    list:
       thesis_title_header: Title
       author_name_header: Author
       school_acronym_header: School

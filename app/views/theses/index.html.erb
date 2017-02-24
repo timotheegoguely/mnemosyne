@@ -55,35 +55,7 @@
 
   <!-- List -->
   <div id="list" class="hide">
-    <table class="table">
-      <tr>
-        <th></th>
-        <th><%= t('.thesis_title_header') %></th>
-        <th><%= t('.author_name_header') %></th>
-        <th><%= t('.school_acronym_header') %></th>
-        <th><%= t('.year_header') %></th>
-        <th><%= t('.bookmarks') %></th>
-      </tr>
-      <% @theses.each do |thesis| %>
-        <tr>
-          <td class="thesis-thumbnail">
-            <%= link_to "#" do %>
-              <%= image_tag "http://placehold.it/32x48" %>
-            <% end %>
-          </td>
-          <td class="thesis-title">
-            <%= link_to user_thesis_path(thesis.user, thesis) do %>
-              <h5><%= thesis.title %></h5>
-              <span class="thesis-subtitle"><small><%= thesis.subtitle if thesis.subtitle %></small></span>
-            <% end %>
-          </td>
-          <td class="thesis-author"><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
-          <td class="thesis-school"><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
-          <td class="thesis-year"><%= thesis.year.year %></td>
-          <td class="thesis-bookmarks"><%= thesis.get_likes.size %></td>
-        </tr>
-      <% end %>
-    </table>
+    <%= render "list", elements: @theses %>
   </div>
 
 

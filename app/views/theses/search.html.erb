@@ -4,31 +4,21 @@
 
 
 
-<main class="container full", id="main">
+<main class="container">
+  <h3 style="margin-left: 144px;">
+    <strong><%= @results.size %> </strong>
+    <% if @results.size == 0 || @results.size > 1 %>
+      <%= t('.search_result_begin') + "s" %>
+    <% else %>
+      <%= t('.search_result_begin') %>
+    <% end %>
+    <%= t('.search_result_end') %>
+    <strong> <%= @keywords %></strong>
+  </h3>
 
-  <div class="hero">
-    <div id="intro">
-      <h3>
-        <strong><%= @results.size %> </strong>
-        <% if @results.size == 0 || @results.size > 1 %>
-          <%= t('.search_result_begin') + "s" %>
-        <% else %>
-          <%= t('.search_result_begin') %>
-        <% end %>
-        <%= t('.search_result_end') %>
-        <strong> <%= @keywords %></strong>
-      </h3>
-
-      <ul>
-        <% @results.each do |thesis| %>
-          <li>
-            <%= link_to user_thesis_path(thesis.user, thesis) do %>
-              <%= thesis.title%> - <%= thesis.user.first_name %> <%= thesis.user.last_name %>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+  <div id="list">
+    <%= render "list", elements: @results %>
   </div>
+
 
 </main>
