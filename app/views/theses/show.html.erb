@@ -5,7 +5,7 @@
 <main class="container full">
 
   <div id="thesis-cover-wrapper">
-    <%= image_tag "http://placehold.it/350x500", id:"thesis-cover" %>
+    <%= cl_image_tag("#{@thesis.document.file.public_id}.png", :width => 400, :crop => :fill, :page => 1, :id => "thesis-cover", :class => "shadow") %>
   </div>
 
   <div id="thesis-content-wrapper">
