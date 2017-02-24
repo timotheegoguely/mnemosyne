@@ -10,7 +10,8 @@ class Thesis < ApplicationRecord
       resume: 'C'
     },
     associated_against: {
-      user: [ :first_name, :last_name ]
+      user: [ :first_name, :last_name ],
+      school: [ :name, :acronym, :city, :country ]
     }
 
   belongs_to :user
