@@ -35,7 +35,7 @@
       <% @theses.each do |thesis| %>
         <%= link_to user_thesis_path(thesis) do %>
           <h1><strong><%= thesis.title %></strong></h1>
-          <h2><%= thesis.subtitle %></h2>
+          <h2><%= thesis.subtitle if thesis.subtitle%></h2>
           <p><%= thesis.resume %></p>
           <p><%= thesis.school.name %></p>
           <p><%= thesis.year %></p>
