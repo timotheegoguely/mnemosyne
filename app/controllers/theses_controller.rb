@@ -1,14 +1,13 @@
 class ThesesController < ApplicationController
+  before_action :set_thesis, only: [ :show, :bookmark ]
   skip_before_action :authenticate_user!, only: [ :index, :show, :new, :create ]
-  layout "home", only: [ :new ]
+  layout "basic", only: [ :new, :show, :edit, :update ]
 
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)
   end
 
   def show
-    @thesis = Thesis.find(params[:id])
-    authorize @thesis
   end
 
   def new
@@ -43,7 +42,28 @@ class ThesesController < ApplicationController
     authorize @thesis
   end
 
+  def bookmark
+    if current_user.voted_for? @thesis
+      current_user.unvote_for @thesis
+      respond_to do |format|
+        format.html { redirect_to user_thesis(@thesis) }
+        format.js  # <-- will render `app/views/theses/bookmark.js.erb`
+      end
+    else
+      current_user.up_votes @thesis
+      respond_to do |format|
+        format.html { redirect_to user_thesis(@thesis) }
+        format.js  # <-- will render `app/views/theses/bookmark.js.erb`
+      end
+    end
+  end
+
   private
+
+  def set_thesis
+    @thesis = Thesis.find(params[:id])
+    authorize @thesis
+  end
 
   def theses_params
     params.require(:thesis).permit(:title, :year, :school, :diploma, :document, :document_cache)

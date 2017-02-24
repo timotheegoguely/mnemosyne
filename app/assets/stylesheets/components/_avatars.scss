@@ -2,8 +2,15 @@
   width: 32px;
   border-radius: 50%;
 }
-.avatar-large {
+.avatar-big {
   width: 48px;
+}
+.avatar-large {
+  width: 128px;
+}
+.avatar-full {
+  width: 80%;
+  border-radius: 50%;
 }
 .avatar-bordered {
   border-radius: 50%;

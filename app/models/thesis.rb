@@ -1,4 +1,8 @@
 class Thesis < ApplicationRecord
+<<<<<<< HEAD
+=======
+  # has_attachment :document
+>>>>>>> d1abc2a077079bc87b6646b8bf490aa8484fda7e
   # Bookmark
   acts_as_votable
   mount_uploader :document, DocumentUploader

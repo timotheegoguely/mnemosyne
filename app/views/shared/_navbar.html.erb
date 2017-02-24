@@ -25,7 +25,7 @@
         <div id="navbar-dropdown">
           <!-- Dropdown toggle -->
           <%= link_to "#", id: "user-avatar", "data-component" => "dropdown", "data-target" => "#dropdown" do %>
-            <%= image_tag "http://placehold.it/48x48", class: "avatar avatar-large" %>
+            <%= image_tag "http://placehold.it/48x48", class: "avatar avatar-big" %>
           <% end %>
 
           <!-- Notifications -->
@@ -70,7 +70,6 @@
     <% else %>
       <!-- Login text link -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-item button secondary small upper" %>
-
     <% end %>
 
     <!-- Button (call-to-action) -->

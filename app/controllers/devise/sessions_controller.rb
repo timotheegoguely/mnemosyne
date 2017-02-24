@@ -31,7 +31,6 @@ class Devise::SessionsController < DeviseController
       thesis.update(diploma: Diploma.find(session[:thesis_diploma_id]))
     end
 
-
     respond_with resource, location: after_sign_in_path_for(resource)
   end
 
