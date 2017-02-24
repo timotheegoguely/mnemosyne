@@ -6,22 +6,3 @@
   <% end %>
 </ul>
 
-<div id='map'></div>
-
-<script>
-
-L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
-// ENV['MAPBOX_API_KEY']
-var map = L.mapbox.map('map', 'mapbox.light')
-    .setView([46.2276, 2.2137], 6);
-</script>
-
-<!-- alert javascript -->
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).ready(function() {
-      var coord = <%= raw @school_coordinates.to_json %>;
-      alert('School coordinates are ' + coord.lat + ', ' + coord.lng);
-    });
-  <% end %>
-<% end %>
