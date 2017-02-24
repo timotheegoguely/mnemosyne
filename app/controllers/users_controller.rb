@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     authorize @user
+    @theses = current_user.theses
   end
 
   def edit

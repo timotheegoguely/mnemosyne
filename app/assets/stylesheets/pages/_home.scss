@@ -1,7 +1,7 @@
 #main {
   margin: auto;
   max-width: 1080px;
-  padding-top: 88px;
+  padding-top: 88px; // $navbar-height
 }
 
 .hero {
@@ -14,6 +14,9 @@
   height: calc(100vh - 88px);
   padding: 0px 176px;
   #intro {
+    h1 {
+      font-weight: bold;
+    }
     h2 {
       font-family: "Thesaurus Display Regular", sans-serif;
       margin-bottom: 32px;
