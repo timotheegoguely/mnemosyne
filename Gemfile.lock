@@ -102,6 +102,10 @@ GEM
     jbuilder (2.6.2)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jquery-fileupload-rails (0.4.7)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      sass (>= 3.2)
     jquery-rails (4.2.2)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -249,11 +253,13 @@ DEPENDENCIES
   binding_of_caller
   carrierwave (~> 1.0)
   cloudinary (= 1.1.7)
+  coffee-rails
   devise
   devise-i18n
   figaro
   geocoder
   jbuilder (~> 2.0)
+  jquery-fileupload-rails
   jquery-rails
   listen (~> 3.0.5)
   pg
