@@ -21,4 +21,10 @@ Rails.application.routes.draw do
     resources :theses, only: [:index, :new, :create]
     resources :schools, only: [ :index, :show, :edit, :update ]
   end
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :theses, only: [ :index, :show, :update, :create, :destroy ]
+    end
+  end
 end

@@ -4,17 +4,15 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # Authentication token
+  acts_as_token_authenticatable
   # Bookmarks : voter
   acts_as_voter
 
+  # Associations
   belongs_to :school
-  # has_and_belongs_to_many :schools
   has_many :theses
+
   # Validations
   validates :email, :password, presence: true
-
-  # def school_thesis(thesis)
-  #   self.thesis.school
-  # end
-
 end
