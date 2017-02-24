@@ -1,0 +1,34 @@
+<% content_for(:title_tag) do %>
+  <%= t('.title') %>
+<% end %>
+
+
+
+<main class="container full", id="main">
+
+  <div class="hero">
+    <div id="intro">
+      <h3>
+        <strong><%= @results.size %> </strong>
+        <% if @results.size == 0 || @results.size > 1 %>
+          <%= t('.search_result_begin') + "s" %>
+        <% else %>
+          <%= t('.search_result_begin') %>
+        <% end %>
+        <%= t('.search_result_end') %>
+        <strong> <%= @keywords %></strong>
+      </h3>
+
+      <ul>
+        <% @results.each do |thesis| %>
+          <li>
+            <%= link_to user_thesis_path(thesis.user, thesis) do %>
+              <%= thesis.title%> - <%= thesis.user.first_name %> <%= thesis.user.last_name %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+</main>

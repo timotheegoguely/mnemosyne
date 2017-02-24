@@ -1,4 +1,5 @@
 class School < ApplicationRecord
+
   has_many :theses
   has_many :users
   has_many :school_diplomas

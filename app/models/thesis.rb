@@ -1,18 +1,14 @@
 class Thesis < ApplicationRecord
+
+  # Elasticsearch (using searchkick gem)
+  searchkick
+  scope :search_import, -> { includes(:user) }
+
+
   # has_attachment :document
+
   # Bookmark
   acts_as_votable
-
-  include PgSearch
-    multisearchable against: {
-      title: 'A',
-      subtitle: 'B',
-      resume: 'C'
-    },
-    associated_against: {
-      user: [ :first_name, :last_name ],
-      school: [ :name, :acronym, :city, :country ]
-    }
 
   belongs_to :user
   belongs_to :school
@@ -30,4 +26,6 @@ class Thesis < ApplicationRecord
   def subcategories
     self.thesis_diploma_subcategories.map { |diploma_subcategory| diploma_subcategory.subcategory }
   end
+
+
 end

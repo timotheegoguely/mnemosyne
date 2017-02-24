@@ -42,12 +42,14 @@
           </p>
         </div>
       </div>
-      <span class="category"><%= @thesis.subcategories.first.category.name %></span><br>
-      <p class="subcategories">
-        <% @thesis.subcategories.each do |subcategory| %>
-          <span class="subcategory"><%= subcategory.name %></span>
-        <% end %>
-      </p>
+      <% unless @thesis.subcategories == [] %>
+        <span class="category"><%= @thesis.subcategories.first.category.name %></span><br>
+        <p class="subcategories">
+          <% @thesis.subcategories.each do |subcategory| %>
+            <span class="subcategory"><%= subcategory.name %></span>
+          <% end %>
+        </p>
+      <% end %>
       <hr>
 
       <div class="resume">

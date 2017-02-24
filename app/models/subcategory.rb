@@ -1,4 +1,8 @@
 class Subcategory < ApplicationRecord
+
+  # Elasticsearch (using searchkick gem)
+  searchkick
+
   belongs_to :category
   has_many :school_subcategories
   has_many :schools, through: :school_subcategories
