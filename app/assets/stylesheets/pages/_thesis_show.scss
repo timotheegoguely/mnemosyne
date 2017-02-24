@@ -2,6 +2,119 @@
   padding: 0px;
 }
 
-#thesis-content {
-  padding: 50px 30px;
+#thesis-cover-wrapper {
+  @include flex;
+  @include flex-items-middle;
+  position: relative;
+  width: 100vw;
+  height: 480px;
+  padding: 32px;
+  background-color: $color-aluminum;
+  #thesis-cover {
+    margin: auto;
+    max-height: 400px;
+    box-shadow: 2px 8px 16px rgba(0,0,0,0.25);
+  }
+}
+#thesis-content-wrapper {
+  font-family: $headings-font-family, sans-serif;
+  width: 100vw;
+  padding: 48px 32px;
+  #bookmark-wrapper {
+    position: absolute;
+    width: 32px;
+    right: 32px;
+    #bookmark {
+      display: block;
+      width: 32px;
+      margin: 12px 0;
+      text-align: right;
+    }
+  }
+  #thesis-content {
+    hr {
+      margin: 24px 0;
+    }
+    .title {
+      font-family: "Thesaurus Display Medium", sans-serif;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-family: "Thesaurus Regular", sans-serif;
+      font-size: 24px;
+    }
+    .author {
+      font-family: "Thesaurus Medium", sans-serif;
+      margin-bottom: 0;
+    }
+    #meta {
+      font-size: 21px;
+    }
+    .school,
+    .year {
+      float: right;
+    }
+    .year {
+      margin-left: 24px;
+    }
+    .category,
+    .subcategory {
+      display: inline-block;
+      font-family: $text-font-family, sans-serif;
+      background-color: $color-success;
+      color: #fff;
+      padding: 0.5em 1.25em;
+      border-radius: 21px;
+      margin: 0 4px 8px 0;
+      font-size: 14px;
+      letter-spacing: 0.025em;
+    }
+    .subcategory {
+      font-size: 12px;
+    }
+    .resume {
+      margin-bottom: 32px;
+    }
+    .tags > a {
+      font-family: $text-font-family, sans-serif;
+      font-size: 14px;
+      display: inline-block;
+      margin: 0 0.25em 0.5em 0;
+      padding: 0.125em 0.5em;
+      background-color: rgba(0,0,0,.05);
+      border-radius: 2px;
+      @include transition;
+      &:hover {
+        background-color: rgba(0,0,0,.1);
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .container.full {
+    @include flex;
+  }
+  #thesis-cover-wrapper {
+    position: fixed;
+    width: 38.2vw;
+    padding: 48px;
+    height: calc(100vh - 88px);
+    #thesis-cover {
+      max-height: none;
+    }
+  }
+  #thesis-content-wrapper {
+    margin-left: 38.2vw;
+    width: 61.8vw;
+    #bookmark-wrapper {
+      right: inherit;
+      #bookmark {
+        margin: 18px auto;
+      }
+    }
+    #thesis-content {
+      padding-left: 64px;
+    }
+  }
 }

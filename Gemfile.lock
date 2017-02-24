@@ -58,6 +58,10 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
     byebug (9.0.6)
+    carrierwave (1.0.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     cloudinary (1.1.7)
       aws_cf_signer
       rest-client
@@ -210,6 +214,10 @@ GEM
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    simple_token_authentication (1.15.1)
+      actionmailer (>= 3.2.6, < 6)
+      actionpack (>= 3.2.6, < 6)
+      devise (>= 3.2, < 6)
     slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -247,6 +255,7 @@ DEPENDENCIES
   autoprefixer-rails
   better_errors
   binding_of_caller
+  carrierwave (~> 1.0)
   cloudinary (= 1.1.7)
   coffee-rails
   devise
@@ -269,6 +278,7 @@ DEPENDENCIES
   remotipart!
   sass-rails
   simple_form
+  simple_token_authentication
   spring
   spring-watcher-listen (~> 2.0.0)
   uglifier

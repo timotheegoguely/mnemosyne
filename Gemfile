@@ -11,9 +11,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 gem 'pundit'
-
+gem "simple_token_authentication"
 
 gem 'cloudinary', '1.1.7'
+gem 'carrierwave', '~> 1.0'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 
@@ -30,7 +31,6 @@ gem 'autoprefixer-rails'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
-#geocoding
 gem 'geocoder'
 
 gem 'acts_as_votable', '~> 0.10.0'
