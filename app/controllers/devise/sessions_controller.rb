@@ -7,6 +7,7 @@ class Devise::SessionsController < DeviseController
   # GET /resource/sign_in
   def new
     self.resource = resource_class.new(sign_in_params)
+    store_location_for(resource, params[:redirect_to])
     clean_up_passwords(resource)
     yield resource if block_given?
     respond_with(resource, serialize_options(resource))

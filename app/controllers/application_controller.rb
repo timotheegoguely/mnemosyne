@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
   before_action :set_locale
+  before_filter :store_current_location, :unless => :devise_controller?
   include Pundit
 
   # Pundit: white-list approach.
@@ -23,8 +24,21 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
   end
 
+  # def after_sign_in_path_for(resource)
+  #   theses_path
+  # end
+
+  def store_current_location
+    store_location_for(:user, request.url)
+  end
+
   def after_sign_in_path_for(resource)
-    theses_path
+    sign_in_url = new_user_session_url
+    if request.referer == sign_in_url
+      super
+    else
+      stored_location_for(resource) || request.referer || root_path
+    end
   end
 
   private
