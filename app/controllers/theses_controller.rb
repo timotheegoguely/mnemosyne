@@ -1,7 +1,14 @@
 class ThesesController < ApplicationController
   before_action :set_thesis, only: [ :show, :edit, :destroy, :bookmark ]
-  skip_before_action :authenticate_user!, only: [ :index, :show, :new, :create ]
+  skip_before_action :authenticate_user!, only: [ :search, :index, :show, :new, :create ]
+  before_action :get_search_params, only: [ :search ]
+
   layout "basic", only: [ :new, :show, :edit, :update ]
+
+  def search
+    @results = Thesis.search @keywords, misspellings: {below: 5}
+    authorize @results
+  end
 
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)
@@ -82,6 +89,11 @@ class ThesesController < ApplicationController
   end
 
   private
+
+  def get_search_params
+    Thesis.reindex
+    @keywords = params["keywords"]
+  end
 
   def set_thesis
     @thesis = Thesis.find(params[:id])

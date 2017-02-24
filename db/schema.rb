@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(version: 20170224090127) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text     "content"
+    t.string   "searchable_type"
+    t.integer  "searchable_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id", using: :btree
+  end
+
   create_table "school_diplomas", force: :cascade do |t|
     t.integer  "school_id"
     t.integer  "diploma_id"

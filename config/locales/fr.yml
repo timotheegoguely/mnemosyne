@@ -78,12 +78,15 @@ fr:
 
   theses:
     index:
-      title: "Liste des mémoires"
-      thesis_title_header: "Titre"
-      author_name_header: "Auteur"
-      school_acronym_header: "École"
-      city_header: "Ville"
-      year_header: "Année"
-      categories_header: "Catégories"
-      bookmarks: "Favoris"
-    show:
+      title: Liste des mémoires
+      thesis_title_header: Titre
+      author_name_header: Auteur
+      school_acronym_header: École
+      city_header: Ville
+      year_header: Année
+      categories_header: Catégories
+      bookmarks: Favoris
+    search:
+      title: "Résultats de recherche"
+      search_result_begin: "résultat"
+      search_result_end: "pour :"

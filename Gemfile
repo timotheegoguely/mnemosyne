@@ -18,6 +18,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 
+gem 'searchkick', '~> 1.3'
 
 gem 'sass-rails'
 gem 'jquery-rails'

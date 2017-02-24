@@ -12,7 +12,8 @@ Rails.application.routes.draw do
         end
       end
     end
-    resources :theses, only: [:index, :new, :create]
+    get 'search', to: 'theses#search'
+    resources :theses, only: [:index, :new, :create, :search]
     resources :schools, only: [ :index, :show, :edit, :update ]
   end
 
