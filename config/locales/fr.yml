@@ -93,3 +93,13 @@ fr:
       title: "Résultats de recherche"
       search_result_begin: "résultat"
       search_result_end: "pour :"
+
+  users:
+    show:
+      thesis_tab_title_my_account: Mon mémoire
+      bookmarks_tab_title_my_account: Mes favoris
+      settings_tab_my_account: Paramètres et confidentidentialité
+      thesis_tab_title: Mémoire
+      bookmarks_tab_title: Favoris
+      permission: Autoriser tous les utilisateurs à télécharger mon mémoire ?
+

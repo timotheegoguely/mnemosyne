@@ -96,3 +96,12 @@ en:
       title: "Search results"
       search_result_begin: "result"
       search_result_end: "for:"
+
+  users:
+    show:
+      thesis_tab_title_my_account: My thesis
+      bookmarks_tab_title_my_account: My bookmarks
+      settings_tab_my_account: Paramètres et confidentidentialité
+      thesis_tab_title: Thesis
+      bookmarks_tab_title: Bookmarks
+      permission: Allow all users to download my thesis ?
