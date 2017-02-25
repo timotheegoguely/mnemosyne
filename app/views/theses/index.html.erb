@@ -22,6 +22,15 @@
 
   <!-- Cards -->
   <div id="cards" class="cards">
+    <% @theses.each do |thesis| %>
+      <% if thesis.document? %>
+        <%= link_to user_thesis_path(thesis.user, thesis), class: "card" do %>
+          <figure class="card-cover">
+            <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
+          </figure>
+        <% end %>
+      <% end %>
+    <% end %>
     <% 16.times do %>
       <%= link_to "#", class: "card" do %>
         <figure class="card-cover">
