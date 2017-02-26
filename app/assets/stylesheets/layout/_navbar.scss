@@ -1,4 +1,4 @@
-$navbar-height: 88px;
+$navbar-height: 80px;
 
 .navbar {
   @include flex;
@@ -27,7 +27,15 @@ $navbar-height: 88px;
   }
   &-middle {
     @include flex-item-grow(1);
-    margin-left: 24px;
+    margin-left: 40px;
+    #search-wrapper {
+      width: 100%;
+      margin-left: 0;
+      #search-form {
+        width: 100%;
+        margin-bottom: 0px;
+      }
+    }
   }
   &-right {
     @include flex-items-right;
@@ -41,12 +49,6 @@ $navbar-height: 88px;
     @include flex-items-middle;
     @include flex-items-right;
     margin: 0 0 0 24px;
-    .form {
-      margin-bottom: 0px;
-      .search {
-        width: 320px;
-      }
-    }
   }
   &-link {
     color: $color-link;
@@ -57,6 +59,21 @@ $navbar-height: 88px;
     #user-avatar {
       @include flex;
       @include flex-items-middle;
+      width: 48px;
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    &-middle {
+      #search-wrapper {
+        width: inherit;
+        #search-form {
+          width: inherit;
+        }
+      }
     }
   }
 }
