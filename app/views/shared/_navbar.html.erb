@@ -6,10 +6,10 @@
   <div class="navbar-middle">
 
     <!-- Search -->
-    <div class="navbar-item">
-      <form action="<% root_path %>/search" class="form">
+    <div class="navbar-item" id="search-wrapper">
+      <form action="<% root_path %>/search" class="form" id="search-form">
         <div class="form-item">
-          <input type="text" name= "keywords" class="search" placeholder="<%= t(".search") %>">
+          <input type="text" name= "keywords" class="search" id="search-input" placeholder="<%= t(".search") %>">
         </div>
       </form>
     </div>
@@ -29,9 +29,9 @@
           <% end %>
 
           <!-- Notifications -->
-          <%= link_to "#", class: "badge-container" do %>
-            <span class="badge badge-blue">3</span>
-          <% end %>
+          <%#= link_to "#", class: "badge-container" do %>
+            <!--<span class="badge badge-blue">3</span>-->
+          <%# end %>
 
           <div class="dropdown hide" id="dropdown">
             <a href="" class="close show-sm"></a>
@@ -73,7 +73,7 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Upload"), new_thesis_path, class: "navbar-item button secondary outline small upper" %>
+    <%= link_to t(".top_call_to_action", default: "Upload"), new_thesis_path, class: "navbar-item button secondary outline small upper hide-sm" %>
 
   </div>
 </nav>

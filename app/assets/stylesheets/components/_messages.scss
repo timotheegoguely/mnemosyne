@@ -8,7 +8,11 @@
     padding-right: 2.5em;
     padding-bottom: .75rem;
     margin-bottom: $base-line;
-    position: relative;
+    position: absolute;
+    right: 16px;
+    top: 96px;
+    z-index: 500;
+    max-width: 320px;
 
     & a {
         color: inherit;
