@@ -72,6 +72,14 @@ en:
       sign_out: Sign out
       search: Search…
       top_call_to_action: Upload
+    list:
+      thesis_title_header: Title
+      author_name_header: Author
+      school_acronym_header: School
+      city_header: City
+      year_header: Year
+      categories_header: Categories
+      bookmarks: Bookmarks
 
   pages:
     home:
@@ -82,14 +90,6 @@ en:
   theses:
     index:
       title: All theses
-    list:
-      thesis_title_header: Title
-      author_name_header: Author
-      school_acronym_header: School
-      city_header: City
-      year_header: Year
-      categories_header: Categories
-      bookmarks: Bookmarks
     show:
       edit: Edit
     search:
@@ -104,4 +104,6 @@ en:
       settings_tab_my_account: Paramètres et confidentidentialité
       thesis_tab_title: Thesis
       bookmarks_tab_title: Bookmarks
+      no_bookmark_text: You have no bookmark !
+      explore_link: Explore theses
       permission: Allow all users to download my thesis ?

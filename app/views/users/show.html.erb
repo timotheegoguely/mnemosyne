@@ -54,7 +54,12 @@
 
       <!-- My bookmarks -->
       <div class="tab-content" id="bookmarks">
-        My bookmarks
+        <% if @user.find_voted_items.count == 0 %>
+          <h3><%= t('.no_bookmark_text') %></h3>
+          <%= link_to t('.explore_link'), theses_path, class: "button outline secondary" %>
+        <% else %>
+          <%= render "shared/list", elements: @user.find_voted_items %>
+        <% end %>
       </div>
 
       <!-- Settings & privacy -->
