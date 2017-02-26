@@ -69,6 +69,14 @@ fr:
       sign_out: Se déconnecter
       search: Rechercher…
       top_call_to_action: Uploader
+    list:
+      thesis_title_header: Titre
+      author_name_header: Auteur
+      school_acronym_header: École
+      city_header: Ville
+      year_header: Année
+      categories_header: Catégories
+      bookmarks: Favoris
 
   pages:
     home:
@@ -79,17 +87,21 @@ fr:
   theses:
     index:
       title: Liste des mémoires
-    list:
-      thesis_title_header: Titre
-      author_name_header: Auteur
-      school_acronym_header: École
-      city_header: Ville
-      year_header: Année
-      categories_header: Catégories
-      bookmarks: Favoris
     show:
       edit: Éditer
     search:
       title: "Résultats de recherche"
       search_result_begin: "résultat"
       search_result_end: "pour :"
+
+  users:
+    show:
+      thesis_tab_title_my_account: Mon mémoire
+      bookmarks_tab_title_my_account: Mes favoris
+      settings_tab_my_account: Paramètres et confidentidentialité
+      thesis_tab_title: Mémoire
+      bookmarks_tab_title: Favoris
+      no_bookmark_text: Vous n'avez sélectionné aucun mémoire dans vos favoris !
+      explore_link: Explorez les autres mémoires
+      permission: Autoriser les utilisateurs à télécharger mon mémoire ?
+

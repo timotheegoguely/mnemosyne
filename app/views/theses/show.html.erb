@@ -5,9 +5,19 @@
 <main class="container full">
 
   <div id="thesis-cover-wrapper">
+
+    <%= link_to user_thesis_path(@thesis.previous.user, @thesis.previous) do %>
+      <i class="fa fa-angle-left" aria-hidden="true" id="thesis-previous"></i>
+    <% end %>
+
     <% unless @thesis.document.file.nil? %>
       <%= cl_image_tag("#{@thesis.document.file&.public_id}.png", :width => 400, :crop => :fill, :page => 1, :id => "thesis-cover", :class => "shadow") %>
     <% end %>
+
+    <%= link_to user_thesis_path(@thesis.next.user, @thesis.next) do %>
+      <i class="fa fa-angle-right" aria-hidden="true" id="thesis-next"></i>
+    <% end %>
+
   </div>
 
   <div id="thesis-content-wrapper">
@@ -27,10 +37,16 @@
           <i class='material-icons'>turned_in_not</i>
         <% end %>
       <% end %>
+      <% if @thesis.get_likes.size > 0 %>
+        <div id="bookmark-counter">
+          <%= @thesis.get_likes.size %>
+        </div>
+      <% end %>
     </div>
 
     <div id="thesis-content">
       <h1 class="title"><%= @thesis.title %></h1>
+
       <% if policy(@thesis).edit? %>
         <%= link_to t('.edit') , edit_user_thesis_path(@thesis), id: "edit", class: "button small secondary" %>
       <% end %>

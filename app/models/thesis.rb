@@ -27,5 +27,22 @@ class Thesis < ApplicationRecord
     self.thesis_diploma_subcategories.map { |diploma_subcategory| diploma_subcategory.subcategory }
   end
 
+  def previous
+    previous_thesis = self.class.where("id < ?", id).last
+    if previous_thesis.nil?
+      previous_thesis = self.class.where("id > ?", id).last
+    else
+      previous_thesis
+    end
+  end
+
+  def next
+    next_thesis = self.class.where("id > ?", id).first
+    if next_thesis.nil?
+      next_thesis = self.class.where("id < ?", id).first
+    else
+      next_thesis
+    end
+  end
 
 end

@@ -19,14 +19,23 @@
       <nav class="tabs" data-component="tabs">
         <ul>
           <div class="col col-3">
-            <li><a href="#theses">Mon Mémoire</a></li>
+            <li>
+              <a href="#theses">
+                <%= @user == current_user ? t('.thesis_tab_title_my_account') : t('.thesis_tab_title') %>
+              </a>
+            </li>
           </div>
           <div class="col col-3">
-            <li><a href="#bookmarks">Mes favoris</a></li>
+            <li>
+              <a href="#bookmarks">
+                <%= @user == current_user ? t('.bookmarks_tab_title_my_account') : t('.bookmarks_tab_title') %>
+              </a></li>
           </div>
-          <div class="col col-3">
-            <li><a href="#settings">Paramètres et Confidentialité</a></li>
-          </div>
+          <% if policy(@user).edit? %>
+            <div class="col col-3">
+              <li><a href="#settings"><%= t('.settings_tab_my_account') %></a></li>
+            </div>
+          <% end %>
         </ul>
       </nav>
 
@@ -35,10 +44,9 @@
       <% @theses.each do |thesis| %>
         <%= link_to user_thesis_path(thesis) do %>
           <h1><strong><%= thesis.title %></strong></h1>
-          <h2><%= thesis.subtitle if thesis.subtitle%></h2>
+          <p><%= thesis.school.name %>, <%= thesis.year.year %></p>
+          <h2><%= thesis.subtitle if thesis.subtitle %></h2>
           <p><%= thesis.resume %></p>
-          <p><%= thesis.school.name %></p>
-          <p><%= thesis.year %></p>
         <% end %>
         <hr>
       <% end %>
@@ -46,12 +54,18 @@
 
       <!-- My bookmarks -->
       <div class="tab-content" id="bookmarks">
-        My bookmarks
+        <% if @user.find_voted_items.count == 0 %>
+          <h3><%= t('.no_bookmark_text') %></h3>
+          <%= link_to t('.explore_link'), theses_path, class: "button outline secondary" %>
+        <% else %>
+          <%= render "shared/list", elements: @user.find_voted_items %>
+        <% end %>
       </div>
 
       <!-- Settings & privacy -->
-      <div class="tab-content" id="settings">Paramètres display test</div>
-
+      <div class="tab-content" id="settings">
+        <h3><%= t('.permission') %></h3>
+      </div>
     </div>
   </div>
 
