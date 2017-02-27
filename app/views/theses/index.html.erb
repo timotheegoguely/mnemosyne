@@ -22,9 +22,9 @@
 
   <!-- Cards -->
   <div id="cards" class="cards">
-    <% @theses.each do |thesis| %>
+    <% @theses.each_with_index do |thesis, index| %>
       <% if thesis.document? %>
-        <%= link_to user_thesis_path(thesis.user, thesis), class: "card" do %>
+        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.to_a.join(" ")}", :data => { :order => index + 1 } do %>
           <figure class="card-cover">
             <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
           </figure>

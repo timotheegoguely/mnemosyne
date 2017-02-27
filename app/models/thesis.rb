@@ -1,3 +1,5 @@
+require 'set'
+
 class Thesis < ApplicationRecord
 
   # Elasticsearch (using searchkick gem)
@@ -25,6 +27,14 @@ class Thesis < ApplicationRecord
 
   def subcategories
     self.thesis_diploma_subcategories.map { |diploma_subcategory| diploma_subcategory.subcategory }
+  end
+
+  def categories
+    categories = Set.new
+    self.subcategories.each do |subcategory|
+      categories << subcategory.category.name
+      return categories
+    end
   end
 
   def previous
