@@ -37,11 +37,9 @@
           <i class='material-icons'>turned_in_not</i>
         <% end %>
       <% end %>
-      <% if @thesis.get_likes.size > 0 %>
-        <div id="bookmark-counter">
-          <%= @thesis.get_likes.size %>
-        </div>
-      <% end %>
+      <div id="bookmark-counter" class=<%= "hide" if @thesis.get_likes.size == 0 %>>
+        <%= @thesis.get_likes.size %>
+      </div>
     </div>
 
     <div id="thesis-content">
@@ -85,5 +83,3 @@
   </div>
 
 </main>
-
-
