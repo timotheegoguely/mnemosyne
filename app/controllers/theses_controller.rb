@@ -44,7 +44,7 @@ class ThesesController < ApplicationController
     @resume = params[:thesis][:resume]
     session[:thesis_resume] = @resume
 
-    @thesis = Thesis.new(theses_params)
+    @thesis = Thesis.new(thesis_params)
     @thesis.thesis_diploma = @thesis_diploma
 
     if current_user
@@ -62,7 +62,7 @@ class ThesesController < ApplicationController
 
   def update
     @thesis = Thesis.find(params[:id])
-    @thesis.update(theses_params)
+    @thesis.update(thesis_params)
     redirect_to user_thesis_path(@thesis)
     authorize @thesis
   end
@@ -101,8 +101,8 @@ class ThesesController < ApplicationController
     authorize @thesis
   end
 
-  def theses_params
-    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache)
+  def thesis_params
+    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache, :tag_list)
   end
 
 end

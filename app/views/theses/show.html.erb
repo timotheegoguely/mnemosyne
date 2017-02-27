@@ -7,7 +7,7 @@
   <div id="thesis-cover-wrapper">
 
     <%= link_to user_thesis_path(@thesis.previous.user, @thesis.previous) do %>
-      <i class="fa fa-angle-left" aria-hidden="true" id="thesis-previous"></i>
+      <i class="material-icons" id="thesis-previous">keyboard_arrow_left</i>
     <% end %>
 
     <% unless @thesis.document.file.nil? %>
@@ -15,7 +15,7 @@
     <% end %>
 
     <%= link_to user_thesis_path(@thesis.next.user, @thesis.next) do %>
-      <i class="fa fa-angle-right" aria-hidden="true" id="thesis-next"></i>
+      <i class="material-icons" id="thesis-next">keyboard_arrow_right</i>
     <% end %>
 
   </div>
@@ -80,11 +80,6 @@
       </div>
 
       <div class="tags">
-        <% if @thesis.thesis_tags %>
-          <% @thesis.thesis_tags.each do |thesis_tag| %>
-            <%= link_to "#" + thesis_tag.tag.name %>
-          <% end %>
-        <% end %>
       </div>
     </div>
   </div>
