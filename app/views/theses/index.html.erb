@@ -32,7 +32,7 @@
       <% end %>
     <% end %>
     <% 16.times do %>
-      <%= link_to "#", class: "card" do %>
+      <%= link_to "#", class: "card mix #{Thesis::CATEGORIES.sample}" do %>
         <figure class="card-cover">
           <%#= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
           <div style="background-color: #eee; width: <%= rand(248..280) %>px; height: <%= rand(344..448) %>px" class="shadow"></div>
@@ -86,6 +86,8 @@
             map.invalidateSize();
           }
         });
+
+        var mixer = mixitup('.cards');
       <% end %>
     <% end %>
 

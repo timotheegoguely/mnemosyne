@@ -2,7 +2,13 @@
 
 <aside id="offcanvas-left" class="hide">
   <ul>
-    <li>Catégories</li>
+    <li>
+      <p>Catégories</p>
+      <button type="button" data-filter="all" class="category">All</button>
+      <% Thesis::CATEGORIES.each do |category| %>
+      <button type="button" data-filter=".<%= category %>" class="category"><%=category.gsub("-", " ").capitalize %></button>
+      <% end %>
+    </li>
     <li>Sous-catégories</li>
     <li>Période</li>
     <li>Écoles</li>

@@ -54,5 +54,15 @@ class Thesis < ApplicationRecord
       next_thesis
     end
   end
-
 end
+
+CATEGORIES = [
+  "architecture",
+  "patrimoines",
+  "arts-plastiques",
+  "spectacle-vivant",
+  "cinema-et-audiovisuel",
+  "livre",
+  "presse",
+  "gestion-et-mediation"
+]

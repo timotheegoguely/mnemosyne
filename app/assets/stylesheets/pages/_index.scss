@@ -47,6 +47,7 @@
   overflow-x: scroll;
   height: calc(100vh - 272px);
   margin: 0 -32px;
+  padding-bottom: 8px;
   .card {
     @include flex-items-wrap;
     @include flex-item-shrink(0);
@@ -61,7 +62,6 @@
     left: 32px;
     right: 32px;
     bottom: 0;
-    margin-top: 8px;
     td {
       border-bottom: none;
     }
