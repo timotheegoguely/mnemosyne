@@ -15,7 +15,6 @@ class Thesis < ApplicationRecord
   mount_uploader :document, DocumentUploader
   belongs_to :user
   belongs_to :school
-  has_many :thesis_tags
   has_one :thesis_diploma, dependent: :destroy
   has_one :diploma, through: :thesis_diploma
   has_many :thesis_diploma_subcategories, through: :thesis_diploma

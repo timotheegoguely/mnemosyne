@@ -70,11 +70,15 @@
         </div>
 
 
-        <div class="form-actions">
-          <%= f.submit "Valider", class: "button big secondary" %>
+        <div class="form-actions row between">
+          <div class="col col-4">
+            <%= f.submit "Valider", class: "button big secondary" %>
+          </div>
+          <div class="col col-4 push-middle">
+            <%= link_to "Supprimer ce mémoire", user_thesis_path(@thesis.user, @thesis), method: :delete, data: { confirm: "Êtes-vous sûr(e) de vouloir supprimer ce mémoire?" }, class: "button danger outline" %>
+          </div>
         </div>
       <% end %>
-      <%= link_to "Supprimer ce mémoire", user_thesis_path(@thesis.user, @thesis), method: :delete, data: { confirm: "Êtes-vous sûr(e) de vouloir supprimer ce mémoire?" }, class: "button red outline" %>
 
     </div> <!-- /#thesis-content -->
   </div> <!-- /#thesis-content-wrapper -->
