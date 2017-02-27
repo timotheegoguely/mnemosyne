@@ -81,7 +81,7 @@
     </style>
 
     <% content_for(:after_js) do %>
-      <%= javascript_tag do %>
+      <script>
         $( ".tabs li" ).one( "click", function() {
           if ($( this ).last().hasClass('active')) {
             map.invalidateSize();
@@ -94,15 +94,25 @@
 
         var map = L.mapbox.map('map', 'mapbox.light').setView([46.2276, 2.2137], 6);
 
-        var featureLayer = L.mapbox.featureLayer()
-        .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson').bindPopup('<div class="popup"><h1>name</h1><hr><br><p>address_1</p><br><p>zipcode</p><br><p>city</p><hr><p>website</p></div>')
+        var myLayer = L.mapbox.featureLayer()
+        .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson')
+        .on('ready', function() {
+          myLayer.eachLayer(function(layer) {
+            var data =
+            '<div><h1>' + layer.feature.properties.etablissements_sieges_et_sites +
+            '</h1><br><hr><p>'+layer.feature.properties.adresse_1+'</p><br><p>'+layer.feature.properties.cp+'</p><p>'+layer.feature.properties.villes+'</p><p>'+layer.feature.properties.sites_internet+'</p><hr></div>'
+
+            layer.bindPopup(data);
+          });
+        })
+
         .addTo(map);
 
-        $('#map').on('click', '.popup', function() {
+        // $('#map').on('click', '.popup', function() {
 
-        });
+        // });
 
-      <% end %>
+      </script>
     <% end %>
 
   </div>

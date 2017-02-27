@@ -15,7 +15,6 @@ class ThesesController < ApplicationController
   end
 
   def show
-    # @school = School.find(params[:id])
   end
 
   def new
