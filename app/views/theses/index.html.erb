@@ -5,7 +5,7 @@
 <main class="container">
 
   <header class="row" id="top">
-    <nav class="col push-right tabs" data-component="tabs">
+    <nav class="col push-right tabs z100" data-component="tabs">
       <ul>
         <li class="active">
           <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
@@ -34,7 +34,8 @@
     <% 16.times do %>
       <%= link_to "#", class: "card" do %>
         <figure class="card-cover">
-          <%= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
+          <%#= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
+          <div style="background-color: #eee; width: <%= rand(248..280) %>px; height: <%= rand(344..448) %>px" class="shadow"></div>
         </figure>
       <% end %>
     <% end %>
@@ -74,17 +75,16 @@
 
     <!-- Forget not to replace access token by ENV['MAPBOX_API_KEY'] -->
     <script>
-    L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
-    var map = L.mapbox.map('map', 'mapbox.light')
-        .setView([46.2276, 2.2137], 6);
+      L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
+      var map = L.mapbox.map('map', 'mapbox.light').setView([46.2276, 2.2137], 6);
     </script>
 
-    <!-- alert javascript -->
     <% content_for(:after_js) do %>
       <%= javascript_tag do %>
-        $(document).ready(function() {
-          var coord = <%= raw @school_coordinates.to_json %>;
-          alert('School coordinates are ' + coord.lat + ', ' + coord.lng);
+        $( ".tabs li" ).one( "click", function() {
+          if ($( this ).last().hasClass('active')) {
+            map.invalidateSize();
+          }
         });
       <% end %>
     <% end %>
