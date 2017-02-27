@@ -7,8 +7,11 @@ class Thesis < ApplicationRecord
 
   # has_attachment :document
 
-  # Bookmark
   acts_as_votable
+  acts_as_taggable # Alias for acts_as_taggable_on :tags
+  acts_as_taggable_on :skills, :interests
+
+
   mount_uploader :document, DocumentUploader
   belongs_to :user
   belongs_to :school
