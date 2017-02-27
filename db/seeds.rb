@@ -424,6 +424,68 @@ thesis9 = Thesis.create!(
 puts "✓ theses table seeded"
 
 
+# tags (using act-as-taggable gem)
+
+tags = [ "mix","culture","DJing","radio","curating","commissaire d’exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain","comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie","réseau","livre","rhizome" ]
+
+tag_list_for_thesis1 = []
+tag_list_for_thesis2 = []
+tag_list_for_thesis6 = []
+
+for i in 0..21 do
+  tag_list_for_thesis1 << tags[i]
+end
+for i in 0..6 do
+  tag_list_for_thesis2 << tags[i]
+end
+for i in 0..4 do
+  tag_list_for_thesis6 << tags[i]
+end
+
+thesis1.tag_list.add(tag_list_for_thesis1.join(','), parse: true)
+thesis2.tag_list.add(tag_list_for_thesis2.join(','), parse: true)
+thesis6.tag_list.add(tag_list_for_thesis6.join(','), parse: true)
+
+thesis1.save!
+thesis2.save!
+thesis6.save!
+
+puts "✓ tags added"
+
+# tag1  = "mix"
+# tag2  = "culture"
+# tag3  = "DJing"
+# tag4  = "radio"
+# tag5  = "curating"
+# tag6  = "commissaire d’exposition"
+# tag7  = "processus créatif"
+# tag8  = "editing"
+# tag9  = "montage"
+# tag10 = "cut"
+# tag11 = "ellipse"
+# tag12 = "cinéma"
+# tag13 = "BD"
+# tag14 = "narration"
+# tag15 = "éclectisme"
+# tag16 = "internet"
+# tag17 = "web"
+# tag18 = "folksonomie"
+# tag19 = "Google"
+# tag20 = "sérendipité"
+# tag21 = "média"
+# tag22 = "art contemporain"
+# tag23 = "comportement"
+# tag24 = "lecture"
+# tag25 = "traduction"
+# tag26 = "écrit"
+# tag27 = "langage"
+# tag28 = "ponctuation"
+# tag29 = "communication"
+# tag30 = "poésie"
+# tag31 = "réseau"
+# tag32 = "livre"
+# tag33 = "rhizome"
+
 # subcategories table
 
 subcategories2a = Subcategory.create!( category_id: category2.id, name: "musées" )

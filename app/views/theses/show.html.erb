@@ -78,6 +78,9 @@
       </div>
 
       <div class="tags">
+        <% @thesis.tag_list.each do |tag| %>
+          <a href="#">#<%= tag %></a>
+        <% end %>
       </div>
     </div>
   </div>

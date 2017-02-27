@@ -44,6 +44,9 @@ class ThesesController < ApplicationController
     @resume = params[:thesis][:resume]
     session[:thesis_resume] = @resume
 
+    @tags = params[:thesis][:tag_list]
+    session[:thesis_tags] = @tags
+
     @thesis = Thesis.new(thesis_params)
     @thesis.thesis_diploma = @thesis_diploma
 
