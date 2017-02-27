@@ -92,13 +92,15 @@
 
         L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
 
-      var map = L.mapbox.map('map', 'mapbox.light').setView([46.2276, 2.2137], 6);
+        var map = L.mapbox.map('map', 'mapbox.light').setView([46.2276, 2.2137], 6);
 
-      var featureLayer = L.mapbox.featureLayer()
-      .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson').bindPopup('<button class="trigger">Say hi</button>')
-      .addTo(map);
+        var featureLayer = L.mapbox.featureLayer()
+        .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson').bindPopup('<div class="popup"><h1>name</h1><hr><br><p>address_1</p><br><p>zipcode</p><br><p>city</p><hr><p>website</p></div>')
+        .addTo(map);
 
+        $('#map').on('click', '.popup', function() {
 
+        });
 
       <% end %>
     <% end %>
