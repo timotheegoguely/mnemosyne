@@ -1,4 +1,9 @@
-
+{
+        "id": "places",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data":
             {
               "type": "FeatureCollection",
               "features":[
@@ -3210,3 +3215,5 @@
               }
              ]
             }
+        }
+}
