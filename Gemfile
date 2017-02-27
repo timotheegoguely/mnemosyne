@@ -35,6 +35,7 @@ gem 'rails_admin', '>= 1.0.0.rc'
 gem 'geocoder'
 
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'acts-as-taggable-on', '~> 4.0'
 gem 'best_in_place', '~> 3.0.1'
 
 group :development, :test do
