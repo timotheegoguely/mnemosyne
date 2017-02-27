@@ -34,7 +34,8 @@
     <% 16.times do %>
       <%= link_to "#", class: "card" do %>
         <figure class="card-cover">
-          <%= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
+          <%#= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
+          <div style="background-color: #eee; width: <%= rand(248..280) %>px; height: <%= rand(344..448) %>px" class="shadow"></div>
         </figure>
       <% end %>
     <% end %>

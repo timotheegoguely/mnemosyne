@@ -51,6 +51,9 @@
     @include flex-items-wrap;
     @include flex-item-shrink(0);
     margin-left: 32px;
+    .card-cover img {
+      display: block;
+    }
   }
   #preview {
     display: block;
