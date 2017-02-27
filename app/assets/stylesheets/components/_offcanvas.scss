@@ -1,7 +1,7 @@
 .offcanvas {
   background: #fff;
   position: fixed;
-  padding: 192px 32px 32px;
+  padding: 32px;
   height: 100%;
   top: 0;
   left: 0;
@@ -27,11 +27,6 @@
 .offcanvas-push-body {
   position: relative;
 }
-
-#filters {
-  position: fixed;
-  top: 112px;
-  left: 32px;
-  background-color: #fff;
-  margin-bottom: 0;
+.offcanvas-is-open {
+  max-width: calc(100vw - 256px);
 }

@@ -1,18 +1,43 @@
-<%= link_to "<i class='material-icons md-18'>filter_list</i> Filtres".html_safe, "#", class: "button outline secondary z400", id: "filters", "data-component" => "offcanvas", "data-target" => "#offcanvas-left" %>
+<%= link_to "<i class='material-icons md-18'>filter_list</i> Filtres".html_safe, "#", class: "button outline small secondary upper z400", id: "filters-btn", "data-component" => "offcanvas", "data-target" => "#offcanvas-left" %>
 
-<aside id="offcanvas-left" class="hide">
+<aside id="offcanvas-left" class="hide sidebar">
   <ul>
-    <li>
-      <p>Catégories</p>
-      <button type="button" data-filter="all" class="category">All</button>
-      <% Thesis::CATEGORIES.each do |category| %>
-      <button type="button" data-filter=".<%= category %>" class="category"><%=category.gsub("-", " ").capitalize %></button>
-      <% end %>
+    <li data-component="collapse" id="filter-category">
+      <div class="form-item">
+        <a href="#categories" class="collapse-toggle">
+          <label>Catégories <span class="caret down"></span></label>
+        </a>
+        <div id="categories" class="collapse-box">
+          <button type="button" data-filter="all" class="category upper">Toutes</button>
+          <% Thesis::CATEGORIES.each do |category| %>
+            <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %></button>
+          <% end %>
+        </div>
+      </div>
     </li>
-    <li>Sous-catégories</li>
-    <li>Période</li>
-    <li>Écoles</li>
-    <li>Diplômes</li>
-    <li>Licenses</li>
+
+    <li id="filter-school">
+      <div class="form-item">
+        <label>École</label>
+        <select class="small">
+          <option value="" selected disabled>Choisissez une école</option>
+          <% @schools.each do |school| %>
+            <option value="<%= school.id %>"><%= school.acronym? ? school.acronym : school.name %></option>
+          <% end %>
+        </select>
+      </div>
+    </li>
+
+    <li id="filter-diploma">
+      <div class="form-item">
+        <label>Diplôme</label>
+        <select class="small">
+          <option value="" selected disabled>Choisissez un diplôme</option>
+          <% @diplomas.each do |diploma| %>
+            <option value="<%= diploma.id %>"><%= diploma.acronym? ? diploma.acronym : diploma.name %></option>
+          <% end %>
+        </select>
+      </div>
+    </li>
   </ul>
 </aside>
