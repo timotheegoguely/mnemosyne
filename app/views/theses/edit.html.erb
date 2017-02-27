@@ -48,11 +48,11 @@
             </div>
           </div>
 
-          <!-- <div class="row">
+          <div class="row">
             <div class="col col-12">
-              <#%= f.input :tags, label: 'Tags', input_html: { class: 'tags' } %>
+              <%= f.input :tag_list, label: 'Tags', input_html: { class: 'tags' }, placeholder: "Séparez les tags par des virgules (,)", input_html: { value: @thesis.tags.map(&:name).join(",")} %>
             </div>
-          </div> -->
+          </div>
 
           <div class="row gutters">
             <div class="col col-4">
@@ -74,6 +74,7 @@
           <%= f.submit "Valider", class: "button big secondary" %>
         </div>
       <% end %>
+      <%= link_to "Supprimer ce mémoire", user_thesis_path(@thesis.user, @thesis), method: :delete, data: { confirm: "Êtes-vous sûr(e) de vouloir supprimer ce mémoire?" }, class: "button red outline" %>
 
     </div> <!-- /#thesis-content -->
   </div> <!-- /#thesis-content-wrapper -->

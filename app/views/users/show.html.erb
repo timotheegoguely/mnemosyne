@@ -42,7 +42,7 @@
       <!-- My theses -->
       <div class="tab-content" id="theses">
       <% @theses.each do |thesis| %>
-        <%= link_to user_thesis_path(thesis) do %>
+        <%= link_to user_thesis_path(@user, thesis) do %>
           <h1><strong><%= thesis.title %></strong></h1>
           <p><%= thesis.school.name %>, <%= thesis.year.year %></p>
           <h2><%= thesis.subtitle if thesis.subtitle %></h2>

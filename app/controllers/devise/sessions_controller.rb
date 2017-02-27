@@ -27,8 +27,10 @@ class Devise::SessionsController < DeviseController
       school = session[:thesis_school_id]
       diploma = session[:thesis_diploma_id]
       year = session[:thesis_year]
+      tags = session[:thesis_tags]
       thesis = Thesis.new(title: title, subtitle: subtitle, year: year, school: School.find(session[:thesis_school_id]) )
       thesis.user = resource
+      thesis.tag_list.add(tags, parse: true)
       thesis.save
       thesis.update(diploma: Diploma.find(session[:thesis_diploma_id]))
     end
