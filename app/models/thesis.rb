@@ -9,7 +9,7 @@ class Thesis < ApplicationRecord
 
   acts_as_votable
   acts_as_taggable # Alias for acts_as_taggable_on :tags
-  acts_as_taggable_on :skills, :interests
+  acts_as_taggable_on :tags
 
 
   mount_uploader :document, DocumentUploader
