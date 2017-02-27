@@ -64,16 +64,17 @@ class ThesesController < ApplicationController
   end
 
   def update
+    authorize @thesis
     @thesis = Thesis.find(params[:id])
     @thesis.update(thesis_params)
     redirect_to user_thesis_path(@thesis)
-    authorize @thesis
   end
 
   def destroy
+    authorize @thesis
     @thesis = Thesis.find(params[:id])
     @thesis.destroy
-    redirect_to theses_path(@thesis)
+    redirect_to theses_path
   end
 
   def bookmark

@@ -5,7 +5,6 @@
 <main class="container full">
 
   <div id="thesis-cover-wrapper">
-
     <%= link_to user_thesis_path(@thesis.previous.user, @thesis.previous) do %>
       <i class="material-icons" id="thesis-previous">keyboard_arrow_left</i>
     <% end %>
@@ -46,7 +45,7 @@
       <h1 class="title"><%= @thesis.title %></h1>
 
       <% if policy(@thesis).edit? %>
-        <%= link_to t('.edit') , edit_user_thesis_path(@thesis), id: "edit", class: "button small secondary" %>
+        <%= link_to t('.edit') , edit_user_thesis_path(@thesis.user, @thesis), id: "edit", class: "button small secondary" %>
       <% end %>
       <% if @thesis.subtitle %>
         <h2 class="subtitle big"><%= @thesis.subtitle if @thesis.subtitle %></h2>

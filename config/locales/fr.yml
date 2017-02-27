@@ -62,7 +62,7 @@ fr:
   shared:
     navbar:
       profile: Profil
-      my_thesis: Mon mémoire
+      my_thesis: Mes mémoires
       my_bookmarks: Mes favoris
       settings: Paramètres & confidentialité
       sign_in: Se connecter
@@ -96,7 +96,7 @@ fr:
 
   users:
     show:
-      thesis_tab_title_my_account: Mon mémoire
+      thesis_tab_title_my_account: Mes mémoires
       bookmarks_tab_title_my_account: Mes favoris
       settings_tab_my_account: Paramètres et confidentidentialité
       thesis_tab_title: Mémoire
