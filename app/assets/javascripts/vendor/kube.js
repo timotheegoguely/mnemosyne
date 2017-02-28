@@ -1101,26 +1101,26 @@ if (typeof jQuery === 'undefined') {throw new Error('Kube\'s requires jQuery')};
 {
     Kube.Collapse = function(element, options)
     {
-        this.namespace = 'collapse';
-        this.defaults = {
-            target: null,
-            toggle: true,
-            active: false, // string (hash = tab id selector)
-            toggleClass: 'collapse-toggle',
-            boxClass: 'collapse-box',
-            callbacks: ['open', 'opened', 'close', 'closed'],
+      this.namespace = 'collapse';
+      this.defaults = {
+        target: null,
+        toggle: false,
+        active: false, // string (hash = tab id selector)
+        toggleClass: 'collapse-toggle',
+        boxClass: 'collapse-box',
+        callbacks: ['open', 'opened', 'close', 'closed'],
 
-            // private
-            hashes: [],
-        	currentHash: false,
-        	currentItem: false
-        };
+        // private
+        hashes: [],
+      	currentHash: false,
+      	currentItem: false
+      };
 
-        // Parent Constructor
-        Kube.apply(this, arguments);
+      // Parent Constructor
+      Kube.apply(this, arguments);
 
-        // Initialization
-        this.start();
+      // Initialization
+      this.start();
     };
 
     // Functionality

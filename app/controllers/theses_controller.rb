@@ -8,10 +8,14 @@ class ThesesController < ApplicationController
   def search
     @results = Thesis.search @keywords, misspellings: {edit_distance: 2}
     authorize @results
+    @schools = School.all
+    @diplomas = Diploma.all
   end
 
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)
+    @schools = School.all
+    @diplomas = Diploma.all
   end
 
   def show
@@ -71,8 +75,6 @@ class ThesesController < ApplicationController
   end
 
   def destroy
-    authorize @thesis
-    @thesis = Thesis.find(params[:id])
     @thesis.destroy
     redirect_to theses_path
   end

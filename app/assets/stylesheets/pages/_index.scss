@@ -1,12 +1,117 @@
-.container {
-  padding: 24px 32px;
-  max-width: 100vw;
-  min-height: calc(100vh - 80px); // $navbar-height
-  //@include transition(all .5s ease);
+#filters-btn {
+  position: fixed;
+  top: 104px;
+  left: 32px;
+  background-color: #fff;
+  margin-bottom: 0;
+  padding-top: 2px;
+  padding-bottom: 6px;
 }
-.offcanvas-is-open {
-  max-width: calc(100vw - 256px);
+
+// Sidebar
+.sidebar {
+  padding-top: 160px;
+  #filter-category {
+    .category-counter {
+      margin-left: 0.5em;
+      font-weight: lighter;
+    }
+    .category {
+      display: inline-block;
+      font-family: $text-font-family, sans-serif;
+      background-color: transparent;
+      color: $color-midgray;
+      padding: 0.25em 0.75em;
+      border: 2px solid $color-midgray;
+      margin: 0 4px 8px 0;
+      font-size: 11px;
+      letter-spacing: 0.025em;
+      min-height: 24px;
+      transition: color 0.1s ease, border 0.1s ease, background 0.1s ease, ;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-midgray, 50%) !important;
+        border-color: lighten($color-midgray, 50%) !important;
+      }
+    }
+    [data-filter=".architecture"] {
+      border-color: $color-architecture !important;
+      color: $color-architecture !important;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-architecture, 30%) !important;
+        border-color: lighten($color-architecture, 30%) !important;
+      }
+    }
+    [data-filter=".patrimoines"] {
+      border-color: $color-patrimoines !important;
+      color: $color-patrimoines !important;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-patrimoines, 35%) !important;
+        border-color: lighten($color-patrimoines, 35%) !important;
+      }
+    }
+    [data-filter=".arts-plastiques"] {
+      border-color: $color-arts-plastiques !important;
+      color: $color-arts-plastiques !important;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-arts-plastiques, 45%) !important;
+        border-color: lighten($color-arts-plastiques, 45%) !important;
+      }
+    }
+    [data-filter=".spectacle-vivant"] {
+      border-color: $color-spectacle-vivant !important;
+      color: $color-spectacle-vivant !important;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-spectacle-vivant, 40%) !important;
+        border-color: lighten($color-spectacle-vivant, 40%) !important;
+      }
+    }
+    [data-filter=".cinema-et-audiovisuel"] {
+      border-color: darken($color-cinema-audiovisuel, 12%) !important;
+      color: darken($color-cinema-audiovisuel, 12%) !important;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-cinema-audiovisuel, 30%) !important;
+        border-color: lighten($color-cinema-audiovisuel, 30%) !important;
+      }
+    }
+    [data-filter=".livre"] {
+      border-color: $color-livre !important;
+      color: $color-livre !important;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-livre, 40%) !important;
+        border-color: lighten($color-livre, 40%) !important;
+      }
+    }
+    [data-filter=".presse"] {
+      border-color: $color-presse !important;
+      color: $color-presse !important;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-presse, 40%) !important;
+        border-color: lighten($color-presse, 40%) !important;
+      }
+    }
+    [data-filter=".gestion-et-mediation"] {
+      border-color: $color-gestion-mediation !important;
+      color: $color-gestion-mediation !important;
+      &:hover,
+      &.mixitup-control-active {
+        background-color: lighten($color-gestion-mediation, 40%) !important;
+        border-color: lighten($color-gestion-mediation, 40%) !important;
+      }
+    }
+  }
+  .form-item {
+    margin-bottom: 1em;
+  }
 }
+
 .table {
   td {
     vertical-align: middle;
@@ -37,16 +142,13 @@
   }
 }
 
-#top {
-  margin-bottom: 16px;
-}
-
 #cards {
   @include flex;
   @include flex-items-bottom;
   overflow-x: scroll;
-  height: calc(100vh - 272px);
+  height: calc(100vh - 256px);
   margin: 0 -32px;
+  padding-bottom: 8px;
   .card {
     @include flex-items-wrap;
     @include flex-item-shrink(0);
@@ -55,21 +157,23 @@
       display: block;
     }
   }
-  #preview {
-    display: block;
-    position: absolute;
-    left: 32px;
-    right: 32px;
-    bottom: 0;
-    margin-top: 8px;
-    td {
-      border-bottom: none;
-    }
+}
+#card-preview {
+  display: block;
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+  td {
+    border-bottom: none;
   }
 }
 
 // Views options
 .tabs {
+  position: fixed;
+  top: 104px;
+  right: 24px;
   margin-bottom: 0;
   font-size: 24px;
 

@@ -4,6 +4,27 @@
  * Feel free to change them and create your own
  * ------------------------------------- */
 
+body {
+  padding-top: 80px;
+}
+
+
+// Containers
+#main {
+  margin: auto;
+  max-width: 1080px;
+}
+.container {
+  padding: 72px 32px 24px;
+  max-width: 100vw;
+  min-height: calc(100vh - 80px); // $navbar-height
+  //@include transition(all .5s ease);
+}
+.container.full {
+  padding: 0px;
+}
+
+
 // Paddings
 .padded {
   padding-top: 5em;
