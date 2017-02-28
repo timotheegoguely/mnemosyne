@@ -15,10 +15,12 @@
           <% end %>
         </td>
         <td class="thesis-title">
-          <%= link_to user_thesis_path(thesis.user, thesis) do %>
+
+          <%= link_to user_thesis_path(nil, thesis.user, thesis) do %>
             <h5><%= thesis.title %></h5>
             <span class="thesis-subtitle"><small><%= thesis.subtitle if thesis.subtitle %></small></span>
           <% end %>
+
         </td>
         <td class="thesis-author"><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
         <td class="thesis-school"><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
