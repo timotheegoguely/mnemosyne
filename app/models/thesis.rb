@@ -2,15 +2,12 @@ class Thesis < ApplicationRecord
 
   # Elasticsearch (using searchkick gem)
   searchkick
-  scope :search_import, -> { includes(:user) }
-
 
   # has_attachment :document
 
   acts_as_votable
-  acts_as_taggable # Alias for acts_as_taggable_on :tags
-  acts_as_taggable_on :tags
-
+  acts_as_taggable
+  scope :search_import, -> { includes(:tags) }
 
   mount_uploader :document, DocumentUploader
   belongs_to :user
@@ -45,6 +42,12 @@ class Thesis < ApplicationRecord
     else
       next_thesis
     end
+  end
+
+  def search_data
+    {
+      name_tagged: "#{title} #{tags.map(&:name).join(" ")}"
+    }
   end
 
 end

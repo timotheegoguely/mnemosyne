@@ -6,7 +6,7 @@ class ThesesController < ApplicationController
   layout "basic", only: [ :new, :show, :edit, :update ]
 
   def search
-    @results = Thesis.search @keywords, misspellings: {below: 5}
+    @results = Thesis.search @keywords, misspellings: {edit_distance: 2}
     authorize @results
   end
 
@@ -64,10 +64,10 @@ class ThesesController < ApplicationController
   end
 
   def update
-    authorize @thesis
     @thesis = Thesis.find(params[:id])
     @thesis.update(thesis_params)
     redirect_to user_thesis_path(@thesis)
+    authorize @thesis
   end
 
   def destroy
