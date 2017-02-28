@@ -1,8 +1,8 @@
 #map {
-  position: fixed;
+  position: absolute;
   left: 0px;
   top: 80px;
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 80px);
   z-index: 0;
 }
@@ -19,6 +19,20 @@
   position: fixed;
   bottom: 40px;
   left: 2px;
+}
+
+.school-info-wrapper {
+  position:absolute;
+  top: 80px;
+  right: 0px;
+  bottom: 0px;
+  width: 400px;
+  height: calc(100vh - 80px);
+  .school-info {
+    padding: 80px 32px 32px;
+    background:#fff;
+    height: 100%;
+  }
 }
 
 .mapboxgl-popup {
