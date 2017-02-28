@@ -81,6 +81,10 @@
           <a href="#">#<%= tag %></a>
         <% end %>
       </div>
+
+      <% if current_user %>
+        <%= link_to "Télécharger", edit_school_path(school) %>
+      <% end %>
     </div>
   </div>
 
