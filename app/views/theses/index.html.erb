@@ -37,28 +37,28 @@
         </figure>
       <% end %>
     <% end %>
+    <footer id="card-preview">
+        <table class="table">
+          <tr>
+            <td class="thesis-thumbnail">
+              <%= link_to "#" do %>
+                <%= image_tag "http://placehold.it/32x48" %>
+              <% end %>
+            </td>
+            <td class="thesis-title">
+              <%= link_to "#" do %>
+                <h5>Titre</h5>
+                <small>Sous-titre</small>
+              <% end %>
+            </td>
+            <td class="thesis-author">Prénom Nom</td>
+            <td class="thesis-school">École</td>
+            <td class="thesis-year">Year</td>
+            <td class="thesis-bookmarks">0</td>
+          </tr>
+        </table>
+      </footer>
   </div>
-  <footer id="card-preview">
-      <table class="table">
-        <tr>
-          <td class="thesis-thumbnail">
-            <%= link_to "#" do %>
-              <%= image_tag "http://placehold.it/32x48" %>
-            <% end %>
-          </td>
-          <td class="thesis-title">
-            <%= link_to "#" do %>
-              <h5>Titre</h5>
-              <small>Sous-titre</small>
-            <% end %>
-          </td>
-          <td class="thesis-author">Prénom Nom</td>
-          <td class="thesis-school">École</td>
-          <td class="thesis-year">Year</td>
-          <td class="thesis-bookmarks">0</td>
-        </tr>
-      </table>
-    </footer>
 
   <!-- List -->
   <div id="list" class="hide">

@@ -73,8 +73,6 @@ class ThesesController < ApplicationController
   end
 
   def destroy
-    authorize @thesis
-    @thesis = Thesis.find(params[:id])
     @thesis.destroy
     redirect_to theses_path
   end

@@ -187,8 +187,6 @@ puts "✓ categories table seede"
 
 user1 = User.create!(
   email: "timotheegoguely@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Timothée",
   last_name: "Goguely",
   bio: "Freelance UI/UX designer",
@@ -199,8 +197,6 @@ user1 = User.create!(
 )
 user2 = User.create!(
   email: "margotcannizzo@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Margot",
   last_name: "Cannizzo",
   bio: "Graphiste / scénographe chez agnès b.",
@@ -210,8 +206,6 @@ user2 = User.create!(
 )
 user3 = User.create!(
   email: "stmartin.geoffrey@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Geoffrey",
   last_name: "Saint-Martin",
   bio: "Graphiste freelance",
@@ -221,8 +215,6 @@ user3 = User.create!(
 )
 user4 = User.create!(
   email: "quentin.schmerber@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Quentin",
   last_name: "Schmerber",
   bio: "Hello I’m Quentin. I design books, lettering and typefaces.",
@@ -232,8 +224,6 @@ user4 = User.create!(
 )
 user5 = User.create!(
   email: "antoine.omerin@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Antoine",
   last_name: "Omerin",
   bio: "Photographe",
@@ -243,8 +233,6 @@ user5 = User.create!(
 )
 user6 = User.create!(
   email: "hello@lenarobin.com",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Lena",
   last_name: "Robin",
   bio: "Hello! My name is Léna Robin, I am an independent graphic designer.
@@ -263,8 +251,6 @@ user6 = User.create!(
 )
 user7 = User.create!(
   email: "martawajszczyk@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Marta",
   last_name: "Wajszczyk",
   bio: "Graphic Designer / Art Director w MOVE-PICTURE",
@@ -274,8 +260,6 @@ user7 = User.create!(
 )
 user8 = User.create!(
   email: "morgannlechat@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Antoine",
   last_name: "Stevenot",
   bio: "Designer graphique",
@@ -285,8 +269,6 @@ user8 = User.create!(
 )
 user9 = User.create!(
   email: "contact@spassky-fischer.fr",
-  password: "123456",
-  password_confirmation: "123456",
   first_name: "Antoine",
   last_name: "Stevenot",
   bio: "",
@@ -296,7 +278,6 @@ user9 = User.create!(
 )
 # userX = User.create!(
 #   email: "dasweiss@gmail.com",
-#   password: "123456",
 #   first_name: "Maxime",
 #   last_name: "Leblanc",
 #   bio: "Titanium contemporay jewellery",
@@ -351,7 +332,7 @@ thesis4 = Thesis.create!(
   resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature dans les espaces architecturaux. Questionnement sur l'image et la simulation.",
   license: "",
   link: "http://www.lulu.com/shop/quentin-schmerber/la-cour-des-mirages/paperback/product-21458084.html",
-  school_id: school1.id,
+  school_id: school1.id
 )
 thesis5 = Thesis.create!(
   user_id: user5.id,
@@ -361,7 +342,7 @@ thesis5 = Thesis.create!(
   resume: "",
   license: "",
   link: "",
-  school_id: school3.id,
+  school_id: school3.id
 )
 thesis6 = Thesis.create!(
   user_id: user6.id,
@@ -386,7 +367,7 @@ thesis7 = Thesis.create!(
     - Quels facteurs déterminent le champ des actions considérées comme exhibitionnistes ?",
   license: "",
   link: "",
-  school_id: school2.id,
+  school_id: school2.id
 )
 thesis8 = Thesis.create!(
   user_id: user8.id,
@@ -399,7 +380,7 @@ thesis8 = Thesis.create!(
     le graphisme-fiction.",
   license: "",
   link: "",
-  school_id: school2.id,
+  school_id: school2.id
 )
 thesis9 = Thesis.create!(
   user_id: user9.id,
@@ -418,7 +399,7 @@ thesis9 = Thesis.create!(
     À ce titre, la typographie, dans son acception large, peut s’avèrer un outil précieux pour la création d’un langage cartographique singulier, la carte et la typographie ayant un enjeu commun, celui de construire un langage conventionnel, à la fois global et particulier, cherchant sa cohérence dans la diversité.",
   license: "",
   link: "",
-  school_id: school4.id,
+  school_id: school4.id
 )
 
 puts "✓ theses table seeded"
