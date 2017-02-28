@@ -65,7 +65,7 @@ en:
   shared:
     navbar:
       profile: Profile
-      my_thesis: My thesis
+      my_thesis: My theses
       my_bookmarks: My bookmarks
       settings: Settings & privacy
       sign_in: Sign  in
@@ -99,7 +99,7 @@ en:
 
   users:
     show:
-      thesis_tab_title_my_account: My thesis
+      thesis_tab_title_my_account: My theses
       bookmarks_tab_title_my_account: My bookmarks
       settings_tab_my_account: Paramètres et confidentidentialité
       thesis_tab_title: Thesis

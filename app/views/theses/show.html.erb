@@ -5,9 +5,8 @@
 <main class="container full">
 
   <div id="thesis-cover-wrapper">
-
     <%= link_to user_thesis_path(@thesis.previous.user, @thesis.previous) do %>
-      <i class="fa fa-angle-left" aria-hidden="true" id="thesis-previous"></i>
+      <i class="material-icons" id="thesis-previous">keyboard_arrow_left</i>
     <% end %>
 
     <% unless @thesis.document.file.nil? %>
@@ -15,7 +14,7 @@
     <% end %>
 
     <%= link_to user_thesis_path(@thesis.next.user, @thesis.next) do %>
-      <i class="fa fa-angle-right" aria-hidden="true" id="thesis-next"></i>
+      <i class="material-icons" id="thesis-next">keyboard_arrow_right</i>
     <% end %>
 
   </div>
@@ -37,18 +36,16 @@
           <i class='material-icons'>turned_in_not</i>
         <% end %>
       <% end %>
-      <% if @thesis.get_likes.size > 0 %>
-        <div id="bookmark-counter">
-          <%= @thesis.get_likes.size %>
-        </div>
-      <% end %>
+      <div id="bookmark-counter" class=<%= "hide" if @thesis.get_likes.size == 0 %>>
+        <%= @thesis.get_likes.size %>
+      </div>
     </div>
 
     <div id="thesis-content">
       <h1 class="title"><%= @thesis.title %></h1>
 
       <% if policy(@thesis).edit? %>
-        <%= link_to t('.edit') , edit_user_thesis_path(@thesis), id: "edit", class: "button small secondary" %>
+        <%= link_to t('.edit') , edit_user_thesis_path(@thesis.user, @thesis), id: "edit", class: "button small secondary" %>
       <% end %>
       <% if @thesis.subtitle %>
         <h2 class="subtitle big"><%= @thesis.subtitle if @thesis.subtitle %></h2>
@@ -80,15 +77,11 @@
       </div>
 
       <div class="tags">
-        <% if @thesis.thesis_tags %>
-          <% @thesis.thesis_tags.each do |thesis_tag| %>
-            <%= link_to "#" + thesis_tag.tag.name %>
-          <% end %>
+        <% @thesis.tag_list.each do |tag| %>
+          <a href="#">#<%= tag %></a>
         <% end %>
       </div>
     </div>
   </div>
 
 </main>
-
-

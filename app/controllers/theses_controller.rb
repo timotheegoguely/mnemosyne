@@ -6,7 +6,7 @@ class ThesesController < ApplicationController
   layout "basic", only: [ :new, :show, :edit, :update ]
 
   def search
-    @results = Thesis.search @keywords, misspellings: {below: 5}
+    @results = Thesis.search @keywords, misspellings: {edit_distance: 2}
     authorize @results
   end
 
@@ -46,7 +46,10 @@ class ThesesController < ApplicationController
     @resume = params[:thesis][:resume]
     session[:thesis_resume] = @resume
 
-    @thesis = Thesis.new(theses_params)
+    @tags = params[:thesis][:tag_list]
+    session[:thesis_tags] = @tags
+
+    @thesis = Thesis.new(thesis_params)
     @thesis.thesis_diploma = @thesis_diploma
 
     if current_user
@@ -64,15 +67,16 @@ class ThesesController < ApplicationController
 
   def update
     @thesis = Thesis.find(params[:id])
-    @thesis.update(theses_params)
+    @thesis.update(thesis_params)
     redirect_to user_thesis_path(@thesis)
     authorize @thesis
   end
 
   def destroy
+    authorize @thesis
     @thesis = Thesis.find(params[:id])
     @thesis.destroy
-    redirect_to theses_path(@thesis)
+    redirect_to theses_path
   end
 
   def bookmark
@@ -103,8 +107,8 @@ class ThesesController < ApplicationController
     authorize @thesis
   end
 
-  def theses_params
-    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache)
+  def thesis_params
+    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache, :tag_list)
   end
 
 end

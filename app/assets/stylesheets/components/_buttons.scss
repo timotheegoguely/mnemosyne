@@ -123,3 +123,6 @@ button:hover,
 .button.secondary {
 	@include button($color-button-secondary-text, $color-button-secondary);
 }
+.button.danger {
+    @include button(#fff, $color-error);
+}

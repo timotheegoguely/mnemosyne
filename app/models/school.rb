@@ -1,5 +1,8 @@
 class School < ApplicationRecord
 
+  # Elasticsearch (using searchkick gem)
+  searchkick
+
   has_many :theses
   has_many :users
   has_many :school_diplomas

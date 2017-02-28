@@ -4,14 +4,14 @@ DiplomaSubcategory.destroy_all
 SchoolSubcategory.destroy_all
 ThesisDiploma.destroy_all
 SchoolDiploma.destroy_all
-ThesisTag.destroy_all
+# ThesisTag.destroy_all
 Subcategory.destroy_all
 Thesis.destroy_all
 User.destroy_all
 School.destroy_all
 Category.destroy_all
 Diploma.destroy_all
-Tag.destroy_all
+# Tag.destroy_all
 
 
 # schools table
@@ -146,41 +146,41 @@ puts "✓ categories table seede"
 
 # tags table
 
-tag1  = Tag.create!(name: "mix")
-tag2  = Tag.create!(name: "culture")
-tag3  = Tag.create!(name: "DJing")
-tag4  = Tag.create!(name: "radio")
-tag5  = Tag.create!(name: "curating")
-tag6  = Tag.create!(name: "commissaire d’exposition")
-tag7  = Tag.create!(name: "processus créatif")
-tag8  = Tag.create!(name: "editing")
-tag9  = Tag.create!(name: "montage")
-tag10 = Tag.create!(name: "cut")
-tag11 = Tag.create!(name: "ellipse")
-tag12 = Tag.create!(name: "cinéma")
-tag13 = Tag.create!(name: "BD")
-tag14 = Tag.create!(name: "narration")
-tag15 = Tag.create!(name: "éclectisme")
-tag16 = Tag.create!(name: "internet")
-tag17 = Tag.create!(name: "web")
-tag18 = Tag.create!(name: "folksonomie")
-tag19 = Tag.create!(name: "Google")
-tag20 = Tag.create!(name: "sérendipité")
-tag21 = Tag.create!(name: "média")
-tag22 = Tag.create!(name: "art contemporain")
-tag23 = Tag.create!(name: "comportement")
-tag24 = Tag.create!(name: "lecture")
-tag25 = Tag.create!(name: "traduction")
-tag26 = Tag.create!(name: "écrit")
-tag27 = Tag.create!(name: "langage")
-tag28 = Tag.create!(name: "ponctuation")
-tag29 = Tag.create!(name: "communication")
-tag30 = Tag.create!(name: "poésie")
-tag31 = Tag.create!(name: "réseau")
-tag32 = Tag.create!(name: "livre")
-tag33 = Tag.create!(name: "rhizome")
+# tag1  = Tag.create!(name: "mix")
+# tag2  = Tag.create!(name: "culture")
+# tag3  = Tag.create!(name: "DJing")
+# tag4  = Tag.create!(name: "radio")
+# tag5  = Tag.create!(name: "curating")
+# tag6  = Tag.create!(name: "commissaire d’exposition")
+# tag7  = Tag.create!(name: "processus créatif")
+# tag8  = Tag.create!(name: "editing")
+# tag9  = Tag.create!(name: "montage")
+# tag10 = Tag.create!(name: "cut")
+# tag11 = Tag.create!(name: "ellipse")
+# tag12 = Tag.create!(name: "cinéma")
+# tag13 = Tag.create!(name: "BD")
+# tag14 = Tag.create!(name: "narration")
+# tag15 = Tag.create!(name: "éclectisme")
+# tag16 = Tag.create!(name: "internet")
+# tag17 = Tag.create!(name: "web")
+# tag18 = Tag.create!(name: "folksonomie")
+# tag19 = Tag.create!(name: "Google")
+# tag20 = Tag.create!(name: "sérendipité")
+# tag21 = Tag.create!(name: "média")
+# tag22 = Tag.create!(name: "art contemporain")
+# tag23 = Tag.create!(name: "comportement")
+# tag24 = Tag.create!(name: "lecture")
+# tag25 = Tag.create!(name: "traduction")
+# tag26 = Tag.create!(name: "écrit")
+# tag27 = Tag.create!(name: "langage")
+# tag28 = Tag.create!(name: "ponctuation")
+# tag29 = Tag.create!(name: "communication")
+# tag30 = Tag.create!(name: "poésie")
+# tag31 = Tag.create!(name: "réseau")
+# tag32 = Tag.create!(name: "livre")
+# tag33 = Tag.create!(name: "rhizome")
 
-puts "✓ tags table seeded"
+# puts "✓ tags table seeded"
 
 
 # users table
@@ -424,6 +424,68 @@ thesis9 = Thesis.create!(
 puts "✓ theses table seeded"
 
 
+# tags (using act-as-taggable gem)
+
+tags = [ "mix","culture","DJing","radio","curating","commissaire d’exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain","comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie","réseau","livre","rhizome" ]
+
+tag_list_for_thesis1 = []
+tag_list_for_thesis2 = []
+tag_list_for_thesis6 = []
+
+for i in 0..21 do
+  tag_list_for_thesis1 << tags[i]
+end
+for i in 0..6 do
+  tag_list_for_thesis2 << tags[i]
+end
+for i in 0..4 do
+  tag_list_for_thesis6 << tags[i]
+end
+
+thesis1.tag_list.add(tag_list_for_thesis1.join(','), parse: true)
+thesis2.tag_list.add(tag_list_for_thesis2.join(','), parse: true)
+thesis6.tag_list.add(tag_list_for_thesis6.join(','), parse: true)
+
+thesis1.save!
+thesis2.save!
+thesis6.save!
+
+puts "✓ tags added"
+
+# tag1  = "mix"
+# tag2  = "culture"
+# tag3  = "DJing"
+# tag4  = "radio"
+# tag5  = "curating"
+# tag6  = "commissaire d’exposition"
+# tag7  = "processus créatif"
+# tag8  = "editing"
+# tag9  = "montage"
+# tag10 = "cut"
+# tag11 = "ellipse"
+# tag12 = "cinéma"
+# tag13 = "BD"
+# tag14 = "narration"
+# tag15 = "éclectisme"
+# tag16 = "internet"
+# tag17 = "web"
+# tag18 = "folksonomie"
+# tag19 = "Google"
+# tag20 = "sérendipité"
+# tag21 = "média"
+# tag22 = "art contemporain"
+# tag23 = "comportement"
+# tag24 = "lecture"
+# tag25 = "traduction"
+# tag26 = "écrit"
+# tag27 = "langage"
+# tag28 = "ponctuation"
+# tag29 = "communication"
+# tag30 = "poésie"
+# tag31 = "réseau"
+# tag32 = "livre"
+# tag33 = "rhizome"
+
 # subcategories table
 
 subcategories2a = Subcategory.create!( category_id: category2.id, name: "musées" )
@@ -476,42 +538,42 @@ puts "✓ school_diplomas table seeded"
 
 # thesis_tags table
 
-thesis1_tag1  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag1.id )
-thesis1_tag2  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag2.id )
-thesis1_tag3  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag3.id )
-thesis1_tag4  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag4.id )
-thesis1_tag5  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag5.id )
-thesis1_tag6  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag6.id )
-thesis1_tag7  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag7.id )
-thesis1_tag8  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag8.id )
-thesis1_tag9  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag9.id )
-thesis1_tag10 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag10.id )
-thesis1_tag11 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag11.id )
-thesis1_tag12 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag12.id )
-thesis1_tag13 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag13.id )
-thesis1_tag14 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag14.id )
-thesis1_tag15 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag15.id )
-thesis1_tag16 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag16.id )
-thesis1_tag17 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag17.id )
-thesis1_tag18 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag18.id )
-thesis1_tag19 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag19.id )
-thesis1_tag20 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag20.id )
-thesis1_tag21 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag21.id )
-thesis1_tag22 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag22.id )
-thesis2_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag23.id )
-thesis2_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
-thesis2_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag25.id )
-thesis2_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag26.id )
-thesis2_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag27.id )
-thesis2_tag6 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag28.id )
-thesis2_tag7 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag29.id )
-thesis6_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
-thesis6_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag30.id )
-thesis6_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag31.id )
-thesis6_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag32.id )
-thesis6_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag33.id )
+# thesis1_tag1  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag1.id )
+# thesis1_tag2  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag2.id )
+# thesis1_tag3  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag3.id )
+# thesis1_tag4  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag4.id )
+# thesis1_tag5  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag5.id )
+# thesis1_tag6  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag6.id )
+# thesis1_tag7  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag7.id )
+# thesis1_tag8  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag8.id )
+# thesis1_tag9  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag9.id )
+# thesis1_tag10 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag10.id )
+# thesis1_tag11 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag11.id )
+# thesis1_tag12 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag12.id )
+# thesis1_tag13 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag13.id )
+# thesis1_tag14 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag14.id )
+# thesis1_tag15 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag15.id )
+# thesis1_tag16 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag16.id )
+# thesis1_tag17 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag17.id )
+# thesis1_tag18 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag18.id )
+# thesis1_tag19 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag19.id )
+# thesis1_tag20 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag20.id )
+# thesis1_tag21 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag21.id )
+# thesis1_tag22 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag22.id )
+# thesis2_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag23.id )
+# thesis2_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
+# thesis2_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag25.id )
+# thesis2_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag26.id )
+# thesis2_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag27.id )
+# thesis2_tag6 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag28.id )
+# thesis2_tag7 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag29.id )
+# thesis6_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
+# thesis6_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag30.id )
+# thesis6_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag31.id )
+# thesis6_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag32.id )
+# thesis6_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag33.id )
 
-puts "✓ thesis_tags table seeded"
+# puts "✓ thesis_tags table seeded"
 
 
 # diploma_subcategories table

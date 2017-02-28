@@ -4,19 +4,17 @@ class Thesis < ApplicationRecord
 
   # Elasticsearch (using searchkick gem)
   searchkick
-  scope :search_import, -> { includes(:user) }
-
 
   # has_attachment :document
 
-  # Bookmark
   acts_as_votable
+  acts_as_taggable
+  scope :search_import, -> { includes(:tags) }
+
   mount_uploader :document, DocumentUploader
   belongs_to :user
   belongs_to :school
-  has_many :thesis_tags
-  has_many :tags, through: :thesis_tags
-  has_one :thesis_diploma
+  has_one :thesis_diploma, dependent: :destroy
   has_one :diploma, through: :thesis_diploma
   has_many :thesis_diploma_subcategories, through: :thesis_diploma
 
@@ -24,6 +22,7 @@ class Thesis < ApplicationRecord
   validates :title, presence: true, allow_blank: false
   validates :year, presence: true
   validates :school, presence: true
+  validates :user, presence: true
 
   def subcategories
     self.thesis_diploma_subcategories.map { |diploma_subcategory| diploma_subcategory.subcategory }
@@ -54,6 +53,13 @@ class Thesis < ApplicationRecord
       next_thesis
     end
   end
+
+  def search_data
+    {
+      name_tagged: "#{title} #{tags.map(&:name).join(" ")}"
+    }
+  end
+
 end
 
 CATEGORIES = [

@@ -209,22 +209,6 @@
 <part>id</part>
 </key>
 </table>
-<table x="122" y="124" name="thesis_tags">
-<row name="id" null="1" autoincrement="1">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
-<row name="tags_id" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><relation table="tags" row="id" />
-</row>
-<row name="thesis_id" null="1" autoincrement="0">
-<datatype>TINYINT</datatype>
-<default>NULL</default><relation table="theses" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
 <table x="665" y="504" name="diploma_subcategories">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
@@ -242,17 +226,6 @@
 </key>
 </table>
 <table x="1035" y="476" name="categories">
-<row name="id" null="1" autoincrement="1">
-<datatype>TINYINT</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="72" y="237" name="tags">
 <row name="id" null="1" autoincrement="1">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>

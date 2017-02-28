@@ -1,5 +1,17 @@
 <% if current_user && current_user.voted_for?(@thesis) %>
   $('#bookmark').html("<i class='material-icons md-36'>turned_in</i>");
+  <% if @thesis.get_likes.size > 0 %>
+    $('#bookmark-counter').removeClass('hide').show();
+    $('#bookmark-counter').html("<%= @thesis.get_likes.size %>");
+  <% else %>
+    $('#bookmark-counter').hide();
+  <% end %>
 <% else %>
   $('#bookmark').html("<i class='material-icons md-36'>turned_in_not</i>");
+  <% if @thesis.get_likes.size > 0 %>
+    $('#bookmark-counter').removeClass('hide').show();
+    $('#bookmark-counter').html("<%= @thesis.get_likes.size %>");
+  <% else %>
+    $('#bookmark-counter').hide();
+  <% end %>
 <% end %>
