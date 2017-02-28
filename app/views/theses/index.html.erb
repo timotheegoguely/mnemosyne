@@ -27,14 +27,12 @@
             <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
           </figure>
         <% end %>
-      <% end %>
-    <% end %>
-    <% 16.times do %>
-      <%= link_to "#", class: "card mix #{Thesis::CATEGORIES.sample}" do %>
-        <figure class="card-cover">
-          <%#= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
-          <div style="background-color: #ddd; width: <%= rand(248..280) %>px; height: <%= rand(344..448) %>px" class="shadow"></div>
-        </figure>
+      <% else %>
+        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
+          <figure class="card-cover">
+            <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "shadow" %>
+          </figure>
+        <% end %>
       <% end %>
     <% end %>
   </div>

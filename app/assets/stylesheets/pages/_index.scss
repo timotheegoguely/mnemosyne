@@ -175,8 +175,12 @@
     @include flex-items-wrap;
     @include flex-item-shrink(0);
     margin-left: 32px;
-    .card-cover img {
-      display: block;
+    width: 36vh;
+    .card-cover {
+      img {
+        display: block;
+        width: 100%;
+      }
     }
   }
 }
