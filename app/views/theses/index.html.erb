@@ -4,7 +4,7 @@
 
 <main class="container">
 
-  <nav class="col push-right tabs z100" data-component="tabs">
+  <nav class="col push-right tabs z200" data-component="tabs">
     <ul>
       <li id="tab-cards" class="active">
         <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
@@ -19,7 +19,7 @@
   </nav>
 
   <!-- Cards -->
-  <div id="cards" class="cards">
+  <div id="cards" class="cards hide z100">
     <% @theses.each_with_index do |thesis, index| %>
       <% if thesis.document? %>
         <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
@@ -38,7 +38,20 @@
       <% end %>
     <% end %>
   </div>
-  <footer id="card-preview">
+
+  <!-- List -->
+  <div id="list" class="hide z100">
+    <%= render "shared/list", elements: @theses %>
+  </div>
+
+
+  <!-- Map -->
+  <div id='map' class="hide">
+    <div id="popup_container"></div>
+  </div>
+
+  <!-- Card preview -->
+  <footer id="card-preview" style="display: none">
     <table class="table">
       <tr>
         <td class="thesis-thumbnail">
@@ -60,61 +73,46 @@
     </table>
   </footer>
 
-  <!-- List -->
-  <div id="list" class="hide">
-    <%= render "shared/list", elements: @theses %>
-  </div>
-
-
-  <!-- Map -->
-
-    <div id='map' class="hide">
-
-    <style>
-    .mapboxgl-popup {
-        max-width: 400px;
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    }
-    </style>
-
-    <% content_for(:after_js) do %>
-      <script>
-        $( ".tabs li" ).one( "click", function() {
-          if ($( this ).last().hasClass('active')) {
-            map.invalidateSize();
-          }
-        });
-
-        var mixer = mixitup('.cards', {
-          controls: {
-            toggleLogic: 'and'
-          }
-        });
-
-        <!-- Forget not to replace access token by ENV['MAPBOX_API_KEY'] -->
-
-        L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
-
-        // France centered map
-        var map = L.mapbox.map('map', 'mapbox.light').setView([46.2276, 2.2137], 6);
-
-        var myLayer = L.mapbox.featureLayer()
-        .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson')
-        .on('ready', function() {
-          myLayer.eachLayer(function(layer) {
-            var data =
-            '<div><h1>' + layer.feature.properties.etablissements_sieges_et_sites +
-            '</h1><br><hr><p>'+layer.feature.properties.adresse_1+'</p><br><p>'+layer.feature.properties.cp+'</p><p>'+layer.feature.properties.villes+'</p><p>'+layer.feature.properties.sites_internet+'</p><hr></div>'
-
-            layer.bindPopup(data);
-          });
-        })
-
-        .addTo(map);
-
-      </script>
-    <% end %>
-
-  </div>
-
 </main>
+
+<% content_for(:after_js) do %>
+  <script>
+
+    // MixItUp
+    var mixer = mixitup('.cards', {
+      controls: {
+        toggleLogic: 'and'
+      }
+    });
+
+
+    // Mapbox
+    $( "#tab-map" ).click(function() {
+      if ($( this ).last().hasClass('active')) {
+        map.invalidateSize();
+      }
+    });
+
+    // Forget not to replace access token by ENV['MAPBOX_API_KEY']
+
+    L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
+
+    // France centered map
+    var map = L.mapbox.map('map', 'mapbox.light').setView([46.9, 2.2137], 6);
+
+    var myLayer = L.mapbox.featureLayer()
+    .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson')
+    .on('ready', function() {
+      myLayer.eachLayer(function(layer) {
+        var data =
+        '<div><h1>' + layer.feature.properties.etablissements_sieges_et_sites +
+        '</h1><br><hr><p>'+layer.feature.properties.adresse_1+'</p><br><p>'+layer.feature.properties.cp+'</p><p>'+layer.feature.properties.villes+'</p><p>'+layer.feature.properties.sites_internet+'</p><hr></div>'
+
+        layer.bindPopup(data);
+      });
+    })
+
+    .addTo(map);
+
+  </script>
+<% end %>

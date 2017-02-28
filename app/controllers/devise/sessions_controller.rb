@@ -32,6 +32,7 @@ class Devise::SessionsController < DeviseController
       thesis.user = resource
       thesis.tag_list.add(tags, parse: true)
       thesis.save
+      session_cleaner
       thesis.update(diploma: Diploma.find(session[:thesis_diploma_id]))
     end
 
@@ -94,5 +95,14 @@ class Devise::SessionsController < DeviseController
       format.all { head :no_content }
       format.any(*navigational_formats) { redirect_to after_sign_out_path_for(resource_name) }
     end
+  end
+
+  def session_cleaner
+    session[:thesis_title] = nil
+    session[:thesis_subtitle] = nil
+    session[:thesis_school_id] = nil
+    session[:thesis_diploma_id] = nil
+    session[:thesis_year] = nil
+    session[:thesis_tags] = nil
   end
 end
