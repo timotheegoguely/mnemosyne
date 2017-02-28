@@ -82,8 +82,8 @@
         <% end %>
       </div>
 
-      <% if current_user %>
-        <%= link_to "Télécharger", edit_school_path(school) %>
+      <% if current_user && @thesis.download  %>
+        <%= link_to "Télécharger", class: "button big secondary" %>
       <% end %>
     </div>
   </div>
