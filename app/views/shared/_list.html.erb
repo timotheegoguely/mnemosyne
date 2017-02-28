@@ -16,7 +16,7 @@
         </td>
         <td class="thesis-title">
 
-          <%= link_to user_thesis_path(nil, thesis.user, thesis) do %>
+          <%= link_to user_thesis_path(thesis.user, thesis) do %>
             <h5><%= thesis.title %></h5>
             <span class="thesis-subtitle"><small><%= thesis.subtitle if thesis.subtitle %></small></span>
           <% end %>

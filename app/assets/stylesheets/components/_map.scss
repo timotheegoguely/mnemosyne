@@ -1,5 +1,5 @@
 #map {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 80px;
   width: 100%;
@@ -7,9 +7,23 @@
   z-index: 0;
 }
 
+.leaflet-popup {
+  //position: relative;
+}
 .leaflet-popup-content-wrapper {
   height: 400px;
   width: 400px;
+}
+
+.leaflet-control-zoom {
+  position: fixed;
+  bottom: 40px;
+  left: 2px;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 hr {
