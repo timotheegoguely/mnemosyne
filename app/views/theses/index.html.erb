@@ -73,20 +73,42 @@
 
     <div id='map' class="hide">
 
-    <!-- Forget not to replace access token by ENV['MAPBOX_API_KEY'] -->
-    <script>
-      L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
-      var map = L.mapbox.map('map', 'mapbox.light').setView([46.2276, 2.2137], 6);
-    </script>
+    <style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+    </style>
 
     <% content_for(:after_js) do %>
-      <%= javascript_tag do %>
+      <script>
         $( ".tabs li" ).one( "click", function() {
           if ($( this ).last().hasClass('active')) {
             map.invalidateSize();
           }
         });
-      <% end %>
+
+        <!-- Forget not to replace access token by ENV['MAPBOX_API_KEY'] -->
+
+        L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
+
+        var map = L.mapbox.map('map', 'mapbox.light').setView([46.2276, 2.2137], 6);
+
+        var myLayer = L.mapbox.featureLayer()
+        .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson')
+        .on('ready', function() {
+          myLayer.eachLayer(function(layer) {
+            var data =
+            '<div><h1>' + layer.feature.properties.etablissements_sieges_et_sites +
+            '</h1><br><hr><p>'+layer.feature.properties.adresse_1+'</p><br><p>'+layer.feature.properties.cp+'</p><p>'+layer.feature.properties.villes+'</p><p>'+layer.feature.properties.sites_internet+'</p><hr></div>'
+
+            layer.bindPopup(data);
+          });
+        })
+
+        .addTo(map);
+
+      </script>
     <% end %>
 
   </div>
