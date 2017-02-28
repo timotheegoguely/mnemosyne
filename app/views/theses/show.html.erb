@@ -83,7 +83,7 @@
       </div>
 
       <% if current_user && @thesis.download  %>
-        <%= link_to "Télécharger", class: "button big secondary" %>
+        <%= link_to "Télécharger", cloudinary_url(@thesis.document), target: "_blank", class: "button big secondary" %>
       <% end %>
     </div>
   </div>
