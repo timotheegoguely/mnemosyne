@@ -27,6 +27,19 @@ class ThesesController < ApplicationController
   end
 
   def create
+
+    if params[:file]
+      @thesis = Thesis.new
+      authorize @thesis
+      file = Cloudinary::Uploader.upload(params[:file])
+
+      # Récupérer l'url pour la preview + d'autres infos avec le parser de PDF
+      # Construire le JSON de retour
+      @json = { file: file }
+      return render json: @json
+    end
+
+
     @title = params[:thesis][:title]
     session[:thesis_title] = @title
 

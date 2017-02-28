@@ -11,7 +11,7 @@
   <div id="thesis-content-wrapper">
 
     <div id="thesis-content">
-      <%= simple_form_for @thesis, defaults: { wrapper_html: { class: 'form-item'} }, html: { class: "form" } do |f| %>
+      <%= simple_form_for @thesis, defaults: { wrapper_html: { class: 'form-item'} }, html: { class: "form dropzone" } do |f| %>
         <div class="form-inputs">
           <%= f.input :title, label: false, placeholder: "Titre", input_html: { class: 'title big' } %>
           <%= f.input :subtitle, label: false, placeholder: "Sous-titre", input_html: { class: 'subtitle' } %>

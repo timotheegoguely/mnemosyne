@@ -4,5 +4,6 @@
 //= require cloudinary/jquery.cloudinary
 //= require best_in_place
 //= require mixitup
+//= require dropzone
 //= require_tree ./vendor/
 //= require_tree ./app/
