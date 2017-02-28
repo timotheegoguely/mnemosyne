@@ -25,15 +25,15 @@ class Devise::SessionsController < DeviseController
       title = session[:thesis_title]
       subtitle = session[:thesis_subtitle]
       school = session[:thesis_school_id]
-      diploma = session[:thesis_diploma_id]
+      diploma_id = session[:thesis_diploma_id]
       year = session[:thesis_year]
       tags = session[:thesis_tags]
       thesis = Thesis.new(title: title, subtitle: subtitle, year: year, school: School.find(session[:thesis_school_id]) )
       thesis.user = resource
       thesis.tag_list.add(tags, parse: true)
+      thesis.diploma = Diploma.find(diploma_id)
       thesis.save
       session_cleaner
-      thesis.update(diploma: Diploma.find(session[:thesis_diploma_id]))
     end
 
     respond_with resource, location: after_sign_in_path_for(resource)
