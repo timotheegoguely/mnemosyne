@@ -1,7 +1,4 @@
 class Diploma < ApplicationRecord
-
-  searchkick
-
   has_many :theses
   has_many :school_diplomas
   has_many :schools, through: :school_diplomas
