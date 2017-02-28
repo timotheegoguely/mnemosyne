@@ -10,7 +10,7 @@
         <div id="categories" class="collapse-box">
           <button type="button" data-filter="all" class="category upper">Toutes <span class="category-counter">1024</span></button>
           <% Thesis::CATEGORIES.each do |category| %>
-            <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %> <span class="category-counter">128</span></button>
+            <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %> <span class="category-counter"><%= Thesis.joins(:categories).where(categories: { name: category }).count %></span></button>
           <% end %>
         </div>
       </div>

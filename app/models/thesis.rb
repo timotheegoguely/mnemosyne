@@ -17,6 +17,8 @@ class Thesis < ApplicationRecord
   has_one :thesis_diploma, dependent: :destroy
   has_one :diploma, through: :thesis_diploma
   has_many :thesis_diploma_subcategories, through: :thesis_diploma
+  has_many :subcategories, -> { distinct }, through: :thesis_diploma_subcategories
+  has_many :categories, -> { distinct }, through: :subcategories
 
   # Validations
   validates :title, presence: true, allow_blank: false
@@ -24,17 +26,17 @@ class Thesis < ApplicationRecord
   validates :school, presence: true
   validates :user, presence: true
 
-  def subcategories
-    self.thesis_diploma_subcategories.map { |diploma_subcategory| diploma_subcategory.subcategory }
-  end
+  # def subcategories
+  #   self.thesis_diploma_subcategories.map { |diploma_subcategory| diploma_subcategory.subcategory }
+  # end
 
-  def categories
-    categories = Set.new
-    self.subcategories.each do |subcategory|
-      categories << subcategory.category.name
-      return categories.to_a
-    end
-  end
+  # def categories
+  #   categories = Set.new
+  #   self.subcategories.each do |subcategory|
+  #     categories << subcategory.category.name
+  #     return categories.to_a
+  #   end
+  # end
 
   def previous
     previous_thesis = self.class.where("id < ?", id).last
