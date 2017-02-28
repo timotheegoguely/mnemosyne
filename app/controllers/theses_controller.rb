@@ -35,8 +35,8 @@ class ThesesController < ApplicationController
 
     session[:thesis_school_id] = params[:thesis][:school_id]
 
-    @thesis_diploma = ThesisDiploma.find(params[:thesis][:thesis_diploma])
-    session[:thesis_diploma_id] = params[:thesis][:thesis_diploma_id]
+    @diploma = Diploma.find(params[:thesis][:thesis_diploma])
+    session[:thesis_diploma_id] = params[:thesis][:thesis_diploma]
 
     @year = params[:thesis]['year(1i)'].to_i
     date = Date.new(@year)
@@ -52,7 +52,7 @@ class ThesesController < ApplicationController
     session[:thesis_tags] = @tags
 
     @thesis = Thesis.new(thesis_params)
-    @thesis.thesis_diploma = @thesis_diploma
+    @thesis.diploma = @diploma
 
     if current_user
       @thesis.user = current_user

@@ -1,5 +1,5 @@
 #map {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 80px;
   width: 100vw;
@@ -22,16 +22,21 @@
 }
 
 .school-info-wrapper {
-  position:absolute;
+  position: fixed;
   top: 80px;
   right: 0px;
   bottom: 0px;
-  width: 400px;
   height: calc(100vh - 80px);
   .school-info {
     padding: 80px 32px 32px;
     background:#fff;
+    width: 400px;
     height: 100%;
+  }
+  #school-close {
+    position: absolute;
+    top: 36px;
+    cursor: pointer;
   }
 }
 

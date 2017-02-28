@@ -40,24 +40,26 @@
   </div>
   <footer id="card-preview" style="display: none">
     <table class="table">
-      <tr>
-        <td class="thesis-thumbnail">
-          <%= link_to "#" do %>
-            <%#= image_tag "http://placehold.it/32x48" %>
-            <div style="background-color: #ddd; height: 48px; width: 32px"></div>
-          <% end %>
-        </td>
-        <td class="thesis-title">
-          <%= link_to "#" do %>
-            <h5>Titre</h5>
-            <small>Sous-titre</small>
-          <% end %>
-        </td>
-        <td class="thesis-author">Prénom Nom</td>
-        <td class="thesis-school">École</td>
-        <td class="thesis-year">Year</td>
-        <td class="thesis-bookmarks">0</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td class="thesis-thumbnail">
+            <%= link_to "#" do %>
+              <%#= image_tag "http://placehold.it/32x48" %>
+              <div class="thumbnail" style="background-color: #ddd; height: 48px; width: 32px"></div>
+            <% end %>
+          </td>
+          <td class="thesis-title">
+            <%= link_to "#" do %>
+              <h5>Titre</h5>
+              <small>Sous-titre</small>
+            <% end %>
+          </td>
+          <td class="thesis-author">Prénom Nom</td>
+          <td class="thesis-school">École</td>
+          <td class="thesis-year">Year</td>
+          <td class="thesis-bookmarks">0</td>
+        </tr>
+      </tbody>
     </table>
   </footer>
 
@@ -107,7 +109,9 @@
       e.layer.closePopup();
 
       var feature = e.layer.feature;
-      var content = '<div class="school-info"><h2>' + feature.properties.etablissements_sieges_et_sites + '</h2><hr>' +
+      var content = '<div class="school-info">' +
+                    '<span id="school-close" class="close big"></span>' +
+                    '<h2>' + feature.properties.etablissements_sieges_et_sites + '</h2><hr>' +
                     '<p class="school-address">' + feature.properties.adresse_1+'</p>' +
                     '<p class="school-zipcode">' + feature.properties.cp+'</p>' +
                     '<p class="school-city">' + feature.properties.villes + '</p>' +
@@ -116,9 +120,10 @@
       info.innerHTML = content;
     });
 
-    // Clear the tooltip when map is clicked.
+    // Clear the tooltip when map is moved or clicked + when close button is clicked.
     map.on('move', empty);
     map.on('click', empty);
+    $("#school-close").on('click', empty);
 
     // Trigger empty contents when the script
     // has loaded on the page.
