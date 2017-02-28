@@ -8,6 +8,8 @@ class ThesesController < ApplicationController
   def search
     @results = Thesis.search @keywords, misspellings: {edit_distance: 2}
     authorize @results
+    @schools = School.all
+    @diplomas = Diploma.all
   end
 
   def index

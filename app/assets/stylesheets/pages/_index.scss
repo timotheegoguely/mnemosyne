@@ -146,7 +146,7 @@
   @include flex;
   @include flex-items-bottom;
   overflow-x: scroll;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 256px);
   margin: 0 -32px;
   padding-bottom: 8px;
   .card {
@@ -172,6 +172,7 @@
 // Views options
 .tabs {
   position: fixed;
+  top: 104px;
   right: 24px;
   margin-bottom: 0;
   font-size: 24px;
