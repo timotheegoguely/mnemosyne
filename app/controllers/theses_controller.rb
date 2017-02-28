@@ -16,6 +16,7 @@ class ThesesController < ApplicationController
     @theses = policy_scope(Thesis).order(created_at: :desc)
     @schools = School.all
     @diplomas = Diploma.all
+    @categories = Category.all
   end
 
   def show

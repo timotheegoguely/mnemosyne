@@ -1,0 +1,4 @@
+<option value="" selected disabled>Choisissez un diplôme</option>
+<% diplomas.each do |diploma| %>
+  <option value="<%= diploma.id %>"><%= diploma.acronym? ? diploma.acronym : diploma.name %></option>
+<% end %>
