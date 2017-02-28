@@ -5,6 +5,7 @@
             "type": "Feature",
             "recordid": "c0b185ffe5d8f51384b854df70a966425f46e9e2",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "Parvis de la Préfecture",
               "coordonnees_tel": "01 30 30 54 44",
@@ -19,7 +20,8 @@
               "coordonnees_cp": "49.0378977963, 2.06061895699",
               "sites_internet": "www.ensapc.fr",
               "cp": 95000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’art de Paris Cergy"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’art de Paris Cergy",
+
             },
             "geometry": {
               "type": "Point",
@@ -34,6 +36,7 @@
             "type": "Feature",
             "recordid": "1b0d3f71661bd368ad520c7d6082a761bb59ffcf",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "BP 94",
               "coordonnees_tel": "04 77 42 35 42",
@@ -48,7 +51,8 @@
               "coordonnees_cp": "45.4301225907, 4.37830062526",
               "sites_internet": "www.st-etienne.archi.fr",
               "cp": 42000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Saint-Étienne"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Saint-Étienne",
+
             },
             "geometry": {
               "type": "Point",
@@ -63,7 +67,8 @@
             "type": "Feature",
             "recordid": "24a15171ffe824b558f9bd3c5b75f944b0378f40",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "adresse_2": "BP 2024",
               "coordonnees_tel": "04 78 38 40 00",
               "coordonnees_finales": [
@@ -77,7 +82,8 @@
               "coordonnees_cp": "45.7483660735, 4.825926093",
               "sites_internet": "www.cefedem-rhonealpes.org",
               "cp": 69002,
-              "etablissements_sieges_et_sites": "CEFEDEM Rhône Alpes Lyon"
+              "etablissements_sieges_et_sites": "CEFEDEM Rhône Alpes Lyon",
+
             },
             "geometry": {
               "type": "Point",
@@ -92,7 +98,8 @@
             "type": "Feature",
             "recordid": "d8dab1b9f986cd7f995d60243a782ff5eacafd95",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "05 56 91 36 84",
               "adresse_1": "19 rue Monthyon",
               "coordonnees_finales": [
@@ -105,7 +112,8 @@
               "coordonnees_cp": "44.8579384389, -0.573595011059",
               "sites_internet": "www.pesmd-bordeaux-aquitaine.com",
               "cp": 33800,
-              "etablissements_sieges_et_sites": "Pôle enseignement supérieur musique&danse Bordeaux aquitaine"
+              "etablissements_sieges_et_sites": "Pôle enseignement supérieur musique&danse Bordeaux aquitaine",
+
             },
             "geometry": {
               "type": "Point",
@@ -120,6 +128,7 @@
             "type": "Feature",
             "recordid": "fe75a13674464df02ce57df93b7b96774091ad96",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Architecture|Paysage",
               "adresse_2": "CS 70109",
               "coordonnees_tel": "05 57 35 11 00",
@@ -133,7 +142,8 @@
               "villes": "Talence",
               "sites_internet": "www.bordeaux.archi.fr",
               "cp": 33405,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture et de paysage de Bordeaux"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture et de paysage de Bordeaux",
+
             },
             "geometry": {
               "type": "Point",
@@ -148,6 +158,7 @@
             "type": "Feature",
             "recordid": "1cce8d318867015ace9b8e805754634a05194009",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "coordonnees_tel": "01 53 38 50 00",
               "adresse_1": "60 boulevard de la Villette",
@@ -161,7 +172,8 @@
               "coordonnees_cp": "48.8868704923, 2.38465309568",
               "sites_internet": "www.paris-belleville.archi.fr",
               "cp": 75019,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Paris-Belleville"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Paris-Belleville",
+
             },
             "geometry": {
               "type": "Point",
@@ -176,7 +188,8 @@
             "type": "Feature",
             "recordid": "9b7fc84316e8ed359a080309e548b83be284ae04",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "adresse_2": "BP 30015",
               "coordonnees_tel": "05 49 60 59 34",
               "coordonnees_finales": [
@@ -189,7 +202,8 @@
               "villes": "Poitiers",
               "sites_internet": "www.cesmd-poitoucharentes.org",
               "cp": 86001,
-              "etablissements_sieges_et_sites": "Centre d’études supérieur de musique et de danse Poitou Charentes"
+              "etablissements_sieges_et_sites": "Centre d’études supérieur de musique et de danse Poitou Charentes",
+
             },
             "geometry": {
               "type": "Point",
@@ -204,6 +218,7 @@
             "type": "Feature",
             "recordid": "c408c726be5c589cc8a44c43336ba739fb30b127",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "01 47 90 95 33",
               "adresse_1": "3 Rue Edmond Fantin",
@@ -217,7 +232,8 @@
               "coordonnees_cp": "48.915464529, 2.28801082145",
               "sites_internet": "http://www.studio-asnieres.com/",
               "cp": 92600,
-              "etablissements_sieges_et_sites": "Studio d’Asnières Théâtre"
+              "etablissements_sieges_et_sites": "Studio d’Asnières Théâtre",
+
             },
             "geometry": {
               "type": "Point",
@@ -232,6 +248,7 @@
             "type": "Feature",
             "recordid": "1015149cf2d6c90ed496bd542431e78f17788faf",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "Jardin Massey",
               "coordonnees_tel": "05 62 93 10 31",
@@ -246,7 +263,8 @@
               "coordonnees_cp": "43.2347029707, 0.0655253081546",
               "sites_internet": "www.esapyrenees.fr",
               "cp": 65000,
-              "etablissements_sieges_et_sites": "École supérieure d'art des Pyrénées Pau Tarbes"
+              "etablissements_sieges_et_sites": "École supérieure d'art des Pyrénées Pau Tarbes",
+
             },
             "geometry": {
               "type": "Point",
@@ -261,6 +279,7 @@
             "type": "Feature",
             "recordid": "7c143bc4bf655c1481e2ec646d22f159a5621f66",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 98 00 87 20",
               "adresse_1": "18 rue du Château",
@@ -274,7 +293,8 @@
               "coordonnees_cp": "48.3998970513, -4.5026725313",
               "sites_internet": "www.eesab.fr\nwww.esa-brest.fr",
               "cp": 29200,
-              "etablissements_sieges_et_sites": "École européenne supérieure d’art de Bretagne \nRennes, Lorient, Quimper et Brest (4 sites)"
+              "etablissements_sieges_et_sites": "École européenne supérieure d’art de Bretagne \nRennes, Lorient, Quimper et Brest (4 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -289,6 +309,7 @@
             "type": "Feature",
             "recordid": "f554b293996b903a42c9bd1b69bfb82de46e277f",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 23 62 22 60",
               "adresse_1": "34 rue Hoche",
@@ -302,7 +323,8 @@
               "coordonnees_cp": "48.1116364246, -1.6816378334",
               "sites_internet": "www.eesab.fr - www.erba-rennes.fr",
               "cp": 35000,
-              "etablissements_sieges_et_sites": "École européenne supérieure d’art de Bretagne \nRennes, Lorient, Quimper et Brest (4 sites)"
+              "etablissements_sieges_et_sites": "École européenne supérieure d’art de Bretagne \nRennes, Lorient, Quimper et Brest (4 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -317,6 +339,7 @@
             "type": "Feature",
             "recordid": "41100bd51effcad433829433f375bbadda190800",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 43 47 38 53",
               "adresse_1": "28 avenue Rostov-sur-le-Don",
@@ -330,7 +353,8 @@
               "coordonnees_cp": "47.9887754636, 0.199888551607",
               "sites_internet": "www.esba-talm.fr",
               "cp": 72000,
-              "etablissements_sieges_et_sites": "École supérieure des beaux-arts Tours Angers Le Mans  (3 sites)"
+              "etablissements_sieges_et_sites": "École supérieure des beaux-arts Tours Angers Le Mans  (3 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -345,6 +369,7 @@
             "type": "Feature",
             "recordid": "1938e02e4df7ce02abcd7099635a5944a335141c",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "3, rue Javelin-Pagnon",
               "coordonnees_tel": "04 77 47 88 00",
@@ -358,7 +383,8 @@
               "coordonnees_cp": "45.4301225907, 4.37830062526",
               "sites_internet": "www.esadse.fr",
               "cp": 42000,
-              "etablissements_sieges_et_sites": "École supérieure d’art et design de Saint-Étienne"
+              "etablissements_sieges_et_sites": "École supérieure d’art et design de Saint-Étienne",
+
             },
             "geometry": {
               "type": "Point",
@@ -373,6 +399,7 @@
             "type": "Feature",
             "recordid": "0fb37ef6ff41129fdf070e96abd760c0628b6140",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 92 07 73 73",
               "adresse_1": "20 avenue Stephen-Liégeard",
@@ -386,7 +413,8 @@
               "coordonnees_cp": "43.7122279855, 7.23752896461",
               "sites_internet": "http://esadmm.fr",
               "cp": 6100,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’art Nice - Villa Arson"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’art Nice - Villa Arson",
+
             },
             "geometry": {
               "type": "Point",
@@ -401,6 +429,7 @@
             "type": "Feature",
             "recordid": "566b079359cf00a4f287783952de7c4130e40c33",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "École pluridisciplinaire",
               "coordonnees_tel": "03 29 68 50 66",
               "adresse_1": "15 rue des Jardiniers",
@@ -414,7 +443,8 @@
               "coordonnees_cp": "48.1844846952, 6.48526974054",
               "sites_internet": "www.esae.fr",
               "cp": 88000,
-              "etablissements_sieges_et_sites": "École supérieure d’art de Lorraine Epinal et Metz (2 sites)"
+              "etablissements_sieges_et_sites": "École supérieure d’art de Lorraine Epinal et Metz (2 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -429,6 +459,7 @@
             "type": "Feature",
             "recordid": "604bf54e3f4584f683562ebf2b5d031456150fff",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 14 37 25 00",
               "adresse_1": "17 Cours Caffarelli",
@@ -442,7 +473,8 @@
               "coordonnees_cp": "49.1850251668, -0.370004009634",
               "sites_internet": "www.esam-c2.fr",
               "cp": 14000,
-              "etablissements_sieges_et_sites": "École supérieure d’art et des médias de Caen et Cherbourg (2 sites)"
+              "etablissements_sieges_et_sites": "École supérieure d’art et des médias de Caen et Cherbourg (2 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -457,6 +489,7 @@
             "type": "Feature",
             "recordid": "90646b335f0e9a52b56c5520539dc5f48bf76c1b",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Ecole pluridisciplinaire",
               "coordonnees_tel": "05 61 22 29 98",
               "adresse_1": "5 quai de la Daurade",
@@ -470,7 +503,8 @@
               "coordonnees_cp": "43.5959709582, 1.43229378001",
               "sites_internet": "www.isdat.fr",
               "cp": 31000,
-              "etablissements_sieges_et_sites": "Institut supérieur des arts de Toulouse"
+              "etablissements_sieges_et_sites": "Institut supérieur des arts de Toulouse",
+
             },
             "geometry": {
               "type": "Point",
@@ -485,6 +519,7 @@
             "type": "Feature",
             "recordid": "191f9563d50134d4f9960518f10797e05da6c143",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 66 76 70 22",
               "adresse_1": "10, Grand Rue",
@@ -498,7 +533,8 @@
               "coordonnees_cp": "43.8446783278, 4.34763990758",
               "sites_internet": "www.esba-nimes.fr",
               "cp": 30000,
-              "etablissements_sieges_et_sites": "École supérieure des beaux arts Nîmes"
+              "etablissements_sieges_et_sites": "École supérieure des beaux arts Nîmes",
+
             },
             "geometry": {
               "type": "Point",
@@ -513,6 +549,7 @@
             "type": "Feature",
             "recordid": "c26b91825dbd8e7e0e8f34f210ed4e0394957d77",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "CS 70912",
               "coordonnees_tel": "04 91 82 83 10",
@@ -527,7 +564,8 @@
               "coordonnees_cp": "43.2344717573, 5.45254070973",
               "sites_internet": "www.esaavignon.fr",
               "cp": 13009,
-              "etablissements_sieges_et_sites": "École supérieure d’art et de design Marseille-Méditerranée"
+              "etablissements_sieges_et_sites": "École supérieure d’art et de design Marseille-Méditerranée",
+
             },
             "geometry": {
               "type": "Point",
@@ -542,6 +580,7 @@
             "type": "Feature",
             "recordid": "f89cb48a3ae375de3712244b825adc25f2249706",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "BP 10149",
               "coordonnees_tel": "04 90 99 33 33",
@@ -556,7 +595,8 @@
               "coordonnees_cp": "43.5467808819, 4.66183385891",
               "sites_internet": "www.ensp-arles.com",
               "cp": 13200,
-              "etablissements_sieges_et_sites": "École nationale supérieure de la photographie Arles"
+              "etablissements_sieges_et_sites": "École nationale supérieure de la photographie Arles",
+
             },
             "geometry": {
               "type": "Point",
@@ -571,6 +611,7 @@
             "type": "Feature",
             "recordid": "d1150159799357a1815ee49fbe82aa7106b260e7",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "BP 73824",
               "coordonnees_tel": "05 55 43 14 00",
@@ -585,7 +626,8 @@
               "coordonnees_cp": "45.8544056025, 1.24905166141",
               "sites_internet": "www.ensa-limoges.fr",
               "cp": 87000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’Art Limoges"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’Art Limoges",
+
             },
             "geometry": {
               "type": "Point",
@@ -600,6 +642,7 @@
             "type": "Feature",
             "recordid": "eba5ee0171ff92b598c1bb7229ab15c3baf45280",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "BP 297",
               "coordonnees_tel": "02 48 69 78 78",
@@ -614,7 +657,8 @@
               "coordonnees_cp": "47.0747448585, 2.40489595766",
               "sites_internet": "www.ensa-bourges.fr",
               "cp": 18000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’art de Bourges"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’art de Bourges",
+
             },
             "geometry": {
               "type": "Point",
@@ -629,6 +673,7 @@
             "type": "Feature",
             "recordid": "835b2bdbbbd45b64b0a176b8ba040aba082f2b96",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "BP 20119",
               "coordonnees_tel": "02 40 35 90 20",
@@ -642,7 +687,8 @@
               "coordonnees_cp": "47.2321830557, -1.54780684906",
               "sites_internet": "https://beauxartsnantes.fr",
               "cp": 44000,
-              "etablissements_sieges_et_sites": "École supérieure des beaux-arts de Nantes Métropole"
+              "etablissements_sieges_et_sites": "École supérieure des beaux-arts de Nantes Métropole",
+
             },
             "geometry": {
               "type": "Point",
@@ -657,6 +703,7 @@
             "type": "Feature",
             "recordid": "88ebbd32d1e519b01c6db5470e206a9a966a8b65",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 81 87 81 30",
               "adresse_1": "12 rue Denis-Papin",
@@ -670,7 +717,8 @@
               "coordonnees_cp": "47.2552328934, 6.01938051129",
               "sites_internet": "www.isba-besancon.fr",
               "cp": 25000,
-              "etablissements_sieges_et_sites": "Institut supérieur des beaux-arts de Besançon"
+              "etablissements_sieges_et_sites": "Institut supérieur des beaux-arts de Besançon",
+
             },
             "geometry": {
               "type": "Point",
@@ -685,6 +733,7 @@
             "type": "Feature",
             "recordid": "1b75e3e7aa3c78b096f4385006ba1c8bf954aeb2",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 76 86 61 30",
               "adresse_1": "25 rue Lesdiguières",
@@ -698,7 +747,8 @@
               "coordonnees_cp": "45.182155682, 5.72079920349",
               "sites_internet": "www.esad-gv.fr",
               "cp": 38000,
-              "etablissements_sieges_et_sites": "École supérieure d’art et design Grenoble – Valence"
+              "etablissements_sieges_et_sites": "École supérieure d’art et design Grenoble – Valence",
+
             },
             "geometry": {
               "type": "Point",
@@ -713,6 +763,7 @@
             "type": "Feature",
             "recordid": "c132e63bf031d1af11216c4c4c8e9ec7a7752355",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 27 83 81 42",
               "adresse_1": "130 allée Saint-Roch",
@@ -726,7 +777,8 @@
               "coordonnees_cp": "50.1533767412, 3.19681716574",
               "sites_internet": "www.esac-cambrai.net",
               "cp": 59400,
-              "etablissements_sieges_et_sites": "École supérieure d’art et de communication Cambrai"
+              "etablissements_sieges_et_sites": "École supérieure d’art et de communication Cambrai",
+
             },
             "geometry": {
               "type": "Point",
@@ -741,6 +793,7 @@
             "type": "Feature",
             "recordid": "57240a58fe3905b9b7e6dce17d93e589c89739f2",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 35 53 30 31",
               "adresse_1": "65 rue Demidoff",
@@ -754,7 +807,8 @@
               "coordonnees_cp": "49.4965610328, 0.1402707121",
               "sites_internet": "www.esadhar.fr",
               "cp": 76600,
-              "etablissements_sieges_et_sites": "École supérieure d’art et de design Le Havre et Rouen (2 sites)"
+              "etablissements_sieges_et_sites": "École supérieure d’art et de design Le Havre et Rouen (2 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -769,6 +823,7 @@
             "type": "Feature",
             "recordid": "c1d285887c12bfcc2bda57409a0dd24af5e8adf5",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "BP 246",
               "coordonnees_tel": "02 62 43 08 01",
@@ -782,7 +837,8 @@
               "villes": "Le Port",
               "sites_internet": "www.esareunion.com",
               "cp": 97826,
-              "etablissements_sieges_et_sites": "École supérieure d’art Le Port – La Réunion"
+              "etablissements_sieges_et_sites": "École supérieure d’art Le Port – La Réunion",
+
             },
             "geometry": {
               "type": "Point",
@@ -797,6 +853,7 @@
             "type": "Feature",
             "recordid": "719e9e67300ba80c5a8ef1fdc9250cd9d3f38b0d",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "BP 10037",
               "coordonnees_tel": "03 88 32 25 35",
@@ -811,7 +868,8 @@
               "coordonnees_cp": "48.5716222333, 7.76768232804",
               "sites_internet": "www.strasbourg.archi.fr",
               "cp": 67000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Strasbourg"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Strasbourg",
+
             },
             "geometry": {
               "type": "Point",
@@ -826,7 +884,8 @@
             "type": "Feature",
             "recordid": "b5bae721161539e68116c8481b0e4ab4631b04b5",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "adresse_2": "CP 120",
               "coordonnees_tel": "04 72 19 26 26",
               "coordonnees_finales": [
@@ -840,7 +899,8 @@
               "coordonnees_cp": "45.7824566011, 4.80893117264",
               "sites_internet": "www.cnsmd-lyon.fr",
               "cp": 69009,
-              "etablissements_sieges_et_sites": "Conservatoire national supérieur de musique et danse Lyon"
+              "etablissements_sieges_et_sites": "Conservatoire national supérieur de musique et danse Lyon",
+
             },
             "geometry": {
               "type": "Point",
@@ -855,6 +915,7 @@
             "type": "Feature",
             "recordid": "1d0bac4db3c964f3af5992bd067b9f5fe7ebc07d",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "adresse_2": "BP 70109",
               "coordonnees_tel": "05 56 33 36 76",
@@ -869,7 +930,8 @@
               "coordonnees_cp": "44.8579384389, -0.573595011059",
               "sites_internet": "www.tnba.org",
               "cp": 33000,
-              "etablissements_sieges_et_sites": "École supérieure de théâtre Bordeaux Aquitaine"
+              "etablissements_sieges_et_sites": "École supérieure de théâtre Bordeaux Aquitaine",
+
             },
             "geometry": {
               "type": "Point",
@@ -884,7 +946,8 @@
             "type": "Feature",
             "recordid": "9492d7fdb0d311e5169a2f02dbd738cf3b29bdf3",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "04 42 60 43 40",
               "adresse_1": "380 avenue Wolfgang-Amadeus-Mozart",
               "coordonnees_finales": [
@@ -897,7 +960,8 @@
               "coordonnees_cp": "43.5353485115, 5.4345381961",
               "sites_internet": "http://www.iesm.fr/",
               "cp": 13100,
-              "etablissements_sieges_et_sites": "Institut d’enseignement supérieur de la musique euro-méditerranée Aix-en-Provence"
+              "etablissements_sieges_et_sites": "Institut d’enseignement supérieur de la musique euro-méditerranée Aix-en-Provence",
+
             },
             "geometry": {
               "type": "Point",
@@ -912,6 +976,7 @@
             "type": "Feature",
             "recordid": "0c2e576863f0940b56e677b36497c748f0d1b1d0",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "05 96 60 65 29",
               "adresse_1": "Ermitage – Rue des Artistes",
@@ -925,7 +990,8 @@
               "coordonnees_cp": "14.6410271251, -61.069074331",
               "sites_internet": "http://cca-martinique.com",
               "cp": 97200,
-              "etablissements_sieges_et_sites": "Campus Caribéen des Arts Fort de France – Martinique"
+              "etablissements_sieges_et_sites": "Campus Caribéen des Arts Fort de France – Martinique",
+
             },
             "geometry": {
               "type": "Point",
@@ -940,6 +1006,7 @@
             "type": "Feature",
             "recordid": "8b434b8d1d2f23e21b718e9e3ca4f2dca4418502",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "École pluridisciplinaire",
               "coordonnees_tel": "03 87 39 61 30",
               "adresse_1": "1 rue de la Citadelle",
@@ -953,7 +1020,8 @@
               "coordonnees_cp": "49.1080992241, 6.19573945551",
               "sites_internet": "www.esamm.metzmetropole.fr",
               "cp": 57000,
-              "etablissements_sieges_et_sites": "École supérieure d’art de Lorraine Epinal et Metz (2 sites)"
+              "etablissements_sieges_et_sites": "École supérieure d’art de Lorraine Epinal et Metz (2 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -968,6 +1036,7 @@
             "type": "Feature",
             "recordid": "fe0c51aa482f505e762ccf29e639303d3c01da4a",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Cirque",
               "coordonnees_tel": "03 26 21 12 43",
               "adresse_1": "1 rue du Cirque",
@@ -981,7 +1050,8 @@
               "coordonnees_cp": "48.9640626928, 4.37886072639",
               "sites_internet": "www.cnac.fr",
               "cp": 51000,
-              "etablissements_sieges_et_sites": "Centre national des arts du cirque Châlon-en-Champagne"
+              "etablissements_sieges_et_sites": "Centre national des arts du cirque Châlon-en-Champagne",
+
             },
             "geometry": {
               "type": "Point",
@@ -996,6 +1066,7 @@
             "type": "Feature",
             "recordid": "a67a673efe9886a1ecccae5f9508670fa25b32b3",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "05 53 47 82 08",
               "adresse_1": "21 Rue Paulin Régnier",
@@ -1009,7 +1080,8 @@
               "coordonnees_cp": "44.2024127205, 0.625779253608",
               "sites_internet": "http://www.theatredujour.com/",
               "cp": 47000,
-              "etablissements_sieges_et_sites": "Théâtre École d’aquitaine Agen"
+              "etablissements_sieges_et_sites": "Théâtre École d’aquitaine Agen",
+
             },
             "geometry": {
               "type": "Point",
@@ -1024,6 +1096,7 @@
             "type": "Feature",
             "recordid": "0beb819c5b638e2efd7228c6f6e83f171b99c133",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "adresse_2": "CS 54007",
               "coordonnees_tel": "02 99 31 55 33",
@@ -1037,7 +1110,8 @@
               "villes": "Rennes",
               "sites_internet": "www.t-n-b.fr",
               "cp": 35040,
-              "etablissements_sieges_et_sites": "École supérieure d’art dramatique du Théâtre national de Bretagne Rennes"
+              "etablissements_sieges_et_sites": "École supérieure d’art dramatique du Théâtre national de Bretagne Rennes",
+
             },
             "geometry": {
               "type": "Point",
@@ -1052,6 +1126,7 @@
             "type": "Feature",
             "recordid": "b0d8f7c4b936460a6ad02366a6d7ce7866d8fcf8",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "04 93 38 73 30",
               "adresse_1": "68 avenue du Petit-Juas",
@@ -1064,7 +1139,8 @@
               "villes": "Cannes",
               "sites_internet": "www.erac-cannes.fr",
               "cp": 6400,
-              "etablissements_sieges_et_sites": "École régionale d’acteurs de Cannes"
+              "etablissements_sieges_et_sites": "École régionale d’acteurs de Cannes",
+
             },
             "geometry": {
               "type": "Point",
@@ -1079,6 +1155,7 @@
             "type": "Feature",
             "recordid": "145c20ffe20d7603729c309cd9134ea8f4b3a461",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "Cité de l’architecture et du patrimoine",
               "coordonnees_tel": "01 58 51 52 94",
@@ -1093,7 +1170,8 @@
               "coordonnees_cp": "48.8603821025, 2.26201220212",
               "sites_internet": "www.citechaillot.fr",
               "cp": 75116,
-              "etablissements_sieges_et_sites": "École de Chaillot"
+              "etablissements_sieges_et_sites": "École de Chaillot",
+
             },
             "geometry": {
               "type": "Point",
@@ -1108,6 +1186,7 @@
             "type": "Feature",
             "recordid": "534a626f287b8356faeb24a6134fd81fadcf1524",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Musée",
               "adresse_2": "Palais du Louvre",
               "coordonnees_tel": "01 55 35 18 00",
@@ -1122,7 +1201,8 @@
               "coordonnees_cp": "48.862834158, 2.33616696102",
               "sites_internet": "www.ecoledulouvre.fr",
               "cp": 75001,
-              "etablissements_sieges_et_sites": "École du Louvre"
+              "etablissements_sieges_et_sites": "École du Louvre",
+
             },
             "geometry": {
               "type": "Point",
@@ -1137,6 +1217,7 @@
             "type": "Feature",
             "recordid": "58629f2724bc5236a78591d8d7a80bbd361ae7b7",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "05 59 47 80 02",
               "adresse_1": "11, rue Pierre-Moussempes",
@@ -1150,7 +1231,8 @@
               "coordonnees_cp": "43.44355076, -1.52562527873",
               "sites_internet": "www.esa-rocailles.fr",
               "cp": 64200,
-              "etablissements_sieges_et_sites": "École supérieure d’art des Rocailles\nde l’agglomération Côte Basque-Adour Biarritz"
+              "etablissements_sieges_et_sites": "École supérieure d’art des Rocailles\nde l’agglomération Côte Basque-Adour Biarritz",
+
             },
             "geometry": {
               "type": "Point",
@@ -1165,6 +1247,7 @@
             "type": "Feature",
             "recordid": "0b9e739f0bd33a358c86d487a6e5795912788032",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 59 63 43 20",
               "adresse_1": "36 bis rue des Ursulines",
@@ -1178,7 +1261,8 @@
               "coordonnees_cp": "50.7261026624, 3.15984468995",
               "sites_internet": "www.esa-n.info",
               "cp": 59200,
-              "etablissements_sieges_et_sites": "École Supérieure d'Art du Nord-Pas de Calais Tourcoing-Dunkerque"
+              "etablissements_sieges_et_sites": "École Supérieure d'Art du Nord-Pas de Calais Tourcoing-Dunkerque",
+
             },
             "geometry": {
               "type": "Point",
@@ -1193,6 +1277,7 @@
             "type": "Feature",
             "recordid": "0515e455ba516acce646474f451f8021970715b0",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 28 63 72 93",
               "adresse_1": "5 bis rue de l’Esplanade",
@@ -1206,7 +1291,8 @@
               "coordonnees_cp": "51.0306940868, 2.33760634",
               "sites_internet": "www.esa-n.info",
               "cp": 59140,
-              "etablissements_sieges_et_sites": "École Supérieure d'Art du Nord-Pas de Calais Tourcoing-Dunkerque"
+              "etablissements_sieges_et_sites": "École Supérieure d'Art du Nord-Pas de Calais Tourcoing-Dunkerque",
+
             },
             "geometry": {
               "type": "Point",
@@ -1221,6 +1307,7 @@
             "type": "Feature",
             "recordid": "ef3c8582213feb88dfc0d9d018a423a15615cb78",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 99 58 32 85",
               "adresse_1": "130 rue Yéhudi-Menuhin",
@@ -1234,7 +1321,8 @@
               "coordonnees_cp": "43.613085594, 3.86919806969",
               "sites_internet": "www.esbama.fr",
               "cp": 34000,
-              "etablissements_sieges_et_sites": "École supérieure des beaux-arts de Montpellier Agglomération"
+              "etablissements_sieges_et_sites": "École supérieure des beaux-arts de Montpellier Agglomération",
+
             },
             "geometry": {
               "type": "Point",
@@ -1249,6 +1337,7 @@
             "type": "Feature",
             "recordid": "5815adc393d4b6345bb1baa2af352371275eb421",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 35 53 30 31",
               "adresse_1": "2 rue Giuseppe Verdi",
@@ -1262,7 +1351,8 @@
               "coordonnees_cp": "49.4414760352, 1.09318612833",
               "sites_internet": "www.esadhar.fr",
               "cp": 76000,
-              "etablissements_sieges_et_sites": "École supérieure d’art et de design Le Havre et Rouen (2 sites)"
+              "etablissements_sieges_et_sites": "École supérieure d’art et de design Le Havre et Rouen (2 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -1277,6 +1367,7 @@
             "type": "Feature",
             "recordid": "b33351415b9e587526a5583f154f177b0026dd94",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 75 79 24 00",
               "adresse_1": "Place des Beaux-Arts",
@@ -1290,7 +1381,8 @@
               "coordonnees_cp": "44.9223144548, 4.91305108836",
               "sites_internet": "www.esad-gv.fr",
               "cp": 26000,
-              "etablissements_sieges_et_sites": "École Supérieure d'Art et Design Grenoble - Valence"
+              "etablissements_sieges_et_sites": "École Supérieure d'Art et Design Grenoble - Valence",
+
             },
             "geometry": {
               "type": "Point",
@@ -1305,6 +1397,7 @@
             "type": "Feature",
             "recordid": "34524a52af1840d68945a35f4b5807af74562518",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "05 59 02 20 06",
               "adresse_1": "25 Rue René Cassin",
@@ -1318,7 +1411,8 @@
               "coordonnees_cp": "43.3202428022, -0.349730360793",
               "sites_internet": "www.esapyrenees.fr",
               "cp": 64000,
-              "etablissements_sieges_et_sites": "École supérieure d'art des Pyrénées Pau Tarbes"
+              "etablissements_sieges_et_sites": "École supérieure d'art des Pyrénées Pau Tarbes",
+
             },
             "geometry": {
               "type": "Point",
@@ -1333,6 +1427,7 @@
             "type": "Feature",
             "recordid": "a5d103c05e1f735d020e4c3097aea61746c25bd2",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 73 17 36 10",
               "adresse_1": "25 rue Kessler",
@@ -1346,7 +1441,8 @@
               "coordonnees_cp": "45.7859081171, 3.1155334528",
               "sites_internet": "www.esacm.fr",
               "cp": 63000,
-              "etablissements_sieges_et_sites": "École supérieure d’art de Clermont Métropole"
+              "etablissements_sieges_et_sites": "École supérieure d’art de Clermont Métropole",
+
             },
             "geometry": {
               "type": "Point",
@@ -1361,6 +1457,7 @@
             "type": "Feature",
             "recordid": "00e7aed0962b865b3c5d451249fb0567f02e45d6",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 26 89.42.70",
               "adresse_1": "12 rue Libergier",
@@ -1374,7 +1471,8 @@
               "coordonnees_cp": "49.2518578026, 4.03958522088",
               "sites_internet": "www.esad-reims.fr",
               "cp": 51100,
-              "etablissements_sieges_et_sites": "École Supérieure d'Art et de Design ESAD de Reims"
+              "etablissements_sieges_et_sites": "École Supérieure d'Art et de Design ESAD de Reims",
+
             },
             "geometry": {
               "type": "Point",
@@ -1389,6 +1487,7 @@
             "type": "Feature",
             "recordid": "50a8a067260219a6acd47d15da72b7710884fd3d",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "Hôtel d’Ollone",
               "coordonnees_tel": "02 41 24 13 50",
@@ -1403,7 +1502,8 @@
               "coordonnees_cp": "47.4764503449, -0.55599583518",
               "sites_internet": "www.esba-talm.fr",
               "cp": 49100,
-              "etablissements_sieges_et_sites": "École supérieure des beaux-arts Tours Angers Le Mans  (3 sites)"
+              "etablissements_sieges_et_sites": "École supérieure des beaux-arts Tours Angers Le Mans  (3 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -1418,6 +1518,7 @@
             "type": "Feature",
             "recordid": "fce23e60626691f772da225261a7b325e473a29c",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "BP 20917",
               "coordonnees_tel": "04 90 27 04 23",
@@ -1432,7 +1533,8 @@
               "coordonnees_cp": "43.9352589636, 4.84116595474",
               "sites_internet": "www.ensp-arles.fr",
               "cp": 84000,
-              "etablissements_sieges_et_sites": "École supérieure d'art d’Avignon"
+              "etablissements_sieges_et_sites": "École supérieure d'art d’Avignon",
+
             },
             "geometry": {
               "type": "Point",
@@ -1447,6 +1549,7 @@
             "type": "Feature",
             "recordid": "a87aec4dfecfc9c7f470da3491143389b2428ffd",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "BP 40435",
               "coordonnees_tel": "03 83 30 81 00",
@@ -1461,7 +1564,8 @@
               "coordonnees_cp": "48.6902043213, 6.1760319489",
               "sites_internet": "www.nancy.archi.fr",
               "cp": 54000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Nancy"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Nancy",
+
             },
             "geometry": {
               "type": "Point",
@@ -1476,6 +1580,7 @@
             "type": "Feature",
             "recordid": "6038a093afac4a1fe838cbe8a17b22cbc8a306c8",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "03 20 00 72 64",
               "adresse_1": "23-25 rue de Bergues",
@@ -1489,7 +1594,8 @@
               "coordonnees_cp": "50.6319195692, 3.04708687186",
               "sites_internet": "http://ecoledunord.theatredunord.fr/",
               "cp": 59000,
-              "etablissements_sieges_et_sites": "École professionnelle supérieure d’art dramatique du Nord-Pas-de-Calais Lille"
+              "etablissements_sieges_et_sites": "École professionnelle supérieure d’art dramatique du Nord-Pas-de-Calais Lille",
+
             },
             "geometry": {
               "type": "Point",
@@ -1504,6 +1610,7 @@
             "type": "Feature",
             "recordid": "cbbd27a4368e88fd24eda06422582533780a18c9",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 42 91 88 70",
               "adresse_1": "1 rue Émile-Tavan",
@@ -1517,7 +1624,8 @@
               "coordonnees_cp": "43.5353485115, 5.4345381961",
               "sites_internet": "www.ecole-art-aix.fr",
               "cp": 13100,
-              "etablissements_sieges_et_sites": "École supérieure d’art d’Aix-en-Provence"
+              "etablissements_sieges_et_sites": "École supérieure d’art d’Aix-en-Provence",
+
             },
             "geometry": {
               "type": "Point",
@@ -1532,6 +1640,7 @@
             "type": "Feature",
             "recordid": "dae8a4022d2db3275adcecc28f203d6e3a13a2c0",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Cirque",
               "coordonnees_tel": "01 56 63 05 40",
               "adresse_1": "22 rue Jules-Guesde",
@@ -1545,7 +1654,8 @@
               "coordonnees_cp": "48.8745435446, 2.48670478198",
               "sites_internet": "www.enacr.com",
               "cp": 93110,
-              "etablissements_sieges_et_sites": "École nationale supérieure des arts du cirque Rosny-sous-Bois"
+              "etablissements_sieges_et_sites": "École nationale supérieure des arts du cirque Rosny-sous-Bois",
+
             },
             "geometry": {
               "type": "Point",
@@ -1560,6 +1670,7 @@
             "type": "Feature",
             "recordid": "bab83fe49ce03290245401b557652e0459983ebd",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "01 42 46 12 91",
               "adresse_1": "2bis rue du Conservatoire",
@@ -1573,7 +1684,8 @@
               "coordonnees_cp": "48.8769274899, 2.33736632955",
               "sites_internet": "www.cnsad.fr",
               "cp": 75009,
-              "etablissements_sieges_et_sites": "Conservatoire national supérieur d’art dramatique Paris"
+              "etablissements_sieges_et_sites": "Conservatoire national supérieur d’art dramatique Paris",
+
             },
             "geometry": {
               "type": "Point",
@@ -1588,6 +1700,7 @@
             "type": "Feature",
             "recordid": "20197104071b3a8719c58c28a6b6dfd4e095c461",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "04 67 60 05 40",
               "adresse_1": "19 rue Lallemand",
@@ -1601,7 +1714,8 @@
               "coordonnees_cp": "43.613085594, 3.86919806969",
               "sites_internet": "http://www.ensad-montpellier.fr/",
               "cp": 34000,
-              "etablissements_sieges_et_sites": "École supérieure d’art dramatique Montpellier"
+              "etablissements_sieges_et_sites": "École supérieure d’art dramatique Montpellier",
+
             },
             "geometry": {
               "type": "Point",
@@ -1616,6 +1730,7 @@
             "type": "Feature",
             "recordid": "bb946545fb4d3e270b74e83a17904f488990f850",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "BP 170",
               "coordonnees_tel": "04 78 79 50 50",
@@ -1629,7 +1744,8 @@
               "villes": "Vaulx-en-Velin",
               "sites_internet": "www.lyon.archi.fr",
               "cp": 69512,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Lyon"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Lyon",
+
             },
             "geometry": {
               "type": "Point",
@@ -1644,6 +1760,7 @@
             "type": "Feature",
             "recordid": "76ba44881962b36c03119de92b851edb84157e2b",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Marionnettes",
               "coordonnees_tel": "03 24 33 72 50",
               "adresse_1": "7 place Winston-Churchill",
@@ -1656,7 +1773,8 @@
               "villes": "Charleville-Mézières",
               "sites_internet": "www.marionnette.com",
               "cp": 8000,
-              "etablissements_sieges_et_sites": "École nationale supérieure des arts de la marionnette Charleville-Mézières"
+              "etablissements_sieges_et_sites": "École nationale supérieure des arts de la marionnette Charleville-Mézières",
+
             },
             "geometry": {
               "type": "Point",
@@ -1671,7 +1789,8 @@
             "type": "Feature",
             "recordid": "3fd21389f85159493220036ceda27ee32eed6360",
             "properties": {
-              "domaines": "Cinéma|Audiovisuel",
+              "marker-color": "#FED02F",
+              "domaines": "Cinéma et Audiovisuel",
               "coordonnees_tel": "01 53 41 21 00",
               "adresse_1": "6 rue Francœur",
               "coordonnees_finales": [
@@ -1684,7 +1803,8 @@
               "coordonnees_cp": "48.8923628559, 2.34785432498",
               "sites_internet": "www.femis.fr",
               "cp": 75018,
-              "etablissements_sieges_et_sites": "École nationale supérieure des métiers de l’image et du son La Fémis Paris"
+              "etablissements_sieges_et_sites": "École nationale supérieure des métiers de l’image et du son La Fémis Paris",
+
             },
             "geometry": {
               "type": "Point",
@@ -1699,6 +1819,7 @@
             "type": "Feature",
             "recordid": "989aa7674a57e1e9069ad5241ea4e5706aac9c67",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "coordonnees_tel": "01 44 65 23 00",
               "adresse_1": "144 avenue de Flandre",
@@ -1712,7 +1833,8 @@
               "coordonnees_cp": "48.8868704923, 2.38465309568",
               "sites_internet": "www.paris-lavillette.archi.fr",
               "cp": 75019,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Paris-La Villette"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Paris-La Villette",
+
             },
             "geometry": {
               "type": "Point",
@@ -1727,6 +1849,7 @@
             "type": "Feature",
             "recordid": "e3e474d2104c9dcb54460f9d321cf2ffd2c9ac3d",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "Case 924",
               "coordonnees_tel": "04 91 82 71 00",
@@ -1740,7 +1863,8 @@
               "villes": "Marseille",
               "sites_internet": "www.marseille.archi.fr",
               "cp": 13000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Marseille"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Marseille",
+
             },
             "geometry": {
               "type": "Point",
@@ -1755,6 +1879,7 @@
             "type": "Feature",
             "recordid": "f816492b6506428619588764ea4f648c2b9109ca",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "BP 80179",
               "coordonnees_tel": "03 20 28 38 00",
@@ -1769,7 +1894,8 @@
               "coordonnees_cp": "50.7261026624, 3.15984468995",
               "sites_internet": "communication@lefresnoy.net\nwww.lefresnoy.net",
               "cp": 59200,
-              "etablissements_sieges_et_sites": "Le Fresnoy – Studio national des arts contemporains Tourcoing"
+              "etablissements_sieges_et_sites": "Le Fresnoy – Studio national des arts contemporains Tourcoing",
+
             },
             "geometry": {
               "type": "Point",
@@ -1784,6 +1910,7 @@
             "type": "Feature",
             "recordid": "f67312019f5a2a118efb5a0ca8928b8138fca7dd",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 98 55 61 57",
               "adresse_1": "8 esplanade François-Mitterrand",
@@ -1797,7 +1924,8 @@
               "coordonnees_cp": "47.9969497735, -4.09093803063",
               "sites_internet": "www.eesab.fr - www.esa-quimper.fr",
               "cp": 29000,
-              "etablissements_sieges_et_sites": "École européenne supérieure d’art de Bretagne \nRennes, Lorient, Quimper et Brest (4 sites)"
+              "etablissements_sieges_et_sites": "École européenne supérieure d’art de Bretagne \nRennes, Lorient, Quimper et Brest (4 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -1812,6 +1940,7 @@
             "type": "Feature",
             "recordid": "eff5f3662fe78b2f1d65d788a2ec4ff5357094ac",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 97 35 31 70",
               "adresse_1": "1 avenue de Kergroise",
@@ -1825,7 +1954,8 @@
               "coordonnees_cp": "47.7501619572, -3.37871159231",
               "sites_internet": "www.eesab.fr - www.esa-lorient.fr",
               "cp": 56100,
-              "etablissements_sieges_et_sites": "École européenne supérieure d’art de Bretagne \nRennes, Lorient, Quimper et Brest (4 sites)"
+              "etablissements_sieges_et_sites": "École européenne supérieure d’art de Bretagne \nRennes, Lorient, Quimper et Brest (4 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -1840,6 +1970,7 @@
             "type": "Feature",
             "recordid": "41165adfdfbf52e63f9656f8f986b7d9253c70d0",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 14 37 25 00",
               "adresse_1": "61 rue de l’Abbaye",
@@ -1853,7 +1984,8 @@
               "coordonnees_cp": "49.6331832109, -1.6338586934",
               "sites_internet": "www.esam-c2.fr",
               "cp": 50100,
-              "etablissements_sieges_et_sites": "École supérieure d’art et des médias de Caen et Cherbourg (2 sites)"
+              "etablissements_sieges_et_sites": "École supérieure d’art et des médias de Caen et Cherbourg (2 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -1868,6 +2000,7 @@
             "type": "Feature",
             "recordid": "6c1ab723a33be7a0f58d52c48dc370b9a310e529",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "01 49 23 12 12",
               "adresse_1": "48 rue Saint-Sabin",
@@ -1881,7 +2014,8 @@
               "coordonnees_cp": "48.8593266337, 2.37986086805",
               "sites_internet": "www.ensci.com",
               "cp": 75011,
-              "etablissements_sieges_et_sites": "École nationale supérieure de création industrielle – Les Ateliers Paris"
+              "etablissements_sieges_et_sites": "École nationale supérieure de création industrielle – Les Ateliers Paris",
+
             },
             "geometry": {
               "type": "Point",
@@ -1896,6 +2030,7 @@
             "type": "Feature",
             "recordid": "1fb8fba1d59d30cbd6172de2cfdc23b7e010e84c",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "05 45 92 66 02",
               "adresse_1": "134 rue de Bordeaux",
@@ -1909,7 +2044,8 @@
               "coordonnees_cp": "45.6474756307, 0.145191503645",
               "sites_internet": "www.eesi.eu",
               "cp": 16000,
-              "etablissements_sieges_et_sites": "École européenne supérieure de l’image Angoulême Poitiers"
+              "etablissements_sieges_et_sites": "École européenne supérieure de l’image Angoulême Poitiers",
+
             },
             "geometry": {
               "type": "Point",
@@ -1924,6 +2060,7 @@
             "type": "Feature",
             "recordid": "2fff799a401381bff31487148e12ddc424d83bef",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 50 33 65 50",
               "adresse_1": "52 bis rue des Marquisats",
@@ -1937,7 +2074,8 @@
               "coordonnees_cp": "45.8901612835, 6.12568603812",
               "sites_internet": "www.esaaa.fr",
               "cp": 74000,
-              "etablissements_sieges_et_sites": "École supérieure d’art de l’agglomération d’Annecy"
+              "etablissements_sieges_et_sites": "École supérieure d’art de l’agglomération d’Annecy",
+
             },
             "geometry": {
               "type": "Point",
@@ -1952,6 +2090,7 @@
             "type": "Feature",
             "recordid": "62af1ce31509180c8b3a3c2626408ca40df0491f",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 38 79 24 67",
               "adresse_1": "14 rue Dupanloup",
@@ -1965,7 +2104,8 @@
               "coordonnees_cp": "47.8826248233, 1.91635582903",
               "sites_internet": "www.esad-orleans.com",
               "cp": 45000,
-              "etablissements_sieges_et_sites": "École Supérieure d'Art et de Design d’Orléans"
+              "etablissements_sieges_et_sites": "École Supérieure d'Art et de Design d’Orléans",
+
             },
             "geometry": {
               "type": "Point",
@@ -1980,6 +2120,7 @@
             "type": "Feature",
             "recordid": "62c56706a205289ce44cf6ef0d3fe30c73b33d6e",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "01 42 34 97 00",
               "adresse_1": "31 rue d’Ulm",
@@ -1993,7 +2134,8 @@
               "coordonnees_cp": "48.844407753, 2.350655453",
               "sites_internet": "www.ensad.fr",
               "cp": 75005,
-              "etablissements_sieges_et_sites": "École nationale supérieure des arts décoratifs Paris"
+              "etablissements_sieges_et_sites": "École nationale supérieure des arts décoratifs Paris",
+
             },
             "geometry": {
               "type": "Point",
@@ -2008,6 +2150,7 @@
             "type": "Feature",
             "recordid": "e4cb8249e6d427968f0c5839c4b72af4f6c6aee0",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "CS 16427",
               "coordonnees_tel": "02 99 29 68 00",
@@ -2022,7 +2165,8 @@
               "coordonnees_cp": "48.1116364246, -1.6816378334",
               "sites_internet": "www.rennes.archi.fr",
               "cp": 35000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Bretagne"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Bretagne",
+
             },
             "geometry": {
               "type": "Point",
@@ -2037,7 +2181,8 @@
             "type": "Feature",
             "recordid": "cf8ff9dddc627daafda954b5723c73aab769617b",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "Tél. : 02 40 89 90 50",
               "adresse_1": "4 bis rue Gaëtan-Rondeau",
               "coordonnees_finales": [
@@ -2050,7 +2195,8 @@
               "coordonnees_cp": "47.2321830557, -1.54780684906",
               "sites_internet": "www.lepontsuperieur.eu",
               "cp": 44200,
-              "etablissements_sieges_et_sites": "Pôle d’enseignement supérieur spectacle vivant – Pont supérieur Nantes"
+              "etablissements_sieges_et_sites": "Pôle d’enseignement supérieur spectacle vivant – Pont supérieur Nantes",
+
             },
             "geometry": {
               "type": "Point",
@@ -2065,6 +2211,7 @@
             "type": "Feature",
             "recordid": "cb3408ff1d46a1706491b8f9338b3a0fbed1653e",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "05 55 37 93 93",
               "adresse_1": "Le Mazeau",
@@ -2078,7 +2225,8 @@
               "coordonnees_cp": "45.8976895915, 1.39589865728",
               "sites_internet": "www.academietheatrelimoges.com",
               "cp": 87480,
-              "etablissements_sieges_et_sites": "Académie de l’Union, école supérieure professionnelle de théâtre du Limousin Limoges"
+              "etablissements_sieges_et_sites": "Académie de l’Union, école supérieure professionnelle de théâtre du Limousin Limoges",
+
             },
             "geometry": {
               "type": "Point",
@@ -2093,7 +2241,8 @@
             "type": "Feature",
             "recordid": "fd6dd88fcb0f7b96e5bd27ce1894e16bf7951724",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "01 43 11 25 05",
               "adresse_1": "41 avenue Gabriel-Péri",
               "coordonnees_finales": [
@@ -2106,7 +2255,8 @@
               "coordonnees_cp": "48.9327015423, 2.39963456624",
               "sites_internet": "www.polesup93.fr",
               "cp": 93120,
-              "etablissements_sieges_et_sites": "Pôle d’enseignement supérieur de la musique Seine Saint-Denis Pole sup 93 La Courneuve"
+              "etablissements_sieges_et_sites": "Pôle d’enseignement supérieur de la musique Seine Saint-Denis Pole sup 93 La Courneuve",
+
             },
             "geometry": {
               "type": "Point",
@@ -2121,7 +2271,8 @@
             "type": "Feature",
             "recordid": "27e70c1e75d1bbe5535d31ddd0783e5aab0ca83d",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "04 91 32 72 72",
               "adresse_1": "20 boulevard Gabès",
               "coordonnees_finales": [
@@ -2134,7 +2285,8 @@
               "coordonnees_cp": "43.2388428582, 5.37571442554",
               "sites_internet": "www.ecole-danse-marseille.com",
               "cp": 13008,
-              "etablissements_sieges_et_sites": "École nationale supérieure de danse de Marseille"
+              "etablissements_sieges_et_sites": "École nationale supérieure de danse de Marseille",
+
             },
             "geometry": {
               "type": "Point",
@@ -2149,6 +2301,7 @@
             "type": "Feature",
             "recordid": "38830a13b9c0853bdab2e2a0647e3991b2714741",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "02 47 05 72 88",
               "adresse_1": "40 rue du Docteur-Chaumier",
@@ -2162,7 +2315,8 @@
               "coordonnees_cp": "47.3979724257, 0.696297496341",
               "sites_internet": "www.esba-talm.fr",
               "cp": 37000,
-              "etablissements_sieges_et_sites": "École supérieure des beaux-arts Tours Angers Le Mans  (3 sites)"
+              "etablissements_sieges_et_sites": "École supérieure des beaux-arts Tours Angers Le Mans  (3 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -2177,7 +2331,8 @@
             "type": "Feature",
             "recordid": "ca0da81d2eb37e44064e224be585c4d6f6e6fd67",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "01 44 70 64 37",
               "adresse_1": "14 rue de Madrid",
               "coordonnees_finales": [
@@ -2190,7 +2345,8 @@
               "coordonnees_cp": "48.8725623657, 2.31240969073",
               "sites_internet": "www.pspbb.fr/",
               "cp": 75008,
-              "etablissements_sieges_et_sites": "Pôle supérieur d’enseignement artistique Paris Boulogne Billancourt"
+              "etablissements_sieges_et_sites": "Pôle supérieur d’enseignement artistique Paris Boulogne Billancourt",
+
             },
             "geometry": {
               "type": "Point",
@@ -2205,7 +2361,8 @@
             "type": "Feature",
             "recordid": "b2b3374749d51586311192f1dc67f19507449d0c",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "02 32 76 07 08",
               "adresse_1": "27 rue Pierre-Corneille",
               "coordonnees_finales": [
@@ -2218,7 +2375,8 @@
               "coordonnees_cp": "49.3813581985, 1.09010989308",
               "sites_internet": "www.cefedem-normandie.fr",
               "cp": 76800,
-              "etablissements_sieges_et_sites": "CEFEDEM Normandie Rouen"
+              "etablissements_sieges_et_sites": "CEFEDEM Normandie Rouen",
+
             },
             "geometry": {
               "type": "Point",
@@ -2233,6 +2391,7 @@
             "type": "Feature",
             "recordid": "27755db91a687c9938da9b9005e7adb430b3c9cf",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "04 77 25 12 98",
               "adresse_1": "7 avenue Émile-Loubet",
@@ -2246,7 +2405,8 @@
               "coordonnees_cp": "45.4301225907, 4.37830062526",
               "sites_internet": "www.lacomedie.fr",
               "cp": 42100,
-              "etablissements_sieges_et_sites": "École de la Comédie Saint-Étienne"
+              "etablissements_sieges_et_sites": "École de la Comédie Saint-Étienne",
+
             },
             "geometry": {
               "type": "Point",
@@ -2261,6 +2421,7 @@
             "type": "Feature",
             "recordid": "c0c2b202fd9c6b26602f87c969b8be592b5a4b78",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "BP 20674",
               "coordonnees_tel": "01 39 07 40 00",
@@ -2274,7 +2435,8 @@
               "villes": "Versailles",
               "sites_internet": "www.versailles.archi.fr",
               "cp": 78006,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Versailles"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Versailles",
+
             },
             "geometry": {
               "type": "Point",
@@ -2289,6 +2451,7 @@
             "type": "Feature",
             "recordid": "5d93410bb7caaeb77469cfaf62b0ed7b81a7ef5d",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "BP 10629",
               "coordonnees_tel": "05 62 11 50 50",
@@ -2303,7 +2466,8 @@
               "coordonnees_cp": "43.5959709582, 1.43229378001",
               "sites_internet": "www.toulouse.archi.fr",
               "cp": 31000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Toulouse"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Toulouse",
+
             },
             "geometry": {
               "type": "Point",
@@ -2318,6 +2482,7 @@
             "type": "Feature",
             "recordid": "0c348e78d1eda24d617e6e58c0758c734a8c95e3",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "Champs-sur-Marne",
               "coordonnees_tel": "01 60 95 84 00",
@@ -2331,7 +2496,8 @@
               "coordonnees_cp": "48.8536259253, 2.65078543729",
               "sites_internet": "www.marnelavallee.archi.fr",
               "cp": 77200,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Marne-la-Vallée"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Marne-la-Vallée",
+
             },
             "geometry": {
               "type": "Point",
@@ -2346,6 +2512,7 @@
             "type": "Feature",
             "recordid": "2435860d0082592d23cf8625d966d36197a51519",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Architecture|Paysage",
               "coordonnees_tel": "03 20 61 95 50",
               "adresse_1": "2 rue Verte",
@@ -2359,7 +2526,8 @@
               "coordonnees_cp": "50.6323253006, 3.15291340611",
               "sites_internet": "www.lille.archi.fr",
               "cp": 59650,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture et de paysage de Lille"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture et de paysage de Lille",
+
             },
             "geometry": {
               "type": "Point",
@@ -2374,6 +2542,7 @@
             "type": "Feature",
             "recordid": "97111e04ef76cba46e9544d227a731bb01b5db2d",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "coordonnees_tel": "02 32 83 42 00",
               "adresse_1": "27 rue Lucien-Fromage",
@@ -2387,7 +2556,8 @@
               "coordonnees_cp": "49.45757124, 1.20910529231",
               "sites_internet": "www.rouen.archi.fr",
               "cp": 76160,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Normandie"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Normandie",
+
             },
             "geometry": {
               "type": "Point",
@@ -2402,6 +2572,7 @@
             "type": "Feature",
             "recordid": "32aeab0cb1e8d932ba339034c4c5adc4c6952ced",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "BP 16202",
               "coordonnees_tel": "02 40 16 01 21",
@@ -2415,7 +2586,8 @@
               "villes": "Nantes",
               "sites_internet": "www.nantes.archi.fr",
               "cp": 44262,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Nantes"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Nantes",
+
             },
             "geometry": {
               "type": "Point",
@@ -2430,6 +2602,7 @@
             "type": "Feature",
             "recordid": "932ae3a2f429c1f3f9c6dac3eb28c56fb250fd83",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "adresse_2": "8 bis, quai Saint-Vincent",
               "coordonnees_tel": "04 72 00 11 71",
@@ -2444,7 +2617,8 @@
               "coordonnees_cp": "45.7698747385, 4.82857516905",
               "sites_internet": "www.ensba-lyon.fr",
               "cp": 69001,
-              "etablissements_sieges_et_sites": "École nationale supérieure des beaux-arts de Lyon"
+              "etablissements_sieges_et_sites": "École nationale supérieure des beaux-arts de Lyon",
+
             },
             "geometry": {
               "type": "Point",
@@ -2459,6 +2633,7 @@
             "type": "Feature",
             "recordid": "3363a31dc0e5a91bdd069cf86f0b17e1aa4f604d",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 27 22 57 59",
               "adresse_1": "132 avenue du Faubourg-de-Cambrai",
@@ -2472,7 +2647,8 @@
               "coordonnees_cp": "50.3420089884, 3.52240338554",
               "sites_internet": "www.esad.valenciennes.fr",
               "cp": 59300,
-              "etablissements_sieges_et_sites": "École supérieure d’art et de design du Nord-Pas-de-Calais Valenciennes"
+              "etablissements_sieges_et_sites": "École supérieure d’art et de design du Nord-Pas-de-Calais Valenciennes",
+
             },
             "geometry": {
               "type": "Point",
@@ -2487,6 +2663,7 @@
             "type": "Feature",
             "recordid": "e2cda60fb2c1594776607b1dbf2b7d7206526eb8",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 85 48 14 11",
               "adresse_1": "7, rue Leschenault de la Tour",
@@ -2500,7 +2677,8 @@
               "coordonnees_cp": "46.753921991, 4.82932300465",
               "sites_internet": "www.emafructidor.com",
               "cp": 71100,
-              "etablissements_sieges_et_sites": "École media art - Fructidor de Chalon-sur-Saône"
+              "etablissements_sieges_et_sites": "École media art - Fructidor de Chalon-sur-Saône",
+
             },
             "geometry": {
               "type": "Point",
@@ -2515,6 +2693,7 @@
             "type": "Feature",
             "recordid": "702f6bfeb08b4d0da39de60c8f27dc87a8f18106",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "05 49 88 82 44",
               "adresse_1": "26 rue Jean-Alexandre",
@@ -2528,7 +2707,8 @@
               "coordonnees_cp": "46.5833929687, 0.359226445482",
               "sites_internet": "www.eesi.eu",
               "cp": 86000,
-              "etablissements_sieges_et_sites": "École européenne supérieure de l’image Angoulême Poitiers"
+              "etablissements_sieges_et_sites": "École européenne supérieure de l’image Angoulême Poitiers",
+
             },
             "geometry": {
               "type": "Point",
@@ -2543,6 +2723,7 @@
             "type": "Feature",
             "recordid": "e1d16d985cebc98a4703428b39a752a0f52c20d4",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 22 66 49 90",
               "adresse_1": "40 rue des Teinturiers",
@@ -2556,7 +2737,8 @@
               "coordonnees_cp": "49.9004650343, 2.29084588963",
               "sites_internet": "www.esad-amiens.fr",
               "cp": 80080,
-              "etablissements_sieges_et_sites": "École supérieure d’art et de design d’Amiens"
+              "etablissements_sieges_et_sites": "École supérieure d’art et de design d’Amiens",
+
             },
             "geometry": {
               "type": "Point",
@@ -2571,6 +2753,7 @@
             "type": "Feature",
             "recordid": "eba8fc1428df4b3428c07f737548c61484827d75",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "01 47 03 50 00",
               "adresse_1": "14 rue Bonaparte",
@@ -2584,7 +2767,8 @@
               "coordonnees_cp": "48.8492531918, 2.33300877472",
               "sites_internet": "www.beauxartsparis.fr",
               "cp": 75006,
-              "etablissements_sieges_et_sites": "École nationale supérieure des beaux-arts Paris"
+              "etablissements_sieges_et_sites": "École nationale supérieure des beaux-arts Paris",
+
             },
             "geometry": {
               "type": "Point",
@@ -2599,6 +2783,7 @@
             "type": "Feature",
             "recordid": "49b986ddd4618347ed302f7cae625ab8970acd76",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 80 30 21 27",
               "adresse_1": "3 rue Michelet",
@@ -2612,7 +2797,8 @@
               "coordonnees_cp": "47.3229417955, 5.03751223305",
               "sites_internet": "www.ensa-dijon.fr",
               "cp": 21000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’art de Dijon"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’art de Dijon",
+
             },
             "geometry": {
               "type": "Point",
@@ -2627,6 +2813,7 @@
             "type": "Feature",
             "recordid": "7f20a593976aaadc77f2a2f983929c869f84ed11",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "05 56 33 49 10",
               "adresse_1": "7 rue des Beaux-Arts",
@@ -2640,7 +2827,8 @@
               "coordonnees_cp": "44.8579384389, -0.573595011059",
               "sites_internet": "www.ebabx.fr",
               "cp": 33800,
-              "etablissements_sieges_et_sites": "École des beaux arts de Bordeaux"
+              "etablissements_sieges_et_sites": "École des beaux arts de Bordeaux",
+
             },
             "geometry": {
               "type": "Point",
@@ -2655,6 +2843,7 @@
             "type": "Feature",
             "recordid": "e44ebcba0912f75efa06487877f9c65d044056a0",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "03 83 41 61 61",
               "adresse_1": "1 place Charles-Cartier-Bresson",
@@ -2667,7 +2856,8 @@
               "coordonnees_cp": "48.6902043213, 6.1760319489",
               "sites_internet": "www.ensa-nancy.fr",
               "cp": 54000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’art de Nancy"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’art de Nancy",
+
             },
             "geometry": {
               "type": "Point",
@@ -2682,6 +2872,7 @@
             "type": "Feature",
             "recordid": "7633b7dab1c525695939560cb0ebdbbb2a2129ab",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "École pluridisciplinaire",
               "adresse_2": "CS 10032",
               "coordonnees_tel": "03 69 06 37 77",
@@ -2696,7 +2887,8 @@
               "coordonnees_cp": "48.5716222333, 7.76768232804",
               "sites_internet": "www.hear.fr",
               "cp": 67000,
-              "etablissements_sieges_et_sites": "Haute école des Arts du Rhin Strasbourg- Mulhouse (2 sites)"
+              "etablissements_sieges_et_sites": "Haute école des Arts du Rhin Strasbourg- Mulhouse (2 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -2711,6 +2903,7 @@
             "type": "Feature",
             "recordid": "7904d120ba6d6f339502be82ee0295a5fb461dff",
             "properties": {
+              "marker-color": "#1FBFD4",
               "domaines": "Arts plastiques",
               "coordonnees_tel": "04 94 62 01 48",
               "adresse_1": "168 boulevard du Commandant-Nicolas",
@@ -2724,7 +2917,8 @@
               "coordonnees_cp": "43.1364016655, 5.93275623187",
               "sites_internet": "www.esart-tpm.fr",
               "cp": 83000,
-              "etablissements_sieges_et_sites": "École supérieure d’art et de design Toulon Provence Méditerranée"
+              "etablissements_sieges_et_sites": "École supérieure d’art et de design Toulon Provence Méditerranée",
+
             },
             "geometry": {
               "type": "Point",
@@ -2739,7 +2933,8 @@
             "type": "Feature",
             "recordid": "f66cf1cadebf51a381b3ab0bf49162f82268daa8",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "03 80 58 98 90",
               "adresse_1": "36-38 rue Chabot-Charny",
               "coordonnees_finales": [
@@ -2752,7 +2947,8 @@
               "coordonnees_cp": "47.3229417955, 5.03751223305",
               "sites_internet": "www.pesm-bourgogne.fr",
               "cp": 21000,
-              "etablissements_sieges_et_sites": "Pôle d’enseignement supérieur de la musique en Bourgogne PESM Bourgogne Dijon"
+              "etablissements_sieges_et_sites": "Pôle d’enseignement supérieur de la musique en Bourgogne PESM Bourgogne Dijon",
+
             },
             "geometry": {
               "type": "Point",
@@ -2767,7 +2963,8 @@
             "type": "Feature",
             "recordid": "6d2244bb2417158eb7c57a711da640738f57a4ad",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "01 40 01 80 00",
               "adresse_1": "20 allée de la Danse",
               "coordonnees_finales": [
@@ -2780,7 +2977,8 @@
               "coordonnees_cp": "48.8962161446, 2.2068493546",
               "sites_internet": "www.operadeparis.fr/artistes/ecole-de-danse",
               "cp": 92000,
-              "etablissements_sieges_et_sites": "École de danse de l’Opéra national de Paris Nanterre"
+              "etablissements_sieges_et_sites": "École de danse de l’Opéra national de Paris Nanterre",
+
             },
             "geometry": {
               "type": "Point",
@@ -2795,6 +2993,7 @@
             "type": "Feature",
             "recordid": "40061ba0b460361fe3ecd4137cb44c4ecc855778",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Théâtre",
               "coordonnees_tel": "03 88 24 88 08 00",
               "adresse_1": "1 avenue de la Marseillaise",
@@ -2808,7 +3007,8 @@
               "coordonnees_cp": "48.5716222333, 7.76768232804",
               "sites_internet": "www.tns.fr",
               "cp": 67000,
-              "etablissements_sieges_et_sites": "École supérieure d’art dramatique du Théâtre national de Strasbourg (TNS)"
+              "etablissements_sieges_et_sites": "École supérieure d’art dramatique du Théâtre national de Strasbourg (TNS)",
+
             },
             "geometry": {
               "type": "Point",
@@ -2823,7 +3023,8 @@
             "type": "Feature",
             "recordid": "381a56e73fe041bab18f3dd71326c6e4316dd7f4",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "01 40 40 45 45",
               "adresse_1": "209, avenue Jean Jaurès",
               "coordonnees_finales": [
@@ -2836,7 +3037,8 @@
               "coordonnees_cp": "48.8868704923, 2.38465309568",
               "sites_internet": "www.cnsmdp.fr",
               "cp": 75019,
-              "etablissements_sieges_et_sites": "Conservatoire national supérieur de musique et danse de Paris"
+              "etablissements_sieges_et_sites": "Conservatoire national supérieur de musique et danse de Paris",
+
             },
             "geometry": {
               "type": "Point",
@@ -2851,6 +3053,7 @@
             "type": "Feature",
             "recordid": "7111fd79bb6797d761f54471968416ac71645bd2",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "École pluridisciplinaire",
               "coordonnees_tel": "03 69 77 77 20",
               "adresse_1": "3 quai des Pêcheurs",
@@ -2864,7 +3067,8 @@
               "coordonnees_cp": "47.7494423807, 7.32540160105",
               "sites_internet": "www.hear.fr",
               "cp": 68200,
-              "etablissements_sieges_et_sites": "Haute école des Arts du Rhin Strasbourg- Mulhouse (2 sites)"
+              "etablissements_sieges_et_sites": "Haute école des Arts du Rhin Strasbourg- Mulhouse (2 sites)",
+
             },
             "geometry": {
               "type": "Point",
@@ -2879,7 +3083,8 @@
             "type": "Feature",
             "recordid": "75219eba79a4e723955ac733dca0cc1c2b6c31f3",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "03 28 36 67 94",
               "adresse_1": "Rue Alphonse-Colas",
               "coordonnees_finales": [
@@ -2892,7 +3097,8 @@
               "coordonnees_cp": "50.6319195692, 3.04708687186",
               "sites_internet": "www.esmd.fr",
               "cp": 59000,
-              "etablissements_sieges_et_sites": "École supérieure de musique et de danse Nord de France Lille"
+              "etablissements_sieges_et_sites": "École supérieure de musique et de danse Nord de France Lille",
+
             },
             "geometry": {
               "type": "Point",
@@ -2907,7 +3113,8 @@
             "type": "Feature",
             "recordid": "3073c0a50ef0d4ff70096cbbd0ee90f5ac7d80a7",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "adresse_2": "BP 50107",
               "coordonnees_tel": "02 44 01 22 66",
               "coordonnees_finales": [
@@ -2920,7 +3127,8 @@
               "villes": "Angers",
               "sites_internet": "www.cndc.fr",
               "cp": 49101,
-              "etablissements_sieges_et_sites": "Centre national de danse contemporaine d’Angers"
+              "etablissements_sieges_et_sites": "Centre national de danse contemporaine d’Angers",
+
             },
             "geometry": {
               "type": "Point",
@@ -2935,14 +3143,16 @@
             "type": "Feature",
             "recordid": "8ede9990b0c07e5afb7e25a034577c5c3b34cf23",
             "properties": {
-              "domaines": "Musique|Danse",
+              "marker-color": "#FC4E1E",
+              "domaines": "Spectacle vivant",
               "coordonnees_tel": "04 93 94 79 80",
               "adresse_1": "140 allée Rosella Hightower",
               "regions": "Provence-Alpes Côte d’Azur",
               "villes": "Mougins",
               "sites_internet": "www.cannesdance.com",
               "cp": 6250,
-              "etablissements_sieges_et_sites": "École supérieure de Danse de Canne Rosella Hightower Mougins"
+              "etablissements_sieges_et_sites": "École supérieure de Danse de Canne Rosella Hightower Mougins",
+
             },
             "geometry": {
               "type": "Point",
@@ -2957,6 +3167,7 @@
             "type": "Feature",
             "recordid": "8d25180a1fee9bfee34cd17656466aade81185fc",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "CS 12636",
               "coordonnees_tel": "04 76 69 83 00",
@@ -2971,7 +3182,8 @@
               "coordonnees_cp": "45.182155682, 5.72079920349",
               "sites_internet": "www.grenoble.archi.fr",
               "cp": 38000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Grenoble"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Grenoble",
+
             },
             "geometry": {
               "type": "Point",
@@ -2986,6 +3198,7 @@
             "type": "Feature",
             "recordid": "c5ebd8721fe78b489ba31c15daf4210a2d25cae6",
             "properties": {
+              "marker-color": "#EE853E",
               "domaines": "Patrimoine",
               "adresse_2": "Galerie Colbert",
               "coordonnees_tel": "01 44 41 16 41",
@@ -3000,7 +3213,8 @@
               "coordonnees_cp": "48.8683234515, 2.3432977179",
               "sites_internet": "http://www.inp.fr/",
               "cp": 75002,
-              "etablissements_sieges_et_sites": "Institut national du patrimoine Paris"
+              "etablissements_sieges_et_sites": "Institut national du patrimoine Paris",
+
             },
             "geometry": {
               "type": "Point",
@@ -3015,6 +3229,7 @@
             "type": "Feature",
             "recordid": "81507a66921e0c3f9e541427b910706ef83fd6f9",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "coordonnees_tel": "04 73 34 71 50",
               "adresse_1": "85 rue du Docteur-Bousquet",
@@ -3028,7 +3243,8 @@
               "coordonnees_cp": "45.7859081171, 3.1155334528",
               "sites_internet": "www.clermont-fd.archi.fr",
               "cp": 63100,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Clermont-Ferrand"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Clermont-Ferrand",
+
             },
             "geometry": {
               "type": "Point",
@@ -3043,6 +3259,7 @@
             "type": "Feature",
             "recordid": "df739ae5037984f7a42fe0880c8a2bf4d9b68b09",
             "properties": {
+              "marker-color": "#3ca0d3",
               "domaines": "Cirque",
               "coordonnees_tel": "01 72 59 40 23",
               "adresse_1": "1-9 rue des Cheminots",
@@ -3056,7 +3273,8 @@
               "coordonnees_cp": "48.9296140653, 2.35920270384",
               "sites_internet": "www.academie-fratellini.com",
               "cp": 93210,
-              "etablissements_sieges_et_sites": "École supérieure de cirque Académie Fratellini Saint-Denis La Plaine"
+              "etablissements_sieges_et_sites": "École supérieure de cirque Académie Fratellini Saint-Denis La Plaine",
+
             },
             "geometry": {
               "type": "Point",
@@ -3071,6 +3289,7 @@
             "type": "Feature",
             "recordid": "c388b841c0c9d09257fd47eff077f44486e3639c",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "coordonnees_tel": "01 72 69 63 00",
               "adresse_1": "3/15 quai Panhard-et-Levassor",
@@ -3084,7 +3303,8 @@
               "coordonnees_cp": "48.8283577313, 2.36214011885",
               "sites_internet": "www.paris-valdeseine.archi.fr",
               "cp": 75013,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Paris-Val de Seine"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Paris-Val de Seine",
+
             },
             "geometry": {
               "type": "Point",
@@ -3099,6 +3319,7 @@
             "type": "Feature",
             "recordid": "98dcc3ab3ad70b53be5ff82919ae858cf1f24f36",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "coordonnees_tel": "01 55 04 56 50",
               "adresse_1": "14 rue Bonaparte",
@@ -3112,7 +3333,8 @@
               "coordonnees_cp": "48.8492531918, 2.33300877472",
               "sites_internet": "www.paris-malaquais.archi.fr",
               "cp": 75006,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Paris-Malaquais"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Paris-Malaquais",
+
             },
             "geometry": {
               "type": "Point",
@@ -3127,6 +3349,7 @@
             "type": "Feature",
             "recordid": "c4c5d69cb88de36998d7daba4bf7ffb9c7940078",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "coordonnees_tel": "04 67 91 89 89",
               "adresse_1": "179 rue de l’Esperou",
@@ -3140,7 +3363,8 @@
               "coordonnees_cp": "43.613085594, 3.86919806969",
               "sites_internet": "www.montpellier.archi.fr",
               "cp": 34000,
-              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Montpellier"
+              "etablissements_sieges_et_sites": "École nationale supérieure d’architecture de Montpellier",
+
             },
             "geometry": {
               "type": "Point",
@@ -3155,7 +3379,8 @@
             "type": "Feature",
             "recordid": "cb9a0ff64c93e1e43abc26d338eb28ad770f8588",
             "properties": {
-              "domaines": "Cinéma|Audiovisuel",
+              "marker-color": "#FED02F",
+              "domaines": "Cinéma et Audiovisuel",
               "coordonnees_tel": "01 49 83 21 75",
               "adresse_1": "4 avenue de l’Europe",
               "coordonnees_finales": [
@@ -3168,7 +3393,8 @@
               "coordonnees_cp": "48.839091496, 2.52374839829",
               "sites_internet": "www.ina-sup.com",
               "cp": 94360,
-              "etablissements_sieges_et_sites": "Ina SUP Bry-sur-Marne"
+              "etablissements_sieges_et_sites": "Ina SUP Bry-sur-Marne",
+
             },
             "geometry": {
               "type": "Point",
@@ -3183,6 +3409,7 @@
             "type": "Feature",
             "recordid": "c0d4f1d  8f89347212ca9b0840fe7a5e1df823eee",
             "properties": {
+              "marker-color": "#8ABDA8",
               "domaines": "Architecture",
               "adresse_2": "BP 306",
               "coordonnees_tel": "02.62.45.71.70",
@@ -3195,7 +3422,8 @@
               "villes": "Le Port",
               "coordonnees_cp": "-20.9441300378, 55.3052625029",
               "cp": 97420,
-              "etablissements_sieges_et_sites": "Ecole nationale supérieure d'architecture de Montpellier \nAntenne de la Réunion"
+              "etablissements_sieges_et_sites": "Ecole nationale supérieure d'architecture de Montpellier \nAntenne de la Réunion",
+
             },
             "geometry": {
               "type": "Point",
