@@ -44,6 +44,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (4.0.0)
+      activerecord (>= 4.0)
     acts_as_votable (0.10.0)
     arel (7.1.4)
     autoprefixer-rails (6.7.5)
@@ -104,8 +106,6 @@ GEM
       thor (~> 0.14)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
-    font-awesome-sass (4.7.0)
-      sass (>= 3.2)
     geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -272,6 +272,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 4.0)
   acts_as_votable (~> 0.10.0)
   autoprefixer-rails
   best_in_place (~> 3.0.1)
@@ -283,7 +284,6 @@ DEPENDENCIES
   devise
   devise-i18n
   figaro
-  font-awesome-sass
   geocoder
   jbuilder (~> 2.0)
   jquery-fileupload-rails

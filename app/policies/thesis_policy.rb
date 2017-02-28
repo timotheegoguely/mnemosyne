@@ -32,4 +32,8 @@ class ThesisPolicy < ApplicationPolicy
   def update?
     edit?
   end
+
+  def destroy?
+    record.user == user
+  end
 end

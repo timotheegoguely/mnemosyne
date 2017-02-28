@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   # Associations
   belongs_to :school
-  has_many :theses
+  has_many :theses, dependent: :destroy
 
   # Validations
   validates :email, :password, presence: true
