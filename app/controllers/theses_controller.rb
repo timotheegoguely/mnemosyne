@@ -28,6 +28,19 @@ class ThesesController < ApplicationController
   end
 
   def create
+
+    if params[:file]
+      @thesis = Thesis.new
+      authorize @thesis
+      file = Cloudinary::Uploader.upload(params[:file])
+
+      # Récupérer l'url pour la preview + d'autres infos avec le parser de PDF
+      # Construire le JSON de retour
+      @json = { file: file }
+      return render json: @json
+    end
+
+
     @title = params[:thesis][:title]
     session[:thesis_title] = @title
 
@@ -36,8 +49,8 @@ class ThesesController < ApplicationController
 
     session[:thesis_school_id] = params[:thesis][:school_id]
 
-    @thesis_diploma = ThesisDiploma.find(params[:thesis][:thesis_diploma])
-    session[:thesis_diploma_id] = params[:thesis][:thesis_diploma_id]
+    @diploma = Diploma.find(params[:thesis][:thesis_diploma])
+    session[:thesis_diploma_id] = params[:thesis][:thesis_diploma]
 
     @year = params[:thesis]['year(1i)'].to_i
     date = Date.new(@year)
@@ -53,7 +66,7 @@ class ThesesController < ApplicationController
     session[:thesis_tags] = @tags
 
     @thesis = Thesis.new(thesis_params)
-    @thesis.thesis_diploma = @thesis_diploma
+    @thesis.diploma = @diploma
 
     if current_user
       @thesis.user = current_user
@@ -109,7 +122,7 @@ class ThesesController < ApplicationController
   end
 
   def thesis_params
-    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache, :tag_list)
+    params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache, :tag_list, :download)
   end
 
 end

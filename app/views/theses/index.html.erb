@@ -4,7 +4,7 @@
 
 <main class="container">
 
-  <nav class="col push-right tabs z100" data-component="tabs">
+  <nav class="col push-right tabs z200" data-component="tabs">
     <ul>
       <li id="tab-cards" class="active">
         <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
@@ -19,7 +19,7 @@
   </nav>
 
   <!-- Cards -->
-  <div id="cards" class="cards">
+  <div id="cards" class="cards hide z100">
     <% @theses.each_with_index do |thesis, index| %>
       <% if thesis.document? %>
         <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
@@ -33,87 +33,105 @@
       <%= link_to "#", class: "card mix #{Thesis::CATEGORIES.sample}" do %>
         <figure class="card-cover">
           <%#= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
-          <div style="background-color: #eee; width: <%= rand(248..280) %>px; height: <%= rand(344..448) %>px" class="shadow"></div>
+          <div style="background-color: #ddd; width: <%= rand(248..280) %>px; height: <%= rand(344..448) %>px" class="shadow"></div>
         </figure>
       <% end %>
     <% end %>
   </div>
-  <footer id="card-preview">
+  <footer id="card-preview" style="display: none">
     <table class="table">
-      <tr>
-        <td class="thesis-thumbnail">
-          <%= link_to "#" do %>
-            <%= image_tag "http://placehold.it/32x48" %>
-          <% end %>
-        </td>
-        <td class="thesis-title">
-          <%= link_to "#" do %>
-            <h5>Titre</h5>
-            <small>Sous-titre</small>
-          <% end %>
-        </td>
-        <td class="thesis-author">Prénom Nom</td>
-        <td class="thesis-school">École</td>
-        <td class="thesis-year">Year</td>
-        <td class="thesis-bookmarks">0</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td class="thesis-thumbnail">
+            <%= link_to "#" do %>
+              <%#= image_tag "http://placehold.it/32x48" %>
+              <div class="thumbnail" style="background-color: #ddd; height: 48px; width: 32px"></div>
+            <% end %>
+          </td>
+          <td class="thesis-title">
+            <%= link_to "#" do %>
+              <h5>Titre</h5>
+              <small>Sous-titre</small>
+            <% end %>
+          </td>
+          <td class="thesis-author">Prénom Nom</td>
+          <td class="thesis-school">École</td>
+          <td class="thesis-year">Year</td>
+          <td class="thesis-bookmarks">0</td>
+        </tr>
+      </tbody>
     </table>
   </footer>
 
   <!-- List -->
-  <div id="list" class="hide">
+  <div id="list" class="hide z100">
     <%= render "shared/list", elements: @theses %>
   </div>
 
 
   <!-- Map -->
+  <div id="map" class="hide"></div>
+  <div id="info" class="school-info-wrapper"></div>
 
-    <div id='map' class="hide">
-
-    <style>
-    .mapboxgl-popup {
-        max-width: 400px;
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    }
-    </style>
-
-    <% content_for(:after_js) do %>
-      <script>
-        $( ".tabs li" ).one( "click", function() {
-          if ($( this ).last().hasClass('active')) {
-            map.invalidateSize();
-          }
-        });
-
-        var mixer = mixitup('.cards', {
-          controls: {
-            toggleLogic: 'and'
-          }
-        });
-
-        <!-- Forget not to replace access token by ENV['MAPBOX_API_KEY'] -->
-
-        L.mapbox.accessToken = 'pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw';
-
-        var map = L.mapbox.map('map', 'mapbox.light').setView([46.2276, 2.2137], 6);
-
-        var myLayer = L.mapbox.featureLayer()
-        .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson')
-        .on('ready', function() {
-          myLayer.eachLayer(function(layer) {
-            var data =
-            '<div><h1>' + layer.feature.properties.etablissements_sieges_et_sites +
-            '</h1><br><hr><p>'+layer.feature.properties.adresse_1+'</p><br><p>'+layer.feature.properties.cp+'</p><p>'+layer.feature.properties.villes+'</p><p>'+layer.feature.properties.sites_internet+'</p><hr></div>'
-
-            layer.bindPopup(data);
-          });
-        })
-
-        .addTo(map);
-
-      </script>
-    <% end %>
-
-  </div>
 
 </main>
+
+<% content_for(:after_js) do %>
+  <script>
+
+    // MixItUp
+    var mixer = mixitup('.cards', {
+      controls: {
+        toggleLogic: 'and'
+      }
+    });
+
+
+    // Mapbox
+    $( "#tab-map" ).click(function() {
+      if ($( this ).last().hasClass('active')) {
+        map.invalidateSize();
+      }
+    });
+
+    L.mapbox.accessToken = "pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw";
+
+    var info = document.getElementById('info');
+    var map = L.mapbox.map('map').setView([46.9, 2.2137], 6);
+    var styleLayer = L.mapbox.styleLayer('mapbox://styles/timotheegoguely/cizpp8yvt00g02snuonomh5ue').addTo(map);
+    var myLayer = L.mapbox.featureLayer()
+    .loadURL('https://raw.githubusercontent.com/timotheegoguely/mnemosyne/master/db/schools_list_mnemosyne.geojson')
+    .addTo(map);
+
+    // Listen for individual marker clicks.
+    myLayer.on('click',function(e) {
+      // Force the popup closed.
+      e.layer.closePopup();
+
+      var feature = e.layer.feature;
+      var content = '<div class="school-info">' +
+                    '<span id="school-close" class="close big"></span>' +
+                    '<h2>' + feature.properties.etablissements_sieges_et_sites + '</h2><hr>' +
+                    '<p class="school-address">' + feature.properties.adresse_1+'</p>' +
+                    '<p class="school-zipcode">' + feature.properties.cp+'</p>' +
+                    '<p class="school-city">' + feature.properties.villes + '</p>' +
+                    '<p class="school-website">' + feature.properties.sites_internet + '</p></div>';
+
+      info.innerHTML = content;
+    });
+
+    // Clear the tooltip when map is moved or clicked + when close button is clicked.
+    map.on('move', empty);
+    map.on('click', empty);
+    $("#school-close").on('click', empty);
+
+    // Trigger empty contents when the script
+    // has loaded on the page.
+    empty();
+
+    function empty() {
+      info.innerHTML = '';
+    }
+
+  </script>
+<% end %>

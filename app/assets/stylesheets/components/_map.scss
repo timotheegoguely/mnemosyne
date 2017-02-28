@@ -1,17 +1,65 @@
 #map {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 80px;
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 80px);
   z-index: 0;
 }
 
+.leaflet-popup {
+  //position: relative;
+}
 .leaflet-popup-content-wrapper {
   height: 400px;
   width: 400px;
 }
 
+.leaflet-control-zoom {
+  position: fixed;
+  bottom: 40px;
+  left: 2px;
+}
+
+.school-info-wrapper {
+  position: fixed;
+  top: 80px;
+  right: 0px;
+  bottom: 0px;
+  height: calc(100vh - 80px);
+  .school-info {
+    padding: 80px 32px 32px;
+    background:#fff;
+    width: 400px;
+    height: 100%;
+  }
+  #school-close {
+    position: absolute;
+    top: 36px;
+    cursor: pointer;
+  }
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
 hr {
   width: 100%;
+}
+
+.hidden {
+    width: 50%;
+    z-index: 2;
+    position:absolute;
+    float: right;
+    height: 350px;
+    right: 1000px;
+    background-color: white;
+    color: black;
+}
+
+.clear {
+    clear:both;
 }

@@ -8,6 +8,7 @@
   padding-bottom: 6px;
 }
 
+
 // Sidebar
 .sidebar {
   padding-top: 160px;
@@ -112,7 +113,23 @@
   }
 }
 
+
+// List
 .table {
+  width: 100vw;
+  margin-left: -32px;
+  margin-bottom: 0px;
+  background-color: #fff;
+  tbody tr {
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: $color-aluminum;
+    }
+  }
+  #bookmark-th {
+    padding-bottom: 12px;
+    padding-left: 10px;
+  }
   td {
     vertical-align: middle;
     font-family: $headings-font-family;
@@ -121,8 +138,11 @@
     -moz-font-feature-settings: 'tnum';
   }
   .thesis-thumbnail {
-    min-width: 48px;
+    min-width: 64px;
     width: 5%;
+    .thumbnail {
+      margin-left: 32px;
+    }
   }
   .thesis-title {
     width: 30%;
@@ -142,6 +162,8 @@
   }
 }
 
+
+// Cards
 #cards {
   @include flex;
   @include flex-items-bottom;
@@ -164,10 +186,12 @@
   left: 32px;
   right: 32px;
   bottom: 0;
+  z-index: -1;
   td {
     border-bottom: none;
   }
 }
+
 
 // Views options
 .tabs {

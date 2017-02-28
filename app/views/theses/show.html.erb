@@ -81,6 +81,10 @@
           <a href="#">#<%= tag %></a>
         <% end %>
       </div>
+
+      <% if current_user && @thesis.download  %>
+        <%= link_to "Télécharger", cloudinary_url(@thesis.document), target: "_blank", class: "button big secondary" %>
+      <% end %>
     </div>
   </div>
 

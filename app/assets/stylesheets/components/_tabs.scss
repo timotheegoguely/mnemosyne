@@ -2,6 +2,10 @@
   margin-bottom: $base-line;
   font-size: $font-size-small;
 
+  & ul {
+    @include flex;
+  }
+
   & li em,
   & li.active a {
   	color: $color-text;
@@ -32,8 +36,6 @@
 @include breakpoint($min: $sm) {
   .tabs {
     & ul {
-      @include flex;
-
       margin-top: -1px;
       border-bottom: 1px solid rgba(0, 0, 0, .1);
     }
