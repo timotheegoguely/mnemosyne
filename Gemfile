@@ -28,7 +28,7 @@ gem 'uglifier'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'rails-assets-mixitup', source: 'https://rails-assets.org'
-
+gem 'dropzonejs-rails'
 #admin
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
