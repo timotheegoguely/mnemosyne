@@ -3,6 +3,7 @@
 //= require jquery-fileupload/basic
 //= require cloudinary/jquery.cloudinary
 //= require best_in_place
+//= require DataTables
 //= require mixitup
 //= require dropzone
 //= require_tree ./vendor/
