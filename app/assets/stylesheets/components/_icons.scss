@@ -23,6 +23,10 @@
 .kube-calendar:before {
   content: "\e900";
 }
+.caret {
+  font-size: 18px;
+  color: #5e6c75;
+}
 .caret.down:before,
 .kube-caret-down:before {
   content: "\e901";

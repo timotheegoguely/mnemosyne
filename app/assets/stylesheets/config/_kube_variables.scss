@@ -42,8 +42,8 @@ $input-font-family: $text-font-family !default;
 // ---------------------------------------------------------------------------
 
 // Text
-$color-text: #313439 !default;
-$color-headings: #0d0d0e !default;
+$color-text: lighten($color-darkblue, 5%) !default; //#313439
+$color-headings: $color-darkblue !default; // #0d0d0e
 
 // Links
 $color-link: $color-text !default;
@@ -52,7 +52,7 @@ $color-link-hover: darken($color-text, 20%) !default;
 // Button
 $color-button-primary: #1c86f2 !default;
 $color-button-primary-text: #fff !default;
-$color-button-secondary: #313439 !default;
+$color-button-secondary: $color-darkblue !default;
 $color-button-secondary-text: #fff !default;
 
 // States

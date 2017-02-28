@@ -4,27 +4,25 @@
 
 <main class="container">
 
-  <header class="row" id="top">
-    <nav class="col push-right tabs z100" data-component="tabs">
-      <ul>
-        <li class="active">
-          <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
-        </li>
-        <li>
-          <%= link_to "<i class='material-icons'>list</i>".html_safe, "#list" %>
-        </li>
-        <li>
-          <%= link_to "<i class='material-icons'>map</i>".html_safe, "#map" %>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="col push-right tabs z100" data-component="tabs">
+    <ul>
+      <li class="active">
+        <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
+      </li>
+      <li>
+        <%= link_to "<i class='material-icons'>list</i>".html_safe, "#list" %>
+      </li>
+      <li>
+        <%= link_to "<i class='material-icons'>map</i>".html_safe, "#map" %>
+      </li>
+    </ul>
+  </nav>
 
   <!-- Cards -->
   <div id="cards" class="cards">
-    <% @theses.each do |thesis| %>
+    <% @theses.each_with_index do |thesis, index| %>
       <% if thesis.document? %>
-        <%= link_to user_thesis_path(thesis.user, thesis), class: "card" do %>
+        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
           <figure class="card-cover">
             <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
           </figure>
@@ -32,15 +30,15 @@
       <% end %>
     <% end %>
     <% 16.times do %>
-      <%= link_to "#", class: "card" do %>
+      <%= link_to "#", class: "card mix #{Thesis::CATEGORIES.sample}" do %>
         <figure class="card-cover">
           <%#= image_tag "http://placehold.it/#{rand(248..280)}x#{rand(344..448)}" %>
           <div style="background-color: #eee; width: <%= rand(248..280) %>px; height: <%= rand(344..448) %>px" class="shadow"></div>
         </figure>
       <% end %>
     <% end %>
-
-    <footer id="preview">
+  </div>
+  <footer id="card-preview">
       <table class="table">
         <tr>
           <td class="thesis-thumbnail">
@@ -61,7 +59,6 @@
         </tr>
       </table>
     </footer>
-  </div>
 
   <!-- List -->
   <div id="list" class="hide">
@@ -85,6 +82,12 @@
         $( ".tabs li" ).one( "click", function() {
           if ($( this ).last().hasClass('active')) {
             map.invalidateSize();
+          }
+        });
+
+        var mixer = mixitup('.cards', {
+          controls: {
+            toggleLogic: 'and'
           }
         });
 

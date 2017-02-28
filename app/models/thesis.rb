@@ -1,3 +1,5 @@
+require 'set'
+
 class Thesis < ApplicationRecord
 
   # Elasticsearch (using searchkick gem)
@@ -26,6 +28,14 @@ class Thesis < ApplicationRecord
     self.thesis_diploma_subcategories.map { |diploma_subcategory| diploma_subcategory.subcategory }
   end
 
+  def categories
+    categories = Set.new
+    self.subcategories.each do |subcategory|
+      categories << subcategory.category.name
+      return categories.to_a
+    end
+  end
+
   def previous
     previous_thesis = self.class.where("id < ?", id).last
     if previous_thesis.nil?
@@ -51,3 +61,14 @@ class Thesis < ApplicationRecord
   end
 
 end
+
+CATEGORIES = [
+  "architecture",
+  "patrimoines",
+  "arts-plastiques",
+  "spectacle-vivant",
+  "cinema-et-audiovisuel",
+  "livre",
+  "presse",
+  "gestion-et-mediation"
+]
