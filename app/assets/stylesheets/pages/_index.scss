@@ -12,6 +12,10 @@
 .sidebar {
   padding-top: 160px;
   #filter-category {
+    .category-counter {
+      margin-left: 0.5em;
+      font-weight: lighter;
+    }
     .category {
       display: inline-block;
       font-family: $text-font-family, sans-serif;

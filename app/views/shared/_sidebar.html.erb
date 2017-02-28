@@ -8,9 +8,9 @@
           <label>Catégories <span class="caret down"></span></label>
         </a>
         <div id="categories" class="collapse-box">
-          <button type="button" data-filter="all" class="category upper">Toutes</button>
+          <button type="button" data-filter="all" class="category upper">Toutes <span class="category-counter">1024</span></button>
           <% Thesis::CATEGORIES.each do |category| %>
-            <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %></button>
+            <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %> <span class="category-counter">128</span></button>
           <% end %>
         </div>
       </div>

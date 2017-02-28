@@ -33,7 +33,7 @@ class Thesis < ApplicationRecord
     categories = Set.new
     self.subcategories.each do |subcategory|
       categories << subcategory.category.name
-      return categories
+      return categories.to_a
     end
   end
 
