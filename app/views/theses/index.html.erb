@@ -16,11 +16,8 @@
         <tbody>
           <tr>
             <td class="thesis-title">
-
-                <h5><%= thesis.title %></h5>
-
-                <small><%= thesis.subtitle %></small>
-
+              <h5><%= thesis.title %></h5>
+              <small><%= thesis.subtitle %></small>
             </td>
             <td class="thesis-author"><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
             <td class="thesis-school"><%= thesis.school.name %></td>
@@ -50,8 +47,8 @@
 
     // MixItUp
     var mixer = mixitup('.cards', {
-      controls: {
-        toggleLogic: 'and'
+      multifilter: {
+        enable: true
       }
     });
 
