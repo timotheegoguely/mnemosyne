@@ -37,6 +37,11 @@ class Devise::SessionsController < DeviseController
     end
 
     respond_with resource, location: after_sign_in_path_for(resource)
+
+    # Omniauth
+    @user = User.find_or_create_from_auth_hash(auth_hash)
+    self.current_user = @user
+    redirect_to '/'
   end
 
   # DELETE /resource/sign_out
@@ -104,5 +109,10 @@ class Devise::SessionsController < DeviseController
     session[:thesis_diploma_id] = nil
     session[:thesis_year] = nil
     session[:thesis_tags] = nil
+  end
+
+  # Omniauth
+  def auth_hash
+    request.env['omniauth.auth']
   end
 end

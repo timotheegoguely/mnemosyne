@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get '/auth/:provider/callback', to: 'sessions#create'
+
   scope '(:locale)', locale: /fr|en/ do
     root to: 'pages#home' # theses#index
     resources :users do

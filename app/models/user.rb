@@ -7,6 +7,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:twitter]
 
+  # Omniauth Twitter
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+    end
+  end
+
   # Authentication token
   acts_as_token_authenticatable
   # Bookmarks : voter
