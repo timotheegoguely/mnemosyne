@@ -30,13 +30,13 @@ class Thesis < ApplicationRecord
   #   self.thesis_diploma_subcategories.map { |diploma_subcategory| diploma_subcategory.subcategory }
   # end
 
-  # def categories
-  #   categories = Set.new
-  #   self.subcategories.each do |subcategory|
-  #     categories << subcategory.category.name
-  #     return categories.to_a
-  #   end
-  # end
+  def categories_names
+    categories = Set.new
+    self.subcategories.each do |subcategory|
+      categories << subcategory.category.name.gsub(/\s+/, '-')
+      return categories.to_a
+    end
+  end
 
   def previous
     previous_thesis = self.class.where("id < ?", id).last

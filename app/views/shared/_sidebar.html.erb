@@ -8,35 +8,41 @@
           <label>Catégories <span class="caret down"></span></label>
         </a>
         <div id="categories" class="collapse-box">
-          <button type="button" data-filter="all" class="category upper">Toutes <span class="category-counter">1024</span></button>
-          <% Thesis::CATEGORIES.each do |category| %>
-            <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %> <span class="category-counter"><%= Thesis.joins(:categories).where(categories: { name: category }).count %></span></button>
-          <% end %>
+          <fieldset data-filter-group>
+            <button type="button" data-filter="all" class="category upper">Toutes <span class="category-counter">1024</span></button>
+            <% Thesis::CATEGORIES.each do |category| %>
+              <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %> <span class="category-counter"><%= Thesis.joins(:categories).where(categories: { name: category }).count %></span></button>
+            <% end %>
+          </fieldset>
         </div>
       </div>
     </li>
 
     <li id="filter-school">
       <div class="form-item">
-        <label>École</label>
-        <select class="small">
-          <option value="" selected disabled>Choisissez une école</option>
-          <% @schools.each do |school| %>
-            <option value="<%= school.id %>"><%= school.acronym? ? school.acronym : school.name %></option>
-          <% end %>
-        </select>
+        <fieldset data-filter-group>
+          <label>École</label>
+          <select class="small">
+            <option value="" selected>–</option>
+            <% @schools.each do |school| %>
+              <option value=".school-<%= school.id %>"><%= school.acronym? ? school.acronym : school.name %></option>
+            <% end %>
+          </select>
+        </fieldset>
       </div>
     </li>
 
     <li id="filter-diploma">
       <div class="form-item">
-        <label>Diplôme</label>
-        <select class="small">
-          <option value="" selected disabled>Choisissez un diplôme</option>
-          <% @diplomas.each do |diploma| %>
-            <option value="<%= diploma.id %>"><%= diploma.acronym? ? diploma.acronym : diploma.name %></option>
-          <% end %>
-        </select>
+        <fieldset data-filter-group>
+          <label>Diplôme</label>
+          <select class="small">
+            <option value="" selected>–</option>
+            <% @diplomas.each do |diploma| %>
+              <option value=".diploma-<%= diploma.id %>"><%= diploma.acronym? ? diploma.acronym : diploma.name %></option>
+            <% end %>
+          </select>
+        </fieldset>
       </div>
     </li>
   </ul>
