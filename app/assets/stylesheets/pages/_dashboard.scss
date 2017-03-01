@@ -1,12 +1,55 @@
-.tabs {
+#dashboard-wrapper {
+  padding: 2rem 10vw;
 }
 
-.profil {
-  height: 400px;
-}
+#dashboard {
+  .user-avatar {
+    margin-bottom: 2rem;
+    height: 400px;
+    padding-right: 1.5rem;
+  }
 
-.tab-content {
-  width: 100%;
-  height: 100%;
+  .tabs {
+    position: initial;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $color-text;
+    .active {
+      border-bottom: 2px solid transparentize($color-text, 0.5);
+    }
+    li:hover {
+      border-bottom: 2px solid transparentize($color-text, 0.75);
+    }
+    i {
+      opacity: 0.5;
+    }
+  }
+
+  .tab-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  #profile {
+    .user-data {
+      margin-bottom: 2rem;
+      .user-name {
+        margin-bottom: .5rem;
+      }
+      .user-bio {
+        opacity: 0.5;
+      }
+      .user-website {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+      }
+    }
+  }
+
+  .cards {
+  }
 }
 

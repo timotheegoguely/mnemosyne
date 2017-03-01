@@ -64,11 +64,11 @@ en:
         resend_unlock_instructions: Resend unlock instructions
   shared:
     navbar:
-      profile: Profile
-      my_thesis: My theses
+      my_profile: Profile
+      my_thesis: My thesis
       my_bookmarks: My bookmarks
-      settings: Settings & privacy
-      sign_in: Sign  in
+      settings: Settings
+      sign_in: Sign in
       sign_out: Sign out
       search: Search…
       top_call_to_action: Upload
@@ -99,11 +99,26 @@ en:
 
   users:
     show:
+      profile_tab_title_my_account: My profile
       thesis_tab_title_my_account: My theses
       bookmarks_tab_title_my_account: My bookmarks
-      settings_tab_my_account: Paramètres et confidentidentialité
+      settings_tab_my_account: Settings
+      profile_tab_title: Profile
       thesis_tab_title: Thesis
       bookmarks_tab_title: Bookmarks
-      no_bookmark_text: You have no bookmark !
+      no_bookmark_text: You have no bookmark yet!
       explore_link: Explore theses
-      permission: Allow all users to download my thesis ?
+      permission: Allow all users to download my thesis?
+    edit:
+      profile_tab_title_my_account: My profile
+      thesis_tab_title_my_account: My theses
+      bookmarks_tab_title_my_account: My bookmarks
+      settings_tab_my_account: Settings
+      edit_your_profile: Edit your profile
+      email: Email
+      first_name: First name
+      last_name: Last name
+      bio: Bio
+      birthdate: Birth date
+      website: Website
+      save: Save

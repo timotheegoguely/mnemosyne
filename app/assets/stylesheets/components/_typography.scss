@@ -17,6 +17,15 @@ a:hover {
 	color: $color-link-hover;
 }
 
+a.underline {
+  padding-bottom: 0.1em;
+  border-bottom: 2px solid transparentize($color-text, 0.75);
+  transition: border-bottom-color 0.2s ease;
+  &:hover {
+    border-bottom-color: transparentize($color-text, 0.5);
+  }
+}
+
 // Headings
 h1.title, h1, h2, h3, h4, h5, h6 {
 	font-family: $headings-font-family;

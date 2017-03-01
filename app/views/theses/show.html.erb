@@ -35,7 +35,7 @@
         <% end %>
       <% else %>
         <%= link_to bookmark_user_thesis_path, method: :post, id:"bookmark" do %>
-          <i class='material-icons'>turned_in_not</i>
+          <i class='material-icons md-36'>turned_in_not</i>
         <% end %>
       <% end %>
       <div id="bookmark-counter" class=<%= "hide" if @thesis.get_likes.size == 0 %>>
@@ -51,7 +51,7 @@
       <h1 class="title"><%= @thesis.title %></h1>
 
       <% if policy(@thesis).edit? %>
-        <%= link_to t('.edit') , edit_user_thesis_path(@thesis.user, @thesis), id: "edit", class: "button small secondary" %>
+        <%= link_to t('.edit') , edit_user_thesis_path(@thesis.user, @thesis), id: "edit", class: "button small upper secondary" %>
       <% end %>
       <% if @thesis.subtitle %>
         <h2 class="subtitle big"><%= @thesis.subtitle if @thesis.subtitle %></h2>
@@ -84,12 +84,12 @@
 
       <div class="tags">
         <% @thesis.tag_list.each do |tag| %>
-          <a href="#">#<%= tag %></a>
+          <%= link_to '#' + tag, search_path(keywords: tag) %>
         <% end %>
       </div>
 
       <% if current_user && @thesis.download  %>
-        <%= link_to "Télécharger", cloudinary_url(@thesis.document), target: "_blank", class: "button big secondary" %>
+        <%= link_to "Télécharger", cloudinary_url(@thesis.document), target: "_blank", class: "button big upper secondary" %>
       <% end %>
     </div>
   </div>

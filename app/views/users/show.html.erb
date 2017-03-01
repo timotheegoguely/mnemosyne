@@ -1,55 +1,69 @@
-<div class="container">
-  <div class="row gutters">
+<main class="container" id="dashboard-wrapper">
+  <div class="row gutters" id="dashboard">
 
-    <div class="col col-3 profil">
-      <div id="user-avatar">
-        <%= image_tag "timothee.jpg", class:"avatar-large" %>
-      </div>
-
-      <div class="user-data">
-        <p class="user-name"><%= @user.first_name %> <%= @user.last_name %></p>
-        <p class="user-website">
-          <%= link_to @user.website, @user.website %>
-        </p>
-        <p class="user-bio"><%= @user.bio %></p>
-      </div>
+    <div class="col col-3 user-avatar">
+      <%= image_tag "timothee.jpg", class:"avatar-full rounded" %>
     </div>
 
-    <div class="col col-9">
+    <!-- Tabs -->
+    <div class="col col-8">
       <nav class="tabs" data-component="tabs">
-        <ul>
-          <div class="col col-3">
+        <ul class="row gutters">
+          <div class="col">
+            <li>
+              <a href="#profile">
+                <i class='material-icons md-18'>account_circle</i>
+                <%= @user == current_user ? t('.profile_tab_title_my_account') : t('.profile_tab_title') %>
+              </a>
+            </li>
+          </div>
+          <div class="col">
             <li>
               <a href="#theses">
+                <i class='material-icons md-18'>book</i>
                 <%= @user == current_user ? t('.thesis_tab_title_my_account') : t('.thesis_tab_title') %>
               </a>
             </li>
           </div>
-          <div class="col col-3">
+          <div class="col">
             <li>
               <a href="#bookmarks">
+                <i class='material-icons md-18'>turned_in</i>
                 <%= @user == current_user ? t('.bookmarks_tab_title_my_account') : t('.bookmarks_tab_title') %>
-              </a></li>
+              </a>
+            </li>
           </div>
           <% if policy(@user).edit? %>
-            <div class="col col-3">
-              <li><a href="#settings"><%= t('.settings_tab_my_account') %></a></li>
+            <div class="col">
+              <li>
+                <a href="#settings"><i class='material-icons md-18'>settings</i> <%= t('.settings_tab_my_account') %></a>
+              </li>
             </div>
           <% end %>
         </ul>
       </nav>
 
-      <!-- My theses -->
+      <!-- My profile -->
+      <div class="tab-content" id="profile">
+        <fieldset>
+          <div class="user-data">
+            <h2 class="user-name"><strong><%= @user.first_name %> <%= @user.last_name %></strong></h2>
+            <p class="user-bio"><%= @user.bio %></p>
+            <p class="user-website">
+              <%= link_to @user.website, @user.website, class: "underline" %>
+            </p>
+          </div>
+          <% if policy(@user).edit? %>
+            <%= link_to t('.edit') , edit_user_path(current_user), id: "edit", class: "button small upper secondary" %>
+          <% end %>
+        </fieldset>
+      </div>
+
+      <!-- My thesis -->
       <div class="tab-content" id="theses">
-      <% @theses.each do |thesis| %>
-        <%= link_to user_thesis_path(@user, thesis) do %>
-          <h1><strong><%= thesis.title %></strong></h1>
-          <p><%= thesis.school.name %>, <%= thesis.year.year %></p>
-          <h2><%= thesis.subtitle if thesis.subtitle %></h2>
-          <p><%= thesis.resume %></p>
-        <% end %>
-        <hr>
-      <% end %>
+        <div id="cards" class="cards">
+          <%= render "shared/cards", theses: @theses %>
+        </div>
       </div>
 
       <!-- My bookmarks -->
@@ -58,17 +72,21 @@
           <h3><%= t('.no_bookmark_text') %></h3>
           <%= link_to t('.explore_link'), theses_path, class: "button outline secondary" %>
         <% else %>
-          <%= render "shared/list", elements: @user.find_voted_items %>
+          <div id="cards" class="cards">
+            <%= render "shared/cards", theses: @user.find_voted_items %>
+          </div>
         <% end %>
       </div>
 
       <!-- Settings & privacy -->
-      <div class="tab-content" id="settings">
-        <h3><%= t('.permission') %></h3>
-      </div>
+      <% if policy(@user).edit? %>
+        <div class="tab-content" id="settings">
+          <h3><%= t('.permission') %></h3>
+        </div>
+      <% end %>
     </div>
   </div>
 
-</div>
+</main>
 
 

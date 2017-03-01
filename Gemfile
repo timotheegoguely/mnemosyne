@@ -34,19 +34,30 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
 gem 'geocoder'
+gem 'pdf-reader'
 
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'best_in_place', '~> 3.0.1'
-
-gem 'rails-assets-DataTables', source: 'https://rails-assets.org'
 
 # Twitter Authentication
 gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'binding_of_caller'
+end
+
+group :development do # Stuff we do not want in :test env
+  gem 'rails-assets-DataTables', source: 'https://rails-assets.org'
   gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
+  gem 'minitest-reporters'
 
   gem 'pry-byebug'
   gem 'pry-rails'
