@@ -4,24 +4,28 @@
   position: relative;
   width: 100vw;
   height: 480px;
-  padding: 32px;
+  padding: 32px 64px;
   background-color: $color-aluminum;
   .thesis-cover {
     margin: auto;
     max-width: 100%;
-    max-height: calc(100vh - 176px);
+    max-height: calc(480px - 64px);
   }
-  #thesis-previous {
-    position: absolute;
-    left: 0px;
-    font-size: 50px;
-    color: #7F7F7F;
-  }
+  #thesis-previous,
   #thesis-next {
     position: absolute;
-    right: 0px;
-    font-size: 50px;
     color: #7F7F7F;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  #thesis-previous {
+    left: 8px;
+  }
+  #thesis-next {
+    right: 8px;
   }
 }
 #thesis-content-wrapper {
@@ -117,10 +121,10 @@
   #thesis-cover-wrapper {
     position: fixed;
     width: 38.2vw;
-    padding: 48px;
+    padding: 48px 64px;
     height: calc(100vh - 80px);
-    #thesis-cover {
-      max-height: none;
+    .thesis-cover {
+      max-height: calc(100vh - 176px);
     }
   }
   #thesis-content-wrapper {

@@ -116,17 +116,34 @@
 
 // List
 .table {
-  width: 100vw;
-  margin-left: -32px;
+  width: 100vw !important;
+  margin-left: -32px !important;
   margin-bottom: 0px;
   background-color: #fff;
-  thead .sorting {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" h…4.134,12.01l0.732-.726Zm7.555,0L9.01,7.9,4.866,12.01l-0.732-.726Z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: center 1rem right;
+  border-bottom: none !important;
+  thead {
+    .sorting,
+    .sorting_asc,
+    .sorting_desc {
+      background-repeat: no-repeat !important;
+      background-position: center right 0.5rem !important;
+      text-transform: uppercase !important;
+      color: transparentize($color-text, 0.5) !important;
+    }
+    .sorting {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12.7" viewBox="0 0 9 12.7"><path opacity=".25" fill="#081C2B" d="M4.5 11.3L.7 7.6l-.7.7 4.5 4.5L9 8.3l-.7-.7M4.5 1.5l3.8 3.7.7-.7L4.5 0 0 4.5l.7.7"/></svg>') !important;
+    }
+    .sorting_asc {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12.746" viewBox="0 0 9 12.746"><path opacity=".5" fill="#081C2B" d="M4.5 1.452l3.778 3.744.732-.723L4.5 0-.01 4.473l.733.723"/></svg>') !important;
+    }
+    .sorting_desc {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12.746" viewBox="0 0 9 12.746"><path opacity=".5" fill="#081C2B" d="M4.5 11.294L.722 7.55l-.732.723 4.51 4.473 4.51-4.473-.733-.723"/></svg>') !important;
+    }
   }
-  thead tr td {
+  thead tr > th {
     border-bottom-color: rgba(0, 0, 0, 0.05) !important;
+    padding: 12px 10px !important;
+    line-height: 1;
   }
   tbody tr {
     transition: background-color 0.2s ease;
@@ -134,9 +151,12 @@
       background-color: $color-aluminum;
     }
   }
+  #thumbnail-th {
+    background-image: none !important;
+  }
   #bookmark-th {
-    padding-bottom: 12px;
-    padding-left: 10px;
+    padding-bottom: 8px !important;
+    background-position: center right 1rem !important;
   }
   td {
     vertical-align: middle;
@@ -153,20 +173,21 @@
     }
   }
   .thesis-title {
-    width: 30%;
+    width: 35%;
     line-height: 1.333;
   }
   .thesis-author {
-    width: 15%;
+    width: 16%;
   }
   .thesis-school {
-    width: 15%;
+    width: 10%;
   }
   .thesis-year {
     width: 5%;
   }
   .thesis-bookmarks {
-    width: 5%;
+    width: 4%;
+    padding-left: 16px;
   }
 }
 

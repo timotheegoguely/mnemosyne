@@ -32,6 +32,27 @@
     background:#fff;
     width: 400px;
     height: 100%;
+    hr {
+      margin: 24px 0;
+    }
+    i {
+      position: relative;
+      top: 3px;
+      margin-right: 1em;
+      opacity: 0.5;
+    }
+    .school-address-2,
+    .school-zipcode {
+      margin-left: 2.5em;
+    }
+    a {
+      padding-bottom: 0.1em;
+      border-bottom: 2px solid transparentize($color-text, 0.75);
+      transition: border-bottom-color 0.2s ease;
+      &:hover {
+        border-bottom-color: transparentize($color-text, 0.5);
+      }
+    }
   }
   #school-close {
     position: absolute;

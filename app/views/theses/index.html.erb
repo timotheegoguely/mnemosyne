@@ -92,7 +92,7 @@
       }
     });
 
-    // L.mapbox.accessToken = "pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw";
+    L.mapbox.accessToken = "pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw";
 
     var info = document.getElementById('info');
     var map = L.mapbox.map('map').setView([46.9, 2.2137], 6);
@@ -110,18 +110,23 @@
       var content = '<div class="school-info">' +
                     '<span id="school-close" class="close big"></span>' +
                     '<h2>' + feature.properties.etablissements_sieges_et_sites + '</h2><hr>' +
-                    '<p class="school-address">' + feature.properties.adresse_1+'</p>' +
-                    '<p class="school-zipcode">' + feature.properties.cp+'</p>' +
-                    '<p class="school-city">' + feature.properties.villes + '</p>' +
-                    '<p class="school-website">' + feature.properties.sites_internet + '</p></div>';
+                    '<p class="school-address"><i class="material-icons md-18">location_on</i> <span class="school-address-1">' + feature.properties.adresse_1 +'</span><br>' +
+                    '<span class="school-zipcode">' + feature.properties.cp+'</span>, ' +
+                    '<span class="school-city">' + feature.properties.villes + '</span></p>' +
+                    '<p class="school-website"><i class="material-icons md-18">link</i> <a href="http://' + feature.properties.sites_internet + '" target="_blank">' + feature.properties.sites_internet + '</a></p>' +
+                    '<p class="school-phone"><i class="material-icons md-18">phone</i> <a href="tel:' + feature.properties.coordonnees_tel.replace(/ /g, '') + '">' + feature.properties.coordonnees_tel + '</a></p>' +
+                    '</div>';
 
       info.innerHTML = content;
+
+      // Close button
+      var close = document.getElementById('school-close');
+      close.onclick = empty;
     });
 
     // Clear the tooltip when map is moved or clicked + when close button is clicked.
     map.on('move', empty);
     map.on('click', empty);
-    $("#school-close").on('click', empty);
 
     // Trigger empty contents when the script
     // has loaded on the page.
