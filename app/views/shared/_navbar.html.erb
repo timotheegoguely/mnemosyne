@@ -9,7 +9,7 @@
     <div class="navbar-item" id="search-wrapper">
       <form action="<% root_path %>/search" class="form" id="search-form">
         <div class="form-item">
-          <input type="text" name= "keywords" class="search" id="search-input" placeholder="<%= t(".search") %>">
+          <input type="text" value="<%= params["keywords"] %>" name= "keywords" class="search" id="search-input" placeholder="<%= t(".search") %>">
         </div>
       </form>
     </div>

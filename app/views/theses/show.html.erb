@@ -84,7 +84,7 @@
 
       <div class="tags">
         <% @thesis.tag_list.each do |tag| %>
-          <a href="#">#<%= tag %></a>
+          <%= link_to '#' + tag, search_path(keywords: tag) %>
         <% end %>
       </div>
 
