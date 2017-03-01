@@ -1,7 +1,6 @@
 require 'open-uri'
 class ThesesController < ApplicationController
-
-  before_action :set_thesis, only: [ :show, :edit, :destroy, :bookmark ]
+  before_action :set_thesis, only: [ :show, :edit, :update, :destroy, :bookmark ]
   skip_before_action :authenticate_user!, only: [ :search, :index, :show, :new, :create ]
   before_action :get_search_params, only: [ :search ]
 
@@ -93,10 +92,8 @@ class ThesesController < ApplicationController
   end
 
   def update
-    @thesis = Thesis.find(params[:id])
     @thesis.update(thesis_params)
     redirect_to user_thesis_path(@thesis)
-    authorize @thesis
   end
 
   def destroy

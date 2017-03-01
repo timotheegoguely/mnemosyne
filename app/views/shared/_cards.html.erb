@@ -1,4 +1,4 @@
-<% elements.each_with_index do |thesis, index| %>
+<% theses.each_with_index do |thesis, index| %>
   <% if thesis.document? %>
     <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
       <figure class="card-cover">

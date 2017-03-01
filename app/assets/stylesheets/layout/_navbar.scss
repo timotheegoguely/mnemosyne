@@ -34,6 +34,9 @@ $navbar-height: 80px;
       #search-form {
         width: 100%;
         margin-bottom: 0px;
+        #search-input {
+          padding-top: 4px;
+        }
       }
     }
   }
