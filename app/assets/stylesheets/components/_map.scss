@@ -43,15 +43,7 @@
     }
     .school-address-2,
     .school-zipcode {
-      margin-left: 2.5em;
-    }
-    a {
-      padding-bottom: 0.1em;
-      border-bottom: 2px solid transparentize($color-text, 0.75);
-      transition: border-bottom-color 0.2s ease;
-      &:hover {
-        border-bottom-color: transparentize($color-text, 0.5);
-      }
+      margin-left: 2.75em;
     }
   }
   #school-close {
@@ -68,19 +60,4 @@
 
 hr {
   width: 100%;
-}
-
-.hidden {
-    width: 50%;
-    z-index: 2;
-    position:absolute;
-    float: right;
-    height: 350px;
-    right: 1000px;
-    background-color: white;
-    color: black;
-}
-
-.clear {
-    clear:both;
 }

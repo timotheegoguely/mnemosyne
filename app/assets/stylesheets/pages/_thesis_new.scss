@@ -47,3 +47,14 @@
   background-color: $color-success;
   color: #fff !important;
 }
+
+.hidden {
+  width: 50%;
+  z-index: 2;
+  position: absolute;
+  float: right;
+  height: 350px;
+  right: 9999px;
+  background-color: white;
+  color: black;
+}

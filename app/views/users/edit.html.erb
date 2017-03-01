@@ -1,2 +1,74 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<main class="container" id="dashboard-wrapper">
+  <div class="row gutters" id="dashboard">
+
+    <div class="col col-3 profil">
+      <div class="user-avatar">
+        <%= image_tag "timothee.jpg", class:"avatar-full rounded" %>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="col col-8">
+      <nav class="tabs" data-component="tabs">
+        <ul class="row gutters">
+          <div class="col">
+            <li>
+              <a href="#profile">
+                <i class='material-icons md-18'>account_circle</i>
+                <%= t('.profile_tab_title_my_account') %>
+              </a>
+            </li>
+          </div>
+          <div class="col">
+            <li>
+              <a href="#theses">
+                <i class='material-icons md-18'>book</i>
+                <%= t('.thesis_tab_title_my_account') %>
+              </a>
+            </li>
+          </div>
+          <div class="col">
+            <li>
+              <a href="#bookmarks">
+                <i class='material-icons md-18'>turned_in</i>
+                <%= t('.bookmarks_tab_title_my_account') %>
+              </a>
+            </li>
+          </div>
+          <% if policy(@user).edit? %>
+            <div class="col">
+              <li>
+                <a href="#settings"><i class='material-icons md-18'>settings</i> <%= t('.settings_tab_my_account') %></a>
+              </li>
+            </div>
+          <% end %>
+        </ul>
+      </nav>
+
+      <!-- My profile -->
+      <div class="tab-content" id="profile">
+        <fieldset>
+          <legend><%= t('.edit_your_profile') %></legend>
+          <%= simple_form_for(current_user, defaults: { wrapper_html: { class: 'form-item'} }, html: { class: "form" }) do |f| %>
+            <%= f.input :email, label: t('.email') %>
+            <%= f.input :first_name, label: t('.first_name'), class: "user-name" %>
+            <%= f.input :last_name, label: t('.last_name'), class: "user-name" %>
+            <%= f.input :bio, label: t('.bio'), class: "user-bio" %>
+            <%= f.input :website, label: t('.website'), class: "user-website" %>
+            <%= f.input :birthdate, label: t('.birthdate'), class: "user-birthdate" %>
+            <%= f.submit t('.save'), class: "button secondary big upper" %>
+          <% end %>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      jQuery(".best_in_place").best_in_place();
+    });
+  <% end %>
+<% end %>

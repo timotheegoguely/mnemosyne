@@ -9,7 +9,7 @@
         <th id="bookmark-th"><i class='material-icons md-18'>turned_in</i></th>
       </tr>
     </thead>
-    <% elements.each do |thesis| %>
+    <% theses.each do |thesis| %>
       <tr>
         <td class="thesis-thumbnail">
           <%= link_to user_thesis_path(thesis.user, thesis) do %>

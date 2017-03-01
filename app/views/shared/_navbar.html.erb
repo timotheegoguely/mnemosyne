@@ -37,28 +37,29 @@
             <a href="" class="close show-sm"></a>
             <ul>
               <li>
-                <%= link_to user_path(current_user) do %>
-                  <%= t(".profile") %>
+                <%= link_to user_path(current_user, anchor: "profile") do %>
+                  <i class='material-icons md-18'>account_circle</i> <%= t(".my_profile") %>
                 <% end %>
               </li>
               <li>
                 <%= link_to user_path(current_user, anchor: "theses") do %>
-                  <%= t(".my_thesis") %>
+                  <i class='material-icons md-18'>book</i> <%= t(".my_thesis") %>
                 <% end %>
               </li>
               <li>
                 <%= link_to user_path(current_user, anchor: "bookmarks") do %>
-                  <%= t(".my_bookmarks") %>
+                  <i class='material-icons md-18'>turned_in</i> <%= t(".my_bookmarks") %>
                 <% end %>
+                <!--<span class="label primary"><%#= current_user.bookmarks.count %></span>-->
               </li>
               <li>
                 <%= link_to user_path(current_user, anchor: "settings") do %>
-                  <%= t(".settings") %>
+                  <i class='material-icons md-18'>settings</i> <%= t(".settings") %>
                 <% end %>
               </li>
               <li>
                 <%= link_to destroy_user_session_path, method: :delete do %>
-                  <%= t(".sign_out", default: "Log out") %>
+                  <i class='material-icons md-18'>exit_to_app</i> <%= t(".sign_out", default: "Log out") %>
                 <% end %>
               </li>
             </ul>

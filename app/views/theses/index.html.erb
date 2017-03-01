@@ -20,21 +20,7 @@
 
   <!-- Cards -->
   <div id="cards" class="cards hide z100">
-    <% @theses.each_with_index do |thesis, index| %>
-      <% if thesis.document? %>
-        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
-          <figure class="card-cover">
-            <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
-          </figure>
-        <% end %>
-      <% else %>
-        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
-          <figure class="card-cover">
-            <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "shadow" %>
-          </figure>
-        <% end %>
-      <% end %>
-    <% end %>
+    <%= render "shared/cards", theses: @theses %>
   </div>
   <footer id="card-preview" style="display: none">
     <table class="table">
@@ -63,7 +49,7 @@
 
   <!-- List -->
   <div id="list" class="hide z100">
-    <%= render "shared/list", elements: @theses %>
+    <%= render "shared/list", theses: @theses %>
   </div>
 
 
@@ -113,8 +99,8 @@
                     '<p class="school-address"><i class="material-icons md-18">location_on</i> <span class="school-address-1">' + feature.properties.adresse_1 +'</span><br>' +
                     '<span class="school-zipcode">' + feature.properties.cp+'</span>, ' +
                     '<span class="school-city">' + feature.properties.villes + '</span></p>' +
-                    '<p class="school-website"><i class="material-icons md-18">link</i> <a href="http://' + feature.properties.sites_internet + '" target="_blank">' + feature.properties.sites_internet + '</a></p>' +
-                    '<p class="school-phone"><i class="material-icons md-18">phone</i> <a href="tel:' + feature.properties.coordonnees_tel.replace(/ /g, '') + '">' + feature.properties.coordonnees_tel + '</a></p>' +
+                    '<p class="school-website"><i class="material-icons md-18">link</i> <a class="underline" href="http://' + feature.properties.sites_internet + '" target="_blank">' + feature.properties.sites_internet + '</a></p>' +
+                    '<p class="school-phone"><i class="material-icons md-18">phone</i> <a class="underline" href="tel:' + feature.properties.coordonnees_tel.replace(/ /g, '') + '">' + feature.properties.coordonnees_tel + '</a></p>' +
                     '</div>';
 
       info.innerHTML = content;
