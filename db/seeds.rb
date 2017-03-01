@@ -260,8 +260,8 @@ user7 = User.create!(
 )
 user8 = User.create!(
   email: "morgannlechat@gmail.com",
-  first_name: "Antoine",
-  last_name: "Stevenot",
+  first_name: "Morgann",
+  last_name: "Lechat",
   bio: "Designer graphique",
   birthdate: DateTime.new(1989,1,1),
   website: "",
