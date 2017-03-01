@@ -4,61 +4,14 @@
 
 <main class="container">
 
-  <nav class="col push-right tabs z200" data-component="tabs">
-    <ul>
-      <li id="tab-cards" class="active">
-        <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
-      </li>
-      <li id="tab-list">
-        <%= link_to "<i class='material-icons'>list</i>".html_safe, "#list" %>
-      </li>
-      <li id="tab-map">
-        <%= link_to "<i class='material-icons'>map</i>".html_safe, "#map" %>
-      </li>
-    </ul>
-  </nav>
+  <%= render "shared/tabs" %>
 
   <!-- Cards -->
   <div id="cards" class="cards hide z100">
-    <% @theses.each_with_index do |thesis, index| %>
-      <% if thesis.document? %>
-        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
-          <figure class="card-cover">
-            <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
-          </figure>
-        <% end %>
-      <% else %>
-        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
-          <figure class="card-cover">
-            <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "shadow" %>
-          </figure>
-        <% end %>
-      <% end %>
-    <% end %>
+    <%= render "shared/cards", elements: @theses %>
   </div>
   <footer id="card-preview" style="display: none">
-    <table class="table">
-      <tbody>
-        <tr>
-          <td class="thesis-thumbnail">
-            <%= link_to "#" do %>
-              <%#= image_tag "http://placehold.it/32x48" %>
-              <div class="thumbnail" style="background-color: #ddd; height: 48px; width: 32px"></div>
-            <% end %>
-          </td>
-          <td class="thesis-title">
-            <%= link_to "#" do %>
-              <h5>Titre</h5>
-              <small>Sous-titre</small>
-            <% end %>
-          </td>
-          <td class="thesis-author">Prénom Nom</td>
-          <td class="thesis-school">École</td>
-          <td class="thesis-year">Year</td>
-          <td class="thesis-bookmarks">0</td>
-        </tr>
-      </tbody>
-    </table>
+    <%= render "shared/card_preview" %>
   </footer>
 
   <!-- List -->

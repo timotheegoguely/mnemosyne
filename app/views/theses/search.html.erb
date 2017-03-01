@@ -2,9 +2,8 @@
   <%= t('.title') %>
 <% end %>
 
-
-
 <main class="container">
+
   <h3 style="margin-left: 144px;">
     <strong><%= @results.size %> </strong>
     <% if @results.size == 0 || @results.size > 1 %>
@@ -16,9 +15,25 @@
     <strong> <%= @keywords %></strong>
   </h3>
 
-  <div id="list">
+  <%= render "shared/tabs" %>
+
+  <!-- Cards -->
+  <div id="cards" class="cards hide z100">
+    <%= render "shared/cards", elements: @results %>
+  </div>
+  <footer id="card-preview" style="display: none">
+    <%= render "shared/card_preview" %>
+  </footer>
+
+  <!-- List -->
+  <div id="list" class="hide z100">
     <%= render "shared/list", elements: @results %>
   </div>
+
+
+  <!-- Map -->
+  <div id="map" class="hide"></div>
+  <div id="info" class="school-info-wrapper"></div>
 
 
 </main>
