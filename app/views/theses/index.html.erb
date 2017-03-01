@@ -92,7 +92,7 @@
       }
     });
 
-    // L.mapbox.accessToken = "pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw";
+    L.mapbox.accessToken = "pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw";
 
     var info = document.getElementById('info');
     var map = L.mapbox.map('map').setView([46.9, 2.2137], 6);
@@ -116,12 +116,15 @@
                     '<p class="school-website">' + feature.properties.sites_internet + '</p></div>';
 
       info.innerHTML = content;
+
+      // Close button
+      var close = document.getElementById('school-close');
+      close.onclick = empty;
     });
 
     // Clear the tooltip when map is moved or clicked + when close button is clicked.
     map.on('move', empty);
     map.on('click', empty);
-    $("#school-close").on('click', empty);
 
     // Trigger empty contents when the script
     // has loaded on the page.
