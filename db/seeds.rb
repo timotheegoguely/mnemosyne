@@ -472,7 +472,8 @@ thesis1 = Thesis.create!(
     Pour répondre à ces questions, je me suis attaché dans un premier temps à deux figures emblématiques du mix : le DJ et le curateur. J’ai tenté de comprendre au travers d’une approche à la fois historique et comparative quels sont les enjeux et quelles ont été les évolutions de leurs pratiques respectives depuis leur apparition jusqu’à nos jours. J’ai établi ensuite dans un second temps une analyse détaillée du processus créatif lié à la pratique du mix, analyse qui me permit enfin d’essayer de voir en quoi cette pratique et ses différentes manifestations artistiques induisent un certain rapport au monde et aux objets culturels qui nous entourent.",
   license: "CC BY-SA 4.0",
   link: "https://github.com/timotheegoguely/mixing-culture",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2014-timothee-goguely.jpg"
 )
 thesis2 = Thesis.create!(
   user_id: user2.id,
@@ -485,6 +486,7 @@ thesis2 = Thesis.create!(
   license: "",
   link: "http://margotcannizzo.tumblr.com/post/68452213577/expression-%C3%A9crite-potentiel-et-limite-du-langage",
   school_id: school2.id,
+  cover: "",
 )
 thesis3 = Thesis.create!(
   user_id: user3.id,
@@ -495,6 +497,7 @@ thesis3 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
+  cover: "2014-geoffrey-saint-martin.jpg",
 )
 thesis4 = Thesis.create!(
   user_id: user4.id,
@@ -504,7 +507,8 @@ thesis4 = Thesis.create!(
   resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature dans les espaces architecturaux. Questionnement sur l'image et la simulation.",
   license: "",
   link: "http://www.lulu.com/shop/quentin-schmerber/la-cour-des-mirages/paperback/product-21458084.html",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2014-quentin-schmerber.jpg"
 )
 thesis5 = Thesis.create!(
   user_id: user5.id,
@@ -514,7 +518,8 @@ thesis5 = Thesis.create!(
   resume: "",
   license: "",
   link: "",
-  school_id: school3.id
+  school_id: school3.id,
+  cover: ""
 )
 thesis6 = Thesis.create!(
   user_id: user6.id,
@@ -528,6 +533,7 @@ thesis6 = Thesis.create!(
   license: "",
   link: "https://issuu.com/lenarobin/docs/le__narobin_me__moire6",
   school_id: school2.id,
+  cover: "2016-lena-robin.jpg"
 )
 thesis7 = Thesis.create!(
   user_id: user7.id,
@@ -539,7 +545,8 @@ thesis7 = Thesis.create!(
     - Quels facteurs déterminent le champ des actions considérées comme exhibitionnistes ?",
   license: "",
   link: "",
-  school_id: school2.id
+  school_id: school2.id,
+  cover: "2012-marta-wajszczyk.jpg"
 )
 thesis8 = Thesis.create!(
   user_id: user8.id,
@@ -552,7 +559,8 @@ thesis8 = Thesis.create!(
     le graphisme-fiction.",
   license: "",
   link: "",
-  school_id: school2.id
+  school_id: school2.id,
+  cover: "2012-morgann-lechat.jpg"
 )
 thesis9 = Thesis.create!(
   user_id: user9.id,
@@ -571,7 +579,8 @@ thesis9 = Thesis.create!(
     À ce titre, la typographie, dans son acception large, peut s’avèrer un outil précieux pour la création d’un langage cartographique singulier, la carte et la typographie ayant un enjeu commun, celui de construire un langage conventionnel, à la fois global et particulier, cherchant sa cohérence dans la diversité.",
   license: "",
   link: "",
-  school_id: school4.id
+  school_id: school4.id,
+  cover: "2008-antoine-stevenot.jpg"
 )
 thesis10 = Thesis.create!(
   user_id: user10.id,
@@ -602,7 +611,8 @@ thesis10 = Thesis.create!(
   une grande angoisse.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-camille-chauvin.jpg"
 )
 thesis11 = Thesis.create!(
   user_id: user11.id,
@@ -638,7 +648,8 @@ thesis11 = Thesis.create!(
   tout en les regroupant et en les analysant.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-emilie-coquard.jpg"
 )
 thesis12 = Thesis.create!(
   user_id: user12.id,
@@ -684,7 +695,8 @@ thesis12 = Thesis.create!(
   un support de créativité.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-floriane-jacques.jpg"
 )
 thesis13 = Thesis.create!(
   user_id: user13.id,
@@ -752,7 +764,8 @@ thesis13 = Thesis.create!(
   tant que morceau.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-vanessa-lalande.jpg"
 )
 thesis14 = Thesis.create!(
   user_id: user14.id,
@@ -776,7 +789,8 @@ thesis14 = Thesis.create!(
   tout à fait fascinant.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-marion-martin.jpg"
 )
 thesis15 = Thesis.create!(
   user_id: user15.id,
@@ -811,7 +825,8 @@ thesis15 = Thesis.create!(
   donc, de l’immortalité.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-ennio-neagle.jpg"
 )
 thesis16 = Thesis.create!(
   user_id: user16.id,
@@ -844,7 +859,8 @@ thesis16 = Thesis.create!(
   sportsman. »",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-vincent-poinsot.jpg"
 )
 thesis17 = Thesis.create!(
   user_id: user17.id,
@@ -878,7 +894,8 @@ thesis17 = Thesis.create!(
   naturels ou faits par la main de l’homme – qui peuplent notre monde. » ",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-priscillia-runghia.jpg"
 )
 thesis18 = Thesis.create!(
   user_id: user18.id,
@@ -916,7 +933,8 @@ thesis18 = Thesis.create!(
   rait des dommages à la structure, causant une catastrophe écologique.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-alice-sawicki.jpg"
 )
 thesis19 = Thesis.create!(
   user_id: user19.id,
@@ -942,7 +960,8 @@ thesis19 = Thesis.create!(
   d’un unique phénomène.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2013-guillaume-vanpoucke.jpg"
 )
 thesis20 = Thesis.create!(
   user_id: user20.id,
@@ -970,7 +989,8 @@ thesis20 = Thesis.create!(
   spectateur.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2014-elodie-correia.jpg"
 )
 thesis21 = Thesis.create!(
   user_id: user21.id,
@@ -1005,7 +1025,8 @@ thesis21 = Thesis.create!(
   de voyages comme dans la création ?",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2014-priscillia-julien.jpg"
 )
 thesis22 = Thesis.create!(
   user_id: user22.id,
@@ -1034,7 +1055,8 @@ thesis22 = Thesis.create!(
   (temps et espace).",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2014-morgane-kribs.jpg"
 )
 thesis23 = Thesis.create!(
   user_id: user23.id,
@@ -1064,7 +1086,8 @@ thesis23 = Thesis.create!(
   de vue qui avait guidé et sous-tendu leur mode de formalisation.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2014-sudji-lascols.jpg"
 )
 thesis24 = Thesis.create!(
   user_id: user24.id,
@@ -1099,7 +1122,8 @@ thesis24 = Thesis.create!(
   blement la sensibilité artistique des enfants.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2014-lucie-trachet.jpg"
 )
 thesis25 = Thesis.create!(
   user_id: user25.id,
@@ -1137,7 +1161,8 @@ thesis25 = Thesis.create!(
   remarque à peine son existence dans notre vie quotidienne. Pour une",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2012-louis-eveillard.jpg"
 )
 thesis26 = Thesis.create!(
   user_id: user26.id,
@@ -1169,7 +1194,8 @@ thesis26 = Thesis.create!(
   certaines interrogations.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2012-lucie-lauv.jpg"
 )
 thesis27 = Thesis.create!(
   user_id: user27.id,
@@ -1203,7 +1229,8 @@ thesis27 = Thesis.create!(
   dont on dispose.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2012-laure-nivard.jpg"
 )
 thesis28 = Thesis.create!(
   user_id: user28.id,
@@ -1230,7 +1257,8 @@ thesis28 = Thesis.create!(
   immédiateté, rentabilité, et productivité.",
   license: "",
   link: "",
-  school_id: school1.id
+  school_id: school1.id,
+  cover: "2012-amandine-richard.jpg"
 )
 puts "✓ theses table seeded"
 

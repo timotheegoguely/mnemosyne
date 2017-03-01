@@ -1,10 +1,10 @@
 $(document).ready( function () {
     $('#table').DataTable({
-      "paging": false,
-      "searching": false,
-      "lengthChange": false,
-      "info": false,
-      "aoColumnDefs": [
+      paging: false,
+      searching: false,
+      lengthChange: false,
+      info: false,
+      aoColumnDefs: [
         { 'bSortable': false, 'aTargets': [ 0 ] }
       ]
     });

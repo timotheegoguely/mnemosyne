@@ -6,9 +6,10 @@
   height: 480px;
   padding: 32px;
   background-color: $color-aluminum;
-  #thesis-cover {
+  .thesis-cover {
     margin: auto;
-    max-height: 400px;
+    max-width: 100%;
+    max-height: calc(100vh - 176px);
   }
   #thesis-previous {
     position: absolute;
