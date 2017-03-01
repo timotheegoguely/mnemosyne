@@ -1,4 +1,6 @@
+require 'open-uri'
 class ThesesController < ApplicationController
+
   before_action :set_thesis, only: [ :show, :edit, :destroy, :bookmark ]
   skip_before_action :authenticate_user!, only: [ :search, :index, :show, :new, :create ]
   before_action :get_search_params, only: [ :search ]
@@ -35,10 +37,19 @@ class ThesesController < ApplicationController
       file = Cloudinary::Uploader.upload(params[:file])
 
       # Récupérer l'url pour la preview + d'autres infos avec le parser de PDF
+      io     = open(file['url'])
+      reader = PDF::Reader.new(io)
+
+      infos = reader.info.reduce({}) do |infos, (key, value)|
+        infos[key] = value.force_encoding("ISO-8859-1").encode("UTF-8")
+        infos
+      end
+
       # Construire le JSON de retour
-      @json = { file: file }
+      @json = { file: file, infos: infos }
       return render json: @json
     end
+
 
 
     @title = params[:thesis][:title]
