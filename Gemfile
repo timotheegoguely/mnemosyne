@@ -45,6 +45,7 @@ gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'binding_of_caller'
+end
 
 group :development do # Stuff we do not want in :test env
   gem 'rails-assets-DataTables', source: 'https://rails-assets.org'
