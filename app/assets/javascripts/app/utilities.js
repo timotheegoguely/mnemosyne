@@ -1,6 +1,5 @@
 $(document).ready(function(){
   $(document).keydown(function(e) {
-    e.preventDefault();
     if (e.keyCode == 37) { // left
       $('#thesis-previous').trigger('click');
     }
@@ -14,10 +13,13 @@ $(document).ready(function(){
     }
   });
 
-  $(function() {
-    $('.card-cover').mouseover(function() {
-      console.log('.card-cover')
-      // $('#card-preview').html(this.id);
-    })
-  })
-})
+  $('.card-cover').mouseenter(function() {
+    $($(this).attr('data-target')).removeClass('hidden');
+    // $('#card-preview').html(this.id);
+  });
+
+  $('.card-cover').mouseout(function() {
+    $('.thesis-footer').addClass('hidden');
+    // $('#card-preview').html(this.id);
+  });
+});
