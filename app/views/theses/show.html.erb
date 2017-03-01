@@ -6,7 +6,7 @@
 
   <div id="thesis-cover-wrapper">
     <%= link_to user_thesis_path(@thesis.previous.user, @thesis.previous) do %>
-      <i class="material-icons" id="thesis-previous">keyboard_arrow_left</i>
+      <i class="material-icons md-48" id="thesis-previous">keyboard_arrow_left</i>
     <% end %>
 
     <% if @thesis.document.file.nil? %>
@@ -16,7 +16,7 @@
     <% end %>
 
     <%= link_to user_thesis_path(@thesis.next.user, @thesis.next) do %>
-      <i class="material-icons" id="thesis-next">keyboard_arrow_right</i>
+      <i class="material-icons md-48" id="thesis-next">keyboard_arrow_right</i>
     <% end %>
 
   </div>
