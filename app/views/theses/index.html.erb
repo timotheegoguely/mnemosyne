@@ -8,10 +8,42 @@
 
   <!-- Cards -->
   <div id="cards" class="cards hide z100">
-    <%= render "shared/cards", elements: @theses %>
+    <% @theses.each_with_index do |thesis, index| %>
+      <% if thesis.document? %>
+        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
+          <figure class="card-cover">
+            <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
+          </figure>
+        <% end %>
+      <% else %>
+        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
+          <figure class="card-cover" data-target="#thesis-footer-<%= thesis.id %>">
+            <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "shadow" %>
+          </figure>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
   <footer id="card-preview" style="display: none">
-    <%= render "shared/card_preview" %>
+    <% @theses.each do |thesis| %>
+      <table class="table thesis-footer hidden" id="thesis-footer-<%= thesis.id %>">
+        <tbody>
+          <tr>
+            <td class="thesis-title">
+
+                <h5><%= thesis.title %></h5>
+
+                <small><%= thesis.subtitle %></small>
+
+            </td>
+            <td class="thesis-author"><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
+            <td class="thesis-school"><%= thesis.school.name %></td>
+            <td class="thesis-year"><%= thesis.year.year %></td>
+            <td class="thesis-bookmarks"><%= thesis.votes_for.size %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
   </footer>
 
   <!-- List -->
