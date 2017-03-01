@@ -1,6 +1,5 @@
 $(document).ready(function(){
   $(document).keydown(function(e) {
-    e.preventDefault();
     if (e.keyCode == 37) { // left
       $('#thesis-previous').trigger('click');
     }
