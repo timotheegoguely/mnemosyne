@@ -4,19 +4,7 @@
 
 <main class="container">
 
-  <nav class="col push-right tabs z200" data-component="tabs">
-    <ul>
-      <li id="tab-cards" class="active">
-        <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
-      </li>
-      <li id="tab-list">
-        <%= link_to "<i class='material-icons'>list</i>".html_safe, "#list" %>
-      </li>
-      <li id="tab-map">
-        <%= link_to "<i class='material-icons'>map</i>".html_safe, "#map" %>
-      </li>
-    </ul>
-  </nav>
+  <%= render "shared/tabs" %>
 
   <!-- Cards -->
   <div id="cards" class="cards hide z100">
