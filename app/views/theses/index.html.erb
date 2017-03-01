@@ -29,7 +29,7 @@
         <% end %>
       <% else %>
         <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
-          <figure class="card-cover">
+          <figure class="card-cover" data-target="#thesis-footer-<%= thesis.id %>">
             <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "shadow" %>
           </figure>
         <% end %>
@@ -37,28 +37,25 @@
     <% end %>
   </div>
   <footer id="card-preview" style="display: none">
-    <table class="table">
-      <tbody>
-        <tr>
-          <td class="thesis-thumbnail">
-            <%= link_to "#" do %>
-              <%#= image_tag "http://placehold.it/32x48" %>
-              <div class="thumbnail" style="background-color: #ddd; height: 48px; width: 32px"></div>
-            <% end %>
-          </td>
-          <td class="thesis-title">
-            <%= link_to "#" do %>
-              <h5>Titre</h5>
-              <small>Sous-titre</small>
-            <% end %>
-          </td>
-          <td class="thesis-author">Prénom Nom</td>
-          <td class="thesis-school">École</td>
-          <td class="thesis-year">Year</td>
-          <td class="thesis-bookmarks">0</td>
-        </tr>
-      </tbody>
-    </table>
+    <% @theses.each do |thesis| %>
+      <table class="table thesis-footer hidden" id="thesis-footer-<%= thesis.id %>">
+        <tbody>
+          <tr>
+            <td class="thesis-title">
+
+                <h5><%= thesis.title %></h5>
+
+                <small><%= thesis.subtitle %></small>
+
+            </td>
+            <td class="thesis-author"><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
+            <td class="thesis-school"><%= thesis.school.name %></td>
+            <td class="thesis-year"><%= thesis.year.year %></td>
+            <td class="thesis-bookmarks"><%= thesis.votes_for.size %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
   </footer>
 
   <!-- List -->
