@@ -209,6 +209,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.1)
       sprockets-rails (>= 2.0.0)
+    rails-assets-DataTables (1.10.13)
+      rails-assets-jquery (>= 1.7.0)
+    rails-assets-jquery (3.1.1)
     rails-assets-mixitup (3.1.7)
     rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
@@ -330,6 +333,7 @@ DEPENDENCIES
   puma
   pundit
   rails (= 5.0.1)
+  rails-assets-DataTables!
   rails-assets-mixitup!
   rails-i18n (~> 5.0.0)
   rails_admin (>= 1.0.0.rc)

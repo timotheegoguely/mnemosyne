@@ -39,7 +39,9 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'best_in_place', '~> 3.0.1'
 
+
 group :development do # Stuff we do not want in :test env
+  gem 'rails-assets-DataTables', source: 'https://rails-assets.org'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
