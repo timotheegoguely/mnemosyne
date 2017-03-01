@@ -41,6 +41,9 @@ gem 'best_in_place', '~> 3.0.1'
 
 gem 'rails-assets-DataTables', source: 'https://rails-assets.org'
 
+# Twitter Authentication
+gem 'omniauth-twitter'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
