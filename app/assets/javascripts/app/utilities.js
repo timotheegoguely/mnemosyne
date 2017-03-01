@@ -9,10 +9,16 @@ $(document).ready(function(){
     }
     else if (e.keyCode == 27) { // esc
       if ($('#thesis-content-wrapper').length) {
-        parent.history.back();
-        return false;
+        window.location.href = "/theses";
       }
     }
   });
+
+  $(function() {
+    $('.card-cover').mouseover(function() {
+      console.log('.card-cover')
+      // $('#card-preview').html(this.id);
+    })
+  })
 })
 
