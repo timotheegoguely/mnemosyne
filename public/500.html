@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <div class="navbar-item" id="search-wrapper">
-      <form action="</search" class="form" id="search-form">
-        <div class="form-item">
-          <input type="text" name= "keywords" class="search" id="search-input">
-        </div>
-      </form>
-    </div>
+  <head>
+    <title>Erreur</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Cousine:400,700');
+      @import url("https://fonts.typotheque.com/WF-019356-009755.css");
+      body {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Thesaurus Display Medium", serif;
+        }
+      h1 {
+        font-family: "Thesaurus Display Regular", serif;
+        font-size: 3.8em;
+        line-height: 1.5em;
+        display: block;
+        padding: 2em 0em;
+      }
+      a {
+        text-decoration: none;
+        cursor: auto;
+      }
+      .button {
+        font-family: "Cousine", "Courier New", monospace;
+        font-size: 15px;
+        font-weight: 600;
+        color: #081c2b;
+        background: none;
+        border-color: #081c2b;
+        border-radius: 3px;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        border-width: 2px;
+        min-height: 56px;
+        padding: 20px 36px;
+        border: 2px solid #081c2b;
+        margin-top: 100px;
 
-  </div>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-  background-color: #F8F8FF;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+      }
+      .button:hover {
+        outline: none;
+        text-decoration: none;
+        color: rgba(8, 28, 43, 0.6);
+        border-color: rgba(8, 28, 43, 0.5);
+        background-color: lighten(#1c86f2, 10%);
+      }
 
-
-  }
-
-  .dialog {
-    color: #DCDCDC;
-    font-family: Courier, monospace
-
-  }
-
-  h1 {
-    font-size: 3.8em;
-    color: #730E15;
-    line-height: 1.5em;
-    display: block;
-    padding: 2em 0em;
-  }
-  .bottom-content{
-  font-size: 2em;
-    color: #730E15;
-    line-height: 1em;
-    display: block;
-
-  }
-  a:-webkit-any-link {
-    color: #730E15;
-    text-decoration: underline;
-    cursor: auto;
-  }
-
-
-
-
-  </style>
-</head>
-
-<body>
-  <!-- This file lives in public/404.html -->
-<div class="dialog">
-        <h1>Oops! Page non trouvée...</h1>
-      </div>
-    <div class="bottom-content">
-      <p><a href="/" class="button secondary small">Revenir à la page d'accueil</a> pour poursuivre votre visite</p>
-  </div>
-  </div>
-</body>
+    </style>
+  </head>
+  <body>
+    <h1>Oups !<br>Cette page n'existe pas</h1>
+    <a href="https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP">Ceci est une erreur 500</a>
+    <br><br>
+    <a href="https://www.mnemosyne.io/" class="button">Revenir à Mnemosyne</a>
+  </body>
 </html>
