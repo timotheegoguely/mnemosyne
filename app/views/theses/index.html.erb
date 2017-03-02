@@ -54,13 +54,7 @@
 
 
     // Mapbox
-    $( "#tab-map" ).click(function() {
-      if ($( this ).last().hasClass('active')) {
-        map.invalidateSize();
-      }
-    });
-
-    L.mapbox.accessToken = "pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw";
+    L.mapbox.accessToken = "<%= ENV['MAPBOX_API_KEY'] %>";
 
     var info = document.getElementById('info');
     var map = L.mapbox.map('map').setView([46.9, 2.2137], 6);
