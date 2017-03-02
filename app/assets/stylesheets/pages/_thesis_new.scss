@@ -67,6 +67,16 @@
   color: transparentize($color-text, 0.5);
   font-family: $text-font-family !important;
 }
+.dz-preview {
+  position: fixed;
+  left: 112px;
+  top: 256px;
+  color: transparentize($color-text, 0.5);
+  font-family: $text-font-family !important;
+  .dz-filename {
+    font-size: 13px;
+  }
+}
 .dz-default {
   display: none;
 }
