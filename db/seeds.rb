@@ -4,15 +4,12 @@ DiplomaSubcategory.destroy_all
 SchoolSubcategory.destroy_all
 ThesisDiploma.destroy_all
 SchoolDiploma.destroy_all
-# ThesisTag.destroy_all
 Subcategory.destroy_all
 Thesis.destroy_all
 User.destroy_all
 School.destroy_all
 Category.destroy_all
 Diploma.destroy_all
-# Tag.destroy_all
-
 
 # schools table
 
@@ -228,46 +225,6 @@ category7 = Category.create!(name: "presse")
 category8 = Category.create!(name: "gestion et médiation")
 
 puts "✓ categories seeded"
-
-
-# tags table
-
-# tag1  = Tag.create!(name: "mix")
-# tag2  = Tag.create!(name: "culture")
-# tag3  = Tag.create!(name: "DJing")
-# tag4  = Tag.create!(name: "radio")
-# tag5  = Tag.create!(name: "curating")
-# tag6  = Tag.create!(name: "commissaire d’exposition")
-# tag7  = Tag.create!(name: "processus créatif")
-# tag8  = Tag.create!(name: "editing")
-# tag9  = Tag.create!(name: "montage")
-# tag10 = Tag.create!(name: "cut")
-# tag11 = Tag.create!(name: "ellipse")
-# tag12 = Tag.create!(name: "cinéma")
-# tag13 = Tag.create!(name: "BD")
-# tag14 = Tag.create!(name: "narration")
-# tag15 = Tag.create!(name: "éclectisme")
-# tag16 = Tag.create!(name: "internet")
-# tag17 = Tag.create!(name: "web")
-# tag18 = Tag.create!(name: "folksonomie")
-# tag19 = Tag.create!(name: "Google")
-# tag20 = Tag.create!(name: "sérendipité")
-# tag21 = Tag.create!(name: "média")
-# tag22 = Tag.create!(name: "art contemporain")
-# tag23 = Tag.create!(name: "comportement")
-# tag24 = Tag.create!(name: "lecture")
-# tag25 = Tag.create!(name: "traduction")
-# tag26 = Tag.create!(name: "écrit")
-# tag27 = Tag.create!(name: "langage")
-# tag28 = Tag.create!(name: "ponctuation")
-# tag29 = Tag.create!(name: "communication")
-# tag30 = Tag.create!(name: "poésie")
-# tag31 = Tag.create!(name: "réseau")
-# tag32 = Tag.create!(name: "livre")
-# tag33 = Tag.create!(name: "rhizome")
-
-# puts "✓ tags table seeded"
-
 
 # users table
 
@@ -587,15 +544,6 @@ user34 = User.create!(
   website: "",
   school_id: school10.id
 )
-
-# userX = User.create!(
-#   email: "dasweiss@gmail.com",
-#   first_name: "Maxime",
-#   last_name: "Leblanc",
-#   bio: "Titanium contemporay jewellery",
-#   birthdate: DateTime.new(1988,1,1),
-#   website: "https://www.instagram.com/maxime_leblanc_jewellery/"
-# )
 
 puts "✓ users seeded"
 
