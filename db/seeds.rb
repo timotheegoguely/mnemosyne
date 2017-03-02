@@ -1365,9 +1365,9 @@ for i in 0..4 do
   tag_list_for_thesis6 << tags[i]
 end
 
-thesis1.tag_list.add(tag_list_for_thesis1.join(’,’), parse: true)
-thesis2.tag_list.add(tag_list_for_thesis2.join(’,’), parse: true)
-thesis6.tag_list.add(tag_list_for_thesis6.join(’,’), parse: true)
+thesis1.tag_list.add(tag_list_for_thesis1.join(','), parse: true)
+thesis2.tag_list.add(tag_list_for_thesis2.join(','), parse: true)
+thesis6.tag_list.add(tag_list_for_thesis6.join(','), parse: true)
 
 puts "✓ tags added"
 
