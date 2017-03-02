@@ -25,7 +25,11 @@
         <div id="navbar-dropdown">
           <!-- Dropdown toggle -->
           <%= link_to "#", id: "user-avatar", "data-component" => "dropdown", "data-target" => "#dropdown" do %>
-            <%= image_tag "timothee.jpg", class: "avatar avatar-big" %>
+            <% if current_user.image? %>
+              <%= image_tag current_user.image, class: "avatar avatar-big" %>
+            <% else %>
+              <%= image_tag "timothee.jpg", class: "avatar avatar-big" %>
+            <% end %>
           <% end %>
 
           <!-- Notifications -->
