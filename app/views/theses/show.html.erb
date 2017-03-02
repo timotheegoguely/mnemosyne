@@ -89,9 +89,12 @@
       </div>
 
       <% if current_user && @thesis.download  %>
-        <%= link_to "Télécharger", cloudinary_url(@thesis.document), target: "_blank", class: "button big upper secondary" %>
+        <%= link_to "Télécharger", Cloudinary::Utils.unsigned_download_url(@thesis.document), target: "_blank", class: "button big upper secondary" %>
       <% end %>
     </div>
   </div>
 
 </main>
+
+<!-- cloudinary_url(@thesis.document)
+ -->
