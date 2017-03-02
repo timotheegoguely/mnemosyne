@@ -16,8 +16,13 @@ class ThesesController < ApplicationController
   def index
     @theses = policy_scope(Thesis).order(created_at: :desc)
     @schools = School.all
+    @school_cities = School.order("name").group_by(&:city)
     @diplomas = Diploma.all
     @categories = Category.all
+    @theses_per_category = []
+    @theses.each do |thesis|
+      @theses_per_category << thesis.categories_names
+    end
   end
 
   def show
