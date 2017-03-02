@@ -1,7 +1,7 @@
 Dropzone.autoDiscover = false; // keep me OUTSIDE a document ready
 
 $(function() {
-  var myDropzone = new Dropzone("#new_thesis");
+  var myDropzone = new Dropzone(".dropzone");
 
   myDropzone.on("success", function(file, json) {
     console.log(json);
@@ -20,8 +20,8 @@ $(function() {
   });
 });
 
-Dropzone.options.myAwesomeDropzone = {
-  maxFilesize: 10, // MB
-  addRemoveLinks: true,
-  createImageThumbnails: true
-};
+// Dropzone.options.myAwesomeDropzone = {
+//   maxFilesize: 10, // MB
+//   addRemoveLinks: true,
+//   createImageThumbnails: true
+// };

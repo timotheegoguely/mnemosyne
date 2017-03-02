@@ -123,6 +123,50 @@ school10 = School.create!(
   website: "",
   phone_number: "+33 1 72 69 63 20"
 )
+school11 = School.create!(
+  name: "École Nationale Supérieure Louis-Lumière",
+  acronym: "ENS",
+  address_1: "La Cité du Cinéma",
+  address_2: "",
+  zipcode: "93200",
+  city: "La Plaine Saint-Denis",
+  country: "France",
+  website: "",
+  phone_number: "+33 1 84 67 00 01"
+)
+school12 = School.create!(
+  name: "Lycée le Corbusier",
+  acronym: "",
+  address_1: "15 Rue Lixenbuhl",
+  address_2: "",
+  zipcode: "67400",
+  city: "Illkirch-Graffenstaden",
+  country: "France",
+  website: "",
+  phone_number: "+33 3 88 66 87 66"
+)
+school13 = School.create!(
+  name: "L’École des nouveaux Métiers de la Communication",
+  acronym: "EFAP",
+  address_1: "61-63 Rue Pierre Charron",
+  address_2: "",
+  zipcode: "75008",
+  city: "Paris",
+  country: "France",
+  website: "",
+  phone_number: "+33 1 53 76 88 00"
+)
+school14 = School.create!(
+  name: "Université Paul Valéry - Montpellier III",
+  acronym: "",
+  address_1: "34 Route de Mende",
+  address_2: "",
+  zipcode: "34090",
+  city: "Montpellier",
+  country: "France",
+  website: "",
+  phone_number: "+33 4 67 14 20 00"
+)
 
 puts "✓ schools seeded"
 
@@ -208,6 +252,16 @@ insa = Diploma.create!(
   name: "Diplôme d’école en architecture",
   acronym: "",
   degree: "1"
+)
+ens = Diploma.create!(
+  name: "Diplôme d’école en Cinéma",
+  acronym: "",
+  degree: "2"
+)
+efap = Diploma.create!(
+  name: "Diplôme d’école EFAP",
+  acronym: "",
+  degree: "2"
 )
 
 puts "✓ diplomas seeded"
@@ -612,6 +666,72 @@ user34 = User.create!(
   website: "",
   school_id: school10.id
 )
+user35 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "baudean.romain@gmail.com",
+  first_name: "Romain",
+  last_name: "Baudéan",
+  bio: "",
+  birthdate: DateTime.new(1986,4,5),
+  website: "",
+  school_id: school11.id
+)
+user36 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "muzart.alice@gmail.com",
+  first_name: "Alice",
+  last_name: "Muzart",
+  bio: "",
+  birthdate: DateTime.new(1993,6,1),
+  website: "",
+  school_id: school6.id
+)
+user37 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "hurtado.elise@gmail.com",
+  first_name: "Elise",
+  last_name: "Hurtado",
+  bio: "",
+  birthdate: DateTime.new(1990,4,4),
+  website: "",
+  school_id: school12.id
+)
+user38 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "jousset.nina@gmail.com",
+  first_name: "Nina",
+  last_name: "Jousset",
+  bio: "",
+  birthdate: DateTime.new(1988,4,8),
+  website: "",
+  school_id: school13.id
+)
+user39 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "fournet.fayard.celine@gmail.com",
+  first_name: "Céline",
+  last_name: "Fournet-Fayard",
+  bio: "",
+  birthdate: DateTime.new(1984,5,6),
+  website: "",
+  school_id: school14.id
+)
+user40 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "lexcellent.thomas@gmail.com",
+  first_name: "Thomas",
+  last_name: "L'Excellent",
+  bio: "",
+  birthdate: DateTime.new(1985,4,12),
+  website: "",
+  school_id: school3.id
+)
 
 puts "✓ users seeded"
 
@@ -629,7 +749,8 @@ thesis1 = Thesis.new(
   license: "CC BY-SA 4.0",
   link: "https://github.com/timotheegoguely/mixing-culture",
   school_id: school1.id,
-  cover: "2014-timothee_goguely.jpg"
+  cover: "2014-timothee_goguely.jpg",
+  pdf: "2014-timothee_goguely-mixing_culture.pdf"
 )
 thesis2 = Thesis.new(
   user_id: user2.id,
@@ -643,6 +764,7 @@ thesis2 = Thesis.new(
   link: "http://margotcannizzo.tumblr.com/post/68452213577/expression-%C3%A9crite-potentiel-et-limite-du-langage",
   school_id: school2.id,
   cover: "2014-margot_cannizzo-expression_ecrite.jpg",
+  pdf: "2014-margot_cannizzo-expression_ecrite.pdf"
 )
 thesis3 = Thesis.new(
   user_id: user3.id,
@@ -1359,6 +1481,149 @@ thesis34 = Thesis.new(
   school_id: school10.id,
   cover: "2015-pauline_bernard.jpg"
 )
+thesis35 = Thesis.new(
+  user_id: user35.id,
+  title: "Les enjeux de la caméra portée",
+  subtitle: "Un dispositif qui fait bouger le cinéma",
+  year: Date.new(2010),
+  resume: "Faire le choix de filmer à l’épaule n’est pas anodin, cela doit avoir un sens. Par ailleurs, cela
+  ne veut pas dire forcément faire un cinéma réaliste ou pseudo documentaire. C’est un
+  dispositif d’écriture cinématographie au service des metteurs en scène. Il permet d’envisager
+  la création différemment et offre un outil de plus aux cinéastes, comme l’est le numérique
+  aujourd’hui, ou le scope autrefois. Il s’agit avec ce travail de recherche, de s’interroger sur
+  les spécificités de ce dispositif, et de définir plusieurs approches esthétiques liées à la
+  caméra portée. Dans quelle mesure la caméra portée a-t-elle permis de renouveler les
+  méthodes de mise en scène et notamment amené les cinéastes à repenser la notion de
+  découpage technique ? Nous nous demanderons aussi s’il s’agit pour les cinéastes qui
+  l’emploient, de faire advenir du réel ou des effets de réel ?
+  Ce mémoire a pour objectif dans un premier temps, d’analyser dans quel contexte est né et
+  s’est développé l’emploi de la caméra portée chez les documentaristes. En effet, avec
+  l’arrivée des caméras légères au début des années 1960, les cinéastes ont appris à filmer et
+  à voir le monde différemment. Ils se sont retrouvés en possession d’un nouvel outil de
+  création, qui leur a permis de se renouveler, en proposant un geste et une écriture
+  cinématographique différente grâce auxquels sujet et technique, forme et fond sont imbriqués.",
+  license: "",
+  link: "",
+  school_id: school11.id,
+  cover: ""
+)
+thesis36 = Thesis.new(
+  user_id: user36.id,
+  title: "Des studios de cinéma à Toulouse",
+  subtitle: "",
+  year: Date.new(2014),
+  resume: "Le cinéma produit des images et fait rêver. Pour autant, les lieux où le cinéma se réalise, les
+  lieux de fabrication, ont une image totalement à l’opposé de celle de l’industrie du cinéma.
+  Loin du glamour du festival de Cannes, les studios sont des lieux démesurés, isolés, enclavés
+  qui, la plupart du temps, ont été construits au fil des besoins sans planification.
+  Le cinéma se développe, on en fabrique et visionne davantage dans le monde chaque année.
+  L’’industrie de la production d’images s’étend, se rapproche de la télévision et du jeu vidéo,
+  développe ses propres nouvelles technologies, compétences et métiers. Leur popularité gran-
+  dissante rend d’autant plus importante l’image de l’industrie du cinéma et son rapport à la ville.
+  L’annonce en 2012 à Toulouse de la potentielle construction de studios de cinéma sur une
+  ancienne base aérienne a généré une grande excitation et a fait rêver l’agglomération. Le
+  projet a été abandonné pour des raisons financières, mais le contexte, les partenariats et l’en-
+  gouement populaire sont toujours là. Je me suis penchée sur ce projet, et après avoir étudié
+  l’idée d’implanter des studios sur Toulouse, ai décidé de travailler sur ce sujet. J’ai choisi un
+  site sur la commune de Balma, frontalière de Toulouse. Au terminus du métro, le long d’une
+  rivière, la parcelle est actuellement inoccupée et présente une surface largement suffisante.
+  Sa desserte doit être revue mais sa position stratégique, visible depuis la rocade, se prête to-
+  talement à la problématique de l’image des studios.",
+  license: "",
+  link: "",
+  school_id: school6.id,
+  cover: ""
+)
+thesis37 = Thesis.new(
+  user_id: user37.id,
+  title: "Je suis indépendant",
+  subtitle: "Médiation & cinéma",
+  year: Date.new(2016),
+  resume: "« Mainstream, Mot d’origine américaine. Littéralement « dominant »,
+  « grand public » ou « populaire ». Se dit par exemple pour un produit cultu-
+  rel qui vise une audience générale. L’expression « culture mainstream » peut
+  avoir une connotation positive, au sens de « culture pour tous », ou négative,
+  au sens de « culture hégémonique ». Un produit mainstream: qui se vend
+  massivement, « il veut être mainstream », il veut plaire à tout le monde. »",
+  license: "",
+  link: "",
+  school_id: school12.id,
+  cover: ""
+)
+thesis38 = Thesis.new(
+  user_id: user38.id,
+  title: "La communication culturelle",
+  subtitle: "Le théâtre: Quelles solutions pour faire face à la crise de l'art?",
+  year: Date.new(2016),
+  resume: "La culture peut être définie comme << l'ensemble des connaissances,
+  des savoir-faire, des traditions, des coutumes, propres à un groupe humain,à
+  une civilisation.>> L'art, en tant que patrimoine se transmettant de génération
+  en génération, en fait largement partie. Part <<Art>> on entendra <<expression
+  par des créations humaines d'un idéal esthétique.>> Cette définition assez
+  abstraite, permet donc d'associer à l'Art toute création réalisée dans une
+  recherche d'une esthétique quelle qu'elle soit. L'Art a su évoluer avec les
+  siècles et a entraîné avec lui la notion d'excellence qui lui est dû. C'est ainsi
+  que les genres artistiques sont appartus et que la notion d'art s'est élargie à
+  de nouveaux moyens d'expression, telles que le théâtre.",
+  license: "",
+  link: "",
+  school_id: school13.id,
+  cover: ""
+)
+thesis39 = Thesis.new(
+  user_id: user39.id,
+  title: "Le théâtre comme moyen déclencheur de parole en français langue étrangère",
+  subtitle: "",
+  year: Date.new(2006),
+  resume: "C'est en démontrant dans un premier lieu que le théâtre est un moyen déclencheur
+  d'expression, de parole qu’il sera possible de démontrer qu'il a le même pouvoir lors de l'acquisition
+  d'une langue étrangère.
+  La dramaturgie relationnelle a pour objectif le développement d'attitudes qui favorisent
+  l'expression spontanée, la communication relationnelle dans les interactions et la créativité en
+  pédagogie. Pour bien expliquer ce fait, j'aimerais parler brièvement d'un type de théâtre qui existe
+  déjà depuis plusieurs années et qui illustre, pour moi, parfaitement le pouvoir libérateur qu'exerce le
+  théâtre sur les gens; cela s'appelle le théâtre de l'opprimé. Il s'agit d'une méthode théâtrale inventée
+  et développée par Augusto Boal dans les années soixante, d'abord au Brésil puis en Europe, et qui
+  est maintenant répandue dans le monde entier. Cette méthode utilise le théâtre comme langage,
+  comme moyen de connaissance et de transformation de la réalité intérieure, relationnelle et sociale.
+  Il s'agit d'un théâtre qui rend le public actif et qui sert aux groupes de « spect-acteurs » à explorer, à
+  mettre en scène, à analyser et à transformer la réalité qu'eux-mêmes vivent. Une des principales
+  hypothèses de base est que « le corps pense », cela signifie une conception de l'être humain comme
+  globalité de corps, d'esprit et d'émotion. Tout en touchant des aspects personnels et émotifs, le
+  Théâtre de l'opprimé ne se pose pas comme thérapie, mais comme instrument de « libération »
+  collective s’appuyant sur la prise de conscience autonome des personnes, sur le « miroir multiple du
+  regard des autres ».",
+  license: "",
+  link: "",
+  school_id: school13.id,
+  cover: ""
+)
+thesis40 = Thesis.new(
+  user_id: user40.id,
+  title: "Penser la typographie en couleur",
+  subtitle: "",
+  year: Date.new(2009),
+  resume: "Captivé par les lettres d’une part et la couleur d’autre part, c’est tout naturellement que ces deux passions se sont associées et ont mûri au fil des ans pour aboutir au mémoire ici présenté.
+  La couleur et les lettres nous environnent au quotidien. Nous les
+  rencontrons dès que nous ouvrons les yeux, sur l’écran de notre réveil
+  digital tout d’abord, sur les emballages de notre paquet de café ou
+  de notre gel douche ensuite, puis sur les enseignes des magasins et
+  les affiches publicitaires lorsque nous nous rendons à notre travail
+  ou en revenant à notre domicile. Ils sont encore présents sur les plans
+  de notre quartier et les panneaux de signalétique quand nous cherchons
+  à nous orienter, sur notre ordinateur, sur internet, etc. Et pourtant,
+  ces deux univers semblent vouloir garder leur indépendance, sans jamais
+  partager leurs qualités respectives. Qu’elles en sont les raisons ? Est-ce
+  la cause d’un héritage historique trop fortement ancré ou bien au
+  contraire d’une difficulté technologique que personne ne cherche
+  à surmonter ? N’est-il pas une seule application de la couleur qui puisse
+  enrichir la création d’alphabets ? Qu’en est-il de l’expérimentation
+  typographique, ne s’est-elle jamais intéressée à la couleur ?",
+  license: "",
+  link: "",
+  school_id: school3.id,
+  cover: ""
+)
 
 puts "✓ theses seeded"
 
@@ -1502,6 +1767,12 @@ thesis31.diploma = dnsep
 thesis32.diploma = dnsep
 thesis33.diploma = dnsep
 thesis34.diploma = dnsep
+thesis35.diploma = ens
+thesis36.diploma = insa
+thesis37.diploma = dsaa
+thesis38.diploma = efap
+thesis39.diploma = efap
+thesis40.diploma = ensad
 
 puts "✓ thesis.diploma seeded"
 
@@ -1539,6 +1810,12 @@ thesis31.save!
 thesis32.save!
 thesis33.save!
 thesis34.save!
+thesis35.save!
+thesis36.save!
+thesis37.save!
+thesis38.save!
+thesis39.save!
+thesis40.save!
 
 puts "✓ thesis saved!"
 
@@ -1578,6 +1855,12 @@ thesisDiploma31 = ThesisDiploma.find_by_thesis_id(thesis31.id)
 thesisDiploma32 = ThesisDiploma.find_by_thesis_id(thesis32.id)
 thesisDiploma33 = ThesisDiploma.find_by_thesis_id(thesis33.id)
 thesisDiploma34 = ThesisDiploma.find_by_thesis_id(thesis34.id)
+thesisDiploma35 = ThesisDiploma.find_by_thesis_id(thesis35.id)
+thesisDiploma36 = ThesisDiploma.find_by_thesis_id(thesis36.id)
+thesisDiploma37 = ThesisDiploma.find_by_thesis_id(thesis37.id)
+thesisDiploma38 = ThesisDiploma.find_by_thesis_id(thesis38.id)
+thesisDiploma39 = ThesisDiploma.find_by_thesis_id(thesis39.id)
+thesisDiploma40 = ThesisDiploma.find_by_thesis_id(thesis40.id)
 
 
 thesis1_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3b.id)
@@ -1641,5 +1924,13 @@ thesis31_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma
 thesis32_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma32.id, subcategory_id: subcategories1a.id)
 thesis33_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma33.id, subcategory_id: subcategories1a.id)
 thesis34_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma34.id, subcategory_id: subcategories1a.id)
+thesis35_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma35.id, subcategory_id: subcategories5a.id)
+thesis36_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma36.id, subcategory_id: subcategories5a.id)
+thesis37_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma37.id, subcategory_id: subcategories4c.id)
+thesis38_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma38.id, subcategory_id: subcategories4c.id)
+thesis39_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma39.id, subcategory_id: subcategories4c.id)
+thesis40_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma40.id, subcategory_id: subcategories3b.id)
+thesis40_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma40.id, subcategory_id: subcategories3c.id)
+
 
 puts "✓ thesis_diploma_subcategories seeded"
