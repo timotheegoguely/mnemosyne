@@ -36,4 +36,8 @@ class ThesisPolicy < ApplicationPolicy
   def destroy?
     edit?
   end
+
+  def pdf?
+    edit?
+  end
 end

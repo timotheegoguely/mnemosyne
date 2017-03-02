@@ -750,7 +750,7 @@ thesis1 = Thesis.new(
   link: "https://github.com/timotheegoguely/mixing-culture",
   school_id: school1.id,
   cover: "2014-timothee_goguely.jpg",
-  pdf: "2014-timothee_goguely-mixing_culture.pdf"
+  pdf: "https://dl.dropboxusercontent.com/u/10748485/2014-timothee_goguely-mixing_culture.pdf"
 )
 thesis2 = Thesis.new(
   user_id: user2.id,
@@ -764,7 +764,7 @@ thesis2 = Thesis.new(
   link: "http://margotcannizzo.tumblr.com/post/68452213577/expression-%C3%A9crite-potentiel-et-limite-du-langage",
   school_id: school2.id,
   cover: "2014-margot_cannizzo-expression_ecrite.jpg",
-  pdf: "2014-margot_cannizzo-expression_ecrite.pdf"
+  pdf: "https://dl.dropboxusercontent.com/u/10748485/2014-margot_cannizzo-expression_ecrite.pdf"
 )
 thesis3 = Thesis.new(
   user_id: user3.id,
@@ -775,7 +775,7 @@ thesis3 = Thesis.new(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-geoffrey-saint-martin.jpg",
+  cover: "2014-geoffrey_saint_martin.jpg"
 )
 thesis4 = Thesis.new(
   user_id: user4.id,
@@ -1481,59 +1481,59 @@ thesis34 = Thesis.new(
   school_id: school10.id,
   cover: "2015-pauline_bernard.jpg"
 )
-thesis35 = Thesis.new(
-  user_id: user35.id,
-  title: "Les enjeux de la caméra portée",
-  subtitle: "Un dispositif qui fait bouger le cinéma",
-  year: Date.new(2010),
-  resume: "Faire le choix de filmer à l’épaule n’est pas anodin, cela doit avoir un sens. Par ailleurs, cela
-  ne veut pas dire forcément faire un cinéma réaliste ou pseudo documentaire. C’est un
-  dispositif d’écriture cinématographie au service des metteurs en scène. Il permet d’envisager
-  la création différemment et offre un outil de plus aux cinéastes, comme l’est le numérique
-  aujourd’hui, ou le scope autrefois. Il s’agit avec ce travail de recherche, de s’interroger sur
-  les spécificités de ce dispositif, et de définir plusieurs approches esthétiques liées à la
-  caméra portée. Dans quelle mesure la caméra portée a-t-elle permis de renouveler les
-  méthodes de mise en scène et notamment amené les cinéastes à repenser la notion de
-  découpage technique ? Nous nous demanderons aussi s’il s’agit pour les cinéastes qui
-  l’emploient, de faire advenir du réel ou des effets de réel ?
-  Ce mémoire a pour objectif dans un premier temps, d’analyser dans quel contexte est né et
-  s’est développé l’emploi de la caméra portée chez les documentaristes. En effet, avec
-  l’arrivée des caméras légères au début des années 1960, les cinéastes ont appris à filmer et
-  à voir le monde différemment. Ils se sont retrouvés en possession d’un nouvel outil de
-  création, qui leur a permis de se renouveler, en proposant un geste et une écriture
-  cinématographique différente grâce auxquels sujet et technique, forme et fond sont imbriqués.",
-  license: "",
-  link: "",
-  school_id: school11.id,
-  cover: ""
-)
-thesis36 = Thesis.new(
-  user_id: user36.id,
-  title: "Des studios de cinéma à Toulouse",
-  subtitle: "",
-  year: Date.new(2014),
-  resume: "Le cinéma produit des images et fait rêver. Pour autant, les lieux où le cinéma se réalise, les
-  lieux de fabrication, ont une image totalement à l’opposé de celle de l’industrie du cinéma.
-  Loin du glamour du festival de Cannes, les studios sont des lieux démesurés, isolés, enclavés
-  qui, la plupart du temps, ont été construits au fil des besoins sans planification.
-  Le cinéma se développe, on en fabrique et visionne davantage dans le monde chaque année.
-  L’’industrie de la production d’images s’étend, se rapproche de la télévision et du jeu vidéo,
-  développe ses propres nouvelles technologies, compétences et métiers. Leur popularité gran-
-  dissante rend d’autant plus importante l’image de l’industrie du cinéma et son rapport à la ville.
-  L’annonce en 2012 à Toulouse de la potentielle construction de studios de cinéma sur une
-  ancienne base aérienne a généré une grande excitation et a fait rêver l’agglomération. Le
-  projet a été abandonné pour des raisons financières, mais le contexte, les partenariats et l’en-
-  gouement populaire sont toujours là. Je me suis penchée sur ce projet, et après avoir étudié
-  l’idée d’implanter des studios sur Toulouse, ai décidé de travailler sur ce sujet. J’ai choisi un
-  site sur la commune de Balma, frontalière de Toulouse. Au terminus du métro, le long d’une
-  rivière, la parcelle est actuellement inoccupée et présente une surface largement suffisante.
-  Sa desserte doit être revue mais sa position stratégique, visible depuis la rocade, se prête to-
-  talement à la problématique de l’image des studios.",
-  license: "",
-  link: "",
-  school_id: school6.id,
-  cover: ""
-)
+# thesis35 = Thesis.new(
+#   user_id: user35.id,
+#   title: "Les enjeux de la caméra portée",
+#   subtitle: "Un dispositif qui fait bouger le cinéma",
+#   year: Date.new(2010),
+#   resume: "Faire le choix de filmer à l’épaule n’est pas anodin, cela doit avoir un sens. Par ailleurs, cela
+#   ne veut pas dire forcément faire un cinéma réaliste ou pseudo documentaire. C’est un
+#   dispositif d’écriture cinématographie au service des metteurs en scène. Il permet d’envisager
+#   la création différemment et offre un outil de plus aux cinéastes, comme l’est le numérique
+#   aujourd’hui, ou le scope autrefois. Il s’agit avec ce travail de recherche, de s’interroger sur
+#   les spécificités de ce dispositif, et de définir plusieurs approches esthétiques liées à la
+#   caméra portée. Dans quelle mesure la caméra portée a-t-elle permis de renouveler les
+#   méthodes de mise en scène et notamment amené les cinéastes à repenser la notion de
+#   découpage technique ? Nous nous demanderons aussi s’il s’agit pour les cinéastes qui
+#   l’emploient, de faire advenir du réel ou des effets de réel ?
+#   Ce mémoire a pour objectif dans un premier temps, d’analyser dans quel contexte est né et
+#   s’est développé l’emploi de la caméra portée chez les documentaristes. En effet, avec
+#   l’arrivée des caméras légères au début des années 1960, les cinéastes ont appris à filmer et
+#   à voir le monde différemment. Ils se sont retrouvés en possession d’un nouvel outil de
+#   création, qui leur a permis de se renouveler, en proposant un geste et une écriture
+#   cinématographique différente grâce auxquels sujet et technique, forme et fond sont imbriqués.",
+#   license: "",
+#   link: "",
+#   school_id: school11.id,
+#   cover: ""
+# )
+# thesis36 = Thesis.new(
+#   user_id: user36.id,
+#   title: "Des studios de cinéma à Toulouse",
+#   subtitle: "",
+#   year: Date.new(2014),
+#   resume: "Le cinéma produit des images et fait rêver. Pour autant, les lieux où le cinéma se réalise, les
+#   lieux de fabrication, ont une image totalement à l’opposé de celle de l’industrie du cinéma.
+#   Loin du glamour du festival de Cannes, les studios sont des lieux démesurés, isolés, enclavés
+#   qui, la plupart du temps, ont été construits au fil des besoins sans planification.
+#   Le cinéma se développe, on en fabrique et visionne davantage dans le monde chaque année.
+#   L’’industrie de la production d’images s’étend, se rapproche de la télévision et du jeu vidéo,
+#   développe ses propres nouvelles technologies, compétences et métiers. Leur popularité gran-
+#   dissante rend d’autant plus importante l’image de l’industrie du cinéma et son rapport à la ville.
+#   L’annonce en 2012 à Toulouse de la potentielle construction de studios de cinéma sur une
+#   ancienne base aérienne a généré une grande excitation et a fait rêver l’agglomération. Le
+#   projet a été abandonné pour des raisons financières, mais le contexte, les partenariats et l’en-
+#   gouement populaire sont toujours là. Je me suis penchée sur ce projet, et après avoir étudié
+#   l’idée d’implanter des studios sur Toulouse, ai décidé de travailler sur ce sujet. J’ai choisi un
+#   site sur la commune de Balma, frontalière de Toulouse. Au terminus du métro, le long d’une
+#   rivière, la parcelle est actuellement inoccupée et présente une surface largement suffisante.
+#   Sa desserte doit être revue mais sa position stratégique, visible depuis la rocade, se prête to-
+#   talement à la problématique de l’image des studios.",
+#   license: "",
+#   link: "",
+#   school_id: school6.id,
+#   cover: ""
+# )
 thesis37 = Thesis.new(
   user_id: user37.id,
   title: "Je suis indépendant",
@@ -1548,7 +1548,7 @@ thesis37 = Thesis.new(
   license: "",
   link: "",
   school_id: school12.id,
-  cover: ""
+  cover: "2016-elise_hurtado.jpg"
 )
 thesis38 = Thesis.new(
   user_id: user38.id,
@@ -1568,36 +1568,36 @@ thesis38 = Thesis.new(
   license: "",
   link: "",
   school_id: school13.id,
-  cover: ""
+  cover: "2012-jousset_nina.jpg"
 )
-thesis39 = Thesis.new(
-  user_id: user39.id,
-  title: "Le théâtre comme moyen déclencheur de parole en français langue étrangère",
-  subtitle: "",
-  year: Date.new(2006),
-  resume: "C'est en démontrant dans un premier lieu que le théâtre est un moyen déclencheur
-  d'expression, de parole qu’il sera possible de démontrer qu'il a le même pouvoir lors de l'acquisition
-  d'une langue étrangère.
-  La dramaturgie relationnelle a pour objectif le développement d'attitudes qui favorisent
-  l'expression spontanée, la communication relationnelle dans les interactions et la créativité en
-  pédagogie. Pour bien expliquer ce fait, j'aimerais parler brièvement d'un type de théâtre qui existe
-  déjà depuis plusieurs années et qui illustre, pour moi, parfaitement le pouvoir libérateur qu'exerce le
-  théâtre sur les gens; cela s'appelle le théâtre de l'opprimé. Il s'agit d'une méthode théâtrale inventée
-  et développée par Augusto Boal dans les années soixante, d'abord au Brésil puis en Europe, et qui
-  est maintenant répandue dans le monde entier. Cette méthode utilise le théâtre comme langage,
-  comme moyen de connaissance et de transformation de la réalité intérieure, relationnelle et sociale.
-  Il s'agit d'un théâtre qui rend le public actif et qui sert aux groupes de « spect-acteurs » à explorer, à
-  mettre en scène, à analyser et à transformer la réalité qu'eux-mêmes vivent. Une des principales
-  hypothèses de base est que « le corps pense », cela signifie une conception de l'être humain comme
-  globalité de corps, d'esprit et d'émotion. Tout en touchant des aspects personnels et émotifs, le
-  Théâtre de l'opprimé ne se pose pas comme thérapie, mais comme instrument de « libération »
-  collective s’appuyant sur la prise de conscience autonome des personnes, sur le « miroir multiple du
-  regard des autres ».",
-  license: "",
-  link: "",
-  school_id: school13.id,
-  cover: ""
-)
+# thesis39 = Thesis.new(
+#   user_id: user39.id,
+#   title: "Le théâtre comme moyen déclencheur de parole en français langue étrangère",
+#   subtitle: "",
+#   year: Date.new(2006),
+#   resume: "C'est en démontrant dans un premier lieu que le théâtre est un moyen déclencheur
+#   d'expression, de parole qu’il sera possible de démontrer qu'il a le même pouvoir lors de l'acquisition
+#   d'une langue étrangère.
+#   La dramaturgie relationnelle a pour objectif le développement d'attitudes qui favorisent
+#   l'expression spontanée, la communication relationnelle dans les interactions et la créativité en
+#   pédagogie. Pour bien expliquer ce fait, j'aimerais parler brièvement d'un type de théâtre qui existe
+#   déjà depuis plusieurs années et qui illustre, pour moi, parfaitement le pouvoir libérateur qu'exerce le
+#   théâtre sur les gens; cela s'appelle le théâtre de l'opprimé. Il s'agit d'une méthode théâtrale inventée
+#   et développée par Augusto Boal dans les années soixante, d'abord au Brésil puis en Europe, et qui
+#   est maintenant répandue dans le monde entier. Cette méthode utilise le théâtre comme langage,
+#   comme moyen de connaissance et de transformation de la réalité intérieure, relationnelle et sociale.
+#   Il s'agit d'un théâtre qui rend le public actif et qui sert aux groupes de « spect-acteurs » à explorer, à
+#   mettre en scène, à analyser et à transformer la réalité qu'eux-mêmes vivent. Une des principales
+#   hypothèses de base est que « le corps pense », cela signifie une conception de l'être humain comme
+#   globalité de corps, d'esprit et d'émotion. Tout en touchant des aspects personnels et émotifs, le
+#   Théâtre de l'opprimé ne se pose pas comme thérapie, mais comme instrument de « libération »
+#   collective s’appuyant sur la prise de conscience autonome des personnes, sur le « miroir multiple du
+#   regard des autres ».",
+#   license: "",
+#   link: "",
+#   school_id: school13.id,
+#   cover: ""
+# )
 thesis40 = Thesis.new(
   user_id: user40.id,
   title: "Penser la typographie en couleur",
@@ -1622,7 +1622,7 @@ thesis40 = Thesis.new(
   license: "",
   link: "",
   school_id: school3.id,
-  cover: ""
+  cover: "2009-thomas_lexcellent.jpg"
 )
 
 puts "✓ theses seeded"
@@ -1768,10 +1768,10 @@ thesis32.diploma = dnsep
 thesis33.diploma = dnsep
 thesis34.diploma = dnsep
 thesis35.diploma = ens
-thesis36.diploma = insa
+# thesis36.diploma = insa
 thesis37.diploma = dsaa
 thesis38.diploma = efap
-thesis39.diploma = efap
+# thesis39.diploma = efap
 thesis40.diploma = ensad
 
 puts "✓ thesis.diploma seeded"
@@ -1811,10 +1811,10 @@ thesis32.save!
 thesis33.save!
 thesis34.save!
 thesis35.save!
-thesis36.save!
+# thesis36.save!
 thesis37.save!
 thesis38.save!
-thesis39.save!
+# thesis39.save!
 thesis40.save!
 
 puts "✓ thesis saved!"
@@ -1855,11 +1855,11 @@ thesisDiploma31 = ThesisDiploma.find_by_thesis_id(thesis31.id)
 thesisDiploma32 = ThesisDiploma.find_by_thesis_id(thesis32.id)
 thesisDiploma33 = ThesisDiploma.find_by_thesis_id(thesis33.id)
 thesisDiploma34 = ThesisDiploma.find_by_thesis_id(thesis34.id)
-thesisDiploma35 = ThesisDiploma.find_by_thesis_id(thesis35.id)
-thesisDiploma36 = ThesisDiploma.find_by_thesis_id(thesis36.id)
+# thesisDiploma35 = ThesisDiploma.find_by_thesis_id(thesis35.id)
+# thesisDiploma36 = ThesisDiploma.find_by_thesis_id(thesis36.id)
 thesisDiploma37 = ThesisDiploma.find_by_thesis_id(thesis37.id)
 thesisDiploma38 = ThesisDiploma.find_by_thesis_id(thesis38.id)
-thesisDiploma39 = ThesisDiploma.find_by_thesis_id(thesis39.id)
+# thesisDiploma39 = ThesisDiploma.find_by_thesis_id(thesis39.id)
 thesisDiploma40 = ThesisDiploma.find_by_thesis_id(thesis40.id)
 
 
@@ -1924,11 +1924,11 @@ thesis31_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma
 thesis32_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma32.id, subcategory_id: subcategories1a.id)
 thesis33_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma33.id, subcategory_id: subcategories1a.id)
 thesis34_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma34.id, subcategory_id: subcategories1a.id)
-thesis35_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma35.id, subcategory_id: subcategories5a.id)
-thesis36_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma36.id, subcategory_id: subcategories5a.id)
+# thesis35_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma35.id, subcategory_id: subcategories5a.id)
+# thesis36_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma36.id, subcategory_id: subcategories5a.id)
 thesis37_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma37.id, subcategory_id: subcategories4c.id)
 thesis38_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma38.id, subcategory_id: subcategories4c.id)
-thesis39_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma39.id, subcategory_id: subcategories4c.id)
+# thesis39_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma39.id, subcategory_id: subcategories4c.id)
 thesis40_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma40.id, subcategory_id: subcategories3b.id)
 thesis40_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma40.id, subcategory_id: subcategories3c.id)
 
