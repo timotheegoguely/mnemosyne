@@ -1,9 +1,3 @@
-GIT
-  remote: git://github.com/mshibuya/remotipart.git
-  revision: cd653ddc43bb09767b8f2802d6e27b3e00ef992f
-  specs:
-    remotipart (1.3.1)
-
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -264,6 +258,7 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redis (3.3.3)
+    remotipart (1.3.1)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
     rest-client (2.0.1)
@@ -361,7 +356,7 @@ DEPENDENCIES
   rails-i18n (~> 5.0.0)
   rails_admin (>= 1.0.0.rc)
   redis
-  remotipart!
+  remotipart
   sass-rails
   searchkick (~> 1.3)
   simple_form
