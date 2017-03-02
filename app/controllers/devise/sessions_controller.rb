@@ -37,11 +37,6 @@ class Devise::SessionsController < DeviseController
     end
 
     respond_with resource, location: after_sign_in_path_for(resource)
-
-    # Omniauth
-    @user = User.find_or_create_from_auth_hash(auth_hash)
-    self.current_user = @user
-    redirect_to root_path
   end
 
   # DELETE /resource/sign_out

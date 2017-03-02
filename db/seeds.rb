@@ -229,6 +229,8 @@ puts "✓ categories seeded"
 # users table
 
 user1 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "timotheegoguely@gmail.com",
   first_name: "Timothée",
   last_name: "Goguely",
@@ -239,6 +241,8 @@ user1 = User.create!(
   admin: true
 )
 user2 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "margotcannizzo@gmail.com",
   first_name: "Margot",
   last_name: "Cannizzo",
@@ -248,6 +252,8 @@ user2 = User.create!(
   school_id: school2.id
 )
 user3 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "stmartin.geoffrey@gmail.com",
   first_name: "Geoffrey",
   last_name: "Saint-Martin",
@@ -257,6 +263,8 @@ user3 = User.create!(
   school_id: school1.id
 )
 user4 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "quentin.schmerber@gmail.com",
   first_name: "Quentin",
   last_name: "Schmerber",
@@ -266,6 +274,8 @@ user4 = User.create!(
   school_id: school1.id
 )
 user5 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "antoine.omerin@gmail.com",
   first_name: "Antoine",
   last_name: "Omerin",
@@ -275,6 +285,8 @@ user5 = User.create!(
   school_id: school3.id
 )
 user6 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "hello@lenarobin.com",
   first_name: "Lena",
   last_name: "Robin",
@@ -293,6 +305,8 @@ user6 = User.create!(
   school_id: school2.id
 )
 user7 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "martawajszczyk@gmail.com",
   first_name: "Marta",
   last_name: "Wajszczyk",
@@ -302,6 +316,8 @@ user7 = User.create!(
   school_id: school1.id
 )
 user8 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "morgannlechat@gmail.com",
   first_name: "Morgann",
   last_name: "Lechat",
@@ -311,6 +327,8 @@ user8 = User.create!(
   school_id: school1.id
 )
 user9 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "contact@spassky-fischer.fr",
   first_name: "Antoine",
   last_name: "Stevenot",
@@ -320,6 +338,8 @@ user9 = User.create!(
   school_id: school4.id
 )
 user10 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "chauvin.camille@gmail.com",
   first_name: "Camille",
   last_name: "Chauvin",
@@ -329,6 +349,8 @@ user10 = User.create!(
   school_id: school1.id
 )
 user11 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "coquard.emilie@gmail.com",
   first_name: "Emilie",
   last_name: "Coquard",
@@ -338,6 +360,8 @@ user11 = User.create!(
   school_id: school1.id
 )
 user12 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "jacques.floriane@gmail.com",
   first_name: "Floriane",
   last_name: "Jacques",
@@ -347,6 +371,8 @@ user12 = User.create!(
   school_id: school1.id
 )
 user13 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "lalande.vanessa@gmail.com",
   first_name: "Vanessa",
   last_name: "Lalande",
@@ -356,6 +382,8 @@ user13 = User.create!(
   school_id: school1.id
 )
 user14 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "martin.marion@gmail.com",
   first_name: "Marion",
   last_name: "Martin",
@@ -365,6 +393,8 @@ user14 = User.create!(
   school_id: school1.id
 )
 user15 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "neagle.ennio@gmail.com",
   first_name: "Ennio",
   last_name: "Neagle",
@@ -374,6 +404,8 @@ user15 = User.create!(
   school_id: school1.id
 )
 user16 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "poinsot.vincent@gmail.com",
   first_name: "Vincent",
   last_name: "Poinsot",
@@ -383,6 +415,8 @@ user16 = User.create!(
   school_id: school1.id
 )
 user17 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "runghia.priscilla@gmail.com",
   first_name: "Priscilla",
   last_name: "Runghia",
@@ -392,6 +426,8 @@ user17 = User.create!(
   school_id: school1.id
 )
 user18 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "sawicki.alice@gmail.com",
   first_name: "Alice",
   last_name: "Sawicki",
@@ -401,6 +437,8 @@ user18 = User.create!(
   school_id: school1.id
 )
 user19 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "vanpoucke.guillaume@gmail.com",
   first_name: "Guillaume",
   last_name: "Vanpoucke",
@@ -410,6 +448,8 @@ user19 = User.create!(
   school_id: school1.id
 )
 user20 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "correia.elodie@gmail.com",
   first_name: "Elodie",
   last_name: "Correia",
@@ -419,6 +459,8 @@ user20 = User.create!(
   school_id: school1.id
 )
 user21 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "julien.priscillia@gmail.com",
   first_name: "Priscilla",
   last_name: "Julien",
@@ -428,6 +470,8 @@ user21 = User.create!(
   school_id: school1.id
 )
 user22 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "kribs.morgane@gmail.com",
   first_name: "Morgane",
   last_name: "Kribs",
@@ -437,6 +481,8 @@ user22 = User.create!(
   school_id: school1.id
 )
 user23 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "lascols.sudji@gmail.com",
   first_name: "Sudji",
   last_name: "Lascols",
@@ -446,6 +492,8 @@ user23 = User.create!(
   school_id: school1.id
 )
 user24 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "trachet.lucie@gmail.com",
   first_name: "Lucie",
   last_name: "Trachet",
@@ -455,6 +503,8 @@ user24 = User.create!(
   school_id: school1.id
 )
 user25 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "eveillard.louis@gmail.com",
   first_name: "Louis",
   last_name: "Eveillard",
@@ -464,6 +514,8 @@ user25 = User.create!(
   school_id: school1.id
 )
 user26 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "lauv.lucie@gmail.com",
   first_name: "Lucie",
   last_name: "Lauv",
@@ -473,6 +525,8 @@ user26 = User.create!(
   school_id: school1.id
 )
 user27 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "nivard.laure@gmail.com",
   first_name: "Laure",
   last_name: "Nivard",
@@ -482,6 +536,8 @@ user27 = User.create!(
   school_id: school1.id
 )
 user28 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "richard.amandine@gmail.com",
   first_name: "Amandine",
   last_name: "Richard",
@@ -491,6 +547,8 @@ user28 = User.create!(
   school_id: school1.id
 )
 user29 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "lemarie.matthieu@gmail.com",
   first_name: "Matthieu",
   last_name: "Lemarié",
@@ -500,6 +558,8 @@ user29 = User.create!(
   school_id: school5.id
 )
 user30 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "bertrand.charlotte@gmail.com",
   first_name: "Charlotte",
   last_name: "Bertrand",
@@ -509,6 +569,8 @@ user30 = User.create!(
   school_id: school6.id
 )
 user31 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "cuillerat.mickael@gmail.com",
   first_name: "Mickaël",
   last_name: "Cuillerat",
@@ -518,6 +580,8 @@ user31 = User.create!(
   school_id: school7.id
 )
 user32 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "loiseau.anne@gmail.com",
   first_name: "Anne",
   last_name: "Loiseau",
@@ -527,6 +591,8 @@ user32 = User.create!(
   school_id: school8.id
 )
 user33 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "martial.victor@gmail.com",
   first_name: "Victor",
   last_name: "Martial",
@@ -536,6 +602,8 @@ user33 = User.create!(
   school_id: school9.id
 )
 user34 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "bernard.pauline@gmail.com",
   first_name: "Pauline",
   last_name: "Bernard",
