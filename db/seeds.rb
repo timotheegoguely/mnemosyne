@@ -61,7 +61,7 @@ school4 = School.create!(
   phone_number: "+33 1 55 43 47 47"
 )
 school5 = School.create!(
-  name: "École Nationale Supérieure d'Architecture de Grenoble",
+  name: "École Nationale Supérieure d’Architecture de Grenoble",
   acronym: "ENSAG",
   address_1: "60 avenue de Constantine",
   address_2: "",
@@ -83,7 +83,7 @@ school6 = School.create!(
   phone_number: "+33 3 88 14 47 00"
 )
 school7 = School.create!(
-  name: "École Nationale Supérieure d'Architecture de Lyon",
+  name: "École Nationale Supérieure d’Architecture de Lyon",
   acronym: "ENSAL",
   address_1: "3 Rue Maurice Audin",
   address_2: "",
@@ -94,7 +94,7 @@ school7 = School.create!(
   phone_number: "+33 4 78 79 50 50"
 )
 school8 = School.create!(
-  name: "École Nationale Supérieure d'Architecture de Paris-Belleville",
+  name: "École Nationale Supérieure d’Architecture de Paris-Belleville",
   acronym: "ENSA",
   address_1: "60 Boulevard de la Villette",
   address_2: "",
@@ -105,7 +105,7 @@ school8 = School.create!(
   phone_number: "+33 1 53 38 50 00"
 )
 school9 = School.create!(
-  name: "École Nationale Supérieure d'Architecture de Nantes",
+  name: "École Nationale Supérieure d’Architecture de Nantes",
   acronym: "ENSAN",
   address_1: "6 Quai François Mitterrand",
   address_2: "",
@@ -116,7 +116,7 @@ school9 = School.create!(
   phone_number: "+33 2 40 16 01 21"
 )
 school10 = School.create!(
-  name: "École Nationale Supérieure d'Architecture de Paris-Val de Seine",
+  name: "École Nationale Supérieure d’Architecture de Paris-Val de Seine",
   acronym: "ENSAN",
   address_1: "3 Quai Panhard et Levassor",
   address_2: "",
@@ -168,7 +168,7 @@ ensad = Diploma.create!(
   degree: "2"
 )
 ensag = Diploma.create!(
-  name: "Diplôme d'école en Architecture",
+  name: "Diplôme d’école en Architecture",
   acronym: "",
   degree: "2"
 )
@@ -602,7 +602,7 @@ puts "✓ users table seeded"
 
 # theses table
 
-thesis1 = Thesis.create!(
+thesis1 = Thesis.new(
   user_id: user1.id,
   title: "Mixing Culture",
   subtitle: "",
@@ -613,9 +613,9 @@ thesis1 = Thesis.create!(
   license: "CC BY-SA 4.0",
   link: "https://github.com/timotheegoguely/mixing-culture",
   school_id: school1.id,
-  cover: "2014-timothee-goguely.jpg"
+  cover: "2014-timothee_goguely.jpg"
 )
-thesis2 = Thesis.create!(
+thesis2 = Thesis.new(
   user_id: user2.id,
   title: "Expression Écrite",
   subtitle: "Potentiel et limite du langage écrit normé dans la traduction d’une émotion",
@@ -626,9 +626,9 @@ thesis2 = Thesis.create!(
   license: "",
   link: "http://margotcannizzo.tumblr.com/post/68452213577/expression-%C3%A9crite-potentiel-et-limite-du-langage",
   school_id: school2.id,
-  cover: "",
+  cover: "2014-margot_cannizzo-expression_ecrite.jpg",
 )
-thesis3 = Thesis.create!(
+thesis3 = Thesis.new(
   user_id: user3.id,
   title: "Hommage à son parcours",
   subtitle: "",
@@ -639,18 +639,18 @@ thesis3 = Thesis.create!(
   school_id: school1.id,
   cover: "2014-geoffrey-saint-martin.jpg",
 )
-thesis4 = Thesis.create!(
+thesis4 = Thesis.new(
   user_id: user4.id,
   title: "La cour des mirages",
   subtitle: "Le paysage des l’espace construit",
   year: Date.new(2014),
-  resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature dans les espaces architecturaux. Questionnement sur l'image et la simulation.",
+  resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature dans les espaces architecturaux. Questionnement sur l’image et la simulation.",
   license: "",
   link: "http://www.lulu.com/shop/quentin-schmerber/la-cour-des-mirages/paperback/product-21458084.html",
   school_id: school1.id,
-  cover: "2014-quentin-schmerber.jpg"
+  cover: "2014-quentin_schmerber.jpg"
 )
-thesis5 = Thesis.create!(
+thesis5 = Thesis.new(
   user_id: user5.id,
   title: "« Wesh alors ? »",
   subtitle: "Un puzzle de mots et de pensées",
@@ -659,9 +659,9 @@ thesis5 = Thesis.create!(
   license: "",
   link: "",
   school_id: school3.id,
-  cover: ""
+  cover: "2016-antoine_omerin-wesh_alors.jpg"
 )
-thesis6 = Thesis.create!(
+thesis6 = Thesis.new(
   user_id: user6.id,
   title: "Points, Zig-zag, Double-ligne",
   subtitle: "Nouveaux modes de lecture et poétique du réseau Internet dans le livre imprimé",
@@ -673,9 +673,9 @@ thesis6 = Thesis.create!(
   license: "",
   link: "https://issuu.com/lenarobin/docs/le__narobin_me__moire6",
   school_id: school2.id,
-  cover: "2016-lena-robin.jpg"
+  cover: "2016-lena_robin.jpg"
 )
-thesis7 = Thesis.create!(
+thesis7 = Thesis.new(
   user_id: user7.id,
   title: "Exhibitionnisme",
   subtitle: "La culture de l’exhibition et de la confession",
@@ -686,9 +686,9 @@ thesis7 = Thesis.create!(
   license: "",
   link: "",
   school_id: school2.id,
-  cover: "2012-marta-wajszczyk.jpg"
+  cover: "2012-marta_wajszczyk.jpg"
 )
-thesis8 = Thesis.create!(
+thesis8 = Thesis.new(
   user_id: user8.id,
   title: "Simulations",
   subtitle: "Pour un graphisme-fiction",
@@ -700,9 +700,9 @@ thesis8 = Thesis.create!(
   license: "",
   link: "",
   school_id: school2.id,
-  cover: "2012-morgann-lechat.jpg"
+  cover: "2012-morgann_lechat.jpg"
 )
-thesis9 = Thesis.create!(
+thesis9 = Thesis.new(
   user_id: user9.id,
   title: "Un atlas du film d’action",
   subtitle: "",
@@ -720,84 +720,44 @@ thesis9 = Thesis.create!(
   license: "",
   link: "",
   school_id: school4.id,
-  cover: "2008-antoine-stevenot.jpg"
+  cover: "2008-antoine_stevenot.jpg"
 )
-thesis10 = Thesis.create!(
+thesis10 = Thesis.new(
   user_id: user10.id,
   title: "Imaginer la fin du monde",
-  subtitle: "De la pédagogie de la catastrophe à l'heure de l'urgence environnementale",
+  subtitle: "De la pédagogie de la catastrophe à l’heure de l’urgence environnementale",
   year: Date.new(2013),
-  resume: "Cette fin d’année 2012 nous aura une fois de plus confirmé notre
-  fascination pour le mythe de la fin du monde. En effet, si le 21 décembre
-  n’aura finalement pas été le jour tant redouté, sensé advenir en raison
-  de l’achèvement du cycle du calendrier maya, il nous aura néanmoins
-  permis de nous pencher sur l’engouement de notre société pour comp-
-  ter le temps qui la sépare de sa dernière heure.
-  Depuis quelques années, les publications et les réalisations ciné-
-  matographiques autour de ce sujet ont été très nombreuses, mais il
-  ne faudrait pas voir là une tendance purement contemporaine. Car
-  imaginer la fin du monde est un concept inné à l’espèce humaine et
-  est ancré en nous depuis de nombreux siècles déjà.
-  Sans pouvoir en faire une étude exhaustive, nous verrons comment les
-  civilisations et les religions qui nous ont précédés ont profondément
-  inscrit en nous l’idée d’un monde voué à disparaître et comment ce
-  mythe s’est renforcé pendant les moments sombres de notre histoire.
-  En effet, depuis les conceptions égyptiennes de la vie après la mort
-  jusqu’aux sectes millénaristes de notre siècle, les croyances escha-
-  tologiques ont évolué au même rythme que notre capacité à nous
-  projeter sereinement dans l’avenir. Ainsi, le Moyen Âge, tourmenté
-  par les guerres, les épidémies et les famines, est l’une des périodes où
-  les visions dramatiques proposées par l’Apocalypse de Jean suscitent
-  une grande angoisse.",
+  resume: "Cette fin d’année 2012 nous aura une fois de plus confirmé notre fascination pour le mythe de la fin du monde. En effet, si le 21 décembre n’aura finalement pas été le jour tant redouté, sensé advenir en raison de l’achèvement du cycle du calendrier maya, il nous aura néanmoins permis de nous pencher sur l’engouement de notre société pour compter le temps qui la sépare de sa dernière heure.
+    Depuis quelques années, les publications et les réalisations cinématographiques autour de ce sujet ont été très nombreuses, mais il ne faudrait pas voir là une tendance purement contemporaine. Car imaginer la fin du monde est un concept inné à l’espèce humaine et est ancré en nous depuis de nombreux siècles déjà.
+    Sans pouvoir en faire une étude exhaustive, nous verrons comment les civilisations et les religions qui nous ont précédés ont profondément inscrit en nous l’idée d’un monde voué à disparaître et comment ce mythe s’est renforcé pendant les moments sombres de notre histoire.
+    En effet, depuis les conceptions égyptiennes de la vie après la mort jusqu’aux sectes millénaristes de notre siècle, les croyances eschatologiques ont évolué au même rythme que notre capacité à nous projeter sereinement dans l’avenir. Ainsi, le Moyen Âge, tourmenté par les guerres, les épidémies et les famines, est l’une des périodes où les visions dramatiques proposées par l’Apocalypse de Jean suscitent une grande angoisse.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-camille-chauvin.jpg"
+  cover: "2013-camille_chauvin.jpg"
 )
-thesis11 = Thesis.create!(
+thesis11 = Thesis.new(
   user_id: user11.id,
   title: "Datavisualisation",
   subtitle: "Nouvel outil de communication",
   year: Date.new(2013),
-  resume: "« Grâce au numérique, l’ensemble des connaissances est disponible
-  partout, tout le temps, à tout le monde. Cela répond aux enjeux d’une
-  économie où la connaissance devient facteur majeur de compétitivité,
-  et d’un monde qui change très vite et où il est indispensable
-  d’apprendre tout au long de sa vie. Le numérique transforme alors
-  radicalement les façons d’apprendre et d’enseigner. »
-  Ceci est possible grâce au développement du réseau Internet et
-  aux nombreux supports y donnant accès, se multipliant et devenant
-  de plus en plus petits. En 2011, le nombre de ventes de tablettes
-  et smartphones n’a cessé d’augmenter et surpasse alors le nombre
-  d’ordinateurs vendus  2 . Le monde est connecté. Que l’on soit chez nous,
-  dans les transports en commun, ou à l’école, nous suivons les nouvelles,
-  travaillons ou discutons sur les réseaux sociaux. Tout cela représente
-  une masse exponentielle d’informations et de données.
-  En Angleterre, la charte de l’Open Data  3 a été signée en décembre 2006
-  et n’est arrivée en France qu’en 2009. Depuis, nous pouvons penser
-  que l’accessibilité aux données, leur lisibilité et leur com­préhension sont
-  évidentes. Les données se comptent en milliards, réunis sur le réseau
-  Internet et regroupées sous le terme de « Big data ».
-  Comment se retrouver dans cet espace vaste où sont mélangés tous
-  types d’informations de différents domaines et de différents formats ?
-  Les lectures sont encore floues et très complexes pour la plupart
-  d’entre nous. C’est pourquoi graphistes, journalistes, informaticiens
-  s’associent de plus en plus pour tenter de transmettre ces données
-  grâce à des représentations visuelles accessibles au plus grand nombre.
-  Cela permet de rendre ces données intelligibles au plus grand nombre
-  tout en les regroupant et en les analysant.",
+  resume: "« Grâce au numérique, l’ensemble des connaissances est disponible partout, tout le temps, à tout le monde. Cela répond aux enjeux d’une économie où la connaissance devient facteur majeur de compétitivité, et d’un monde qui change très vite et où il est indispensable d’apprendre tout au long de sa vie. Le numérique transforme alors radicalement les façons d’apprendre et d’enseigner. »
+  Ceci est possible grâce au développement du réseau Internet et aux nombreux supports y donnant accès, se multipliant et devenant de plus en plus petits. En 2011, le nombre de ventes de tablettes et smartphones n’a cessé d’augmenter et surpasse alors le nombre d’ordinateurs vendus  2 . Le monde est connecté. Que l’on soit chez nous, dans les transports en commun, ou à l’école, nous suivons les nouvelles, travaillons ou discutons sur les réseaux sociaux. Tout cela représente une masse exponentielle d’informations et de données.
+  En Angleterre, la charte de l’Open Data  3 a été signée en décembre 2006 et n’est arrivée en France qu’en 2009. Depuis, nous pouvons penser que l’accessibilité aux données, leur lisibilité et leur com­préhension sont évidentes. Les données se comptent en milliards, réunis sur le réseau Internet et regroupées sous le terme de « Big data ».
+  Comment se retrouver dans cet espace vaste où sont mélangés tous types d’informations de différents domaines et de différents formats ?
+  Les lectures sont encore floues et très complexes pour la plupart d’entre nous. C’est pourquoi graphistes, journalistes, informaticiens s’associent de plus en plus pour tenter de transmettre ces données grâce à des représentations visuelles accessibles au plus grand nombre. Cela permet de rendre ces données intelligibles au plus grand nombre tout en les regroupant et en les analysant.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-emilie-coquard.jpg"
+  cover: "2013-emilie_coquard.jpg"
 )
-thesis12 = Thesis.create!(
+thesis12 = Thesis.new(
   user_id: user12.id,
   title: "Espaces et aires de jeux",
-  subtitle: "Un lieu dédié à la construction, l'organisation et l'imagination de l'enfant",
+  subtitle: "Un lieu dédié à la construction, l’organisation et l’imagination de l’enfant",
   year: Date.new(2013),
   resume: "Le jeu est une idée plaisante qui évoque l’enfance,
-  la création, l'émulation, la nostalgie, l’amitié, la liberté...
+  la création, l’émulation, la nostalgie, l’amitié, la liberté...
   Le jeu est envisagé comme un phénomène culturel,
   et non pas comme une fonction biologique. Il est pourtant
   plus ancien que la culture. En effet, la notion de culture,
@@ -836,12 +796,12 @@ thesis12 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-floriane-jacques.jpg"
+  cover: "2013-floriane_jacques.jpg"
 )
-thesis13 = Thesis.create!(
+thesis13 = Thesis.new(
   user_id: user13.id,
   title: "Le réel transfiguré",
-  subtitle: "Ou l'entreprise proustienne au service d'une vision",
+  subtitle: "Ou l’entreprise proustienne au service d’une vision",
   year: Date.new(2013),
   resume: "À la recherche du temps perdu est un monument de la littérature française,
   publié entre 1913 et 1927. Pourquoi s’intéresser à un roman qui, n’est plus
@@ -905,12 +865,12 @@ thesis13 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-vanessa-lalande.jpg"
+  cover: "2013-vanessa_lalande.jpg"
 )
-thesis14 = Thesis.create!(
+thesis14 = Thesis.new(
   user_id: user14.id,
   title: "La langue et ses signes",
-  subtitle: "Une pensée en mouvement: l'information au bout des doigts",
+  subtitle: "Une pensée en mouvement: l’information au bout des doigts",
   year: Date.new(2013),
   resume: "Il y a quelques années, j’ai entrepris l’expérience de l’ap-
   prentissage de la Langue des Signes Française (LSF). Mon
@@ -930,11 +890,11 @@ thesis14 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-marion-martin.jpg"
+  cover: "2013-marion_martin.jpg"
 )
-thesis15 = Thesis.create!(
+thesis15 = Thesis.new(
   user_id: user15.id,
-  title: "L'immortalité: qu'en dire, aujourd'hui",
+  title: "L’immortalité: qu’en dire, aujourd’hui",
   subtitle: "",
   year: Date.new(2013),
   resume: "Échapper à la mort et vivre pour l’éternité : une
@@ -966,9 +926,9 @@ thesis15 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-ennio-neagle.jpg"
+  cover: "2013-ennio_neagle.jpg"
 )
-thesis16 = Thesis.create!(
+thesis16 = Thesis.new(
   user_id: user16.id,
   title: "Du standard au non-conforme",
   subtitle: "",
@@ -980,7 +940,7 @@ thesis16 = Thesis.create!(
   souvent mal interprété; nécessaire car il s’agit
   bien de préciser que son emploi se fera par la
   suite dans son sens premier et littéral, contraire-
-  ment à l'usage péjoratif qu'il pourrait induire. Sa
+  ment à l’usage péjoratif qu’il pourrait induire. Sa
   signification, donnée ici par le Robert précise
   donc qu’il s’agit bien d’une « personne qui aime,
   cultive, recherche ».
@@ -1000,9 +960,9 @@ thesis16 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-vincent-poinsot.jpg"
+  cover: "2013-vincent_poinsot.jpg"
 )
-thesis17 = Thesis.create!(
+thesis17 = Thesis.new(
   user_id: user17.id,
   title: "Les difficultés à décrypter le langage commun",
   subtitle: "",
@@ -1035,9 +995,9 @@ thesis17 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-priscillia-runghia.jpg"
+  cover: "2013-priscillia_runghia.jpg"
 )
-thesis18 = Thesis.create!(
+thesis18 = Thesis.new(
   user_id: user18.id,
   title: "Déchets ultimes du nucléaire",
   subtitle: "Transmettre la mémoire des sites de stockage",
@@ -1074,9 +1034,9 @@ thesis18 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-alice-sawicki.jpg"
+  cover: "2013-alice_sawicki.jpg"
 )
-thesis19 = Thesis.create!(
+thesis19 = Thesis.new(
   user_id: user19.id,
   title: "Vitesse",
   subtitle: "Terme contemporain du temps",
@@ -1101,11 +1061,11 @@ thesis19 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-guillaume-vanpoucke.jpg"
+  cover: "2013-guillaume_vanpoucke.jpg"
 )
-thesis20 = Thesis.create!(
+thesis20 = Thesis.new(
   user_id: user20.id,
-  title: "Danser l'espace",
+  title: "Danser l’espace",
   subtitle: "",
   year: Date.new(2014),
   resume: "L’infinité des mouvements et des déplacements, les
@@ -1130,9 +1090,9 @@ thesis20 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-elodie-correia.jpg"
+  cover: "2014-elodie_correia.jpg"
 )
-thesis21 = Thesis.create!(
+thesis21 = Thesis.new(
   user_id: user21.id,
   title: "Expériences déplaçantes",
   subtitle: "Déplacements de voyage et déplacements dans la création",
@@ -1166,9 +1126,9 @@ thesis21 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-priscillia-julien.jpg"
+  cover: "2014-priscillia_julien.jpg"
 )
-thesis22 = Thesis.create!(
+thesis22 = Thesis.new(
   user_id: user22.id,
   title: "Au-dela de la norme",
   subtitle: "",
@@ -1196,12 +1156,12 @@ thesis22 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-morgane-kribs.jpg"
+  cover: "2014-morgane_kribs.jpg"
 )
-thesis23 = Thesis.create!(
+thesis23 = Thesis.new(
   user_id: user23.id,
   title: "De la pensée à la forme",
-  subtitle: "Processus de formalisation d'un espcace mental dans le champ de la création artistique",
+  subtitle: "Processus de formalisation d’un espcace mental dans le champ de la création artistique",
   year: Date.new(2014),
   resume: " Commencer par la forme artistique ». Autrement dit, remonter
   à sa genèse en la considérant comme production de l’espace
@@ -1227,345 +1187,161 @@ thesis23 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-sudji-lascols.jpg"
+  cover: "2014-sudji_lascols.jpg"
 )
-thesis24 = Thesis.create!(
+thesis24 = Thesis.new(
   user_id: user24.id,
-  title: "L'enfance, de l'imaginaire au réel, du concept à la création",
+  title: "L’enfance, de l’imaginaire au réel, du concept à la création",
   subtitle: "",
   year: Date.new(2014),
-  resume: "La pulsion créative est indispensable
-  à l’artiste qui veut faire œuvre,
-  mais elle est aussi en chacun
-  de nous, dès le plus jeune âge,
-  comme le montrent les expérimentations
-  vocales ou manuelles des tout-petits
-  enfants. C’est ce qu’explique
-  Donald Winnicott — (1896 - 1971)
-  un pédiatre, psychiatre et psycha-
-  nalyste anglais — dans son œuvre
-  Jeu et Réalité. Pour lui, « voir le monde
-  de manière créative permet
-  à l’individu de ne pas se contenter
-  d’exister mais de vivre. » La « créativité
-  enrichit la vie au quotidien. »
-  Dans La cause des enfants, Françoise
-  Dolto — (1908 - 1988) une pédiatre
-  et psychanalyste française — explique
-  que l’enfant n’est pas le même
-  selon le lieu où il naît et que la famille
-  doit construire un capital pré-sensoriel
-  afin qu’il puisse le développer.
-  Cependant, au cours de l’éducation,
-  la société développe davantage
-  le mimétisme et atténue considéra-
-  blement la sensibilité artistique des enfants.",
+  resume: "La pulsion créative est indispensable à l’artiste qui veut faire œuvre, mais elle est aussi en chacun de nous, dès le plus jeune âge, comme le montrent les expérimentations vocales ou manuelles des tout-petits enfants. C’est ce qu’explique Donald Winnicott — (1896 - 1971) un pédiatre, psychiatre et psycha- nalyste anglais — dans son œuvre
+  Jeu et Réalité. Pour lui, « voir le monde de manière créative permet à l’individu de ne pas se contenter d’exister mais de vivre. » La « créativité enrichit la vie au quotidien. »
+  Dans La cause des enfants, Françoise Dolto — (1908 - 1988) une pédiatre et psychanalyste française — explique que l’enfant n’est pas le même selon le lieu où il naît et que la famille doit construire un capital pré-sensoriel afin qu’il puisse le développer.
+  Cependant, au cours de l’éducation, la société développe davantage le mimétisme et atténue considéra- blement la sensibilité artistique des enfants.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-lucie-trachet.jpg"
+  cover: "2014-lucie_trachet.jpg"
 )
-thesis25 = Thesis.create!(
+thesis25 = Thesis.new(
   user_id: user25.id,
   title: "Interfaces en mouvements",
   subtitle: "",
   year: Date.new(2011),
-  resume: "Il sera bientôt possible de transmettre sans fil des messages à travers le monde
-  tellement facilement que chacun pourra porter et utiliser son propre dispositif.
-  Nikola Tesla, 1909
-  À la fin des années 1980, quand les téléphones portables ont fait leur
-  apparition dans le cinéma hollywoodien, peu de gens étaient capables
-  d'imaginer l'ampleur de l'intégration de ces appareils dans nos vies deux
-  décennies plus tard. Dans le film Wall Street d'Oliver Stone de 1987, le
-  téléphone portable du magnat de la finance Gordon Gekko n'est jamais
-  loin de lui. C'est un des symboles de l'emprise qu'il exerce sur ses affaires
-  et de l'influence qu'il a sur le reste du monde. « L'argent ne dort jamais »,
-  Gordon Gekko et son téléphone non plus. Pour autant, avec la taille d'un
-  gros fer à repasser et un prix de 3995 $US, les avancées révolutionnaires
-  apportées par le DynaTAC de Motorola ne conviennent pas à toutes les
-  poches. Qui aurait envie de se balader avec un téléphone de 800 grammes
-  et 25 centimètres de haut sur lui ?
-  De nos jours, la plupart des portables tiennent dans le creux d'une main
-  et il y a, en France, plus d'abonnés mobiles que d'habitants (64,4 millions
-  d'abonnés en 2010 selon l'ARCEP, certaines personnes possédant deux
-  abonnements). Cela étant, l'existence dans la vie de chacun d'entre
-  nous de ces appareils ne tient pas seulement à la capacité de l'objet
-  à nous permettre de communiquer avec n'importe qui, n'importe quand
-  et n'importe où. Elle provient aussi de la multiplicité des usages qu'il est
-  possible d'en faire : agenda, mail, messagerie instantanée, accès à internet
-  permanent, navigation routière, baladeur mp3, radio FM, réveil, lampe de
-  poche, ou encore livre de recettes de cuisine, plan du métro, traducteur
-  vocal, interface de publication pour blog, réservation de billets de train,
-  système de montage audio ou vidéo, niveau à bulle... Il devient tellement
-  naturel de se servir de son téléphone pour toutes ces tâches qu'on
-  remarque à peine son existence dans notre vie quotidienne. Pour une",
+  resume: "Il sera bientôt possible de transmettre sans fil des messages à travers le monde tellement facilement que chacun pourra porter et utiliser son propre dispositif.
+  — Nikola Tesla, 1909
+
+  À la fin des années 1980, quand les téléphones portables ont fait leur apparition dans le cinéma hollywoodien, peu de gens étaient capables d’imaginer l’ampleur de l’intégration de ces appareils dans nos vies deux décennies plus tard. Dans le film Wall Street d’Oliver Stone de 1987, le téléphone portable du magnat de la finance Gordon Gekko n’est jamais loin de lui. C’est un des symboles de l’emprise qu’il exerce sur ses affaires et de l’influence qu’il a sur le reste du monde. « L’argent ne dort jamais », Gordon Gekko et son téléphone non plus. Pour autant, avec la taille d’un gros fer à repasser et un prix de 3995 $US, les avancées révolutionnaires apportées par le DynaTAC de Motorola ne conviennent pas à toutes les poches. Qui aurait envie de se balader avec un téléphone de 800 grammes et 25 centimètres de haut sur lui ?
+  De nos jours, la plupart des portables tiennent dans le creux d’une main et il y a, en France, plus d’abonnés mobiles que d’habitants (64,4 millions d’abonnés en 2010 selon l’ARCEP, certaines personnes possédant deux abonnements). Cela étant, l’existence dans la vie de chacun d’entre nous de ces appareils ne tient pas seulement à la capacité de l’objet à nous permettre de communiquer avec n’importe qui, n’importe quand et n’importe où. Elle provient aussi de la multiplicité des usages qu’il est possible d’en faire : agenda, mail, messagerie instantanée, accès à internet permanent, navigation routière, baladeur mp3, radio FM, réveil, lampe de poche, ou encore livre de recettes de cuisine, plan du métro, traducteur vocal, interface de publication pour blog, réservation de billets de train, système de montage audio ou vidéo, niveau à bulle... Il devient tellement naturel de se servir de son téléphone pour toutes ces tâches qu’on remarque à peine son existence dans notre vie quotidienne. Pour une",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2012-louis-eveillard.jpg"
+  cover: "2012-louis_eveillard.jpg"
 )
-thesis26 = Thesis.create!(
+thesis26 = Thesis.new(
   user_id: user26.id,
   title: "La manipulation des statistiques",
   subtitle: "Comment les politiciens français crédibilisent leurs discours?",
   year: Date.new(2011),
-  resume: "Aujourd’hui, il est incontestable d’admettre
-  l’invasion des statistiques dans l’espace public. On
-  entend par « statistiques » les données produites par
-  le système statistique public français, autrement dit,
-  les chiffres. À ne pas confondre avec la statistique,
-  qui est la méthode utilisée pour les produire.
-     En France, certains de nos hommes politiques
-  manipulent les statistiques. Cela se sait de plus en
-  plus grâce à des informations diffusées à la télévi-
-  sion ou sur internet. Par exemple à travers des sites
-  web personnels, des blogs, des sites d’informations
-  générales ou de revues de presse politique comme
-  le monde, libération, l’humanité, le figaro, etc. Il y a
-  également des informations qui s’écoutent à la ra-
-  dio ou qui sont publiées sous forme de livres. Ces
-  derniers peuvent être écrits par des journalistes, des
-  politiciens ou encore des personnes qui, se sentant
-  particulièrement impliquées par un sujet, ont pris
-  la démarche d’enquêter eux-même. Qu’importent
-  leurs origines, nous ne pouvons affirmer la véracité
-  des informations recueillies. Par contre, la quantité
-  et la multitude de leurs présences nous permettent
-  certaines interrogations.",
+  resume: "Aujourd’hui, il est incontestable d’admettre l’invasion des statistiques dans l’espace public. On entend par « statistiques » les données produites par le système statistique public français, autrement dit, les chiffres. À ne pas confondre avec la statistique, qui est la méthode utilisée pour les produire.
+    En France, certains de nos hommes politiques manipulent les statistiques. Cela se sait de plus en plus grâce à des informations diffusées à la télévi- sion ou sur internet. Par exemple à travers des sites web personnels, des blogs, des sites d’informations générales ou de revues de presse politique comme le monde, libération, l’humanité, le figaro, etc. Il y a également des informations qui s’écoutent à la ra- dio ou qui sont publiées sous forme de livres. Ces derniers peuvent être écrits par des journalistes, des politiciens ou encore des personnes qui, se sentant particulièrement impliquées par un sujet, ont pris la démarche d’enquêter eux-même. Qu’importent leurs origines, nous ne pouvons affirmer la véracité des informations recueillies. Par contre, la quantité et la multitude de leurs présences nous permettent certaines interrogations.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2012-lucie-lauv.jpg"
+  cover: "2012-lucie_lauv.jpg"
 )
-thesis27 = Thesis.create!(
+thesis27 = Thesis.new(
   user_id: user27.id,
   title: "Les paradis artificiels",
   subtitle: "",
   year: Date.new(2011),
-  resume: "Tout commence par un fait, un statut : nous vivons dans une logis-
-  tique stable. En tant que citoyen bien inséré dans la société, on aura
-  élu un lieu comme son domicile, on en connaîtra éventuellement
-  un autre pour exercer sa profession ; on possèdera en dehors de cela
-  un petit cercle d’amis, du moins quelques fréquentations régulières
-  parmi lesquelles les membres proches de cet ensemble filial qu’est la
-  famille. Selon sa situation, que l’on soit plus ou moins pourvu, on
-  a bâti en soi un rythme quotidien où sont ancrés les repères néces-
-  saires pour mener une vie à peu près normale et satisfaisante. Ainsi,
-  si je devais me présenter, je pourrais dire que je m’appelle Jacques,
-  que j’habite Grenoble, que je travaille environ neuf heures par jour à
-  l’entreprise Schneider Électricité, cela en dehors de mes congés payés
-  où je pars rendre visite à mes petits enfants résidant en Autriche avec
-  ma fille aînée. Si l’enchaînement des données — identité, emploi,
-  situation familiale, loisirs — varie peu d’une personne à l’autre, c’est
-  qu’il correspond aussi à l’ordre logique d’une société où l’on trouve
-  sa place dans le travail, en l’échange duquel on perçoit son dû sous
-  forme d’argent : monnaie courante pour subsister à ses besoins,
-  des plus élémentaires aux plus superficiels. L’application de la loi
-  a fait que, s’il y a un temps consacré au travail, il existe forcément
-  un temps de vacance, où, comme l’indique le mot pris en son sens
-  littéral, on manque temporairement à son poste habituel, on prends
-  congé de son cadre de vie pour aller chercher autre chose, ailleurs.
-  Il s’agit alors de combler de la meilleure façon ce temps vacant
-  dont on dispose.",
+  resume: "Tout commence par un fait, un statut : nous vivons dans une logistique stable. En tant que citoyen bien inséré dans la société, on aura élu un lieu comme son domicile, on en connaîtra éventuellement un autre pour exercer sa profession ; on possèdera en dehors de cela un petit cercle d’amis, du moins quelques fréquentations régulières parmi lesquelles les membres proches de cet ensemble filial qu’est la famille. Selon sa situation, que l’on soit plus ou moins pourvu, on a bâti en soi un rythme quotidien où sont ancrés les repères néces- saires pour mener une vie à peu près normale et satisfaisante. Ainsi, si je devais me présenter, je pourrais dire que je m’appelle Jacques, que j’habite Grenoble, que je travaille environ neuf heures par jour à l’entreprise Schneider Électricité, cela en dehors de mes congés payés où je pars rendre visite à mes petits enfants résidant en Autriche avec ma fille aînée. Si l’enchaînement des données — identité, emploi, situation familiale, loisirs — varie peu d’une personne à l’autre, c’est qu’il correspond aussi à l’ordre logique d’une société où l’on trouve sa place dans le travail, en l’échange duquel on perçoit son dû sous forme d’argent : monnaie courante pour subsister à ses besoins, des plus élémentaires aux plus superficiels. L’application de la loi a fait que, s’il y a un temps consacré au travail, il existe forcément un temps de vacance, où, comme l’indique le mot pris en son sens littéral, on manque temporairement à son poste habituel, on prends congé de son cadre de vie pour aller chercher autre chose, ailleurs.
+  Il s’agit alors de combler de la meilleure façon ce temps vacant dont on dispose.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2012-laure-nivard.jpg"
+  cover: "2012-laure_nivard.jpg"
 )
-thesis28 = Thesis.create!(
+thesis28 = Thesis.new(
   user_id: user28.id,
   title: "Produire autrement",
   subtitle: "",
   year: Date.new(2011),
-  resume: "Inspirée par les terroirs, la nourriture est un élément central et fonda-
-  teur des sociétés humaines. Depuis les premières civilisations, l’homme a
-  toujours produit les aliments dont il avait besoin en fonction de son envi-
-  ronnement naturel, cependant, aujourd’hui, la production des ressources
-  agricoles semble être dictée par une politique échappant aux considéra-
-  tions locales.
-  La révolution industrielle, l’exode rural, et l’uniformisation des modes de
-  vies qui s’en suivit, ont profondément influencé la production agricole.
-  L’agriculture a peu à peu évolué en parallèle d’une mondialisation crois-
-  sante, et d’une course à la production de masse.
-  Le paysan rural, qui cultive ses terres au rythme de la nature pour nourrir
-  la population environnante est devenu une véritable image d’Épinal.
-  Cette société paysanne autonome autrefois a fait place à des exploitants
-  agricoles dépendants d’une part des nombreuses coopératives mais sur-
-  tout de la politique agricole et des multinationales du secteur.
-  Les terres agricoles sont devenues des « No Man’s Land », peuplées par
-  des machines toujours plus performantes. Les maîtres mots sont devenus :
-  immédiateté, rentabilité, et productivité.",
+  resume: "Inspirée par les terroirs, la nourriture est un élément central et fondateur des sociétés humaines. Depuis les premières civilisations, l’homme a toujours produit les aliments dont il avait besoin en fonction de son envi- ronnement naturel, cependant, aujourd’hui, la production des ressources agricoles semble être dictée par une politique échappant aux considéra- tions locales.
+  La révolution industrielle, l’exode rural, et l’uniformisation des modes de vies qui s’en suivit, ont profondément influencé la production agricole.
+  L’agriculture a peu à peu évolué en parallèle d’une mondialisation crois sante, et d’une course à la production de masse.
+  Le paysan rural, qui cultive ses terres au rythme de la nature pour nourrir la population environnante est devenu une véritable image d’Épinal.
+  Cette société paysanne autonome autrefois a fait place à des exploitants agricoles dépendants d’une part des nombreuses coopératives mais sur tout de la politique agricole et des multinationales du secteur.
+  Les terres agricoles sont devenues des « No Man’s Land », peuplées par des machines toujours plus performantes. Les maîtres mots sont devenus : immédiateté, rentabilité, et productivité.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2012-amandine-richard.jpg"
+  cover: "2012-amandine_richard.jpg"
 )
-thesis29 = Thesis.create!(
+thesis29 = Thesis.new(
   user_id: user29.id,
-  title: "A l'abordage des délaissés",
-  subtitle: "Vers une nouvelle forme d'espace public",
+  title: "A l’abordage des délaissés",
+  subtitle: "Vers une nouvelle forme d’espace public",
   year: Date.new(2014),
-  resume: "L’image de la ville a toujours été véhiculée par ses innombrables
-  activités, sa lumière omniprésente, sa vitesse de développement et sa
-  technicité. Cependant, qu’elle soit décrite dans un roman, dessinée
-  dans un comic, ou bien même construite dans notre imaginaire
-  lieux incertains, négligés et presque effrayants. Friches industrielles,
-  terrains vagues, dents creuses, logements vacants, interstices ... Ces
-  espaces en dérive se forment suite à la perte des fonctions originelles
-  du lieu, aux intervalles d’aménagement urbain ou au désintérêt de son
-  de ce mémoire, représentant alors les failles d’un système urbain rigide
-  des années 70, pour cause, la crise pétrolière et la désindustrialisation
-  qui s’en est suivie a laissé une part du territoire français miné de friches
-  industrielles, mais aussi militaires, ferroviaires, portuaires et autres
-  espaces vacants. Malgré ces espaces en attente, la ville continue de
-  s’étendre au delà de ses limites et ne prend que très peu conscience
-  du potentiel qu’elle abrite en son cœur. Ces espaces libres ne doivent
-  plus être vécus comme un lieu en marge de la société, mais au contraire,
-  comme une marge de recul, une réserve de disponibilité de la ville.",
+  resume: "L’image de la ville a toujours été véhiculée par ses innombrables activités, sa lumière omniprésente, sa vitesse de développement et sa technicité. Cependant, qu’elle soit décrite dans un roman, dessinée dans un comic, ou bien même construite dans notre imaginaire lieux incertains, négligés et presque effrayants. Friches industrielles, terrains vagues, dents creuses, logements vacants, interstices ... Ces espaces en dérive se forment suite à la perte des fonctions originelles du lieu, aux intervalles d’aménagement urbain ou au désintérêt de son de ce mémoire, représentant alors les failles d’un système urbain rigide des années 70, pour cause, la crise pétrolière et la désindustrialisation qui s’en est suivie a laissé une part du territoire français miné de friches industrielles, mais aussi militaires, ferroviaires, portuaires et autres espaces vacants. Malgré ces espaces en attente, la ville continue de s’étendre au delà de ses limites et ne prend que très peu conscience du potentiel qu’elle abrite en son cœur. Ces espaces libres ne doivent plus être vécus comme un lieu en marge de la société, mais au contraire, comme une marge de recul, une réserve de disponibilité de la ville.",
   license: "",
   link: "",
   school_id: school5.id,
-  cover: ".jpg"
+  cover: "2014-matthieu_lemarie-a_l_abordage_des_delaisses.jpg"
 )
-thesis30 = Thesis.create!(
+thesis30 = Thesis.new(
   user_id: user30.id,
   title: "Un conservatoire de musique et de danse à Antibes Juan les Pins",
   subtitle: "",
   year: Date.new(2012),
-  resume: "Mon projet de fin d’études est l’implantation d’un conservatoire de
-  danse et de musique sur un site du littoral en reconversion à Antibes Juan les
+  resume: "Mon projet de fin d’études est l’implantation d’un conservatoire de danse et de musique sur un site du littoral en reconversion à Antibes Juan les
   Pins, dans les Alpes maritimes.
-  La mairie a décidé de faire évoluer un ilot proche du centre ville, le fai-
-  sant passer d’un statut sportif (présence de la piscine olympique et du tennis
-  club de la ville) à un statut de sportif et culturel, avec la construction d’une
-  très grande salle de spectacle. Elle souhaite, dans les prochaines années, y
-  construire un nouveau conservatoire ; le conservatoire de musique actuel
-  étant situé dans des locaux inadaptés, l’enseignement n’y est pas facilité, et
-  son développement impossible.
-  Une parcelle est proposée pour ce conservatoire mais sa position sur
-  le site va à l’encontre de la volonté de la ville, qui est de faire de cet ilot un
-  espace culturel et sportif, en lien avec le centre ville, en créant un véritable
-  pôle d’attraction. En effet, cette parcelle est à l’opposé de la salle de spectacle
-  et de la piscine, les deux éléments majeurs de l’ilot, et n’est que peu visible
-  et peu accessible car il est encastré entre des logements collectifs et des en-
-  trepôts.
-  D’autre part, à quelques mètres de là, un workshop de l’atelier littoral
-  a eu lieu. Il traite la marina et des abords du port en partant du centre ville
-  jusqu’à un pôle historique et sportif, où sont situés le fort Vauban et le creps.
-  Il intégrerait des commerces, bureaux, parkings, logements et hôtels, et ac-
-  cueillerait un pôle multimodal : gare routière, et départ du nouveau tram
-  bus. Ce projet redynamiserait le centre ville et réconcilierait les Antibois avec
-  leur littoral, aujourd’hui beaucoup trop associé aux touristes et aux inconvé-
-  nients que leur venue génère pendant la période estivale.
-  Je choisis de profiter de la réflexion menée sur cet espace tangent à mon site
-  pour m’intégrer à ce regard porté vers le littoral et cet espace lié au centre
+  La mairie a décidé de faire évoluer un ilot proche du centre ville, le faisant passer d’un statut sportif (présence de la piscine olympique et du tennis club de la ville) à un statut de sportif et culturel, avec la construction d’une très grande salle de spectacle. Elle souhaite, dans les prochaines années, y construire un nouveau conservatoire ; le conservatoire de musique actuel étant situé dans des locaux inadaptés, l’enseignement n’y est pas facilité, et son développement impossible.
+  Une parcelle est proposée pour ce conservatoire mais sa position sur le site va à l’encontre de la volonté de la ville, qui est de faire de cet ilot un espace culturel et sportif, en lien avec le centre ville, en créant un véritable pôle d’attraction. En effet, cette parcelle est à l’opposé de la salle de spectacle et de la piscine, les deux éléments majeurs de l’ilot, et n’est que peu visible et peu accessible car il est encastré entre des logements collectifs et des entrepôts.
+  D’autre part, à quelques mètres de là, un workshop de l’atelier littoral a eu lieu. Il traite la marina et des abords du port en partant du centre ville jusqu’à un pôle historique et sportif, où sont situés le fort Vauban et le creps.
+  Il intégrerait des commerces, bureaux, parkings, logements et hôtels, et accueillerait un pôle multimodal : gare routière, et départ du nouveau tram bus. Ce projet redynamiserait le centre ville et réconcilierait les Antibois avec leur littoral, aujourd’hui beaucoup trop associé aux touristes et aux inconvénients que leur venue génère pendant la période estivale.
+  Je choisis de profiter de la réflexion menée sur cet espace tangent à mon site pour m’intégrer à ce regard porté vers le littoral et cet espace lié au centre
   ville, au port, et à l’espace Vauban.",
   license: "",
   link: "",
   school_id: school6.id,
-  cover: ".jpg"
+  cover: "2012-charlotte_bertrand.jpg"
 )
-thesis31 = Thesis.create!(
+thesis31 = Thesis.new(
   user_id: user31.id,
-  title: "La ville-musée a-t-elle un avenir au XXIeme siècle?",
-  subtitle: "Avant garde ou échec d'une conciliation entre passé et modernité?",
+  title: "La ville-musée a-t-elle un avenir au XXIe siècle?",
+  subtitle: "Avant garde ou échec d’une conciliation entre passé et modernité?",
   year: Date.new(2013),
-  resume: "Reconstruire la ville sur la ville. Peut-
-  être l’enjeu architectural et urbain du XXIème
-  siècle. À l’heure où l’urbanisation s’étend sur les périphéries des métropoles et participe vouloir tirer parti et surtout profi t de la richesse
-  au mitage sans précédent de l’espace rural,
-  l’ensemble des acteurs de l’architecture et de
-  l’urbanisme contemporain se tourne vers le
-  centre-ville des villes.
-  Aujourd’hui les centres-villes anciens sont redécouverts,
-  parfois après des années d’oubli, de mise à l’écart.
-",
+  resume: "Reconstruire la ville sur la ville. Peut-être l’enjeu architectural et urbain du XXIe siècle. À l’heure où l’urbanisation s’étend sur les périphéries des métropoles et participe vouloir tirer parti et surtout profit de la richesse au mitage sans précédent de l’espace rural, l’ensemble des acteurs de l’architecture et de l’urbanisme contemporain se tourne vers le centre-ville des villes.
+  Aujourd’hui les centres-villes anciens sont redécouverts, parfois après des années d’oubli, de mise à l’écart.",
   license: "",
   link: "",
   school_id: school7.id,
-  cover: ".jpg"
+  cover: "2013-mickael_cuillerat-l_avenir_des_villes_musees.jpg"
 )
-thesis32 = Thesis.create!(
+thesis32 = Thesis.new(
   user_id: user32.id,
   title: "Florence",
   subtitle: "La vi(ll)e sur papier glacé",
   year: Date.new(2012),
-  resume: "Présenté sous forme de guide touristique, c’est un outil pour
-  comprendre la ville, la construction de son image.
+  resume: "Présenté sous forme de guide touristique, c’est un outil pour comprendre la ville, la construction de son image.
   Mais pourquoi un guide touristique ?
-  Tout d’abord d’un point de vue historique, comme le montre la
-  Timeline, l’étude trouve son point de départ à l’aube du XIXème
-  siècle, époque marquée par le début des récits de voyage. Héritiers
-  du Grand Tour, ils sont les ancêtres du nos guides.
-  Mais le guide touristique reste encore aujourd’hui un intermédiaire
-  de choixentre la ville et le voyageur, regroupant des données
-  culturelles, historiques, pratiques, c’est un compagnon de route
-  pour le chasseur de ville, c’est un faiseur d’image.
-  La ville et l’image, son image, est un thème fondamental dans
-  l’étude de l’architecture. En 4 ème année, il nous est donné la
-  possibilité de partir pendant une année étudier à l’étranger. Mais
-  parmi toutes les destinations... comment choisir ? Il s’agit ici de la
-  première rencontre du possible avec la ville. Que connaissons-nous
-  des villes à part leur image ? Pourquoi s’imagine-t-on vivre dans une
-  ville plutôt qu’une autre ?
+  Tout d’abord d’un point de vue historique, comme le montre la Timeline, l’étude trouve son point de départ à l’aube du XIXe siècle, époque marquée par le début des récits de voyage. Héritiers du Grand Tour, ils sont les ancêtres du nos guides.
+  Mais le guide touristique reste encore aujourd’hui un intermédiaire de choixentre la ville et le voyageur, regroupant des données culturelles, historiques, pratiques, c’est un compagnon de route pour le chasseur de ville, c’est un faiseur d’image.
+  La ville et l’image, son image, est un thème fondamental dans l’étude de l’architecture. En 4 ème année, il nous est donné la possibilité de partir pendant une année étudier à l’étranger. Mais parmi toutes les destinations… comment choisir ? Il s’agit ici de la première rencontre du possible avec la ville. Que connaissons-nous des villes à part leur image ? Pourquoi s’imagine-t-on vivre dans une ville plutôt qu’une autre ?
   Tout ca n’est qu’affaire d’image.",
   license: "",
   link: "",
   school_id: school8.id,
-  cover: ".jpg"
+  cover: "2012-anne_loiseau.jpg"
 )
-thesis33 = Thesis.create!(
+thesis33 = Thesis.new(
   user_id: user33.id,
-  title: "Architectures du 20eme siècle",
-  subtitle: "Enjeux et défis de la conservation d'un patrimoine récent",
+  title: "Architectures du 20e siècle",
+  subtitle: "Enjeux et défis de la conservation d’un patrimoine récent",
   year: Date.new(2014),
-  resume: "Depuis treize ans déjà, nous sommes entrés dans le 21ème siècle, et
-  l’architecture d’aujourd’hui a la pleine potentialité de devenir le patrimoine de
-  demain.
-  Mais avant de nous projeter en avant, quel regard avons nous aujourd’hui
-  sur le patrimoine d’hier ?
-  Le 20ème siècle représente un véritable tournant dans l’histoire de
-  l’humanité, et les innovations et découvertes qui ont pu y subvenir sont plus
-  importantes et plus nombreuses que jamais alors. L’architecture n’y échappe pas, et
-  depuis les débuts du développement des pensées modernistes jusqu’à l’apparition
-  des premières architectures high tech, la production artistique et les innovations
-  sociales n’ont cessé de s’accélérer.
-  Ainsi l’objet principal de ce mémoire sera l’architecture du 20ème siècle,
-  le rapport que nous pouvons y entretenir aujourd’hui, et les missions que nous
-  avons pour la conserver. Nous chercherons alors à savoir dans quelles mesures le
-  patrimoine du 20ème siècle peut partager les approches globales acceptées quant à
-  la considération du patrimoine dit classique.",
+  resume: "Depuis treize ans déjà, nous sommes entrés dans le 21e siècle, et l’architecture d’aujourd’hui a la pleine potentialité de devenir le patrimoine de demain.
+    Mais avant de nous projeter en avant, quel regard avons nous aujourd’hui sur le patrimoine d’hier ?
+    Le 20e siècle représente un véritable tournant dans l’histoire de l’humanité, et les innovations et découvertes qui ont pu y subvenir sont plus importantes et plus nombreuses que jamais alors. L’architecture n’y échappe pas, et depuis les débuts du développement des pensées modernistes jusqu’à l’apparition des premières architectures high tech, la production artistique et les innovations sociales n’ont cessé de s’accélérer.
+    Ainsi l’objet principal de ce mémoire sera l’architecture du 20e siècle, le rapport que nous pouvons y entretenir aujourd’hui, et les missions que nous avons pour la conserver. Nous chercherons alors à savoir dans quelles mesures le patrimoine du 20ème siècle peut partager les approches globales acceptées quant à la considération du patrimoine dit classique.",
   license: "",
   link: "",
   school_id: school9.id,
-  cover: ".jpg"
+  cover: "2014-victor_martial.jpg"
 )
-thesis34 = Thesis.create!(
+thesis34 = Thesis.new(
   user_id: user34.id,
   title: "Les traces du passé dans la ville",
   subtitle: "Quelle position adopter face à la question du patrimoine?",
   year: Date.new(2015),
-  resume: "Pour m’aider dans mon projet de diplôme et dans ma réflexion sur les sites
-  archéologiques, j’ai décidé d’orienter mon mémoire sur les rapports qu’entretiennent les
-  villes contemporaines avec leur patrimoine historique.
-  Le cadre de la ville d’Athènes, très dense et très urbanisé, fait ressortir le problème des
-  villes musées. Nous sommes à une époque où le patrimoine est particulièrement mis en
-  valeur. Les sociétés occidentales, dans lesquelles nous vivons, sont fortement attachées
-  à la mémoire du passé, leur donnant une forte identité, un ancrage dans leur histoire.
-  Cependant, cette tendance à préserver et à sacraliser la moindre trace physique du
-  passé, produit un phénomène de muséification des villes. Or une ville figée, qui n’évolue
-  plus et qui ne se renouvelle pas, est condamnée à mourir.
-  Face à nos sociétés actuelles, qui ne cessent d’évoluer et ce de plus en plus vite, les
-  traces du passé doivent trouver leur place. Cependant, l’importance de notre patrimoine
-  doit-il prédominer sur l’évolution de la ville ? Sommes-nous obligés de faire un choix en
-  privilégiant l’un au détriment de l’autre, ou peuvent-ils cohabiter ?
-  Il existe un juste équilibre entre la préservation à tout prix de ces vestiges et l’intervention
-  de la ville future sur ces traces. Il nous faut alors trouver une manière de concilier vestiges
-  et projets urbains, en intégrant les traces du passé à une logique urbaine actuelle.",
+  resume: "Pour m’aider dans mon projet de diplôme et dans ma réflexion sur les sites archéologiques, j’ai décidé d’orienter mon mémoire sur les rapports qu’entretiennent les villes contemporaines avec leur patrimoine historique. Le cadre de la ville d’Athènes, très dense et très urbanisé, fait ressortir le problème des villes musées. Nous sommes à une époque où le patrimoine est particulièrement mis en valeur. Les sociétés occidentales, dans lesquelles nous vivons, sont fortement attachées à la mémoire du passé, leur donnant une forte identité, un ancrage dans leur histoire.
+  Cependant, cette tendance à préserver et à sacraliser la moindre trace physique du passé, produit un phénomène de muséification des villes. Or une ville figée, qui n’évolue plus et qui ne se renouvelle pas, est condamnée à mourir.
+  Face à nos sociétés actuelles, qui ne cessent d’évoluer et ce de plus en plus vite, les traces du passé doivent trouver leur place. Cependant, l’importance de notre patrimoine doit-il prédominer sur l’évolution de la ville ? Sommes-nous obligés de faire un choix en privilégiant l’un au détriment de l’autre, ou peuvent-ils cohabiter ?
+  Il existe un juste équilibre entre la préservation à tout prix de ces vestiges et l’intervention de la ville future sur ces traces. Il nous faut alors trouver une manière de concilier vestiges et projets urbains, en intégrant les traces du passé à une logique urbaine actuelle.",
   license: "",
   link: "",
   school_id: school10.id,
-  cover: ".jpg"
+  cover: "2015-pauline_bernard.jpg"
 )
 
 puts "✓ theses table seeded"
@@ -1589,49 +1365,12 @@ for i in 0..4 do
   tag_list_for_thesis6 << tags[i]
 end
 
-thesis1.tag_list.add(tag_list_for_thesis1.join(','), parse: true)
-thesis2.tag_list.add(tag_list_for_thesis2.join(','), parse: true)
-thesis6.tag_list.add(tag_list_for_thesis6.join(','), parse: true)
-
-thesis1.save!
-thesis2.save!
-thesis6.save!
+thesis1.tag_list.add(tag_list_for_thesis1.join(’,’), parse: true)
+thesis2.tag_list.add(tag_list_for_thesis2.join(’,’), parse: true)
+thesis6.tag_list.add(tag_list_for_thesis6.join(’,’), parse: true)
 
 puts "✓ tags added"
 
-# tag1  = "mix"
-# tag2  = "culture"
-# tag3  = "DJing"
-# tag4  = "radio"
-# tag5  = "curating"
-# tag6  = "commissaire d’exposition"
-# tag7  = "processus créatif"
-# tag8  = "editing"
-# tag9  = "montage"
-# tag10 = "cut"
-# tag11 = "ellipse"
-# tag12 = "cinéma"
-# tag13 = "BD"
-# tag14 = "narration"
-# tag15 = "éclectisme"
-# tag16 = "internet"
-# tag17 = "web"
-# tag18 = "folksonomie"
-# tag19 = "Google"
-# tag20 = "sérendipité"
-# tag21 = "média"
-# tag22 = "art contemporain"
-# tag23 = "comportement"
-# tag24 = "lecture"
-# tag25 = "traduction"
-# tag26 = "écrit"
-# tag27 = "langage"
-# tag28 = "ponctuation"
-# tag29 = "communication"
-# tag30 = "poésie"
-# tag31 = "réseau"
-# tag32 = "livre"
-# tag33 = "rhizome"
 
 # subcategories table
 
@@ -1668,7 +1407,7 @@ subcategories7c = Subcategory.create!( category_id: category7.id, name: "photogr
 subcategories8a = Subcategory.create!( category_id: category8.id, name: "gestion" )
 subcategories8b = Subcategory.create!( category_id: category8.id, name: "médiation" )
 
-puts "✓ subcategories table seeded"
+puts "✓ subcategories seeded"
 
 
 # school_diplomas table
@@ -1684,47 +1423,6 @@ school2_diploma5 = SchoolDiploma.create!(school_id: school2.id, diploma_id: cim2
 
 puts "✓ school_diplomas table seeded"
 
-
-# thesis_tags table
-
-# thesis1_tag1  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag1.id )
-# thesis1_tag2  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag2.id )
-# thesis1_tag3  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag3.id )
-# thesis1_tag4  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag4.id )
-# thesis1_tag5  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag5.id )
-# thesis1_tag6  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag6.id )
-# thesis1_tag7  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag7.id )
-# thesis1_tag8  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag8.id )
-# thesis1_tag9  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag9.id )
-# thesis1_tag10 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag10.id )
-# thesis1_tag11 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag11.id )
-# thesis1_tag12 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag12.id )
-# thesis1_tag13 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag13.id )
-# thesis1_tag14 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag14.id )
-# thesis1_tag15 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag15.id )
-# thesis1_tag16 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag16.id )
-# thesis1_tag17 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag17.id )
-# thesis1_tag18 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag18.id )
-# thesis1_tag19 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag19.id )
-# thesis1_tag20 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag20.id )
-# thesis1_tag21 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag21.id )
-# thesis1_tag22 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag22.id )
-# thesis2_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag23.id )
-# thesis2_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
-# thesis2_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag25.id )
-# thesis2_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag26.id )
-# thesis2_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag27.id )
-# thesis2_tag6 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag28.id )
-# thesis2_tag7 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag29.id )
-# thesis6_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
-# thesis6_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag30.id )
-# thesis6_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag31.id )
-# thesis6_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag32.id )
-# thesis6_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag33.id )
-
-# puts "✓ thesis_tags table seeded"
-
-
 # diploma_subcategories table
 
 dna_subcategory1   = DiplomaSubcategory.create!(diploma_id: dna.id, subcategory_id: subcategories3a.id)
@@ -1736,7 +1434,7 @@ dnsep_subcategory2 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategor
 dnsep_subcategory3 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategory_id: subcategories3c.id)
 dnsep_subcategory4 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategory_id: subcategories3b.id)
 
-puts "✓ diploma_subcategories table seeded"
+puts "✓ diploma_subcategories seeded"
 
 
 # school_subcategories table
@@ -1749,7 +1447,7 @@ school3_subcategories3b = SchoolSubcategory.create!(school_id: school3.id, subca
 school4_subcategories6b = SchoolSubcategory.create!(school_id: school4.id, subcategory_id: subcategories6b.id)
 school4_subcategories6d = SchoolSubcategory.create!(school_id: school4.id, subcategory_id: subcategories6d.id)
 
-puts "✓ school_subcategories table seeded"
+puts "✓ school_subcategories seeded"
 
 
 # thesis_diplomas table
@@ -1789,7 +1487,7 @@ thesis32_dnsep = ThesisDiploma.create!(thesis_id: thesis32.id, diploma_id: dnsep
 thesis33_dnsep = ThesisDiploma.create!(thesis_id: thesis33.id, diploma_id: dnsep.id)
 thesis34_dnsep = ThesisDiploma.create!(thesis_id: thesis34.id, diploma_id: dnsep.id)
 
-puts "✓ thesis_diplomas table seeded"
+puts "✓ thesis_diplomas seeded"
 
 
 # thesis_diploma_subcategories table
@@ -1839,6 +1537,49 @@ thesis26_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma
 thesis27_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis27_dnsep.id, subcategory_id: subcategories3b.id)
 thesis27_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis27_dnsep.id, subcategory_id: subcategories3c.id)
 thesis28_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis28_dnsep.id, subcategory_id: subcategories3b.id)
-thesis28_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis28_dnsep.id, subcategory_id: subcategories3c.id)
+thesis29_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis29_dnsep.id, subcategory_id: subcategories1a.id)
+thesis30_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis30_dnsep.id, subcategory_id: subcategories1a.id)
+thesis31_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis31_dnsep.id, subcategory_id: subcategories1a.id)
+thesis32_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis32_dnsep.id, subcategory_id: subcategories1a.id)
+thesis33_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis33_dnsep.id, subcategory_id: subcategories1a.id)
+thesis34_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis34_dnsep.id, subcategory_id: subcategories1a.id)
 
-puts "✓ thesis_diploma_subcategories table seeded"
+puts "✓ thesis_diploma_subcategories seeded"
+
+
+thesis1.save!
+thesis2.save!
+thesis3.save!
+thesis4.save!
+thesis5.save!
+thesis6.save!
+thesis7.save!
+thesis8.save!
+thesis9.save!
+thesis10.save!
+thesis11.save!
+thesis12.save!
+thesis13.save!
+thesis14.save!
+thesis15.save!
+thesis16.save!
+thesis17.save!
+thesis18.save!
+thesis19.save!
+thesis20.save!
+thesis21.save!
+thesis22.save!
+thesis23.save!
+thesis24.save!
+thesis25.save!
+thesis26.save!
+thesis27.save!
+thesis28.save!
+thesis29.save!
+thesis30.save!
+thesis31.save!
+thesis32.save!
+thesis33.save!
+thesis34.save!
+
+puts "✓ thesis saved!"
