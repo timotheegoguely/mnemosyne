@@ -2,19 +2,128 @@
 <html>
   <head>
     <title>Erreur</title>
-      <style>
-        body {
-          text-align: center;
-          font-family: "Thesaurus Display Regular", sans-serif;
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Cousine:400,700');
+      @import url("https://fonts.typotheque.com/WF-019356-009755.css");
+      body {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Thesaurus Display Medium", serif;
         }
-        a {
-          text-decoration: none;
+      .dialog {
+      }
+      h1.title {
+        font-family: "Thesaurus Display Regular", serif;
+        font-size: 3.8em;
+        line-height: 1.5em;
+        display: block;
+        padding: 2em 0em;
+      }
+      a {
+        text-decoration: none;
+        cursor: auto;
+      }
+      button,
+      .button, {
+        font-family: "Cousine", "Courier New", monospace;
+        font-size: 15px;
+        color: #fff;
+        background-color: #1c86f2;
+        border-radius: 3px;
+        min-height: 40px;
+        padding: 8px 20px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 20px;
+        border: 1px solid transparent;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        white-space: nowrap;
+        & i {
+          position: relative;
+          top: 4px;
+          left: -4px;
         }
-      </style>
+      }
+      input[type="submit"] {
+          width: auto;
+      }
+      button:hover,
+      .button:hover {
+        outline: none;
+        text-decoration: none;
+        color: #fff;
+        background-color: lighten(#1c86f2, 10%);
+      }
+
+      // Size
+      .button.large {
+        font-size: 19px;
+        min-height: 56px;
+        padding: 20px 36px;
+        border-radius: 3px;
+      }
+
+
+      // Outline
+      .button.outline {
+        background: none;
+        border-width: 2px;
+        border-color: #1c86f2;
+        color: #1c86f2;
+
+        &:hover {
+            background: none;
+            color: rgba(#1c86f2, .6);
+            border-color: rgba(#1c86f2, .5);
+        }
+        &:disabled,
+        &.disabled {
+            background: none;
+            color: rgba(#1c86f2, .7);
+          border-color: rgba(#1c86f2, .5);
+        }
+      }
+
+        &:hover {
+            opacity: .7;
+        }
+      }
+
+      // Round
+      .button.round {
+        border-radius: $button-height-large;
+      }
+
+      // Raised
+      .button.raised {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+      }
+
+      // Upper
+      .button.upper {
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        font-size: 11px;
+        &.large {
+            font-size: 15px;
+        }
+      }
+
+      // Secondary
+      .button.secondary {
+        @include button(#fff, #0d0d0e);
+      }
+
+    </style>
   </head>
-  Erreur ###
   <body>
-  Désolé, cette page n'existe pas !
-  <a href="/">Revenir à la home</a>
+    <h1 class="title">Oups !<br>Cette page n'existe pas</h1>
+    <a href="https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP">Ceci est une erreur 500</a>
+    <br><br>
+    <a href="https://www.mnemosyne.io/" type="button" class="button outline upper secondary large">Revenir à Mnemosyne</a>
   </body>
 </html>

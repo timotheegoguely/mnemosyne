@@ -1,67 +1,129 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The change you wanted was rejected (422)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  <head>
+    <title>Erreur</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Cousine:400,700');
+      @import url("https://fonts.typotheque.com/WF-019356-009755.css");
+      body {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Thesaurus Display Medium", serif;
+        }
+      .dialog {
+      }
+      h1.title {
+        font-family: "Thesaurus Display Regular", serif;
+        font-size: 3.8em;
+        line-height: 1.5em;
+        display: block;
+        padding: 2em 0em;
+      }
+      a {
+        text-decoration: none;
+        cursor: auto;
+      }
+      button,
+      .button, {
+        font-family: "Cousine", "Courier New", monospace;
+        font-size: 15px;
+        color: #fff;
+        background-color: #1c86f2;
+        border-radius: 3px;
+        min-height: 40px;
+        padding: 8px 20px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 20px;
+        border: 1px solid transparent;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        white-space: nowrap;
+        & i {
+          position: relative;
+          top: 4px;
+          left: -4px;
+        }
+      }
+      input[type="submit"] {
+          width: auto;
+      }
+      button:hover,
+      .button:hover {
+        outline: none;
+        text-decoration: none;
+        color: #fff;
+        background-color: lighten(#1c86f2, 10%);
+      }
 
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+      // Size
+      .button.large {
+        font-size: 19px;
+        min-height: 56px;
+        padding: 20px 36px;
+        border-radius: 3px;
+      }
 
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
 
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+      // Outline
+      .button.outline {
+        background: none;
+        border-width: 2px;
+        border-color: #1c86f2;
+        color: #1c86f2;
 
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
+        &:hover {
+            background: none;
+            color: rgba(#1c86f2, .6);
+            border-color: rgba(#1c86f2, .5);
+        }
+        &:disabled,
+        &.disabled {
+            background: none;
+            color: rgba(#1c86f2, .7);
+          border-color: rgba(#1c86f2, .5);
+        }
+      }
 
-<body>
-  <!-- This file lives in public/422.html -->
-  <div class="dialog">
-    <div>
-      <h1>The change you wanted was rejected.</h1>
-      <p>Maybe you tried to change something you didn't have access to.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
+        &:hover {
+            opacity: .7;
+        }
+      }
+
+      // Round
+      .button.round {
+        border-radius: $button-height-large;
+      }
+
+      // Raised
+      .button.raised {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+      }
+
+      // Upper
+      .button.upper {
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        font-size: 11px;
+        &.large {
+            font-size: 15px;
+        }
+      }
+
+      // Secondary
+      .button.secondary {
+        @include button(#fff, #0d0d0e);
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Oups !<br>Cette page n'existe pas</h1>
+    <a href="https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP">Ceci est une erreur 422</a>
+    <br><br>
+    <a href="https://www.mnemosyne.io/" type="button" class="button outline upper secondary large">Revenir à Mnemosyne</a>
+  </body>
 </html>
