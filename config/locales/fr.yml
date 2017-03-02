@@ -61,10 +61,10 @@ fr:
         resend_unlock_instructions: Renvoyer les instructions de déverrouillage
   shared:
     navbar:
-      profile: Profil
-      my_thesis: Mes mémoires
+      my_profile: Profil
+      my_thesis: Mon mémoire
       my_bookmarks: Mes favoris
-      settings: Paramètres & confidentialité
+      settings: Paramètres
       sign_in: Se connecter
       sign_out: Se déconnecter
       search: Rechercher…
@@ -96,12 +96,26 @@ fr:
 
   users:
     show:
-      thesis_tab_title_my_account: Mes mémoires
+      profile_tab_title_my_account: Mon profil
+      thesis_tab_title_my_account: Mon mémoire
       bookmarks_tab_title_my_account: Mes favoris
-      settings_tab_my_account: Paramètres et confidentidentialité
+      settings_tab_my_account: Paramètres
+      profile_tab_title: Profil
       thesis_tab_title: Mémoire
       bookmarks_tab_title: Favoris
-      no_bookmark_text: Vous n'avez sélectionné aucun mémoire dans vos favoris !
+      no_bookmark_text: Vous n’avez encore aucun mémoire dans vos favoris !
       explore_link: Explorez les autres mémoires
-      permission: Autoriser les utilisateurs à télécharger mon mémoire ?
-
+      permission: Autoriser le téléchargement de mon mémoire
+    edit:
+      profile_tab_title_my_account: Mon profil
+      thesis_tab_title_my_account: Mon mémoire
+      bookmarks_tab_title_my_account: Mes favoris
+      settings_tab_my_account: Paramètres
+      edit_your_profile: Éditez votre profil
+      email: Courriel
+      first_name: Prénom
+      last_name: Nom
+      bio: Bio
+      birthdate: Année de naissance
+      website: Site web
+      save: Sauvegarder

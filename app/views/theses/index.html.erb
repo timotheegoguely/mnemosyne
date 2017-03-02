@@ -4,66 +4,34 @@
 
 <main class="container">
 
-  <nav class="col push-right tabs z200" data-component="tabs">
-    <ul>
-      <li id="tab-cards" class="active">
-        <%= link_to "<i class='material-icons'>view_module</i>".html_safe, "#cards" %>
-      </li>
-      <li id="tab-list">
-        <%= link_to "<i class='material-icons'>list</i>".html_safe, "#list" %>
-      </li>
-      <li id="tab-map">
-        <%= link_to "<i class='material-icons'>map</i>".html_safe, "#map" %>
-      </li>
-    </ul>
-  </nav>
+  <%= render "shared/tabs" %>
 
   <!-- Cards -->
   <div id="cards" class="cards hide z100">
-    <% @theses.each_with_index do |thesis, index| %>
-      <% if thesis.document? %>
-        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
-          <figure class="card-cover">
-            <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
-          </figure>
-        <% end %>
-      <% else %>
-        <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories.join(" ")}", :data => { :order => index + 1 } do %>
-          <figure class="card-cover">
-            <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "shadow" %>
-          </figure>
-        <% end %>
-      <% end %>
-    <% end %>
+    <%= render "shared/cards", theses: @theses %>
   </div>
   <footer id="card-preview" style="display: none">
-    <table class="table">
-      <tbody>
-        <tr>
-          <td class="thesis-thumbnail">
-            <%= link_to "#" do %>
-              <%#= image_tag "http://placehold.it/32x48" %>
-              <div class="thumbnail" style="background-color: #ddd; height: 48px; width: 32px"></div>
-            <% end %>
-          </td>
-          <td class="thesis-title">
-            <%= link_to "#" do %>
-              <h5>Titre</h5>
-              <small>Sous-titre</small>
-            <% end %>
-          </td>
-          <td class="thesis-author">Prénom Nom</td>
-          <td class="thesis-school">École</td>
-          <td class="thesis-year">Year</td>
-          <td class="thesis-bookmarks">0</td>
-        </tr>
-      </tbody>
-    </table>
+    <% @theses.each do |thesis| %>
+      <table class="table thesis-footer hidden" id="thesis-footer-<%= thesis.id %>">
+        <tbody>
+          <tr>
+            <td class="thesis-title">
+              <h5><%= thesis.title %></h5>
+              <small><%= thesis.subtitle %></small>
+            </td>
+            <td class="thesis-author"><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
+            <td class="thesis-school"><%= thesis.school.name %></td>
+            <td class="thesis-year"><%= thesis.year.year %></td>
+            <td class="thesis-bookmarks"><%= thesis.votes_for.size %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
   </footer>
 
   <!-- List -->
   <div id="list" class="hide z100">
-    <%= render "shared/list", elements: @theses %>
+    <%= render "shared/list", theses: @theses %>
   </div>
 
 
@@ -79,20 +47,14 @@
 
     // MixItUp
     var mixer = mixitup('.cards', {
-      controls: {
-        toggleLogic: 'and'
+      multifilter: {
+        enable: true
       }
     });
 
 
     // Mapbox
-    $( "#tab-map" ).click(function() {
-      if ($( this ).last().hasClass('active')) {
-        map.invalidateSize();
-      }
-    });
-
-    L.mapbox.accessToken = "pk.eyJ1IjoidGltb3RoZWVnb2d1ZWx5IiwiYSI6ImNpemk1OGJqZjAwNDUyd2w5cWZ4c2ExdXkifQ.TUImirVLp-smIkKg9RQ3pw";
+    L.mapbox.accessToken = "<%= ENV['MAPBOX_API_KEY'] %>";
 
     var info = document.getElementById('info');
     var map = L.mapbox.map('map').setView([46.9, 2.2137], 6);
@@ -113,8 +75,8 @@
                     '<p class="school-address"><i class="material-icons md-18">location_on</i> <span class="school-address-1">' + feature.properties.adresse_1 +'</span><br>' +
                     '<span class="school-zipcode">' + feature.properties.cp+'</span>, ' +
                     '<span class="school-city">' + feature.properties.villes + '</span></p>' +
-                    '<p class="school-website"><i class="material-icons md-18">link</i> <a href="http://' + feature.properties.sites_internet + '" target="_blank">' + feature.properties.sites_internet + '</a></p>' +
-                    '<p class="school-phone"><i class="material-icons md-18">phone</i> <a href="tel:' + feature.properties.coordonnees_tel.replace(/ /g, '') + '">' + feature.properties.coordonnees_tel + '</a></p>' +
+                    '<p class="school-website"><i class="material-icons md-18">link</i> <a class="underline" href="http://' + feature.properties.sites_internet + '" target="_blank">' + feature.properties.sites_internet + '</a></p>' +
+                    '<p class="school-phone"><i class="material-icons md-18">phone</i> <a class="underline" href="tel:' + feature.properties.coordonnees_tel.replace(/ /g, '') + '">' + feature.properties.coordonnees_tel + '</a></p>' +
                     '</div>';
 
       info.innerHTML = content;

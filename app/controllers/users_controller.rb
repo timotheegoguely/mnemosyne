@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [ :show, :edit, :update ]
+  skip_before_action :authenticate_user!, only: [ :show, :new, :create, :update ]
   layout "basic"
 
   def show
-    authorize @user
-    @theses = current_user.theses
+    @theses = @user.theses
   end
 
   def edit
@@ -12,17 +12,14 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_params)
-    if @user.save
-      redirect_to user_path(@user)
-    else
-      render :edit
-    end
+    redirect_to user_path(@user)
   end
 
   private
 
   def set_user
     @user = User.find(params[:id])
+    authorize @user
   end
 
   def user_params

@@ -57,3 +57,14 @@
 //   z-index: 9999;
 //   opacity: 0;
 // }
+
+.hidden {
+  width: 50%;
+  z-index: 2;
+  position: absolute;
+  float: right;
+  height: 350px;
+  right: 9999px;
+  background-color: white;
+  color: black;
+}

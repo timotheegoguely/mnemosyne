@@ -4,10 +4,22 @@
     <div id="intro">
       <h1>mnémosyne</h1>
       <h2><%= t('.tagline_1') %><br><%= t('.tagline_2') %></h2>
-
-      <%= link_to t('.button_theses_index'), theses_path, class: "button outline upper secondary large" %>
-
+      <div class="categories">
+        <% Thesis::CATEGORIES.each do |category| %>
+          <%= link_to category.gsub("-", " ").capitalize, search_path(keywords: category.gsub("-", " ")), id: category, class:"button outline upper secondary margin" %>
+        <% end %>
+      </div>
+      <%= link_to t('.button_theses_index'), theses_path, class: "button outline upper secondary large margin-big" %>
+    </div>
+    <div class="row">
+  </div>
+</div>
+</main>
+<div class="container">
+  <div class="row">
+    <h2>Mémoires récents</h2>
+    <div id="cards" class="cards z100">
+      <%= render "shared/cards", theses: Thesis.last(5) %>
     </div>
   </div>
-
-</main>
+</div>

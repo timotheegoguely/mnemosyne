@@ -4,7 +4,7 @@ $(function() {
   var myDropzone = new Dropzone("#new_thesis");
 
   myDropzone.on("success", function(file, json) {
-    console.log(json);
+    // console.log(json);
 
     var jsonValue = json["infos"]["Keywords"];
 
@@ -14,9 +14,7 @@ $(function() {
     var tagValue = $("#thesis_tag_list").val();
     var newValue = tagValue.replace(/;/g, ",");
 
-     $("#thesis_tag_list").val(newValue);
+    $("#thesis_tag_list").val(newValue);
 
-    // injecter la preview + les data dans le formulaire + les tags
   });
 });
-

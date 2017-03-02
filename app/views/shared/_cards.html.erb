@@ -1,0 +1,15 @@
+<% theses.each_with_index do |thesis, index| %>
+  <% if thesis.document? %>
+    <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories_names.join(" ")} school-#{thesis.school.id} diploma-#{thesis.diploma.id}", :data => { :order => index + 1 } do %>
+      <figure class="card-cover" data-target="#thesis-footer-<%= thesis.id %>>
+        <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 288, :crop => :fill, :page => 1, :class => "shadow") %>
+      </figure>
+    <% end %>
+  <% else %>
+    <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories_names.join(" ")} school-#{thesis.school.id} diploma-#{thesis.diploma.id}", :data => { :order => index + 1 } do %>
+      <figure class="card-cover" data-target="#thesis-footer-<%= thesis.id %>">
+        <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "shadow" %>
+      </figure>
+    <% end %>
+  <% end %>
+<% end %>
