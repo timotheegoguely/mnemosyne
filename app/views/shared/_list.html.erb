@@ -14,7 +14,13 @@
         <td class="thesis-thumbnail">
           <%= link_to user_thesis_path(thesis.user, thesis) do %>
             <%#= image_tag "http://placehold.it/32x48" %>
-            <div class="thumbnail" style="background-color: #ddd; height: 48px; width: 32px"></div>
+            <div class="thumbnail">
+              <% if thesis.document? %>
+                <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 32, :crop => :fill, :page => 1, :class => "shadow") %>
+              <% else %>
+                <%= image_tag asset_path("/covers/#{thesis.cover}") %>
+              <% end %>
+            </div>
           <% end %>
         </td>
         <td class="thesis-title">
