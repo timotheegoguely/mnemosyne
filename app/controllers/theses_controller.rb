@@ -41,36 +41,7 @@ class ThesesController < ApplicationController
 
   def create
 
-    if params[:file]
-      @thesis = Thesis.new
-      authorize @thesis
-      file = Cloudinary::Uploader.upload(params[:file])
-
-      # Récupérer l'url pour la preview + d'autres infos avec le parser de PDF
-      io     = open(file['url'])
-      reader = PDF::Reader.new(io)
-
-      infos = reader.info.reduce({}) do |infos, (key, value)|
-        cleaned_value = value
-
-        begin
-          value.to_json # try to convert to json
-        rescue JSON::GeneratorError # on illegal/malformed utf-8 error
-          cleaned_value = value.force_encoding("ISO-8859-1").encode("utf-8") # convert from ISO to UTF-8
-        end
-
-        infos[key] = cleaned_value
-        infos
-      end
-
-      # subject is not correctly encoded by PDF::Reader info method so we extract it from metadata \o/
-      infos[:Subject] = reader.metadata.match(/<dc:description>(.*)<\/dc:description>/m)[1].match(/<rdf:li.*>(.*)<\/rdf:li>/m)[1]
-
-      # Construire le JSON de retour
-      @json = { file: file, infos: infos }
-      return render json: @json
-    end
-
+    pdf_upload
 
     @title = params[:thesis][:title]
     session[:thesis_title] = @title
@@ -110,6 +81,7 @@ class ThesesController < ApplicationController
   end
 
   def edit
+    pdf_upload
   end
 
   def update
@@ -152,6 +124,38 @@ class ThesesController < ApplicationController
 
   def thesis_params
     params.require(:thesis).permit(:title, :subtitle, :year, :school_id, :resume, :license, :link, :document, :document_cache, :tag_list, :download)
+  end
+
+  def pdf_upload
+    if params[:file]
+      @thesis = Thesis.new
+      authorize @thesis
+      file = Cloudinary::Uploader.upload(params[:file])
+
+      # Récupérer l'url pour la preview + d'autres infos avec le parser de PDF
+      io     = open(file['url'])
+      reader = PDF::Reader.new(io)
+
+      infos = reader.info.reduce({}) do |infos, (key, value)|
+        cleaned_value = value
+
+        begin
+          value.to_json # try to convert to json
+        rescue JSON::GeneratorError # on illegal/malformed utf-8 error
+          cleaned_value = value.force_encoding("ISO-8859-1").encode("utf-8") # convert from ISO to UTF-8
+        end
+
+        infos[key] = cleaned_value
+        infos
+      end
+
+      # subject is not correctly encoded by PDF::Reader info method so we extract it from metadata \o/
+      infos[:Subject] = reader.metadata.match(/<dc:description>(.*)<\/dc:description>/m)[1].match(/<rdf:li.*>(.*)<\/rdf:li>/m)[1]
+
+      # Construire le JSON de retour
+      @json = { file: file, infos: infos }
+      return render json: @json
+    end
   end
 
 end

@@ -5,13 +5,13 @@
 <main class="container full">
 
   <div id="thesis-cover-wrapper">
-    <%= image_tag asset_path("file.svg"), id:"drop-pdf" %>
+    <%= image_tag asset_path("file.svg"), id:"drop-pdf-icon" %>
   </div>
 
   <div id="thesis-content-wrapper">
 
     <div id="thesis-content">
-      <%= simple_form_for [current_user, @thesis], defaults: { wrapper_html: { class: 'form-item'} }, html: { class: "form" } do |f| %>
+      <%= simple_form_for @thesis, defaults: { wrapper_html: { class: 'form-item'} }, html: { class: "form dropzone" } do |f| %>
         <div class="form-inputs">
           <%= f.input :title, label: false, placeholder: "Titre", input_html: { class: 'title big' } %>
           <%= f.input :subtitle, label: false, placeholder: "Sous-titre", input_html: { class: 'subtitle' } %>
@@ -22,7 +22,7 @@
               <%= f.input :school_id, collection: School.all, label: 'École', input_html: { class: 'school big' } %>
             </div>
             <div class="col col-4">
-              <%= f.input :thesis_diploma, collection: Diploma.all, selected: @thesis.thesis_diploma.try(:id), label: 'Diplôme', input_html: { class: 'diploma big' } %>
+              <%= f.input :thesis_diploma, collection: Diploma.all, label: 'Diplôme', input_html: { class: 'diploma big' } %>
             </div>
             <div class="col col-2">
               <%= f.input :year,
@@ -50,7 +50,7 @@
 
           <div class="row">
             <div class="col col-12">
-              <%= f.input :tag_list, label: 'Tags', input_html: { class: 'tags' }, placeholder: "Séparez les tags par des virgules (,)", input_html: { value: @thesis.tags.map(&:name).join(",")} %>
+              <%= f.input :tag_list, label: 'Tags', input_html: { class: 'tags' }, placeholder: "Séparez les tags par des virgules (,)" %>
             </div>
           </div>
 
@@ -63,10 +63,13 @@
             </div>
           </div>
 
-          <%= f.input :document, label: 'PDF' %>
+          <%= f.input :document, label: '<strong>Déposez</strong> ici votre mémoire au <strong>format PDF</strong> ou <strong>cliquez</strong> pour le sélectionner'.html_safe %>
           <%= f.input :document_cache, as: :hidden %>
 
-          <%= f.input :download, label: 'Autoriser le téléchargement au format PDF de mémoire', input_html: { class: 'link' } %>
+          <%= f.input :download, label: ' Autoriser le téléchargement de mémoire', label_html: { class: 'checkbox' }, input_html: { class: 'link' } %>
+
+          <%#= check_box_tag(:download , {:checked => false} ) %>
+          <%#= label_tag(:download, "Autoriser le téléchargement au format PDF de mémoire ?") %>
 
         </div>
 
@@ -75,10 +78,13 @@
           <div class="col col-4">
             <%= f.submit "Valider", class: "button big secondary" %>
           </div>
-          <div class="col col-4 push-middle">
-            <%= link_to "Supprimer ce mémoire", user_thesis_path(@thesis.user, @thesis), method: :delete, data: { confirm: "Êtes-vous sûr(e) de vouloir supprimer ce mémoire?" }, class: "button danger outline" %>
-          </div>
+          <% if current_user %>
+            <div class="col col-4 push-middle">
+              <%= link_to "Supprimer ce mémoire", user_thesis_path(@thesis.user, thesis), method: :delete, data: { confirm: "Êtes-vous sûr(e) de vouloir supprimer ce mémoire?" }, class: "button danger outline" %>
+            </div>
+          <% end %>
         </div>
+
       <% end %>
 
     </div> <!-- /#thesis-content -->
