@@ -1782,6 +1782,12 @@ thesis25_dnsep = ThesisDiploma.create!(thesis_id: thesis25.id, diploma_id: dnsep
 thesis26_dnsep = ThesisDiploma.create!(thesis_id: thesis26.id, diploma_id: dnsep.id)
 thesis27_dnsep = ThesisDiploma.create!(thesis_id: thesis27.id, diploma_id: dnsep.id)
 thesis28_dnsep = ThesisDiploma.create!(thesis_id: thesis28.id, diploma_id: dnsep.id)
+thesis29_dnsep = ThesisDiploma.create!(thesis_id: thesis29.id, diploma_id: dnsep.id)
+thesis30_dnsep = ThesisDiploma.create!(thesis_id: thesis30.id, diploma_id: dnsep.id)
+thesis31_dnsep = ThesisDiploma.create!(thesis_id: thesis31.id, diploma_id: dnsep.id)
+thesis32_dnsep = ThesisDiploma.create!(thesis_id: thesis32.id, diploma_id: dnsep.id)
+thesis33_dnsep = ThesisDiploma.create!(thesis_id: thesis33.id, diploma_id: dnsep.id)
+thesis34_dnsep = ThesisDiploma.create!(thesis_id: thesis34.id, diploma_id: dnsep.id)
 
 puts "✓ thesis_diplomas table seeded"
 
