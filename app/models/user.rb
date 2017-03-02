@@ -13,12 +13,8 @@ class User < ApplicationRecord
       user.provider = auth.provider
       user.uid = auth.uid
       user.email = auth.uid.to_s+'@twitter.com'
-      # user.email = auth.info.email
+      user.image = auth.info.image
     end
-  end
-
-  def email_required?
-    false
   end
 
   # Authentication token
