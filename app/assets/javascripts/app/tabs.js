@@ -1,11 +1,10 @@
 $( document ).ready( function() {
 
-  // setTimeout( function(){
-  //   map.invalidateSize();
-  // }, 200);
-  // setTimeout( function(){
-  //   map.invalidateSize();
-  // }, 1000);
+  $( "#tab-map" ).click(function() {
+    if ($( this ).last().hasClass('active')) {
+      map.invalidateSize();
+    }
+  });
 
   if ($( '#tab-cards' ).hasClass( 'active' )) {
     $( '#card-preview' ).show();
