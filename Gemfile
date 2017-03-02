@@ -50,7 +50,6 @@ end
 group :development do # Stuff we do not want in :test env
   gem 'rails-assets-DataTables', source: 'https://rails-assets.org'
   gem 'better_errors'
-  gem 'binding_of_caller'
 end
 
 group :development, :test do
