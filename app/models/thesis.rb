@@ -33,7 +33,7 @@ class Thesis < ApplicationRecord
   def categories_names
     categories = Set.new
     self.subcategories.each do |subcategory|
-      categories << subcategory.category.name.gsub(/\s+/, '-')
+      categories << subcategory.category.name.parameterize
       return categories.to_a
     end
   end

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Erreur</title>
+    <title>Page introuvable</title>
     <style>
       @import url('https://fonts.googleapis.com/css?family=Cousine:400,700');
       @import url("https://fonts.typotheque.com/WF-019356-009755.css");
       body {
-        text-align: center;
+        text-align: left;
+        margin-left: 5em;
         background-repeat: no-repeat;
         background-size: cover;
         font-family: "Thesaurus Display Medium", serif;
@@ -18,9 +19,17 @@
         display: block;
         padding: 2em 0em;
       }
+      h2 {
+        font-size: 2.8em;
+
+      }
       a {
+
         text-decoration: none;
         cursor: auto;
+      }
+      .error {
+        padding-bottom: 30px;
       }
       .button {
         font-family: "Cousine", "Courier New", monospace;
@@ -50,8 +59,9 @@
     </style>
   </head>
   <body>
-    <h1>Oups !<br>Cette page n'existe pas</h1>
-    <a href="https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP">Ceci est une erreur 404</a>
+    <h1>Oups !</h1>
+    <h2>Cette page n'existe pas</h2>
+    <a href="https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP" class= "error">Ceci est une erreur 404</a>
     <br><br>
     <a href="https://www.mnemosyne.io/" class="button">Revenir à Mnemosyne</a>
   </body>
