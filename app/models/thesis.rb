@@ -24,7 +24,7 @@ class Thesis < ApplicationRecord
   validates :title, presence: true, allow_blank: false
   validates :year, presence: true
   validates :school, presence: true
-  validates :diploma, presence: true
+  # validates :diploma, presence: true
   validates :user, presence: true
 
   # def subcategories

@@ -127,7 +127,7 @@ school10 = School.create!(
   phone_number: "+33 1 72 69 63 20"
 )
 
-puts "✓ schools table seeded"
+puts "✓ schools seeded"
 
 
 # diplomas table
@@ -213,7 +213,7 @@ insa = Diploma.create!(
   degree: "1"
 )
 
-puts "✓ diplomas table seeded"
+puts "✓ diplomas seeded"
 
 
 # categories table
@@ -227,7 +227,7 @@ category6 = Category.create!(name: "livre")
 category7 = Category.create!(name: "presse")
 category8 = Category.create!(name: "gestion et médiation")
 
-puts "✓ categories table seede"
+puts "✓ categories seeded"
 
 
 # tags table
@@ -597,7 +597,7 @@ user34 = User.create!(
 #   website: "https://www.instagram.com/maxime_leblanc_jewellery/"
 # )
 
-puts "✓ users table seeded"
+puts "✓ users seeded"
 
 
 # theses table
@@ -1344,7 +1344,7 @@ thesis34 = Thesis.new(
   cover: "2015-pauline_bernard.jpg"
 )
 
-puts "✓ theses table seeded"
+puts "✓ theses seeded"
 
 
 # tags (using act-as-taggable gem)
