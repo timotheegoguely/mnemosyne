@@ -60,6 +60,72 @@ school4 = School.create!(
   website: "www.ecole-estienne.paris",
   phone_number: "+33 1 55 43 47 47"
 )
+school5 = School.create!(
+  name: "École Nationale Supérieure d'Architecture de Grenoble",
+  acronym: "ENSAG",
+  address_1: "60 avenue de Constantine",
+  address_2: "",
+  zipcode: "38036",
+  city: "Grenoble",
+  country: "France",
+  website: "www.grenoble.archi.fr",
+  phone_number: "+33 4 76 69 83 00"
+)
+school6 = School.create!(
+  name: "Institut National des Sciences Appliquées",
+  acronym: "INSA",
+  address_1: "24, Boulevard de la Victoire",
+  address_2: "",
+  zipcode: "67084",
+  city: "Strasbourg",
+  country: "France",
+  website: "www.insa-strasbourg.fr",
+  phone_number: "+33 3 88 14 47 00"
+)
+school7 = School.create!(
+  name: "École Nationale Supérieure d'Architecture de Lyon",
+  acronym: "ENSAL",
+  address_1: "3 Rue Maurice Audin",
+  address_2: "",
+  zipcode: "69120",
+  city: "Vaulx-en-Velin",
+  country: "France",
+  website: "",
+  phone_number: "+33 4 78 79 50 50"
+)
+school8 = School.create!(
+  name: "École Nationale Supérieure d'Architecture de Paris-Belleville",
+  acronym: "ENSA",
+  address_1: "60 Boulevard de la Villette",
+  address_2: "",
+  zipcode: "75019",
+  city: "Paris",
+  country: "France",
+  website: "",
+  phone_number: "+33 1 53 38 50 00"
+)
+school9 = School.create!(
+  name: "École Nationale Supérieure d'Architecture de Nantes",
+  acronym: "ENSAN",
+  address_1: "6 Quai François Mitterrand",
+  address_2: "",
+  zipcode: "44200",
+  city: "Nantes",
+  country: "France",
+  website: "",
+  phone_number: "+33 2 40 16 01 21"
+)
+school10 = School.create!(
+  name: "École Nationale Supérieure d'Architecture de Paris-Val de Seine",
+  acronym: "ENSAN",
+  address_1: "3 Quai Panhard et Levassor",
+  address_2: "",
+  zipcode: "75013",
+  city: "Paris",
+  country: "France",
+  website: "",
+  phone_number: "+33 1 72 69 63 20"
+)
 
 puts "✓ schools table seeded"
 
@@ -91,8 +157,23 @@ ensba = Diploma.create!(
   acronym: "",
   degree: "2"
 )
+ensa = Diploma.create!(
+  name: "Master en Architecture",
+  acronym: "",
+  degree: "2"
+)
 ensad = Diploma.create!(
   name: "Diplôme d’école ENSAD",
+  acronym: "",
+  degree: "2"
+)
+ensag = Diploma.create!(
+  name: "Diplôme d'école en Architecture",
+  acronym: "",
+  degree: "2"
+)
+ensal = Diploma.create!(
+  name: "Master en Architecture",
   acronym: "",
   degree: "2"
 )
@@ -124,6 +205,11 @@ cim2 = Diploma.create!(
 de = Diploma.create!(
   name: "Diplôme d’état",
   acronym: "DE",
+  degree: "1"
+)
+insa = Diploma.create!(
+  name: "Diplôme d’école en architecture",
+  acronym: "",
   degree: "1"
 )
 
@@ -446,6 +532,60 @@ user28 = User.create!(
   birthdate: DateTime.new(1988,4,5),
   website: "",
   school_id: school1.id
+)
+user29 = User.create!(
+  email: "lemarie.matthieu@gmail.com",
+  first_name: "Matthieu",
+  last_name: "Lemarié",
+  bio: "",
+  birthdate: DateTime.new(1986,2,2),
+  website: "",
+  school_id: school5.id
+)
+user30 = User.create!(
+  email: "bertrand.charlotte@gmail.com",
+  first_name: "Charlotte",
+  last_name: "Bertrand",
+  bio: "",
+  birthdate: DateTime.new(1987,6,6),
+  website: "",
+  school_id: school6.id
+)
+user31 = User.create!(
+  email: "cuillerat.mickael@gmail.com",
+  first_name: "Mickaël",
+  last_name: "Cuillerat",
+  bio: "",
+  birthdate: DateTime.new(1990,9,3),
+  website: "",
+  school_id: school7.id
+)
+user32 = User.create!(
+  email: "loiseau.anne@gmail.com",
+  first_name: "Anne",
+  last_name: "Loiseau",
+  bio: "",
+  birthdate: DateTime.new(1988,10,7),
+  website: "",
+  school_id: school8.id
+)
+user33 = User.create!(
+  email: "martial.victor@gmail.com",
+  first_name: "Victor",
+  last_name: "Martial",
+  bio: "",
+  birthdate: DateTime.new(1989,1,7),
+  website: "",
+  school_id: school9.id
+)
+user34 = User.create!(
+  email: "bernard.pauline@gmail.com",
+  first_name: "Pauline",
+  last_name: "Bernard",
+  bio: "",
+  birthdate: DateTime.new(1990,2,8),
+  website: "",
+  school_id: school10.id
 )
 
 # userX = User.create!(
@@ -1260,6 +1400,174 @@ thesis28 = Thesis.create!(
   school_id: school1.id,
   cover: "2012-amandine-richard.jpg"
 )
+thesis29 = Thesis.create!(
+  user_id: user29.id,
+  title: "A l'abordage des délaissés",
+  subtitle: "Vers une nouvelle forme d'espace public",
+  year: Date.new(2014),
+  resume: "L’image de la ville a toujours été véhiculée par ses innombrables
+  activités, sa lumière omniprésente, sa vitesse de développement et sa
+  technicité. Cependant, qu’elle soit décrite dans un roman, dessinée
+  dans un comic, ou bien même construite dans notre imaginaire
+  lieux incertains, négligés et presque effrayants. Friches industrielles,
+  terrains vagues, dents creuses, logements vacants, interstices ... Ces
+  espaces en dérive se forment suite à la perte des fonctions originelles
+  du lieu, aux intervalles d’aménagement urbain ou au désintérêt de son
+  de ce mémoire, représentant alors les failles d’un système urbain rigide
+  des années 70, pour cause, la crise pétrolière et la désindustrialisation
+  qui s’en est suivie a laissé une part du territoire français miné de friches
+  industrielles, mais aussi militaires, ferroviaires, portuaires et autres
+  espaces vacants. Malgré ces espaces en attente, la ville continue de
+  s’étendre au delà de ses limites et ne prend que très peu conscience
+  du potentiel qu’elle abrite en son cœur. Ces espaces libres ne doivent
+  plus être vécus comme un lieu en marge de la société, mais au contraire,
+  comme une marge de recul, une réserve de disponibilité de la ville.",
+  license: "",
+  link: "",
+  school_id: school5.id,
+  cover: ".jpg"
+)
+thesis30 = Thesis.create!(
+  user_id: user30.id,
+  title: "Un conservatoire de musique et de danse à Antibes Juan les Pins",
+  subtitle: "",
+  year: Date.new(2012),
+  resume: "Mon projet de fin d’études est l’implantation d’un conservatoire de
+  danse et de musique sur un site du littoral en reconversion à Antibes Juan les
+  Pins, dans les Alpes maritimes.
+  La mairie a décidé de faire évoluer un ilot proche du centre ville, le fai-
+  sant passer d’un statut sportif (présence de la piscine olympique et du tennis
+  club de la ville) à un statut de sportif et culturel, avec la construction d’une
+  très grande salle de spectacle. Elle souhaite, dans les prochaines années, y
+  construire un nouveau conservatoire ; le conservatoire de musique actuel
+  étant situé dans des locaux inadaptés, l’enseignement n’y est pas facilité, et
+  son développement impossible.
+  Une parcelle est proposée pour ce conservatoire mais sa position sur
+  le site va à l’encontre de la volonté de la ville, qui est de faire de cet ilot un
+  espace culturel et sportif, en lien avec le centre ville, en créant un véritable
+  pôle d’attraction. En effet, cette parcelle est à l’opposé de la salle de spectacle
+  et de la piscine, les deux éléments majeurs de l’ilot, et n’est que peu visible
+  et peu accessible car il est encastré entre des logements collectifs et des en-
+  trepôts.
+  D’autre part, à quelques mètres de là, un workshop de l’atelier littoral
+  a eu lieu. Il traite la marina et des abords du port en partant du centre ville
+  jusqu’à un pôle historique et sportif, où sont situés le fort Vauban et le creps.
+  Il intégrerait des commerces, bureaux, parkings, logements et hôtels, et ac-
+  cueillerait un pôle multimodal : gare routière, et départ du nouveau tram
+  bus. Ce projet redynamiserait le centre ville et réconcilierait les Antibois avec
+  leur littoral, aujourd’hui beaucoup trop associé aux touristes et aux inconvé-
+  nients que leur venue génère pendant la période estivale.
+  Je choisis de profiter de la réflexion menée sur cet espace tangent à mon site
+  pour m’intégrer à ce regard porté vers le littoral et cet espace lié au centre
+  ville, au port, et à l’espace Vauban.",
+  license: "",
+  link: "",
+  school_id: school6.id,
+  cover: ".jpg"
+)
+thesis31 = Thesis.create!(
+  user_id: user31.id,
+  title: "La ville-musée a-t-elle un avenir au XXIeme siècle?",
+  subtitle: "Avant garde ou échec d'une conciliation entre passé et modernité?",
+  year: Date.new(2013),
+  resume: "Reconstruire la ville sur la ville. Peut-
+  être l’enjeu architectural et urbain du XXIème
+  siècle. À l’heure où l’urbanisation s’étend sur les périphéries des métropoles et participe vouloir tirer parti et surtout profi t de la richesse
+  au mitage sans précédent de l’espace rural,
+  l’ensemble des acteurs de l’architecture et de
+  l’urbanisme contemporain se tourne vers le
+  centre-ville des villes.
+  Aujourd’hui les centres-villes anciens sont redécouverts,
+  parfois après des années d’oubli, de mise à l’écart.
+",
+  license: "",
+  link: "",
+  school_id: school7.id,
+  cover: ".jpg"
+)
+thesis32 = Thesis.create!(
+  user_id: user32.id,
+  title: "Florence",
+  subtitle: "La vi(ll)e sur papier glacé",
+  year: Date.new(2012),
+  resume: "Présenté sous forme de guide touristique, c’est un outil pour
+  comprendre la ville, la construction de son image.
+  Mais pourquoi un guide touristique ?
+  Tout d’abord d’un point de vue historique, comme le montre la
+  Timeline, l’étude trouve son point de départ à l’aube du XIXème
+  siècle, époque marquée par le début des récits de voyage. Héritiers
+  du Grand Tour, ils sont les ancêtres du nos guides.
+  Mais le guide touristique reste encore aujourd’hui un intermédiaire
+  de choixentre la ville et le voyageur, regroupant des données
+  culturelles, historiques, pratiques, c’est un compagnon de route
+  pour le chasseur de ville, c’est un faiseur d’image.
+  La ville et l’image, son image, est un thème fondamental dans
+  l’étude de l’architecture. En 4 ème année, il nous est donné la
+  possibilité de partir pendant une année étudier à l’étranger. Mais
+  parmi toutes les destinations... comment choisir ? Il s’agit ici de la
+  première rencontre du possible avec la ville. Que connaissons-nous
+  des villes à part leur image ? Pourquoi s’imagine-t-on vivre dans une
+  ville plutôt qu’une autre ?
+  Tout ca n’est qu’affaire d’image.",
+  license: "",
+  link: "",
+  school_id: school8.id,
+  cover: ".jpg"
+)
+thesis33 = Thesis.create!(
+  user_id: user33.id,
+  title: "Architectures du 20eme siècle",
+  subtitle: "Enjeux et défis de la conservation d'un patrimoine récent",
+  year: Date.new(2014),
+  resume: "Depuis treize ans déjà, nous sommes entrés dans le 21ème siècle, et
+  l’architecture d’aujourd’hui a la pleine potentialité de devenir le patrimoine de
+  demain.
+  Mais avant de nous projeter en avant, quel regard avons nous aujourd’hui
+  sur le patrimoine d’hier ?
+  Le 20ème siècle représente un véritable tournant dans l’histoire de
+  l’humanité, et les innovations et découvertes qui ont pu y subvenir sont plus
+  importantes et plus nombreuses que jamais alors. L’architecture n’y échappe pas, et
+  depuis les débuts du développement des pensées modernistes jusqu’à l’apparition
+  des premières architectures high tech, la production artistique et les innovations
+  sociales n’ont cessé de s’accélérer.
+  Ainsi l’objet principal de ce mémoire sera l’architecture du 20ème siècle,
+  le rapport que nous pouvons y entretenir aujourd’hui, et les missions que nous
+  avons pour la conserver. Nous chercherons alors à savoir dans quelles mesures le
+  patrimoine du 20ème siècle peut partager les approches globales acceptées quant à
+  la considération du patrimoine dit classique.",
+  license: "",
+  link: "",
+  school_id: school9.id,
+  cover: ".jpg"
+)
+thesis34 = Thesis.create!(
+  user_id: user34.id,
+  title: "Les traces du passé dans la ville",
+  subtitle: "Quelle position adopter face à la question du patrimoine?",
+  year: Date.new(2015),
+  resume: "Pour m’aider dans mon projet de diplôme et dans ma réflexion sur les sites
+  archéologiques, j’ai décidé d’orienter mon mémoire sur les rapports qu’entretiennent les
+  villes contemporaines avec leur patrimoine historique.
+  Le cadre de la ville d’Athènes, très dense et très urbanisé, fait ressortir le problème des
+  villes musées. Nous sommes à une époque où le patrimoine est particulièrement mis en
+  valeur. Les sociétés occidentales, dans lesquelles nous vivons, sont fortement attachées
+  à la mémoire du passé, leur donnant une forte identité, un ancrage dans leur histoire.
+  Cependant, cette tendance à préserver et à sacraliser la moindre trace physique du
+  passé, produit un phénomène de muséification des villes. Or une ville figée, qui n’évolue
+  plus et qui ne se renouvelle pas, est condamnée à mourir.
+  Face à nos sociétés actuelles, qui ne cessent d’évoluer et ce de plus en plus vite, les
+  traces du passé doivent trouver leur place. Cependant, l’importance de notre patrimoine
+  doit-il prédominer sur l’évolution de la ville ? Sommes-nous obligés de faire un choix en
+  privilégiant l’un au détriment de l’autre, ou peuvent-ils cohabiter ?
+  Il existe un juste équilibre entre la préservation à tout prix de ces vestiges et l’intervention
+  de la ville future sur ces traces. Il nous faut alors trouver une manière de concilier vestiges
+  et projets urbains, en intégrant les traces du passé à une logique urbaine actuelle.",
+  license: "",
+  link: "",
+  school_id: school10.id,
+  cover: ".jpg"
+)
+
 puts "✓ theses table seeded"
 
 
@@ -1326,6 +1634,8 @@ puts "✓ tags added"
 # tag33 = "rhizome"
 
 # subcategories table
+
+subcategories1a = Subcategory.create!( category_id: category1.id, name: "architecture" )
 
 subcategories2a = Subcategory.create!( category_id: category2.id, name: "musées" )
 subcategories2b = Subcategory.create!( category_id: category2.id, name: "archéologie" )
