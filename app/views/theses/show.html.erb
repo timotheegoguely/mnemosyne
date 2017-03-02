@@ -41,11 +41,10 @@
       <div id="bookmark-counter" class=<%= "hide" if @thesis.get_likes.size == 0 %>>
         <%= @thesis.get_likes.size %>
       </div>
-
-      <%= link_to theses_path do %>
-        <i class="material-icons" id="close-btn">close</i>
-      <% end %>
     </div>
+    <%= link_to theses_path, id:"close" do %>
+      <i class="material-icons" id="close-btn">close</i>
+    <% end %>
 
     <div id="thesis-content">
       <h1 class="title"><%= @thesis.title %></h1>
@@ -88,13 +87,13 @@
         <% end %>
       </div>
 
-      <% if current_user && @thesis.download  %>
-        <%= link_to "Télécharger", Cloudinary::Utils.unsigned_download_url(@thesis.document), target: "_blank", class: "button big upper secondary" %>
+      <% if @thesis.download && @thesis.document?  %>
+        <%= link_to "Télécharger", @thesis.document.file.url, target: "_blank", class: "button big upper secondary" %>
       <% end %>
     </div>
   </div>
 
 </main>
-
-<!-- cloudinary_url(@thesis.document)
+<!-- user_signed_in? &&
+cloudinary_url(@thesis.document)
  -->
