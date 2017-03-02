@@ -1767,7 +1767,7 @@ thesis31.diploma = dnsep
 thesis32.diploma = dnsep
 thesis33.diploma = dnsep
 thesis34.diploma = dnsep
-thesis35.diploma = ens
+# thesis35.diploma = ens
 # thesis36.diploma = insa
 thesis37.diploma = dsaa
 thesis38.diploma = efap
@@ -1810,7 +1810,7 @@ thesis31.save!
 thesis32.save!
 thesis33.save!
 thesis34.save!
-thesis35.save!
+# thesis35.save!
 # thesis36.save!
 thesis37.save!
 thesis38.save!
