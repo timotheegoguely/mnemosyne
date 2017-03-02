@@ -1452,100 +1452,42 @@ puts "✓ school_subcategories seeded"
 
 # thesis_diplomas table
 
-thesis1_dnsep = ThesisDiploma.create!(thesis_id: thesis1.id, diploma_id: dnsep.id)
-thesis2_dnsep = ThesisDiploma.create!(thesis_id: thesis2.id, diploma_id: dnsep.id)
-thesis3_dnsep = ThesisDiploma.create!(thesis_id: thesis3.id, diploma_id: dnsep.id)
-thesis4_dnsep = ThesisDiploma.create!(thesis_id: thesis4.id, diploma_id: dnsep.id)
-thesis5_ensad = ThesisDiploma.create!(thesis_id: thesis5.id, diploma_id: ensad.id)
-thesis6_dnat  = ThesisDiploma.create!(thesis_id: thesis6.id, diploma_id: dnat.id)
-thesis7_dnat  = ThesisDiploma.create!(thesis_id: thesis7.id, diploma_id: dnat.id)
-thesis8_dnsep = ThesisDiploma.create!(thesis_id: thesis8.id, diploma_id: dnsep.id)
-thesis9_dsaa  = ThesisDiploma.create!(thesis_id: thesis9.id, diploma_id: dsaa.id)
-thesis10_dnsep = ThesisDiploma.create!(thesis_id: thesis10.id, diploma_id: dnsep.id)
-thesis11_dnsep = ThesisDiploma.create!(thesis_id: thesis11.id, diploma_id: dnsep.id)
-thesis12_dnsep = ThesisDiploma.create!(thesis_id: thesis12.id, diploma_id: dnsep.id)
-thesis13_dnsep = ThesisDiploma.create!(thesis_id: thesis13.id, diploma_id: dnsep.id)
-thesis14_dnsep = ThesisDiploma.create!(thesis_id: thesis14.id, diploma_id: dnsep.id)
-thesis15_dnsep = ThesisDiploma.create!(thesis_id: thesis15.id, diploma_id: dnsep.id)
-thesis16_dnsep = ThesisDiploma.create!(thesis_id: thesis16.id, diploma_id: dnsep.id)
-thesis17_dnsep = ThesisDiploma.create!(thesis_id: thesis17.id, diploma_id: dnsep.id)
-thesis18_dnsep = ThesisDiploma.create!(thesis_id: thesis18.id, diploma_id: dnsep.id)
-thesis19_dnsep = ThesisDiploma.create!(thesis_id: thesis19.id, diploma_id: dnsep.id)
-thesis20_dnsep = ThesisDiploma.create!(thesis_id: thesis20.id, diploma_id: dnsep.id)
-thesis21_dnsep = ThesisDiploma.create!(thesis_id: thesis21.id, diploma_id: dnsep.id)
-thesis22_dnsep = ThesisDiploma.create!(thesis_id: thesis22.id, diploma_id: dnsep.id)
-thesis23_dnsep = ThesisDiploma.create!(thesis_id: thesis23.id, diploma_id: dnsep.id)
-thesis24_dnsep = ThesisDiploma.create!(thesis_id: thesis24.id, diploma_id: dnsep.id)
-thesis25_dnsep = ThesisDiploma.create!(thesis_id: thesis25.id, diploma_id: dnsep.id)
-thesis26_dnsep = ThesisDiploma.create!(thesis_id: thesis26.id, diploma_id: dnsep.id)
-thesis27_dnsep = ThesisDiploma.create!(thesis_id: thesis27.id, diploma_id: dnsep.id)
-thesis28_dnsep = ThesisDiploma.create!(thesis_id: thesis28.id, diploma_id: dnsep.id)
-thesis29_dnsep = ThesisDiploma.create!(thesis_id: thesis29.id, diploma_id: dnsep.id)
-thesis30_dnsep = ThesisDiploma.create!(thesis_id: thesis30.id, diploma_id: dnsep.id)
-thesis31_dnsep = ThesisDiploma.create!(thesis_id: thesis31.id, diploma_id: dnsep.id)
-thesis32_dnsep = ThesisDiploma.create!(thesis_id: thesis32.id, diploma_id: dnsep.id)
-thesis33_dnsep = ThesisDiploma.create!(thesis_id: thesis33.id, diploma_id: dnsep.id)
-thesis34_dnsep = ThesisDiploma.create!(thesis_id: thesis34.id, diploma_id: dnsep.id)
+thesis1.diploma = dnsep
+thesis2.diploma = dnsep
+thesis3.diploma = dnsep
+thesis4.diploma = dnsep
+thesis5.diploma = ensad
+thesis6.diploma = dnat
+thesis7.diploma = dnat
+thesis8.diploma = dnsep
+thesis9.diploma = dsaa
+thesis10.diploma = dnsep
+thesis11.diploma = dnsep
+thesis12.diploma = dnsep
+thesis13.diploma = dnsep
+thesis14.diploma = dnsep
+thesis15.diploma = dnsep
+thesis16.diploma = dnsep
+thesis17.diploma = dnsep
+thesis18.diploma = dnsep
+thesis19.diploma = dnsep
+thesis20.diploma = dnsep
+thesis21.diploma = dnsep
+thesis22.diploma = dnsep
+thesis23.diploma = dnsep
+thesis24.diploma = dnsep
+thesis25.diploma = dnsep
+thesis26.diploma = dnsep
+thesis27.diploma = dnsep
+thesis28.diploma = dnsep
+thesis29.diploma = dnsep
+thesis30.diploma = dnsep
+thesis31.diploma = dnsep
+thesis32.diploma = dnsep
+thesis33.diploma = dnsep
+thesis34.diploma = dnsep
 
-puts "✓ thesis_diplomas seeded"
-
-
-# thesis_diploma_subcategories table
-
-thesis1_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories3b.id)
-thesis1_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories3c.id)
-thesis1_dnsep_subcategories2c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories2c.id)
-thesis2_dnsep_subcategories6a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis2_dnsep.id, subcategory_id: subcategories6a.id)
-thesis2_dnsep_subcategories6c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis2_dnsep.id, subcategory_id: subcategories6c.id)
-thesis9_dsaa_subcategories5a  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5a.id)
-thesis9_dsaa_subcategories5b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5b.id)
-thesis9_dsaa_subcategories5c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5c.id)
-thesis10_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis10_dnsep.id, subcategory_id: subcategories3b.id)
-thesis10_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis10_dnsep.id, subcategory_id: subcategories3c.id)
-thesis11_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis11_dnsep.id, subcategory_id: subcategories3b.id)
-thesis11_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis11_dnsep.id, subcategory_id: subcategories3c.id)
-thesis12_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis12_dnsep.id, subcategory_id: subcategories3b.id)
-thesis12_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis12_dnsep.id, subcategory_id: subcategories3c.id)
-thesis13_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis13_dnsep.id, subcategory_id: subcategories3b.id)
-thesis13_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis13_dnsep.id, subcategory_id: subcategories3c.id)
-thesis14_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis14_dnsep.id, subcategory_id: subcategories3b.id)
-thesis14_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis14_dnsep.id, subcategory_id: subcategories3c.id)
-thesis15_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis15_dnsep.id, subcategory_id: subcategories3b.id)
-thesis15_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis15_dnsep.id, subcategory_id: subcategories3c.id)
-thesis16_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis16_dnsep.id, subcategory_id: subcategories3b.id)
-thesis16_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis16_dnsep.id, subcategory_id: subcategories3c.id)
-thesis17_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis17_dnsep.id, subcategory_id: subcategories3b.id)
-thesis17_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis17_dnsep.id, subcategory_id: subcategories3c.id)
-thesis18_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis18_dnsep.id, subcategory_id: subcategories3b.id)
-thesis18_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis18_dnsep.id, subcategory_id: subcategories3c.id)
-thesis19_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis19_dnsep.id, subcategory_id: subcategories3b.id)
-thesis19_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis19_dnsep.id, subcategory_id: subcategories3c.id)
-thesis20_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis20_dnsep.id, subcategory_id: subcategories3b.id)
-thesis20_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis20_dnsep.id, subcategory_id: subcategories3c.id)
-thesis21_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis21_dnsep.id, subcategory_id: subcategories3b.id)
-thesis21_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis21_dnsep.id, subcategory_id: subcategories3c.id)
-thesis22_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis22_dnsep.id, subcategory_id: subcategories3b.id)
-thesis22_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis22_dnsep.id, subcategory_id: subcategories3c.id)
-thesis23_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis23_dnsep.id, subcategory_id: subcategories3b.id)
-thesis23_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis23_dnsep.id, subcategory_id: subcategories3c.id)
-thesis24_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis24_dnsep.id, subcategory_id: subcategories3b.id)
-thesis24_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis24_dnsep.id, subcategory_id: subcategories3c.id)
-thesis25_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis25_dnsep.id, subcategory_id: subcategories3b.id)
-thesis25_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis25_dnsep.id, subcategory_id: subcategories3c.id)
-thesis26_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis26_dnsep.id, subcategory_id: subcategories3b.id)
-thesis26_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis26_dnsep.id, subcategory_id: subcategories3c.id)
-thesis27_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis27_dnsep.id, subcategory_id: subcategories3b.id)
-thesis27_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis27_dnsep.id, subcategory_id: subcategories3c.id)
-thesis28_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis28_dnsep.id, subcategory_id: subcategories3b.id)
-thesis29_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis29_dnsep.id, subcategory_id: subcategories1a.id)
-thesis30_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis30_dnsep.id, subcategory_id: subcategories1a.id)
-thesis31_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis31_dnsep.id, subcategory_id: subcategories1a.id)
-thesis32_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis32_dnsep.id, subcategory_id: subcategories1a.id)
-thesis33_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis33_dnsep.id, subcategory_id: subcategories1a.id)
-thesis34_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis34_dnsep.id, subcategory_id: subcategories1a.id)
-
-puts "✓ thesis_diploma_subcategories seeded"
-
+puts "✓ thesis.diploma seeded"
 
 thesis1.save!
 thesis2.save!
@@ -1583,3 +1525,105 @@ thesis33.save!
 thesis34.save!
 
 puts "✓ thesis saved!"
+
+
+# thesis_diploma_subcategories table
+thesisDiploma1 = ThesisDiploma.find_by_thesis_id(thesis1.id)
+thesisDiploma2 = ThesisDiploma.find_by_thesis_id(thesis2.id)
+thesisDiploma3 = ThesisDiploma.find_by_thesis_id(thesis3.id)
+thesisDiploma4 = ThesisDiploma.find_by_thesis_id(thesis4.id)
+thesisDiploma5 = ThesisDiploma.find_by_thesis_id(thesis5.id)
+thesisDiploma6 = ThesisDiploma.find_by_thesis_id(thesis6.id)
+thesisDiploma7 = ThesisDiploma.find_by_thesis_id(thesis7.id)
+thesisDiploma8 = ThesisDiploma.find_by_thesis_id(thesis8.id)
+thesisDiploma9 = ThesisDiploma.find_by_thesis_id(thesis9.id)
+thesisDiploma10 = ThesisDiploma.find_by_thesis_id(thesis10.id)
+thesisDiploma11 = ThesisDiploma.find_by_thesis_id(thesis11.id)
+thesisDiploma12 = ThesisDiploma.find_by_thesis_id(thesis12.id)
+thesisDiploma13 = ThesisDiploma.find_by_thesis_id(thesis13.id)
+thesisDiploma14 = ThesisDiploma.find_by_thesis_id(thesis14.id)
+thesisDiploma15 = ThesisDiploma.find_by_thesis_id(thesis15.id)
+thesisDiploma16 = ThesisDiploma.find_by_thesis_id(thesis16.id)
+thesisDiploma17 = ThesisDiploma.find_by_thesis_id(thesis17.id)
+thesisDiploma18 = ThesisDiploma.find_by_thesis_id(thesis18.id)
+thesisDiploma19 = ThesisDiploma.find_by_thesis_id(thesis19.id)
+thesisDiploma20 = ThesisDiploma.find_by_thesis_id(thesis20.id)
+thesisDiploma21 = ThesisDiploma.find_by_thesis_id(thesis21.id)
+thesisDiploma22 = ThesisDiploma.find_by_thesis_id(thesis22.id)
+thesisDiploma23 = ThesisDiploma.find_by_thesis_id(thesis23.id)
+thesisDiploma24 = ThesisDiploma.find_by_thesis_id(thesis24.id)
+thesisDiploma25 = ThesisDiploma.find_by_thesis_id(thesis25.id)
+thesisDiploma26 = ThesisDiploma.find_by_thesis_id(thesis26.id)
+thesisDiploma27 = ThesisDiploma.find_by_thesis_id(thesis27.id)
+thesisDiploma28 = ThesisDiploma.find_by_thesis_id(thesis28.id)
+thesisDiploma29 = ThesisDiploma.find_by_thesis_id(thesis29.id)
+thesisDiploma30 = ThesisDiploma.find_by_thesis_id(thesis30.id)
+thesisDiploma31 = ThesisDiploma.find_by_thesis_id(thesis31.id)
+thesisDiploma32 = ThesisDiploma.find_by_thesis_id(thesis32.id)
+thesisDiploma33 = ThesisDiploma.find_by_thesis_id(thesis33.id)
+thesisDiploma34 = ThesisDiploma.find_by_thesis_id(thesis34.id)
+
+
+thesis1_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3b.id)
+thesis1_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3c.id)
+thesis2_dnsep_subcategories6a  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma2.id,  subcategory_id: subcategories6a.id)
+thesis2_dnsep_subcategories6c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma2.id,  subcategory_id: subcategories6c.id)
+thesis3_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma3.id,  subcategory_id: subcategories3b.id)
+thesis3_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma3.id,  subcategory_id: subcategories3c.id)
+thesis4_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma4.id,  subcategory_id: subcategories3b.id)
+thesis4_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma4.id,  subcategory_id: subcategories3c.id)
+thesis5_dnsep_subcategories5b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma5.id,  subcategory_id: subcategories5b.id)
+thesis6_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma6.id,  subcategory_id: subcategories3b.id)
+thesis6_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma6.id,  subcategory_id: subcategories3c.id)
+thesis7_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma7.id,  subcategory_id: subcategories3b.id)
+thesis7_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma7.id,  subcategory_id: subcategories3c.id)
+thesis8_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma8.id,  subcategory_id: subcategories3b.id)
+thesis8_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma8.id,  subcategory_id: subcategories3c.id)
+thesis9_dsaa_subcategories5a   = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma9.id,  subcategory_id: subcategories5a.id)
+thesis9_dsaa_subcategories5b   = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma9.id,  subcategory_id: subcategories5b.id)
+thesis9_dsaa_subcategories5c   = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma9.id,  subcategory_id: subcategories5c.id)
+thesis10_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma10.id, subcategory_id: subcategories3b.id)
+thesis10_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma10.id, subcategory_id: subcategories3c.id)
+thesis11_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma11.id, subcategory_id: subcategories3b.id)
+thesis11_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma11.id, subcategory_id: subcategories3c.id)
+thesis12_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma12.id, subcategory_id: subcategories3b.id)
+thesis12_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma12.id, subcategory_id: subcategories3c.id)
+thesis13_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma13.id, subcategory_id: subcategories3b.id)
+thesis13_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma13.id, subcategory_id: subcategories3c.id)
+thesis14_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma14.id, subcategory_id: subcategories3b.id)
+thesis14_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma14.id, subcategory_id: subcategories3c.id)
+thesis15_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma15.id, subcategory_id: subcategories3b.id)
+thesis15_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma15.id, subcategory_id: subcategories3c.id)
+thesis16_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma16.id, subcategory_id: subcategories3b.id)
+thesis16_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma16.id, subcategory_id: subcategories3c.id)
+thesis17_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma17.id, subcategory_id: subcategories3b.id)
+thesis17_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma17.id, subcategory_id: subcategories3c.id)
+thesis18_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma18.id, subcategory_id: subcategories3b.id)
+thesis18_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma18.id, subcategory_id: subcategories3c.id)
+thesis19_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma19.id, subcategory_id: subcategories3b.id)
+thesis19_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma19.id, subcategory_id: subcategories3c.id)
+thesis20_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma20.id, subcategory_id: subcategories3b.id)
+thesis20_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma20.id, subcategory_id: subcategories3c.id)
+thesis21_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma21.id, subcategory_id: subcategories3b.id)
+thesis21_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma21.id, subcategory_id: subcategories3c.id)
+thesis22_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma22.id, subcategory_id: subcategories3b.id)
+thesis22_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma22.id, subcategory_id: subcategories3c.id)
+thesis23_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma23.id, subcategory_id: subcategories3b.id)
+thesis23_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma23.id, subcategory_id: subcategories3c.id)
+thesis24_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma24.id, subcategory_id: subcategories3b.id)
+thesis24_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma24.id, subcategory_id: subcategories3c.id)
+thesis25_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma25.id, subcategory_id: subcategories3b.id)
+thesis25_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma25.id, subcategory_id: subcategories3c.id)
+thesis26_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma26.id, subcategory_id: subcategories3b.id)
+thesis26_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma26.id, subcategory_id: subcategories3c.id)
+thesis27_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma27.id, subcategory_id: subcategories3b.id)
+thesis27_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma27.id, subcategory_id: subcategories3c.id)
+thesis28_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma28.id, subcategory_id: subcategories3b.id)
+thesis29_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma29.id, subcategory_id: subcategories1a.id)
+thesis30_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma30.id, subcategory_id: subcategories1a.id)
+thesis31_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma31.id, subcategory_id: subcategories1a.id)
+thesis32_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma32.id, subcategory_id: subcategories1a.id)
+thesis33_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma33.id, subcategory_id: subcategories1a.id)
+thesis34_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma34.id, subcategory_id: subcategories1a.id)
+
+puts "✓ thesis_diploma_subcategories seeded"
