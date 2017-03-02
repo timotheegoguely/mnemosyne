@@ -87,7 +87,7 @@
         <% end %>
       </div>
 
-      <% if @thesis.download && @thesis.document?  %>
+      <% if user_signed_in? && @thesis.download && @thesis.document?  %>
         <%= link_to "Télécharger", @thesis.document.file.url, target: "_blank", class: "button big upper secondary" %>
       <% end %>
     </div>
