@@ -1,8 +1,8 @@
 #thesis-cover-wrapper {
-  #drop-pdf {
+  #drop-pdf-icon {
     margin: auto;
-    height: 50%;
-    opacity: 0.1;
+    height: 30%;
+    opacity: 0.05;
   }
 }
 
@@ -48,15 +48,28 @@
   color: #fff !important;
 }
 
-// #new-thesis-dropzone {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   bottom: 0;
-//   z-index: 9999;
-//   opacity: 0;
-// }
+#thesis_document {
+  display: none;
+}
+
+// Dropzone
+.thesis_document label {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  width: calc(38.2vw - 128px);
+  height: calc(100vh - 80px - 128px);
+  margin: 64px;
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  padding: 64px 32px;
+  color: transparentize($color-text, 0.5);
+  font-family: $text-font-family !important;
+}
+.dz-default {
+  display: none;
+}
 
 .hidden {
   width: 50%;
