@@ -1,5 +1,3 @@
-<div id="new-thesis-dropzone"></div>
-
 <% content_for(:title_tag) do %>
   <%= @thesis.title %>
 <% end %>
@@ -7,7 +5,7 @@
 <main class="container full">
 
   <div id="thesis-cover-wrapper">
-    <%= image_tag asset_path("file.svg"), id:"drop-pdf" %>
+    <%= image_tag asset_path("file.svg"), id:"drop-pdf-icon" %>
   </div>
 
   <div id="thesis-content-wrapper">
@@ -65,10 +63,10 @@
             </div>
           </div>
 
-          <%= f.input :document, label: 'PDF' %>
+          <%= f.input :document, label: '<strong>Désposez</strong> ici votre mémoire au <strong>format PDF</strong> ou <strong>cliquez</strong> pour le sélectionner'.html_safe %>
           <%= f.input :document_cache, as: :hidden %>
 
-          <%= f.input :download, label: 'Autoriser le téléchargement au format PDF de mémoire', input_html: { class: 'link' } %>
+          <%= f.input :download, label: ' Autoriser le téléchargement de mémoire', label_html: { class: 'checkbox' }, input_html: { class: 'link' } %>
 
           <%#= check_box_tag(:download , {:checked => false} ) %>
           <%#= label_tag(:download, "Autoriser le téléchargement au format PDF de mémoire ?") %>

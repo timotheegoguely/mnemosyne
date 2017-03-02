@@ -42,7 +42,7 @@ class ThesesController < ApplicationController
 
 
     infos = reader.info.reduce({}) do |infos, (key, value)|
-      infos[key] = value.force_encoding("ISO-8859-1").encode("UTF-8")
+      infos[key] = value.force_encoding("ISO-8859-1").encode("utf-8")
       infos
     end
 
