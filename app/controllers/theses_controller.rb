@@ -41,21 +41,29 @@ class ThesesController < ApplicationController
       file = Cloudinary::Uploader.upload(params[:file])
 
       # Récupérer l'url pour la preview + d'autres infos avec le parser de PDF
+      io     = open(file['url'])
+      reader = PDF::Reader.new(io)
 
-    io     = open(file['url'])
-    reader = PDF::Reader.new(io)
+      infos = reader.info.reduce({}) do |infos, (key, value)|
+        cleaned_value = value
 
+        begin
+          value.to_json # try to convert to json
+        rescue JSON::GeneratorError # on illegal/malformed utf-8 error
+          cleaned_value = value.force_encoding("ISO-8859-1").encode("utf-8") # convert from ISO to UTF-8
+        end
 
-    infos = reader.info.reduce({}) do |infos, (key, value)|
-      infos[key] = value.force_encoding("ISO-8859-1").encode("utf-8")
-      infos
-    end
+        infos[key] = cleaned_value
+        infos
+      end
+
+      # subject is not correctly encoded by PDF::Reader info method so we extract it from metadata \o/
+      infos[:Subject] = reader.metadata.match(/<dc:description>(.*)<\/dc:description>/m)[1].match(/<rdf:li.*>(.*)<\/rdf:li>/m)[1]
 
       # Construire le JSON de retour
       @json = { file: file, infos: infos }
       return render json: @json
     end
-
 
 
     @title = params[:thesis][:title]
