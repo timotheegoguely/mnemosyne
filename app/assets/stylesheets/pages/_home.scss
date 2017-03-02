@@ -7,80 +7,85 @@
   width: 100vw;
   height: calc(100vh - 80px);
   padding: 0px 32px;
-  #intro {
-    h1 {
-      font-weight: bold;
-    }
-    h2 {
-      font-family: "Thesaurus Display Regular", sans-serif;
-      margin-bottom: 32px;
-    }
-    #architecture {
-      border-color: $color-architecture !important;
-      color: $color-architecture !important;
-      &:hover {
-        background-color: lighten($color-architecture, 30%) !important;
-        border-color: lighten($color-architecture, 30%) !important;
-      }
-    }
-    #patrimoines {
-      border-color: $color-patrimoines !important;
-      color: $color-patrimoines !important;
-      &:hover {
-        background-color: lighten($color-patrimoines, 35%) !important;
-        border-color: lighten($color-patrimoines, 35%) !important;
-      }
-    }
-    #arts-plastiques {
-      border-color: $color-arts-plastiques !important;
-      color: $color-arts-plastiques !important;
-      &:hover {
-        background-color: lighten($color-arts-plastiques, 45%) !important;
-        border-color: lighten($color-arts-plastiques, 45%) !important;
-      }
-    }
-    #spectacle-vivant {
-      border-color: $color-spectacle-vivant !important;
-      color: $color-spectacle-vivant !important;
-      &:hover {
-        background-color: lighten($color-spectacle-vivant, 40%) !important;
-        border-color: lighten($color-spectacle-vivant, 40%) !important;
-      }
-    }
-    #cinema-et-audiovisuel {
-      border-color: darken($color-cinema-audiovisuel, 12%) !important;
-      color: darken($color-cinema-audiovisuel, 12%) !important;
-      &:hover {
-        background-color: lighten($color-cinema-audiovisuel, 30%) !important;
-        border-color: lighten($color-cinema-audiovisuel, 30%) !important;
-      }
-    }
-    #livre {
-      border-color: $color-livre !important;
-      color: $color-livre !important;
-      &:hover {
-        background-color: lighten($color-livre, 40%) !important;
-        border-color: lighten($color-livre, 40%) !important;
-      }
-    }
-    #presse {
-      border-color: $color-presse !important;
-      color: $color-presse !important;
-      &:hover {
-        background-color: lighten($color-presse, 40%) !important;
-        border-color: lighten($color-presse, 40%) !important;
-      }
-    }
-    #gestion-et-mediation {
-      border-color: $color-gestion-mediation !important;
-      color: $color-gestion-mediation !important;
-      &:hover {
-        background-color: lighten($color-gestion-mediation, 40%) !important;
-        border-color: lighten($color-gestion-mediation, 40%) !important;
-      }
+  h1 {
+    font-weight: bold;
+  }
+  h2 {
+    font-family: "Thesaurus Display Regular", sans-serif;
+    margin-bottom: 32px;
+  }
+  #architecture {
+    border-color: $color-architecture !important;
+    color: $color-architecture !important;
+    &:hover {
+      background-color: lighten($color-architecture, 30%) !important;
+      border-color: lighten($color-architecture, 30%) !important;
     }
   }
+  #patrimoines {
+    border-color: $color-patrimoines !important;
+    color: $color-patrimoines !important;
+    &:hover {
+      background-color: lighten($color-patrimoines, 35%) !important;
+      border-color: lighten($color-patrimoines, 35%) !important;
+    }
+  }
+  #arts-plastiques {
+    border-color: $color-arts-plastiques !important;
+    color: $color-arts-plastiques !important;
+    &:hover {
+      background-color: lighten($color-arts-plastiques, 45%) !important;
+      border-color: lighten($color-arts-plastiques, 45%) !important;
+    }
+  }
+  #spectacle-vivant {
+    border-color: $color-spectacle-vivant !important;
+    color: $color-spectacle-vivant !important;
+    &:hover {
+      background-color: lighten($color-spectacle-vivant, 40%) !important;
+      border-color: lighten($color-spectacle-vivant, 40%) !important;
+    }
+  }
+  #cinema-et-audiovisuel {
+    border-color: darken($color-cinema-audiovisuel, 12%) !important;
+    color: darken($color-cinema-audiovisuel, 12%) !important;
+    &:hover {
+      background-color: lighten($color-cinema-audiovisuel, 30%) !important;
+      border-color: lighten($color-cinema-audiovisuel, 30%) !important;
+    }
+  }
+  #livre {
+    border-color: $color-livre !important;
+    color: $color-livre !important;
+    &:hover {
+      background-color: lighten($color-livre, 40%) !important;
+      border-color: lighten($color-livre, 40%) !important;
+    }
+  }
+  #presse {
+    border-color: $color-presse !important;
+    color: $color-presse !important;
+    &:hover {
+      background-color: lighten($color-presse, 40%) !important;
+      border-color: lighten($color-presse, 40%) !important;
+    }
+  }
+  #gestion-et-mediation {
+    border-color: $color-gestion-mediation !important;
+    color: $color-gestion-mediation !important;
+    &:hover {
+      background-color: lighten($color-gestion-mediation, 40%) !important;
+      border-color: lighten($color-gestion-mediation, 40%) !important;
+    }
+  }
+  #view-cards {
+    position: absolute;
+    max-height: 70vh;
+    right: -33.33%;
+    top: 64px;
+  }
 }
+
 
 .margin {
   margin: 5px 5px 5px 0px;

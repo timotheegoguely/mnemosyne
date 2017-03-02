@@ -1,25 +1,26 @@
 <main class="container full", id="main">
 
-  <div class="hero">
+  <section class="hero">
     <div id="intro">
       <h1>mnémosyne</h1>
-      <h2><%= t('.tagline_1') %><br><%= t('.tagline_2') %></h2>
-      <div class="categories">
-        <% Thesis::CATEGORIES.each do |category| %>
-          <%= link_to category.gsub("-", " ").capitalize, search_path(keywords: category.gsub("-", " ")), id: category, class:"button outline upper secondary margin" %>
-        <% end %>
-      </div>
+      <h2>
+        <%= t('.tagline_1') %><br><%= t('.tagline_2')%><span class="categories">
+          <% Thesis::CATEGORIES.each do |category| %>
+            <%= link_to category.gsub("-", " "), search_path(keywords: category.gsub("-", " ")), id: category, class:"" %>,
+          <% end %>
+        </span>
+      </h2>
       <%= link_to t('.button_theses_index'), theses_path, class: "button outline upper secondary large margin-big" %>
+      <%= image_tag asset_path("mnemosyne-view-cards.png"), {class: "screenshot shadow", id: "view-cards"} %>
     </div>
-    <div class="row">
-  </div>
-</div>
-</main>
-<div class="container">
-  <div class="row">
+  </section>
+
+  <!-- <section class="hero">
     <h2>Mémoires récents</h2>
     <div id="cards" class="cards z100">
-      <%= render "shared/cards", theses: Thesis.last(5) %>
+      <%#= render "shared/cards", theses: Thesis.last(5) %>
     </div>
-  </div>
-</div>
+  </section> -->
+
+</main>
+
