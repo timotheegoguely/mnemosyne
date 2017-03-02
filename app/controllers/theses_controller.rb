@@ -36,13 +36,15 @@ class ThesesController < ApplicationController
       file = Cloudinary::Uploader.upload(params[:file])
 
       # Récupérer l'url pour la preview + d'autres infos avec le parser de PDF
-      io     = open(file['url'])
-      reader = PDF::Reader.new(io)
 
-      infos = reader.info.reduce({}) do |infos, (key, value)|
-        infos[key] = value.force_encoding("ISO-8859-1").encode("UTF-8")
-        infos
-      end
+    io     = open(file['url'])
+    reader = PDF::Reader.new(io)
+
+
+    infos = reader.info.reduce({}) do |infos, (key, value)|
+      infos[key] = value.force_encoding("ISO-8859-1").encode("UTF-8")
+      infos
+    end
 
       # Construire le JSON de retour
       @json = { file: file, infos: infos }
