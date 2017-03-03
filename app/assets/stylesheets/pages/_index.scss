@@ -149,13 +149,14 @@
     width: 100%;
     height: 128px;
     background-color: #fff;
+    z-index: 100;
     tr {
+      display: inline-table;
       position: absolute;
+      left: 0px;
+      right: 0px;
       bottom: 0px;
-      transition: background-color 0.2s ease;
-      &:hover {
-        background-color: $color-aluminum;
-      }
+      width: 100%;
       > th {
         border-bottom-color: rgba(0, 0, 0, 0.05) !important;
         padding: 16px 10px !important;
@@ -167,16 +168,16 @@
       background-image: none !important;
     }
     #th-title {
-      width: 50% !important;
+      width: 40% !important;
     }
     #th-author {
       width: 20% !important;
     }
     #th-school {
-      width: 10% !important;
+      width: 15% !important;
     }
     #th-year {
-      width: 5% !important;
+      width: 10% !important;
     }
     #th-bookmark {
       width: 5% !important;
@@ -187,7 +188,15 @@
     position: absolute;
     top: 128px;
     left: -32px;
-    z-index: -1;
+    right: 0px;
+    tr {
+      display: inline-table;
+      width: 100%;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background-color: $color-aluminum;
+      }
+    }
   }
   td {
     vertical-align: middle;
@@ -202,7 +211,7 @@
       min-width: 64px;
       height: 64px;
       img {
-        margin-left: 32px;
+        margin-left: 24px;
         width: auto;
         height: 64px;
         border: 1px solid rgba(0,0,0,.1);
@@ -210,17 +219,17 @@
     }
   }
   .thesis-title {
-    width: 50%;
+    width: 40%;
     line-height: 1.333;
   }
   .thesis-author {
     width: 20%;
   }
   .thesis-school {
-    width: 10%;
+    width: 15%;
   }
   .thesis-year {
-    width: 5%;
+    width: 10%;
   }
   .thesis-bookmarks {
     width: 5%;
