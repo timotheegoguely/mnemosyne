@@ -227,10 +227,15 @@
   position: absolute;
   left: 32px;
   right: 32px;
-  bottom: 0;
+  bottom: 16px;
   z-index: -1;
+  overflow-y: hidden;
   td {
     border-bottom: none;
+  }
+  .thesis-footer {
+    margin: auto 0px !important;
+    width: 100% !important;
   }
 }
 

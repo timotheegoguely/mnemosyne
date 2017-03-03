@@ -2,7 +2,7 @@
   <%= t('.title') %>
 <% end %>
 
-<main class="container">
+<main class="container" id="thesis-index">
 
   <%= render "shared/tabs" %>
 
@@ -12,7 +12,7 @@
   </div>
   <footer id="card-preview" style="display: none">
     <% @theses.each do |thesis| %>
-      <table class="table thesis-footer hidden" id="thesis-footer-<%= thesis.id %>">
+      <table class="table thesis-footer" id="thesis-footer-<%= thesis.id %>" style="display: none">
         <tbody>
           <tr>
             <td class="thesis-title">
@@ -20,7 +20,7 @@
               <small><%= thesis.subtitle %></small>
             </td>
             <td class="thesis-author"><%= thesis.user.first_name %> <%= thesis.user.last_name %></td>
-            <td class="thesis-school"><%= thesis.school.name %></td>
+            <td class="thesis-school"><%= thesis.school.acronym.blank? ? thesis.school.name : thesis.school.acronym %></td>
             <td class="thesis-year"><%= thesis.year.year %></td>
             <td class="thesis-bookmarks"><%= thesis.votes_for.size %></td>
           </tr>
