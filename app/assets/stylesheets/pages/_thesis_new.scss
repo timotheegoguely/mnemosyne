@@ -28,24 +28,28 @@
     .checkbox > label {
       display: inline-block;
       font-family: $text-font-family, sans-serif;
-      border: 2px solid $color-success;
-      color: $color-success;
+      border: 2px solid $color-text;
+      color: $color-text;
       padding: 0.5em 1.25em;
-      border-radius: 21px;
+      border-radius: 3px;
       margin: 0 4px 8px 0;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.025em;
       cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
       > input[type=checkbox] {
         display: none;
       }
     }
+    .checked {
+      background-color: $color-text;
+      color: #fff !important;
+    }
   }
 }
-
-.checked {
-  background-color: $color-success;
-  color: #fff !important;
+.thesis_download label input {
+  margin-right: 0.5rem;
 }
 
 #thesis_document {
@@ -63,7 +67,7 @@
   border: 2px dashed rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   text-align: center;
-  padding: 64px 32px;
+  padding: 48px 32px;
   color: transparentize($color-text, 0.5);
   font-family: $text-font-family !important;
 }
@@ -74,8 +78,12 @@
   color: transparentize($color-text, 0.5);
   font-family: $text-font-family !important;
   .dz-filename {
-    font-size: 13px;
+    font-size: 11px;
   }
+}
+.dz-success-mark,
+.dz-error-mark {
+  display: none !important;
 }
 .dz-default {
   display: none;
