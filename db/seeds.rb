@@ -738,20 +738,20 @@ puts "✓ users seeded"
 
 # theses table
 
-thesis1 = Thesis.new(
-  user_id: user1.id,
-  title: "Mixing Culture",
-  subtitle: "",
-  year: Date.new(2014),
-  resume: "Où se situe la frontière entre la curation et la pratique du mix ? Mixer peut-il être considéré comme une forme de création originale ? En quoi la culture et la pratique du mix ont-elles influencé nos rapports et nos comportements vis-à-vis des produits médiatiques (images, sons, vidéos, textes, jeux, etc.) issus de notre société actuelle ?
+# thesis1 = Thesis.new(
+#   user_id: user1.id,
+#   title: "Mixing Culture",
+#   subtitle: "",
+#   year: Date.new(2014),
+#   resume: "Où se situe la frontière entre la curation et la pratique du mix ? Mixer peut-il être considéré comme une forme de création originale ? En quoi la culture et la pratique du mix ont-elles influencé nos rapports et nos comportements vis-à-vis des produits médiatiques (images, sons, vidéos, textes, jeux, etc.) issus de notre société actuelle ?
 
-    Pour répondre à ces questions, je me suis attaché dans un premier temps à deux figures emblématiques du mix : le DJ et le curateur. J’ai tenté de comprendre au travers d’une approche à la fois historique et comparative quels sont les enjeux et quelles ont été les évolutions de leurs pratiques respectives depuis leur apparition jusqu’à nos jours. J’ai établi ensuite dans un second temps une analyse détaillée du processus créatif lié à la pratique du mix, analyse qui me permit enfin d’essayer de voir en quoi cette pratique et ses différentes manifestations artistiques induisent un certain rapport au monde et aux objets culturels qui nous entourent.",
-  license: "CC BY-SA 4.0",
-  link: "https://github.com/timotheegoguely/mixing-culture",
-  school_id: school1.id,
-  cover: "2014-timothee_goguely.jpg",
-  pdf: "https://dl.dropboxusercontent.com/u/10748485/2014-timothee_goguely-mixing_culture.pdf"
-)
+#     Pour répondre à ces questions, je me suis attaché dans un premier temps à deux figures emblématiques du mix : le DJ et le curateur. J’ai tenté de comprendre au travers d’une approche à la fois historique et comparative quels sont les enjeux et quelles ont été les évolutions de leurs pratiques respectives depuis leur apparition jusqu’à nos jours. J’ai établi ensuite dans un second temps une analyse détaillée du processus créatif lié à la pratique du mix, analyse qui me permit enfin d’essayer de voir en quoi cette pratique et ses différentes manifestations artistiques induisent un certain rapport au monde et aux objets culturels qui nous entourent.",
+#   license: "CC BY-SA 4.0",
+#   link: "https://github.com/timotheegoguely/mixing-culture",
+#   school_id: school1.id,
+#   cover: "2014-timothee_goguely.jpg",
+#   pdf: "https://dl.dropboxusercontent.com/u/10748485/2014-timothee_goguely-mixing_culture.pdf"
+# )
 thesis2 = Thesis.new(
   user_id: user2.id,
   title: "Expression Écrite",
@@ -1629,7 +1629,7 @@ puts "✓ theses seeded"
 
 # tags (using act-as-taggable gem)
 
-thesis1_tags = [ "mix","culture","DJing","radio","curating","commissaire d'exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain" ]
+# thesis1_tags = [ "mix","culture","DJing","radio","curating","commissaire d'exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain" ]
 thesis2_tags = [ "comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie" ]
 thesis3_tags = [ "hommage" ]
 thesis4_tags = [ "mirages", "espage", "image", "simulation" ]
@@ -1668,7 +1668,7 @@ thesis38_tags = [ "communication", "culturelle", "théâtre", "patrimoine", "est
 thesis40_tags = [ "penser", "typographie", "lettres", "couleur", "expérimentation", "indépendance", "héritage" ]
 
 
-thesis1.tag_list.add(thesis1_tags.join(','), parse: true)
+# thesis1.tag_list.add(thesis1_tags.join(','), parse: true)
 thesis2.tag_list.add(thesis2_tags.join(','), parse: true)
 thesis3.tag_list.add(thesis3_tags.join(','), parse: true)
 thesis4.tag_list.add(thesis4_tags.join(','), parse: true)
@@ -1789,7 +1789,7 @@ puts "✓ school_subcategories seeded"
 
 # thesis_diplomas table
 
-thesis1.diploma = dnsep
+# thesis1.diploma = dnsep
 thesis2.diploma = dnsep
 thesis3.diploma = dnsep
 thesis4.diploma = dnsep
@@ -1832,7 +1832,7 @@ thesis40.diploma = ensad
 
 puts "✓ thesis.diploma seeded"
 
-thesis1.save!
+# thesis1.save!
 thesis2.save!
 thesis3.save!
 thesis4.save!
@@ -1877,7 +1877,7 @@ puts "✓ thesis saved!"
 
 
 # thesis_diploma_subcategories table
-thesisDiploma1 = ThesisDiploma.find_by_thesis_id(thesis1.id)
+# thesisDiploma1 = ThesisDiploma.find_by_thesis_id(thesis1.id)
 thesisDiploma2 = ThesisDiploma.find_by_thesis_id(thesis2.id)
 thesisDiploma3 = ThesisDiploma.find_by_thesis_id(thesis3.id)
 thesisDiploma4 = ThesisDiploma.find_by_thesis_id(thesis4.id)
@@ -1919,8 +1919,8 @@ thesisDiploma38 = ThesisDiploma.find_by_thesis_id(thesis38.id)
 thesisDiploma40 = ThesisDiploma.find_by_thesis_id(thesis40.id)
 
 
-thesis1_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3b.id)
-thesis1_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3c.id)
+# thesis1_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3b.id)
+# thesis1_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3c.id)
 thesis2_dnsep_subcategories6a  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma2.id,  subcategory_id: subcategories6a.id)
 thesis2_dnsep_subcategories6c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma2.id,  subcategory_id: subcategories6c.id)
 thesis3_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma3.id,  subcategory_id: subcategories3b.id)

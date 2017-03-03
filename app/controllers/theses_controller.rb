@@ -12,7 +12,7 @@ class ThesesController < ApplicationController
     @schools = School.all
     @school_cities = School.order("name").group_by(&:city)
     @diplomas = Diploma.all
-    theses = policy_scope(Thesis).order(created_at: :asc)
+    theses = policy_scope(Thesis).order(created_at: :desc)
     @theses_per_category = []
     @results.each do |thesis|
       @theses_per_category << thesis.categories_names
