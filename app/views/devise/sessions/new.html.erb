@@ -10,12 +10,11 @@
 
     <div class="form-actions">
       <%- if devise_mapping.omniauthable? %>
-      <ul class="image-list signin-icons">
-        <%- resource_class.omniauth_providers.each do |provider| %>
-          <li><%= link_to ("<span class='fa fa-twitter'></span> Sign in with #{provider.to_s.titleize}").html_safe, omniauth_authorize_path(resource_name, provider), class: "button"%>
-          </li>
-        <% end %>
-      </ul>
+        <div class="image-list signin-icons">
+          <%- resource_class.omniauth_providers.each do |provider| %>
+            <%= link_to ("<span class='fa fa-twitter'></span> Sign in with #{provider.to_s.titleize}").html_safe, omniauth_authorize_path(resource_name, provider), id:"twitter-signin", class: "button big upper"%>
+            <% end -%>
+        </div>
       <% end -%>
       <%= f.button :submit, t(".sign_in"), class: "button secondary upper big" %>
     </div>
