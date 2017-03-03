@@ -35,7 +35,7 @@
         border-color: lighten($color-midgray, 50%) !important;
       }
     }
-    [data-filter=".architecture"] {
+    [data-filter=".architecture"], .artchitecture {
       border-color: $color-architecture !important;
       color: $color-architecture !important;
       &:hover,
@@ -44,7 +44,7 @@
         border-color: lighten($color-architecture, 30%) !important;
       }
     }
-    [data-filter=".patrimoines"] {
+    [data-filter=".patrimoines"], .patrimoines {
       border-color: $color-patrimoines !important;
       color: $color-patrimoines !important;
       &:hover,
@@ -53,7 +53,7 @@
         border-color: lighten($color-patrimoines, 35%) !important;
       }
     }
-    [data-filter=".arts-plastiques"] {
+    [data-filter=".arts-plastiques"], .arts-plastiques {
       border-color: $color-arts-plastiques !important;
       color: $color-arts-plastiques !important;
       &:hover,
@@ -62,7 +62,7 @@
         border-color: lighten($color-arts-plastiques, 45%) !important;
       }
     }
-    [data-filter=".spectacle-vivant"] {
+    [data-filter=".spectacle-vivant"], .spectacle-vivant {
       border-color: $color-spectacle-vivant !important;
       color: $color-spectacle-vivant !important;
       &:hover,
@@ -71,7 +71,7 @@
         border-color: lighten($color-spectacle-vivant, 40%) !important;
       }
     }
-    [data-filter=".cinema-et-audiovisuel"] {
+    [data-filter=".cinema-et-audiovisuel"], .cinema-et-audiovisuel {
       border-color: darken($color-cinema-audiovisuel, 12%) !important;
       color: darken($color-cinema-audiovisuel, 12%) !important;
       &:hover,
@@ -80,7 +80,7 @@
         border-color: lighten($color-cinema-audiovisuel, 30%) !important;
       }
     }
-    [data-filter=".livre"] {
+    [data-filter=".livre"], .livre {
       border-color: $color-livre !important;
       color: $color-livre !important;
       &:hover,
@@ -89,7 +89,7 @@
         border-color: lighten($color-livre, 40%) !important;
       }
     }
-    [data-filter=".presse"] {
+    [data-filter=".presse"], .presse {
       border-color: $color-presse !important;
       color: $color-presse !important;
       &:hover,
@@ -98,7 +98,7 @@
         border-color: lighten($color-presse, 40%) !important;
       }
     }
-    [data-filter=".gestion-et-mediation"] {
+    [data-filter=".gestion-et-mediation"], .gestion-et-mediation {
       border-color: $color-gestion-mediation !important;
       color: $color-gestion-mediation !important;
       &:hover,

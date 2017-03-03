@@ -42,9 +42,9 @@
       width: 32px;
       margin: 12px 0;
       text-align: right;
-      transition: opacity 0.2s ease;
+      transition: transform 0.2s ease;
       &:hover {
-        width: 36px;
+        transform: scale(1.05);
       }
     }
     #bookmark-counter {
@@ -62,15 +62,19 @@
     }
   }
   #download-btn {
-    position: absolute;
-    top: 104px;
-    left: 24px;
+    position: fixed;
+    top: 112px;
+    left: 32px;
     transition: opacity 0.2s ease;
-    background-color: $color-text;
+    background-color: #111;
     border-radius: 32px;
     width: 64px;
     height: 64px;
     padding: 10px 14px;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
     i {
       color: #fff;
     }
@@ -111,16 +115,15 @@
     .subcategory {
       display: inline-block;
       font-family: $text-font-family, sans-serif;
-      background-color: $color-success;
-      color: #fff;
       padding: 0.5em 1.25em;
-      border-radius: 21px;
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 3px;
       margin: 0 4px 8px 0;
-      font-size: 14px;
-      letter-spacing: 0.025em;
-    }
-    .subcategory {
-      font-size: 12px;
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      font-weight: bold;
+      cursor: pointer;
     }
     .resume {
       font-size: 18px;
@@ -138,6 +141,73 @@
       @include transition;
       &:hover {
         background-color: rgba(0,0,0,.1);
+      }
+    }
+    .artchitecture {
+      background-color: lighten($color-architecture, 30%) !important;
+      border-color: lighten($color-architecture, 30%) !important;
+      &:hover,
+      &.category {
+        background-color: lighten($color-architecture, 30%) !important;
+        border-color: lighten($color-architecture, 30%) !important;
+      }
+    }
+    .patrimoines {
+      border-color: $color-patrimoines !important;
+      color: $color-patrimoines !important;
+      &:hover,
+      &.category {
+        background-color: lighten($color-patrimoines, 35%) !important;
+        border-color: lighten($color-patrimoines, 35%) !important;
+      }
+    }
+    .arts-plastiques {
+      border-color: $color-arts-plastiques !important;
+      color: $color-arts-plastiques !important;
+      &:hover,
+      &.category {
+        background-color: lighten($color-arts-plastiques, 45%) !important;
+        border-color: lighten($color-arts-plastiques, 45%) !important;
+      }
+    }
+    .spectacle-vivant {
+      border-color: $color-spectacle-vivant !important;
+      color: $color-spectacle-vivant !important;
+      &:hover,
+      &.category {
+        background-color: lighten($color-spectacle-vivant, 40%) !important;
+        border-color: lighten($color-spectacle-vivant, 40%) !important;
+      }
+    }
+    .cinema-et-audiovisuel {
+      border-color: darken($color-cinema-audiovisuel, 12%) !important;
+      color: darken($color-cinema-audiovisuel, 12%) !important;
+      &:hover,
+      &.category {
+        background-color: lighten($color-cinema-audiovisuel, 30%) !important;
+        border-color: lighten($color-cinema-audiovisuel, 30%) !important;
+      }
+    }
+    .livre {
+      background-color: lighten($color-livre, 40%) !important;
+      border-color: lighten($color-livre, 40%) !important;
+    }
+    .presse {
+      border-color: $color-presse !important;
+      color: $color-presse !important;
+      &:hover,
+      &.category {
+        background-color: lighten($color-presse, 40%) !important;
+        border-color: lighten($color-presse, 40%) !important;
+      }
+    }
+    .gestion-et-mediation {
+      border-color: $color-gestion-mediation !important;
+      color: $color-gestion-mediation !important;
+      &:hover,
+      &.category {
+        background-color: lighten($color-gestion-mediation, 40%) !important;
+        border-color: lighten($color-gestion-mediation, 40%) !important;
       }
     }
   }

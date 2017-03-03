@@ -70,10 +70,10 @@
       </div>
 
       <% unless @thesis.subcategories == [] %>
-        <span class="category"><%= @thesis.subcategories.first.category.name %></span><br>
+        <span class="category upper <%= @thesis.subcategories.first.category.name.parameterize %>"><%= @thesis.subcategories.first.category.name %></span><br>
         <p class="subcategories">
           <% @thesis.subcategories.each do |subcategory| %>
-            <span class="subcategory"><%= subcategory.name %></span>
+            <span class="subcategory upper <%= subcategory.category.name.parameterize %>"><%= subcategory.name %></span>
           <% end %>
         </p>
       <% end %>
