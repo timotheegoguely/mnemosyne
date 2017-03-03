@@ -1630,25 +1630,14 @@ puts "✓ theses seeded"
 
 # tags (using act-as-taggable gem)
 
-tags = [ "mix","culture","DJing","radio","curating","commissaire d’exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain","comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie","réseau","livre","rhizome" ]
+thesis1_tags = [ "mix","culture","DJing","radio","curating","commissaire d’exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain" ]
+thesis2_tags = [ "comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie" ]
 
-tag_list_for_thesis1 = []
-tag_list_for_thesis2 = []
-tag_list_for_thesis6 = []
+thesis6_tags = [ "web","réseau","livre","rhizome" ]
 
-for i in 0..21 do
-  tag_list_for_thesis1 << tags[i]
-end
-for i in 0..6 do
-  tag_list_for_thesis2 << tags[i]
-end
-for i in 0..4 do
-  tag_list_for_thesis6 << tags[i]
-end
 
-thesis1.tag_list.add(tag_list_for_thesis1.join(','), parse: true)
-thesis2.tag_list.add(tag_list_for_thesis2.join(','), parse: true)
-thesis6.tag_list.add(tag_list_for_thesis6.join(','), parse: true)
+thesis1.tag_list.add(thesis1_tags.join(','), parse: true)
+thesis1.tag_list.add(thesis2_tags.join(','), parse: true)
 
 puts "✓ tags added"
 

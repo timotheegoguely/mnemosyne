@@ -1,12 +1,12 @@
   <table class="table" id="table">
     <thead>
       <tr>
-        <th id="thumbnail-th"></th>
-        <th><%= t('.thesis_title_header') %></th>
-        <th><%= t('.author_name_header') %></th>
-        <th><%= t('.school_acronym_header') %></th>
-        <th><%= t('.year_header') %></th>
-        <th id="bookmark-th"><i class='material-icons md-18'>turned_in</i></th>
+        <th id="th-thumbnail"></th>
+        <th id="th-title"><%= t('.thesis_title_header') %></th>
+        <th id="th-author"><%= t('.author_name_header') %></th>
+        <th id="th-school"><%= t('.school_acronym_header') %></th>
+        <th id="th-year"><%= t('.year_header') %></th>
+        <th id="th-bookmark"><i class='material-icons md-18'>turned_in</i></th>
       </tr>
     </thead>
     <% theses.each do |thesis| %>

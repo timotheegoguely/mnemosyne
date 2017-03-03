@@ -20,7 +20,7 @@ class ThesesController < ApplicationController
   end
 
   def index
-    @theses = policy_scope(Thesis).order(created_at: :desc)
+    @theses = policy_scope(Thesis).order(created_at: :asc)
     @schools = School.all
     @school_cities = School.order("name").group_by(&:city)
     @diplomas = Diploma.all
