@@ -19,9 +19,3 @@ $(function() {
 
   });
 });
-
-// Dropzone.options.myAwesomeDropzone = {
-//   maxFilesize: 10, // MB
-//   addRemoveLinks: true,
-//   createImageThumbnails: true
-// };
