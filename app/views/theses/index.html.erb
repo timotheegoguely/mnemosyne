@@ -10,7 +10,7 @@
   <div id="cards" class="cards hide z100">
     <%= render "shared/cards", theses: @theses %>
   </div>
-  <footer id="card-preview" style="display: none">
+  <footer id="card-preview">
     <% @theses.each do |thesis| %>
       <table class="table thesis-footer" id="thesis-footer-<%= thesis.id %>" style="display: none">
         <tbody>
