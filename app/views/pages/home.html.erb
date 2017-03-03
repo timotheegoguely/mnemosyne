@@ -1,18 +1,19 @@
 <main class="container full", id="main">
 
   <section class="hero">
-    <div id="intro">
+    <div id="intro" class="z200">
       <h1>mnémosyne</h1>
       <h2>
-        <%= t('.tagline_1') %><br><%= t('.tagline_2')%><span class="categories">
+        <%= t('.tagline_1') %><br><%= t('.tagline_2')%> d’<span class="categories">
           <% Thesis::CATEGORIES.each do |category| %>
-            <%= link_to category.gsub("-", " "), search_path(keywords: category.gsub("-", " ")), id: category, class:"" %>,
+            <%= link_to category.gsub("-", " "), search_path(keywords: category.gsub("-", " ")), id: category, class: "home-category" %>
           <% end %>
         </span>
       </h2>
       <%= link_to t('.button_theses_index'), theses_path, class: "button outline upper secondary large margin-big" %>
-      <%= image_tag asset_path("mnemosyne-view-cards.png"), {class: "screenshot shadow", id: "view-cards"} %>
     </div>
+    <%= image_tag asset_path("covers/2013-mickael_cuillerat-l_avenir_des_villes_musees.jpg"), {class: "home-cover shadow", id: "cover-1"} %>
+    <%= image_tag asset_path("covers/2016-antoine_omerin-wesh_alors.jpg"), {class: "home-cover shadow", id: "cover-2"} %>
   </section>
 
   <!-- <section class="hero">
