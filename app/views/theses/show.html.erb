@@ -91,7 +91,7 @@
       </div>
 
       <% if user_signed_in? && @thesis.download && @thesis.pdf %>
-        <%= link_to "<i class='material-icons md-36' id='download-btn'>file_download</i>".html_safe, @pdf, target: "_blank", class: "button big upper secondary" %>
+        <%= link_to "<i class='material-icons md-36'>file_download</i>".html_safe, @pdf, target: "_blank", id: "download-btn" %>
       <% end %>
     </div>
   </div>

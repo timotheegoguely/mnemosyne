@@ -61,6 +61,20 @@
       opacity: 0.5;
     }
   }
+  #download-btn {
+    position: absolute;
+    top: 104px;
+    left: 24px;
+    transition: opacity 0.2s ease;
+    background-color: $color-text;
+    border-radius: 32px;
+    width: 64px;
+    height: 64px;
+    padding: 10px 14px;
+    i {
+      color: #fff;
+    }
+  }
   #thesis-content {
     hr {
       margin: 24px 0;
