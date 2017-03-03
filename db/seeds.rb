@@ -1106,7 +1106,7 @@ thesis17 = Thesis.new(
   subtitle: "",
   year: Date.new(2013),
   resume: "Un mot s’évaporant à l’oreille lors d’une conversation, une
-  inscription lapidaire sur une tablette dans un musée, une a∞che
+  inscription lapidaire sur une tablette dans un musée, une affiche
   de théâtre sur le mur d’une station de métro, un doigt désignant ce
   que l’enfant veut de sa mère. À quoi résumer ce terme « langage »
   aussi complexe qu’il questionne le monde de la linguistique, de
@@ -1122,7 +1122,7 @@ thesis17 = Thesis.new(
   langage informatique, etc. Une liste exhaustive parfois contestée
   selon le statut du spécialiste concerné (linguiste, sémiologue,
   philosophe, scientifique, etc.). Qu’importe, le langage interroge ici
-  une a≠aire de vécu et d’expériences singulières.
+  une affaire de vécu et d’expériences singulières.
 
   L’écrivain Bringhusrt définit le langage comme étant ;
   « ce qui nous parle autant que ce que nous parlons. Par nos neurones, nos
@@ -1272,19 +1272,19 @@ thesis22 = Thesis.new(
   subtitle: "",
   year: Date.new(2014),
   resume: "Enfant, j’ai fréquemment cherché à estomper ma différence, ma dyslexie.
-  En effet, elle est souvent assimilée comme un handicap 2 , peu visible, mais
+  En effet, elle est souvent assimilée comme un handicap, peu visible, mais
   certes, diagnostiquée par des spécialistes qui renforcent son caractère sévère.
   Si chaque individu est singulier, certains comportent des nuances notoires
   rompant avec les normes dominantes, là où se trouve le handicap 3 , mais cela
   reste une fois de plus une question de point de vue.
-  Dans le cas du handicap ou défi cience 4 , nous allons voir dans ce mémoire,
+  Dans le cas du handicap ou déficience, nous allons voir dans ce mémoire,
   de quelle manière une personne n’ayant pas les mêmes facultés d’obser-
   vation, d’objectivation, etc. peut insuffler un regard complémentaire
-  aux normes dominantes. Ayant des diffi cultés à communiquer de manière
+  aux normes dominantes. Ayant des difficultés à communiquer de manière
   verbale (écrit et oral), le design graphique m’a donné des outils d’une
   communication autre. L’un n’empêchant pas l’autre, mais ce mémoire fut pour
   moi un véritable challenge. N’étant pas scientifique, je n’ai nullement
-  la prétention d’off rir une solution universelle pour outrepasser quelconque
+  la prétention d’offrir une solution universelle pour outrepasser quelconque
   handicap, mais aborder la question de la dyslexie sous l’angle de l’organisation
   (qui est un problème chronique), qui présente selon moi des intérêts connexes
   transversaux. Dans une société où le temps est une valeur financière,
@@ -1299,7 +1299,7 @@ thesis22 = Thesis.new(
 thesis23 = Thesis.new(
   user_id: user23.id,
   title: "De la pensée à la forme",
-  subtitle: "Processus de formalisation d’un espcace mental dans le champ de la création artistique",
+  subtitle: "Processus de formalisation d’un espace mental dans le champ de la création artistique",
   year: Date.new(2014),
   resume: " Commencer par la forme artistique ». Autrement dit, remonter
   à sa genèse en la considérant comme production de l’espace
@@ -1350,7 +1350,7 @@ thesis25 = Thesis.new(
   — Nikola Tesla, 1909
 
   À la fin des années 1980, quand les téléphones portables ont fait leur apparition dans le cinéma hollywoodien, peu de gens étaient capables d’imaginer l’ampleur de l’intégration de ces appareils dans nos vies deux décennies plus tard. Dans le film Wall Street d’Oliver Stone de 1987, le téléphone portable du magnat de la finance Gordon Gekko n’est jamais loin de lui. C’est un des symboles de l’emprise qu’il exerce sur ses affaires et de l’influence qu’il a sur le reste du monde. « L’argent ne dort jamais », Gordon Gekko et son téléphone non plus. Pour autant, avec la taille d’un gros fer à repasser et un prix de 3995 $US, les avancées révolutionnaires apportées par le DynaTAC de Motorola ne conviennent pas à toutes les poches. Qui aurait envie de se balader avec un téléphone de 800 grammes et 25 centimètres de haut sur lui ?
-  De nos jours, la plupart des portables tiennent dans le creux d’une main et il y a, en France, plus d’abonnés mobiles que d’habitants (64,4 millions d’abonnés en 2010 selon l’ARCEP, certaines personnes possédant deux abonnements). Cela étant, l’existence dans la vie de chacun d’entre nous de ces appareils ne tient pas seulement à la capacité de l’objet à nous permettre de communiquer avec n’importe qui, n’importe quand et n’importe où. Elle provient aussi de la multiplicité des usages qu’il est possible d’en faire : agenda, mail, messagerie instantanée, accès à internet permanent, navigation routière, baladeur mp3, radio FM, réveil, lampe de poche, ou encore livre de recettes de cuisine, plan du métro, traducteur vocal, interface de publication pour blog, réservation de billets de train, système de montage audio ou vidéo, niveau à bulle... Il devient tellement naturel de se servir de son téléphone pour toutes ces tâches qu’on remarque à peine son existence dans notre vie quotidienne. Pour une",
+  De nos jours, la plupart des portables tiennent dans le creux d’une main et il y a, en France, plus d’abonnés mobiles que d’habitants (64,4 millions d’abonnés en 2010 selon l’ARCEP, certaines personnes possédant deux abonnements). Cela étant, l’existence dans la vie de chacun d’entre nous de ces appareils ne tient pas seulement à la capacité de l’objet à nous permettre de communiquer avec n’importe qui, n’importe quand et n’importe où. Elle provient aussi de la multiplicité des usages qu’il est possible d’en faire : agenda, mail, messagerie instantanée, accès à internet permanent, navigation routière, baladeur mp3, radio FM, réveil, lampe de poche, ou encore livre de recettes de cuisine, plan du métro, traducteur vocal, interface de publication pour blog, réservation de billets de train, système de montage audio ou vidéo, niveau à bulle... Il devient tellement naturel de se servir de son téléphone pour toutes ces tâches qu’on remarque à peine son existence dans notre vie quotidienne.",
   license: "",
   link: "",
   school_id: school1.id,
@@ -1362,7 +1362,7 @@ thesis26 = Thesis.new(
   subtitle: "Comment les politiciens français crédibilisent leurs discours?",
   year: Date.new(2011),
   resume: "Aujourd’hui, il est incontestable d’admettre l’invasion des statistiques dans l’espace public. On entend par « statistiques » les données produites par le système statistique public français, autrement dit, les chiffres. À ne pas confondre avec la statistique, qui est la méthode utilisée pour les produire.
-    En France, certains de nos hommes politiques manipulent les statistiques. Cela se sait de plus en plus grâce à des informations diffusées à la télévi- sion ou sur internet. Par exemple à travers des sites web personnels, des blogs, des sites d’informations générales ou de revues de presse politique comme le monde, libération, l’humanité, le figaro, etc. Il y a également des informations qui s’écoutent à la ra- dio ou qui sont publiées sous forme de livres. Ces derniers peuvent être écrits par des journalistes, des politiciens ou encore des personnes qui, se sentant particulièrement impliquées par un sujet, ont pris la démarche d’enquêter eux-même. Qu’importent leurs origines, nous ne pouvons affirmer la véracité des informations recueillies. Par contre, la quantité et la multitude de leurs présences nous permettent certaines interrogations.",
+    En France, certains de nos hommes politiques manipulent les statistiques. Cela se sait de plus en plus grâce à des informations diffusées à la télévision ou sur internet. Par exemple à travers des sites web personnels, des blogs, des sites d’informations générales ou de revues de presse politique comme le monde, libération, l’humanité, le figaro, etc. Il y a également des informations qui s’écoutent à la radio ou qui sont publiées sous forme de livres. Ces derniers peuvent être écrits par des journalistes, des politiciens ou encore des personnes qui, se sentant particulièrement impliquées par un sujet, ont pris la démarche d’enquêter eux-même. Qu’importent leurs origines, nous ne pouvons affirmer la véracité des informations recueillies. Par contre, la quantité et la multitude de leurs présences nous permettent certaines interrogations.",
   license: "",
   link: "",
   school_id: school1.id,
@@ -1373,7 +1373,7 @@ thesis27 = Thesis.new(
   title: "Les paradis artificiels",
   subtitle: "",
   year: Date.new(2011),
-  resume: "Tout commence par un fait, un statut : nous vivons dans une logistique stable. En tant que citoyen bien inséré dans la société, on aura élu un lieu comme son domicile, on en connaîtra éventuellement un autre pour exercer sa profession ; on possèdera en dehors de cela un petit cercle d’amis, du moins quelques fréquentations régulières parmi lesquelles les membres proches de cet ensemble filial qu’est la famille. Selon sa situation, que l’on soit plus ou moins pourvu, on a bâti en soi un rythme quotidien où sont ancrés les repères néces- saires pour mener une vie à peu près normale et satisfaisante. Ainsi, si je devais me présenter, je pourrais dire que je m’appelle Jacques, que j’habite Grenoble, que je travaille environ neuf heures par jour à l’entreprise Schneider Électricité, cela en dehors de mes congés payés où je pars rendre visite à mes petits enfants résidant en Autriche avec ma fille aînée. Si l’enchaînement des données — identité, emploi, situation familiale, loisirs — varie peu d’une personne à l’autre, c’est qu’il correspond aussi à l’ordre logique d’une société où l’on trouve sa place dans le travail, en l’échange duquel on perçoit son dû sous forme d’argent : monnaie courante pour subsister à ses besoins, des plus élémentaires aux plus superficiels. L’application de la loi a fait que, s’il y a un temps consacré au travail, il existe forcément un temps de vacance, où, comme l’indique le mot pris en son sens littéral, on manque temporairement à son poste habituel, on prends congé de son cadre de vie pour aller chercher autre chose, ailleurs.
+  resume: "Tout commence par un fait, un statut : nous vivons dans une logistique stable. En tant que citoyen bien inséré dans la société, on aura élu un lieu comme son domicile, on en connaîtra éventuellement un autre pour exercer sa profession ; on possèdera en dehors de cela un petit cercle d’amis, du moins quelques fréquentations régulières parmi lesquelles les membres proches de cet ensemble filial qu’est la famille. Selon sa situation, que l’on soit plus ou moins pourvu, on a bâti en soi un rythme quotidien où sont ancrés les repères nécessaires pour mener une vie à peu près normale et satisfaisante. Ainsi, si je devais me présenter, je pourrais dire que je m’appelle Jacques, que j’habite Grenoble, que je travaille environ neuf heures par jour à l’entreprise Schneider Électricité, cela en dehors de mes congés payés où je pars rendre visite à mes petits enfants résidant en Autriche avec ma fille aînée. Si l’enchaînement des données — identité, emploi, situation familiale, loisirs — varie peu d’une personne à l’autre, c’est qu’il correspond aussi à l’ordre logique d’une société où l’on trouve sa place dans le travail, en l’échange duquel on perçoit son dû sous forme d’argent : monnaie courante pour subsister à ses besoins, des plus élémentaires aux plus superficiels. L’application de la loi a fait que, s’il y a un temps consacré au travail, il existe forcément un temps de vacance, où, comme l’indique le mot pris en son sens littéral, on manque temporairement à son poste habituel, on prends congé de son cadre de vie pour aller chercher autre chose, ailleurs.
   Il s’agit alors de combler de la meilleure façon ce temps vacant dont on dispose.",
   license: "",
   link: "",
@@ -1385,9 +1385,9 @@ thesis28 = Thesis.new(
   title: "Produire autrement",
   subtitle: "",
   year: Date.new(2011),
-  resume: "Inspirée par les terroirs, la nourriture est un élément central et fondateur des sociétés humaines. Depuis les premières civilisations, l’homme a toujours produit les aliments dont il avait besoin en fonction de son envi- ronnement naturel, cependant, aujourd’hui, la production des ressources agricoles semble être dictée par une politique échappant aux considéra- tions locales.
+  resume: "Inspirée par les terroirs, la nourriture est un élément central et fondateur des sociétés humaines. Depuis les premières civilisations, l’homme a toujours produit les aliments dont il avait besoin en fonction de son environnement naturel, cependant, aujourd’hui, la production des ressources agricoles semble être dictée par une politique échappant aux considéra- tions locales.
   La révolution industrielle, l’exode rural, et l’uniformisation des modes de vies qui s’en suivit, ont profondément influencé la production agricole.
-  L’agriculture a peu à peu évolué en parallèle d’une mondialisation crois sante, et d’une course à la production de masse.
+  L’agriculture a peu à peu évolué en parallèle d’une mondialisation croissante, et d’une course à la production de masse.
   Le paysan rural, qui cultive ses terres au rythme de la nature pour nourrir la population environnante est devenu une véritable image d’Épinal.
   Cette société paysanne autonome autrefois a fait place à des exploitants agricoles dépendants d’une part des nombreuses coopératives mais sur tout de la politique agricole et des multinationales du secteur.
   Les terres agricoles sont devenues des « No Man’s Land », peuplées par des machines toujours plus performantes. Les maîtres mots sont devenus : immédiateté, rentabilité, et productivité.",
@@ -1418,8 +1418,7 @@ thesis30 = Thesis.new(
   Une parcelle est proposée pour ce conservatoire mais sa position sur le site va à l’encontre de la volonté de la ville, qui est de faire de cet ilot un espace culturel et sportif, en lien avec le centre ville, en créant un véritable pôle d’attraction. En effet, cette parcelle est à l’opposé de la salle de spectacle et de la piscine, les deux éléments majeurs de l’ilot, et n’est que peu visible et peu accessible car il est encastré entre des logements collectifs et des entrepôts.
   D’autre part, à quelques mètres de là, un workshop de l’atelier littoral a eu lieu. Il traite la marina et des abords du port en partant du centre ville jusqu’à un pôle historique et sportif, où sont situés le fort Vauban et le creps.
   Il intégrerait des commerces, bureaux, parkings, logements et hôtels, et accueillerait un pôle multimodal : gare routière, et départ du nouveau tram bus. Ce projet redynamiserait le centre ville et réconcilierait les Antibois avec leur littoral, aujourd’hui beaucoup trop associé aux touristes et aux inconvénients que leur venue génère pendant la période estivale.
-  Je choisis de profiter de la réflexion menée sur cet espace tangent à mon site pour m’intégrer à ce regard porté vers le littoral et cet espace lié au centre
-  ville, au port, et à l’espace Vauban.",
+  Je choisis de profiter de la réflexion menée sur cet espace tangent à mon site pour m’intégrer à ce regard porté vers le littoral et cet espace lié au centreville, au port, et à l’espace Vauban.",
   license: "",
   link: "",
   school_id: school6.id,
@@ -1445,7 +1444,7 @@ thesis32 = Thesis.new(
   resume: "Présenté sous forme de guide touristique, c’est un outil pour comprendre la ville, la construction de son image.
   Mais pourquoi un guide touristique ?
   Tout d’abord d’un point de vue historique, comme le montre la Timeline, l’étude trouve son point de départ à l’aube du XIXe siècle, époque marquée par le début des récits de voyage. Héritiers du Grand Tour, ils sont les ancêtres du nos guides.
-  Mais le guide touristique reste encore aujourd’hui un intermédiaire de choixentre la ville et le voyageur, regroupant des données culturelles, historiques, pratiques, c’est un compagnon de route pour le chasseur de ville, c’est un faiseur d’image.
+  Mais le guide touristique reste encore aujourd’hui un intermédiaire de choix entre la ville et le voyageur, regroupant des données culturelles, historiques, pratiques, c’est un compagnon de route pour le chasseur de ville, c’est un faiseur d’image.
   La ville et l’image, son image, est un thème fondamental dans l’étude de l’architecture. En 4 ème année, il nous est donné la possibilité de partir pendant une année étudier à l’étranger. Mais parmi toutes les destinations… comment choisir ? Il s’agit ici de la première rencontre du possible avec la ville. Que connaissons-nous des villes à part leur image ? Pourquoi s’imagine-t-on vivre dans une ville plutôt qu’une autre ?
   Tout ca n’est qu’affaire d’image.",
   license: "",
@@ -1630,25 +1629,82 @@ puts "✓ theses seeded"
 
 # tags (using act-as-taggable gem)
 
-tags = [ "mix","culture","DJing","radio","curating","commissaire d’exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain","comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie","réseau","livre","rhizome" ]
+thesis1_tags = [ "mix","culture","DJing","radio","curating","commissaire d'exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain" ]
+thesis2_tags = [ "comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie" ]
+thesis3_tags = [ "hommage" ]
+thesis4_tags = [ "mirages", "espage", "image", "simulation" ]
+thesis5_tags = [ "wesh", "puzzle", "mots", "pensées" ]
+thesis6_tags = [ "web","réseau","livre","rhizome" ]
+thesis7_tags = [ "exhibitionnisme", "culture", "confession", "normes" ]
+thesis8_tags = [ "simulations", "graphisme", "fiction", "perception" ]
+thesis9_tags = [ "atlas", "film", "action", "divertissement", "hollywood", "thèmes" ]
+thesis10_tags = [ "imaginer", "fin", "monde", "catastrophe", "urgence", "croyances" ]
+thesis11_tags = [ "data", "visualisation", "communication", "numérique", "monde", "connecté" ]
+thesis12_tags = [ "espaces", "jeux", "imagination", "enfants", "émulation", "apprentissage", "créativité" ]
+thesis13_tags = [ "réel", "transfiguré", "proust", "œuvre", "poésie", "sensibilité", "vision", "émerveillement" ]
+thesis14_tags = [ "langue", "signes", "pensée", "mouvement", "information", "communauté", "accès", "savoir" ]
+thesis15_tags = [ "immortalité", "éternité", "peur", "mythologie", "fascination" ]
+thesis16_tags = [ "standard", "non-conforme", "amateur", "signification", "aime", "cultiver" ]
+thesis17_tags = [ "décrypter", "langage", "difficultés", "unique", "universel" ]
+thesis18_tags = [ "déchets", "ultimes", "nucléaire", "stockages", "encombrants", "enjeux", "catastrophes" ]
+thesis19_tags = [ "vitesse", "temps", "immédiateté", "folie", "empressement", "fracture" ]
+thesis20_tags = [ "danser", "espace", "mouvements", "relations", "corps", "conscience", "diversité", 'culture' ]
+thesis21_tags = [ "expériences", "déplacements", "voyage", "expérience", "culture", "création" ]
+thesis22_tags = [ "norme", "dyslexie", "différence", "handicap", "point de vue" ]
+thesis23_tags = [ "pensée", "formalisation", "création", "artistique", "vision" ]
+thesis24_tags = [ "enfance", "imaginaire", "réel", "concept", "création", "expérimentations", "mimétisme", "sensibilité" ]
+thesis25_tags = [ "interfaces", "mouvements", "tesla", "mobile" ]
+thesis26_tags = [ "manipulation", "statistiques", "politique", "information" ]
+thesis27_tags = [ "paradis", "artificiels", "citoyen", "société", "repères" ]
+thesis28_tags = [ "produire", "autrement", "mondialisation", "immédiateté", "rentabilité", "productivité" ]
+thesis29_tags = [ "l'abordage", "délaissés", "espace", "public", "failles", "système", "désindustrialisation" ]
+thesis30_tags = [ "conservatoire", "musique", "danse", "antibes", "littoral" ]
+thesis31_tags = [ "ville-musée", "conciliation", "passé", "modernité", "urbanisation" ]
+thesis32_tags = [ "florence", "comprendre", "ville", "guide", "touristique" ]
+thesis33_tags = [ "architectures", "enjeux", "conservation", "patrimoine", "innovations" ]
+thesis34_tags = [ "traces", "passé", "ville", "patrimoine", "vestiges", "projets" ]
+thesis37_tags = [ "indépendant", "cinéma", "culture", "mainstream", "positive", "négative" ]
+thesis38_tags = [ "communication", "culturelle", "théâtre", "patrimoine", "esthétique" ]
+thesis40_tags = [ "penser", "typographie", "lettres", "couleur", "expérimentation", "indépendance", "héritage" ]
 
-tag_list_for_thesis1 = []
-tag_list_for_thesis2 = []
-tag_list_for_thesis6 = []
 
-for i in 0..21 do
-  tag_list_for_thesis1 << tags[i]
-end
-for i in 0..6 do
-  tag_list_for_thesis2 << tags[i]
-end
-for i in 0..4 do
-  tag_list_for_thesis6 << tags[i]
-end
-
-thesis1.tag_list.add(tag_list_for_thesis1.join(','), parse: true)
-thesis2.tag_list.add(tag_list_for_thesis2.join(','), parse: true)
-thesis6.tag_list.add(tag_list_for_thesis6.join(','), parse: true)
+thesis1.tag_list.add(thesis1_tags.join(','), parse: true)
+thesis2.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis3.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis4.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis5.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis6.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis7.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis8.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis9.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis10.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis11.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis12.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis13.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis14.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis15.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis16.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis17.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis18.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis19.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis20.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis21.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis22.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis23.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis24.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis25.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis26.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis27.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis28.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis29.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis30.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis31.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis32.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis33.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis34.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis37.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis38.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis40.tag_list.add(thesis2_tags.join(','), parse: true)
 
 puts "✓ tags added"
 
