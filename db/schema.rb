@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228204055) do
+ActiveRecord::Schema.define(version: 20170302190424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 20170228204055) do
     t.string   "document"
     t.boolean  "download",   default: false
     t.string   "cover"
+    t.string   "pdf"
     t.index ["school_id"], name: "index_theses_on_school_id", using: :btree
     t.index ["user_id"], name: "index_theses_on_user_id", using: :btree
   end
@@ -183,6 +184,9 @@ ActiveRecord::Schema.define(version: 20170228204055) do
     t.integer  "school_id"
     t.boolean  "admin",                             default: false
     t.string   "authentication_token",   limit: 32
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "image"
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

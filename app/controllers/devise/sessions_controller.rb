@@ -105,4 +105,9 @@ class Devise::SessionsController < DeviseController
     session[:thesis_year] = nil
     session[:thesis_tags] = nil
   end
+
+  # Omniauth
+  def auth_hash
+    request.env['omniauth.auth']
+  end
 end

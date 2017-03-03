@@ -1,12 +1,12 @@
   <table class="table" id="table">
     <thead>
       <tr>
-        <th id="thumbnail-th"></th>
-        <th><%= t('.thesis_title_header') %></th>
-        <th><%= t('.author_name_header') %></th>
-        <th><%= t('.school_acronym_header') %></th>
-        <th><%= t('.year_header') %></th>
-        <th id="bookmark-th"><i class='material-icons md-18'>turned_in</i></th>
+        <th id="th-thumbnail"></th>
+        <th id="th-title"><%= t('.thesis_title_header') %></th>
+        <th id="th-author"><%= t('.author_name_header') %></th>
+        <th id="th-school"><%= t('.school_acronym_header') %></th>
+        <th id="th-year"><%= t('.year_header') %></th>
+        <th id="th-bookmark"><i class='material-icons md-18'>turned_in</i></th>
       </tr>
     </thead>
     <% theses.each do |thesis| %>
@@ -14,7 +14,15 @@
         <td class="thesis-thumbnail">
           <%= link_to user_thesis_path(thesis.user, thesis) do %>
             <%#= image_tag "http://placehold.it/32x48" %>
-            <div class="thumbnail" style="background-color: #ddd; height: 48px; width: 32px"></div>
+            <div class="thumbnail">
+              <% if thesis.cover? %>
+                <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "thesis-cover" %>
+              <% else %>
+                <%= image_tag asset_path("/covers/2014-timothee_goguely.jpg"), class: "thesis-cover" %>
+              <%# else %>
+                <%#= cl_image_tag("#{@thesis.document.file&.public_id}.png", :width => 400, :crop => :fill, :page => 1, :class => "thesis-cover") %>
+              <% end %>
+            </div>
           <% end %>
         </td>
         <td class="thesis-title">

@@ -1,6 +1,6 @@
 $( document ).ready( function() {
 
-  $( "#tab-map" ).click(function() {
+  $( "#tab-map" ).click( function() {
     if ($( this ).last().hasClass('active')) {
       map.invalidateSize();
     }
@@ -10,11 +10,10 @@ $( document ).ready( function() {
     $( '#card-preview' ).show();
   };
 
-  $( '.tabs li' ).click(function(){
+  $( '.tabs li' ).click( function() {
     if ($( '#tab-cards' ).hasClass( 'active' )) {
       $( '#card-preview' ).show();
-    }
-    else {
+    } else {
       $( '#card-preview' ).hide();
     };
   });

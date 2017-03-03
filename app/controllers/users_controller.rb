@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [ :show, :edit, :update ]
-  skip_before_action :authenticate_user!, only: [ :show, :new, :create, :update ]
+  before_action :set_user, only: [ :show ]
+  skip_before_action :authenticate_user!, only: [ :show ]
   layout "basic"
 
   def show
@@ -8,9 +8,13 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = current_user
+    authorize @user
   end
 
   def update
+    @user = current_user
+    authorize @user
     @user.update(user_params)
     redirect_to user_path(@user)
   end
@@ -23,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :bio, :birthdate, :website, :school)
+    params.require(:user).permit(:email, :first_name, :last_name, :bio, :birthdate, :website)
   end
 
 end

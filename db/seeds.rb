@@ -4,15 +4,12 @@ DiplomaSubcategory.destroy_all
 SchoolSubcategory.destroy_all
 ThesisDiploma.destroy_all
 SchoolDiploma.destroy_all
-# ThesisTag.destroy_all
 Subcategory.destroy_all
 Thesis.destroy_all
 User.destroy_all
 School.destroy_all
 Category.destroy_all
 Diploma.destroy_all
-# Tag.destroy_all
-
 
 # schools table
 
@@ -60,8 +57,118 @@ school4 = School.create!(
   website: "www.ecole-estienne.paris",
   phone_number: "+33 1 55 43 47 47"
 )
+school5 = School.create!(
+  name: "École Nationale Supérieure d’Architecture de Grenoble",
+  acronym: "ENSAG",
+  address_1: "60 avenue de Constantine",
+  address_2: "",
+  zipcode: "38036",
+  city: "Grenoble",
+  country: "France",
+  website: "www.grenoble.archi.fr",
+  phone_number: "+33 4 76 69 83 00"
+)
+school6 = School.create!(
+  name: "Institut National des Sciences Appliquées",
+  acronym: "INSA",
+  address_1: "24, Boulevard de la Victoire",
+  address_2: "",
+  zipcode: "67084",
+  city: "Strasbourg",
+  country: "France",
+  website: "www.insa-strasbourg.fr",
+  phone_number: "+33 3 88 14 47 00"
+)
+school7 = School.create!(
+  name: "École Nationale Supérieure d’Architecture de Lyon",
+  acronym: "ENSAL",
+  address_1: "3 Rue Maurice Audin",
+  address_2: "",
+  zipcode: "69120",
+  city: "Vaulx-en-Velin",
+  country: "France",
+  website: "",
+  phone_number: "+33 4 78 79 50 50"
+)
+school8 = School.create!(
+  name: "École Nationale Supérieure d’Architecture de Paris-Belleville",
+  acronym: "ENSA",
+  address_1: "60 Boulevard de la Villette",
+  address_2: "",
+  zipcode: "75019",
+  city: "Paris",
+  country: "France",
+  website: "",
+  phone_number: "+33 1 53 38 50 00"
+)
+school9 = School.create!(
+  name: "École Nationale Supérieure d’Architecture de Nantes",
+  acronym: "ENSAN",
+  address_1: "6 Quai François Mitterrand",
+  address_2: "",
+  zipcode: "44200",
+  city: "Nantes",
+  country: "France",
+  website: "",
+  phone_number: "+33 2 40 16 01 21"
+)
+school10 = School.create!(
+  name: "École Nationale Supérieure d’Architecture de Paris-Val de Seine",
+  acronym: "ENSAN",
+  address_1: "3 Quai Panhard et Levassor",
+  address_2: "",
+  zipcode: "75013",
+  city: "Paris",
+  country: "France",
+  website: "",
+  phone_number: "+33 1 72 69 63 20"
+)
+school11 = School.create!(
+  name: "École Nationale Supérieure Louis-Lumière",
+  acronym: "ENS",
+  address_1: "La Cité du Cinéma",
+  address_2: "",
+  zipcode: "93200",
+  city: "La Plaine Saint-Denis",
+  country: "France",
+  website: "",
+  phone_number: "+33 1 84 67 00 01"
+)
+school12 = School.create!(
+  name: "Lycée le Corbusier",
+  acronym: "",
+  address_1: "15 Rue Lixenbuhl",
+  address_2: "",
+  zipcode: "67400",
+  city: "Illkirch-Graffenstaden",
+  country: "France",
+  website: "",
+  phone_number: "+33 3 88 66 87 66"
+)
+school13 = School.create!(
+  name: "L’École des nouveaux Métiers de la Communication",
+  acronym: "EFAP",
+  address_1: "61-63 Rue Pierre Charron",
+  address_2: "",
+  zipcode: "75008",
+  city: "Paris",
+  country: "France",
+  website: "",
+  phone_number: "+33 1 53 76 88 00"
+)
+school14 = School.create!(
+  name: "Université Paul Valéry - Montpellier III",
+  acronym: "",
+  address_1: "34 Route de Mende",
+  address_2: "",
+  zipcode: "34090",
+  city: "Montpellier",
+  country: "France",
+  website: "",
+  phone_number: "+33 4 67 14 20 00"
+)
 
-puts "✓ schools table seeded"
+puts "✓ schools seeded"
 
 
 # diplomas table
@@ -91,8 +198,23 @@ ensba = Diploma.create!(
   acronym: "",
   degree: "2"
 )
+ensa = Diploma.create!(
+  name: "Master en Architecture",
+  acronym: "",
+  degree: "2"
+)
 ensad = Diploma.create!(
   name: "Diplôme d’école ENSAD",
+  acronym: "",
+  degree: "2"
+)
+ensag = Diploma.create!(
+  name: "Diplôme d’école en Architecture",
+  acronym: "",
+  degree: "2"
+)
+ensal = Diploma.create!(
+  name: "Master en Architecture",
   acronym: "",
   degree: "2"
 )
@@ -126,8 +248,23 @@ de = Diploma.create!(
   acronym: "DE",
   degree: "1"
 )
+insa = Diploma.create!(
+  name: "Diplôme d’école en architecture",
+  acronym: "",
+  degree: "1"
+)
+ens = Diploma.create!(
+  name: "Diplôme d’école en Cinéma",
+  acronym: "",
+  degree: "2"
+)
+efap = Diploma.create!(
+  name: "Diplôme d’école EFAP",
+  acronym: "",
+  degree: "2"
+)
 
-puts "✓ diplomas table seeded"
+puts "✓ diplomas seeded"
 
 
 # categories table
@@ -141,51 +278,13 @@ category6 = Category.create!(name: "livre")
 category7 = Category.create!(name: "presse")
 category8 = Category.create!(name: "gestion et médiation")
 
-puts "✓ categories table seede"
-
-
-# tags table
-
-# tag1  = Tag.create!(name: "mix")
-# tag2  = Tag.create!(name: "culture")
-# tag3  = Tag.create!(name: "DJing")
-# tag4  = Tag.create!(name: "radio")
-# tag5  = Tag.create!(name: "curating")
-# tag6  = Tag.create!(name: "commissaire d’exposition")
-# tag7  = Tag.create!(name: "processus créatif")
-# tag8  = Tag.create!(name: "editing")
-# tag9  = Tag.create!(name: "montage")
-# tag10 = Tag.create!(name: "cut")
-# tag11 = Tag.create!(name: "ellipse")
-# tag12 = Tag.create!(name: "cinéma")
-# tag13 = Tag.create!(name: "BD")
-# tag14 = Tag.create!(name: "narration")
-# tag15 = Tag.create!(name: "éclectisme")
-# tag16 = Tag.create!(name: "internet")
-# tag17 = Tag.create!(name: "web")
-# tag18 = Tag.create!(name: "folksonomie")
-# tag19 = Tag.create!(name: "Google")
-# tag20 = Tag.create!(name: "sérendipité")
-# tag21 = Tag.create!(name: "média")
-# tag22 = Tag.create!(name: "art contemporain")
-# tag23 = Tag.create!(name: "comportement")
-# tag24 = Tag.create!(name: "lecture")
-# tag25 = Tag.create!(name: "traduction")
-# tag26 = Tag.create!(name: "écrit")
-# tag27 = Tag.create!(name: "langage")
-# tag28 = Tag.create!(name: "ponctuation")
-# tag29 = Tag.create!(name: "communication")
-# tag30 = Tag.create!(name: "poésie")
-# tag31 = Tag.create!(name: "réseau")
-# tag32 = Tag.create!(name: "livre")
-# tag33 = Tag.create!(name: "rhizome")
-
-# puts "✓ tags table seeded"
-
+puts "✓ categories seeded"
 
 # users table
 
 user1 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "timotheegoguely@gmail.com",
   first_name: "Timothée",
   last_name: "Goguely",
@@ -196,6 +295,8 @@ user1 = User.create!(
   admin: true
 )
 user2 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "margotcannizzo@gmail.com",
   first_name: "Margot",
   last_name: "Cannizzo",
@@ -205,6 +306,8 @@ user2 = User.create!(
   school_id: school2.id
 )
 user3 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "stmartin.geoffrey@gmail.com",
   first_name: "Geoffrey",
   last_name: "Saint-Martin",
@@ -214,6 +317,8 @@ user3 = User.create!(
   school_id: school1.id
 )
 user4 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "quentin.schmerber@gmail.com",
   first_name: "Quentin",
   last_name: "Schmerber",
@@ -223,6 +328,8 @@ user4 = User.create!(
   school_id: school1.id
 )
 user5 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "antoine.omerin@gmail.com",
   first_name: "Antoine",
   last_name: "Omerin",
@@ -232,6 +339,8 @@ user5 = User.create!(
   school_id: school3.id
 )
 user6 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "hello@lenarobin.com",
   first_name: "Lena",
   last_name: "Robin",
@@ -250,6 +359,8 @@ user6 = User.create!(
   school_id: school2.id
 )
 user7 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "martawajszczyk@gmail.com",
   first_name: "Marta",
   last_name: "Wajszczyk",
@@ -259,6 +370,8 @@ user7 = User.create!(
   school_id: school1.id
 )
 user8 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "morgannlechat@gmail.com",
   first_name: "Morgann",
   last_name: "Lechat",
@@ -268,6 +381,8 @@ user8 = User.create!(
   school_id: school1.id
 )
 user9 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "contact@spassky-fischer.fr",
   first_name: "Antoine",
   last_name: "Stevenot",
@@ -277,6 +392,8 @@ user9 = User.create!(
   school_id: school4.id
 )
 user10 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "chauvin.camille@gmail.com",
   first_name: "Camille",
   last_name: "Chauvin",
@@ -286,6 +403,8 @@ user10 = User.create!(
   school_id: school1.id
 )
 user11 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "coquard.emilie@gmail.com",
   first_name: "Emilie",
   last_name: "Coquard",
@@ -295,6 +414,8 @@ user11 = User.create!(
   school_id: school1.id
 )
 user12 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "jacques.floriane@gmail.com",
   first_name: "Floriane",
   last_name: "Jacques",
@@ -304,6 +425,8 @@ user12 = User.create!(
   school_id: school1.id
 )
 user13 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "lalande.vanessa@gmail.com",
   first_name: "Vanessa",
   last_name: "Lalande",
@@ -313,6 +436,8 @@ user13 = User.create!(
   school_id: school1.id
 )
 user14 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "martin.marion@gmail.com",
   first_name: "Marion",
   last_name: "Martin",
@@ -322,6 +447,8 @@ user14 = User.create!(
   school_id: school1.id
 )
 user15 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "neagle.ennio@gmail.com",
   first_name: "Ennio",
   last_name: "Neagle",
@@ -331,6 +458,8 @@ user15 = User.create!(
   school_id: school1.id
 )
 user16 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "poinsot.vincent@gmail.com",
   first_name: "Vincent",
   last_name: "Poinsot",
@@ -340,6 +469,8 @@ user16 = User.create!(
   school_id: school1.id
 )
 user17 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "runghia.priscilla@gmail.com",
   first_name: "Priscilla",
   last_name: "Runghia",
@@ -349,6 +480,8 @@ user17 = User.create!(
   school_id: school1.id
 )
 user18 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "sawicki.alice@gmail.com",
   first_name: "Alice",
   last_name: "Sawicki",
@@ -358,6 +491,8 @@ user18 = User.create!(
   school_id: school1.id
 )
 user19 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "vanpoucke.guillaume@gmail.com",
   first_name: "Guillaume",
   last_name: "Vanpoucke",
@@ -367,6 +502,8 @@ user19 = User.create!(
   school_id: school1.id
 )
 user20 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "correia.elodie@gmail.com",
   first_name: "Elodie",
   last_name: "Correia",
@@ -376,6 +513,8 @@ user20 = User.create!(
   school_id: school1.id
 )
 user21 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "julien.priscillia@gmail.com",
   first_name: "Priscilla",
   last_name: "Julien",
@@ -385,6 +524,8 @@ user21 = User.create!(
   school_id: school1.id
 )
 user22 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "kribs.morgane@gmail.com",
   first_name: "Morgane",
   last_name: "Kribs",
@@ -394,6 +535,8 @@ user22 = User.create!(
   school_id: school1.id
 )
 user23 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "lascols.sudji@gmail.com",
   first_name: "Sudji",
   last_name: "Lascols",
@@ -403,6 +546,8 @@ user23 = User.create!(
   school_id: school1.id
 )
 user24 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "trachet.lucie@gmail.com",
   first_name: "Lucie",
   last_name: "Trachet",
@@ -412,6 +557,8 @@ user24 = User.create!(
   school_id: school1.id
 )
 user25 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "eveillard.louis@gmail.com",
   first_name: "Louis",
   last_name: "Eveillard",
@@ -421,6 +568,8 @@ user25 = User.create!(
   school_id: school1.id
 )
 user26 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "lauv.lucie@gmail.com",
   first_name: "Lucie",
   last_name: "Lauv",
@@ -430,6 +579,8 @@ user26 = User.create!(
   school_id: school1.id
 )
 user27 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "nivard.laure@gmail.com",
   first_name: "Laure",
   last_name: "Nivard",
@@ -439,6 +590,8 @@ user27 = User.create!(
   school_id: school1.id
 )
 user28 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
   email: "richard.amandine@gmail.com",
   first_name: "Amandine",
   last_name: "Richard",
@@ -447,35 +600,159 @@ user28 = User.create!(
   website: "",
   school_id: school1.id
 )
+user29 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "lemarie.matthieu@gmail.com",
+  first_name: "Matthieu",
+  last_name: "Lemarié",
+  bio: "",
+  birthdate: DateTime.new(1986,2,2),
+  website: "",
+  school_id: school5.id
+)
+user30 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "bertrand.charlotte@gmail.com",
+  first_name: "Charlotte",
+  last_name: "Bertrand",
+  bio: "",
+  birthdate: DateTime.new(1987,6,6),
+  website: "",
+  school_id: school6.id
+)
+user31 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "cuillerat.mickael@gmail.com",
+  first_name: "Mickaël",
+  last_name: "Cuillerat",
+  bio: "",
+  birthdate: DateTime.new(1990,9,3),
+  website: "",
+  school_id: school7.id
+)
+user32 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "loiseau.anne@gmail.com",
+  first_name: "Anne",
+  last_name: "Loiseau",
+  bio: "",
+  birthdate: DateTime.new(1988,10,7),
+  website: "",
+  school_id: school8.id
+)
+user33 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "martial.victor@gmail.com",
+  first_name: "Victor",
+  last_name: "Martial",
+  bio: "",
+  birthdate: DateTime.new(1989,1,7),
+  website: "",
+  school_id: school9.id
+)
+user34 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "bernard.pauline@gmail.com",
+  first_name: "Pauline",
+  last_name: "Bernard",
+  bio: "",
+  birthdate: DateTime.new(1990,2,8),
+  website: "",
+  school_id: school10.id
+)
+user35 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "baudean.romain@gmail.com",
+  first_name: "Romain",
+  last_name: "Baudéan",
+  bio: "",
+  birthdate: DateTime.new(1986,4,5),
+  website: "",
+  school_id: school11.id
+)
+user36 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "muzart.alice@gmail.com",
+  first_name: "Alice",
+  last_name: "Muzart",
+  bio: "",
+  birthdate: DateTime.new(1993,6,1),
+  website: "",
+  school_id: school6.id
+)
+user37 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "hurtado.elise@gmail.com",
+  first_name: "Elise",
+  last_name: "Hurtado",
+  bio: "",
+  birthdate: DateTime.new(1990,4,4),
+  website: "",
+  school_id: school12.id
+)
+user38 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "jousset.nina@gmail.com",
+  first_name: "Nina",
+  last_name: "Jousset",
+  bio: "",
+  birthdate: DateTime.new(1988,4,8),
+  website: "",
+  school_id: school13.id
+)
+user39 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "fournet.fayard.celine@gmail.com",
+  first_name: "Céline",
+  last_name: "Fournet-Fayard",
+  bio: "",
+  birthdate: DateTime.new(1984,5,6),
+  website: "",
+  school_id: school14.id
+)
+user40 = User.create!(
+  password: "123456",
+  password_confirmation: "123456",
+  email: "lexcellent.thomas@gmail.com",
+  first_name: "Thomas",
+  last_name: "L'Excellent",
+  bio: "",
+  birthdate: DateTime.new(1985,4,12),
+  website: "",
+  school_id: school3.id
+)
 
-# userX = User.create!(
-#   email: "dasweiss@gmail.com",
-#   first_name: "Maxime",
-#   last_name: "Leblanc",
-#   bio: "Titanium contemporay jewellery",
-#   birthdate: DateTime.new(1988,1,1),
-#   website: "https://www.instagram.com/maxime_leblanc_jewellery/"
-# )
-
-puts "✓ users table seeded"
+puts "✓ users seeded"
 
 
 # theses table
 
-thesis1 = Thesis.create!(
-  user_id: user1.id,
-  title: "Mixing Culture",
-  subtitle: "",
-  year: Date.new(2014),
-  resume: "Où se situe la frontière entre la curation et la pratique du mix ? Mixer peut-il être considéré comme une forme de création originale ? En quoi la culture et la pratique du mix ont-elles influencé nos rapports et nos comportements vis-à-vis des produits médiatiques (images, sons, vidéos, textes, jeux, etc.) issus de notre société actuelle ?
+# thesis1 = Thesis.new(
+#   user_id: user1.id,
+#   title: "Mixing Culture",
+#   subtitle: "",
+#   year: Date.new(2014),
+#   resume: "Où se situe la frontière entre la curation et la pratique du mix ? Mixer peut-il être considéré comme une forme de création originale ? En quoi la culture et la pratique du mix ont-elles influencé nos rapports et nos comportements vis-à-vis des produits médiatiques (images, sons, vidéos, textes, jeux, etc.) issus de notre société actuelle ?
 
-    Pour répondre à ces questions, je me suis attaché dans un premier temps à deux figures emblématiques du mix : le DJ et le curateur. J’ai tenté de comprendre au travers d’une approche à la fois historique et comparative quels sont les enjeux et quelles ont été les évolutions de leurs pratiques respectives depuis leur apparition jusqu’à nos jours. J’ai établi ensuite dans un second temps une analyse détaillée du processus créatif lié à la pratique du mix, analyse qui me permit enfin d’essayer de voir en quoi cette pratique et ses différentes manifestations artistiques induisent un certain rapport au monde et aux objets culturels qui nous entourent.",
-  license: "CC BY-SA 4.0",
-  link: "https://github.com/timotheegoguely/mixing-culture",
-  school_id: school1.id,
-  cover: "2014-timothee-goguely.jpg"
-)
-thesis2 = Thesis.create!(
+#     Pour répondre à ces questions, je me suis attaché dans un premier temps à deux figures emblématiques du mix : le DJ et le curateur. J’ai tenté de comprendre au travers d’une approche à la fois historique et comparative quels sont les enjeux et quelles ont été les évolutions de leurs pratiques respectives depuis leur apparition jusqu’à nos jours. J’ai établi ensuite dans un second temps une analyse détaillée du processus créatif lié à la pratique du mix, analyse qui me permit enfin d’essayer de voir en quoi cette pratique et ses différentes manifestations artistiques induisent un certain rapport au monde et aux objets culturels qui nous entourent.",
+#   license: "CC BY-SA 4.0",
+#   link: "https://github.com/timotheegoguely/mixing-culture",
+#   school_id: school1.id,
+#   cover: "2014-timothee_goguely.jpg",
+#   pdf: "https://dl.dropboxusercontent.com/u/10748485/2014-timothee_goguely-mixing_culture.pdf"
+# )
+thesis2 = Thesis.new(
   user_id: user2.id,
   title: "Expression Écrite",
   subtitle: "Potentiel et limite du langage écrit normé dans la traduction d’une émotion",
@@ -486,9 +763,10 @@ thesis2 = Thesis.create!(
   license: "",
   link: "http://margotcannizzo.tumblr.com/post/68452213577/expression-%C3%A9crite-potentiel-et-limite-du-langage",
   school_id: school2.id,
-  cover: "",
+  cover: "2014-margot_cannizzo-expression_ecrite.jpg",
+  pdf: "https://dl.dropboxusercontent.com/u/10748485/2014-margot_cannizzo-expression_ecrite.pdf"
 )
-thesis3 = Thesis.create!(
+thesis3 = Thesis.new(
   user_id: user3.id,
   title: "Hommage à son parcours",
   subtitle: "",
@@ -497,20 +775,20 @@ thesis3 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-geoffrey-saint-martin.jpg",
+  cover: "2014-geoffrey_saint_martin.jpg"
 )
-thesis4 = Thesis.create!(
+thesis4 = Thesis.new(
   user_id: user4.id,
   title: "La cour des mirages",
   subtitle: "Le paysage des l’espace construit",
   year: Date.new(2014),
-  resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature dans les espaces architecturaux. Questionnement sur l'image et la simulation.",
+  resume: "Mémoire de DNSEP (option Design Graphique) sur la représentation de la nature dans les espaces architecturaux. Questionnement sur l’image et la simulation.",
   license: "",
   link: "http://www.lulu.com/shop/quentin-schmerber/la-cour-des-mirages/paperback/product-21458084.html",
   school_id: school1.id,
-  cover: "2014-quentin-schmerber.jpg"
+  cover: "2014-quentin_schmerber.jpg"
 )
-thesis5 = Thesis.create!(
+thesis5 = Thesis.new(
   user_id: user5.id,
   title: "« Wesh alors ? »",
   subtitle: "Un puzzle de mots et de pensées",
@@ -519,9 +797,9 @@ thesis5 = Thesis.create!(
   license: "",
   link: "",
   school_id: school3.id,
-  cover: ""
+  cover: "2016-antoine_omerin-wesh_alors.jpg"
 )
-thesis6 = Thesis.create!(
+thesis6 = Thesis.new(
   user_id: user6.id,
   title: "Points, Zig-zag, Double-ligne",
   subtitle: "Nouveaux modes de lecture et poétique du réseau Internet dans le livre imprimé",
@@ -533,9 +811,9 @@ thesis6 = Thesis.create!(
   license: "",
   link: "https://issuu.com/lenarobin/docs/le__narobin_me__moire6",
   school_id: school2.id,
-  cover: "2016-lena-robin.jpg"
+  cover: "2016-lena_robin.jpg"
 )
-thesis7 = Thesis.create!(
+thesis7 = Thesis.new(
   user_id: user7.id,
   title: "Exhibitionnisme",
   subtitle: "La culture de l’exhibition et de la confession",
@@ -546,9 +824,9 @@ thesis7 = Thesis.create!(
   license: "",
   link: "",
   school_id: school2.id,
-  cover: "2012-marta-wajszczyk.jpg"
+  cover: "2012-marta_wajszczyk.jpg"
 )
-thesis8 = Thesis.create!(
+thesis8 = Thesis.new(
   user_id: user8.id,
   title: "Simulations",
   subtitle: "Pour un graphisme-fiction",
@@ -560,9 +838,9 @@ thesis8 = Thesis.create!(
   license: "",
   link: "",
   school_id: school2.id,
-  cover: "2012-morgann-lechat.jpg"
+  cover: "2012-morgann_lechat.jpg"
 )
-thesis9 = Thesis.create!(
+thesis9 = Thesis.new(
   user_id: user9.id,
   title: "Un atlas du film d’action",
   subtitle: "",
@@ -580,84 +858,44 @@ thesis9 = Thesis.create!(
   license: "",
   link: "",
   school_id: school4.id,
-  cover: "2008-antoine-stevenot.jpg"
+  cover: "2008-antoine_stevenot.jpg"
 )
-thesis10 = Thesis.create!(
+thesis10 = Thesis.new(
   user_id: user10.id,
   title: "Imaginer la fin du monde",
-  subtitle: "De la pédagogie de la catastrophe à l'heure de l'urgence environnementale",
+  subtitle: "De la pédagogie de la catastrophe à l’heure de l’urgence environnementale",
   year: Date.new(2013),
-  resume: "Cette fin d’année 2012 nous aura une fois de plus confirmé notre
-  fascination pour le mythe de la fin du monde. En effet, si le 21 décembre
-  n’aura finalement pas été le jour tant redouté, sensé advenir en raison
-  de l’achèvement du cycle du calendrier maya, il nous aura néanmoins
-  permis de nous pencher sur l’engouement de notre société pour comp-
-  ter le temps qui la sépare de sa dernière heure.
-  Depuis quelques années, les publications et les réalisations ciné-
-  matographiques autour de ce sujet ont été très nombreuses, mais il
-  ne faudrait pas voir là une tendance purement contemporaine. Car
-  imaginer la fin du monde est un concept inné à l’espèce humaine et
-  est ancré en nous depuis de nombreux siècles déjà.
-  Sans pouvoir en faire une étude exhaustive, nous verrons comment les
-  civilisations et les religions qui nous ont précédés ont profondément
-  inscrit en nous l’idée d’un monde voué à disparaître et comment ce
-  mythe s’est renforcé pendant les moments sombres de notre histoire.
-  En effet, depuis les conceptions égyptiennes de la vie après la mort
-  jusqu’aux sectes millénaristes de notre siècle, les croyances escha-
-  tologiques ont évolué au même rythme que notre capacité à nous
-  projeter sereinement dans l’avenir. Ainsi, le Moyen Âge, tourmenté
-  par les guerres, les épidémies et les famines, est l’une des périodes où
-  les visions dramatiques proposées par l’Apocalypse de Jean suscitent
-  une grande angoisse.",
+  resume: "Cette fin d’année 2012 nous aura une fois de plus confirmé notre fascination pour le mythe de la fin du monde. En effet, si le 21 décembre n’aura finalement pas été le jour tant redouté, sensé advenir en raison de l’achèvement du cycle du calendrier maya, il nous aura néanmoins permis de nous pencher sur l’engouement de notre société pour compter le temps qui la sépare de sa dernière heure.
+    Depuis quelques années, les publications et les réalisations cinématographiques autour de ce sujet ont été très nombreuses, mais il ne faudrait pas voir là une tendance purement contemporaine. Car imaginer la fin du monde est un concept inné à l’espèce humaine et est ancré en nous depuis de nombreux siècles déjà.
+    Sans pouvoir en faire une étude exhaustive, nous verrons comment les civilisations et les religions qui nous ont précédés ont profondément inscrit en nous l’idée d’un monde voué à disparaître et comment ce mythe s’est renforcé pendant les moments sombres de notre histoire.
+    En effet, depuis les conceptions égyptiennes de la vie après la mort jusqu’aux sectes millénaristes de notre siècle, les croyances eschatologiques ont évolué au même rythme que notre capacité à nous projeter sereinement dans l’avenir. Ainsi, le Moyen Âge, tourmenté par les guerres, les épidémies et les famines, est l’une des périodes où les visions dramatiques proposées par l’Apocalypse de Jean suscitent une grande angoisse.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-camille-chauvin.jpg"
+  cover: "2013-camille_chauvin.jpg"
 )
-thesis11 = Thesis.create!(
+thesis11 = Thesis.new(
   user_id: user11.id,
   title: "Datavisualisation",
   subtitle: "Nouvel outil de communication",
   year: Date.new(2013),
-  resume: "« Grâce au numérique, l’ensemble des connaissances est disponible
-  partout, tout le temps, à tout le monde. Cela répond aux enjeux d’une
-  économie où la connaissance devient facteur majeur de compétitivité,
-  et d’un monde qui change très vite et où il est indispensable
-  d’apprendre tout au long de sa vie. Le numérique transforme alors
-  radicalement les façons d’apprendre et d’enseigner. »
-  Ceci est possible grâce au développement du réseau Internet et
-  aux nombreux supports y donnant accès, se multipliant et devenant
-  de plus en plus petits. En 2011, le nombre de ventes de tablettes
-  et smartphones n’a cessé d’augmenter et surpasse alors le nombre
-  d’ordinateurs vendus  2 . Le monde est connecté. Que l’on soit chez nous,
-  dans les transports en commun, ou à l’école, nous suivons les nouvelles,
-  travaillons ou discutons sur les réseaux sociaux. Tout cela représente
-  une masse exponentielle d’informations et de données.
-  En Angleterre, la charte de l’Open Data  3 a été signée en décembre 2006
-  et n’est arrivée en France qu’en 2009. Depuis, nous pouvons penser
-  que l’accessibilité aux données, leur lisibilité et leur com­préhension sont
-  évidentes. Les données se comptent en milliards, réunis sur le réseau
-  Internet et regroupées sous le terme de « Big data ».
-  Comment se retrouver dans cet espace vaste où sont mélangés tous
-  types d’informations de différents domaines et de différents formats ?
-  Les lectures sont encore floues et très complexes pour la plupart
-  d’entre nous. C’est pourquoi graphistes, journalistes, informaticiens
-  s’associent de plus en plus pour tenter de transmettre ces données
-  grâce à des représentations visuelles accessibles au plus grand nombre.
-  Cela permet de rendre ces données intelligibles au plus grand nombre
-  tout en les regroupant et en les analysant.",
+  resume: "« Grâce au numérique, l’ensemble des connaissances est disponible partout, tout le temps, à tout le monde. Cela répond aux enjeux d’une économie où la connaissance devient facteur majeur de compétitivité, et d’un monde qui change très vite et où il est indispensable d’apprendre tout au long de sa vie. Le numérique transforme alors radicalement les façons d’apprendre et d’enseigner. »
+  Ceci est possible grâce au développement du réseau Internet et aux nombreux supports y donnant accès, se multipliant et devenant de plus en plus petits. En 2011, le nombre de ventes de tablettes et smartphones n’a cessé d’augmenter et surpasse alors le nombre d’ordinateurs vendus  2 . Le monde est connecté. Que l’on soit chez nous, dans les transports en commun, ou à l’école, nous suivons les nouvelles, travaillons ou discutons sur les réseaux sociaux. Tout cela représente une masse exponentielle d’informations et de données.
+  En Angleterre, la charte de l’Open Data  3 a été signée en décembre 2006 et n’est arrivée en France qu’en 2009. Depuis, nous pouvons penser que l’accessibilité aux données, leur lisibilité et leur com­préhension sont évidentes. Les données se comptent en milliards, réunis sur le réseau Internet et regroupées sous le terme de « Big data ».
+  Comment se retrouver dans cet espace vaste où sont mélangés tous types d’informations de différents domaines et de différents formats ?
+  Les lectures sont encore floues et très complexes pour la plupart d’entre nous. C’est pourquoi graphistes, journalistes, informaticiens s’associent de plus en plus pour tenter de transmettre ces données grâce à des représentations visuelles accessibles au plus grand nombre. Cela permet de rendre ces données intelligibles au plus grand nombre tout en les regroupant et en les analysant.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-emilie-coquard.jpg"
+  cover: "2013-emilie_coquard.jpg"
 )
-thesis12 = Thesis.create!(
+thesis12 = Thesis.new(
   user_id: user12.id,
   title: "Espaces et aires de jeux",
-  subtitle: "Un lieu dédié à la construction, l'organisation et l'imagination de l'enfant",
+  subtitle: "Un lieu dédié à la construction, l’organisation et l’imagination de l’enfant",
   year: Date.new(2013),
   resume: "Le jeu est une idée plaisante qui évoque l’enfance,
-  la création, l'émulation, la nostalgie, l’amitié, la liberté...
+  la création, l’émulation, la nostalgie, l’amitié, la liberté...
   Le jeu est envisagé comme un phénomène culturel,
   et non pas comme une fonction biologique. Il est pourtant
   plus ancien que la culture. En effet, la notion de culture,
@@ -696,12 +934,12 @@ thesis12 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-floriane-jacques.jpg"
+  cover: "2013-floriane_jacques.jpg"
 )
-thesis13 = Thesis.create!(
+thesis13 = Thesis.new(
   user_id: user13.id,
   title: "Le réel transfiguré",
-  subtitle: "Ou l'entreprise proustienne au service d'une vision",
+  subtitle: "Ou l’entreprise proustienne au service d’une vision",
   year: Date.new(2013),
   resume: "À la recherche du temps perdu est un monument de la littérature française,
   publié entre 1913 et 1927. Pourquoi s’intéresser à un roman qui, n’est plus
@@ -765,12 +1003,12 @@ thesis13 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-vanessa-lalande.jpg"
+  cover: "2013-vanessa_lalande.jpg"
 )
-thesis14 = Thesis.create!(
+thesis14 = Thesis.new(
   user_id: user14.id,
   title: "La langue et ses signes",
-  subtitle: "Une pensée en mouvement: l'information au bout des doigts",
+  subtitle: "Une pensée en mouvement: l’information au bout des doigts",
   year: Date.new(2013),
   resume: "Il y a quelques années, j’ai entrepris l’expérience de l’ap-
   prentissage de la Langue des Signes Française (LSF). Mon
@@ -790,11 +1028,11 @@ thesis14 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-marion-martin.jpg"
+  cover: "2013-marion_martin.jpg"
 )
-thesis15 = Thesis.create!(
+thesis15 = Thesis.new(
   user_id: user15.id,
-  title: "L'immortalité: qu'en dire, aujourd'hui",
+  title: "L’immortalité: qu’en dire, aujourd’hui",
   subtitle: "",
   year: Date.new(2013),
   resume: "Échapper à la mort et vivre pour l’éternité : une
@@ -826,9 +1064,9 @@ thesis15 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-ennio-neagle.jpg"
+  cover: "2013-ennio_neagle.jpg"
 )
-thesis16 = Thesis.create!(
+thesis16 = Thesis.new(
   user_id: user16.id,
   title: "Du standard au non-conforme",
   subtitle: "",
@@ -840,7 +1078,7 @@ thesis16 = Thesis.create!(
   souvent mal interprété; nécessaire car il s’agit
   bien de préciser que son emploi se fera par la
   suite dans son sens premier et littéral, contraire-
-  ment à l'usage péjoratif qu'il pourrait induire. Sa
+  ment à l’usage péjoratif qu’il pourrait induire. Sa
   signification, donnée ici par le Robert précise
   donc qu’il s’agit bien d’une « personne qui aime,
   cultive, recherche ».
@@ -860,15 +1098,15 @@ thesis16 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-vincent-poinsot.jpg"
+  cover: "2013-vincent_poinsot.jpg"
 )
-thesis17 = Thesis.create!(
+thesis17 = Thesis.new(
   user_id: user17.id,
   title: "Les difficultés à décrypter le langage commun",
   subtitle: "",
   year: Date.new(2013),
   resume: "Un mot s’évaporant à l’oreille lors d’une conversation, une
-  inscription lapidaire sur une tablette dans un musée, une a∞che
+  inscription lapidaire sur une tablette dans un musée, une affiche
   de théâtre sur le mur d’une station de métro, un doigt désignant ce
   que l’enfant veut de sa mère. À quoi résumer ce terme « langage »
   aussi complexe qu’il questionne le monde de la linguistique, de
@@ -884,7 +1122,7 @@ thesis17 = Thesis.create!(
   langage informatique, etc. Une liste exhaustive parfois contestée
   selon le statut du spécialiste concerné (linguiste, sémiologue,
   philosophe, scientifique, etc.). Qu’importe, le langage interroge ici
-  une a≠aire de vécu et d’expériences singulières.
+  une affaire de vécu et d’expériences singulières.
 
   L’écrivain Bringhusrt définit le langage comme étant ;
   « ce qui nous parle autant que ce que nous parlons. Par nos neurones, nos
@@ -895,9 +1133,9 @@ thesis17 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-priscillia-runghia.jpg"
+  cover: "2013-priscillia_runghia.jpg"
 )
-thesis18 = Thesis.create!(
+thesis18 = Thesis.new(
   user_id: user18.id,
   title: "Déchets ultimes du nucléaire",
   subtitle: "Transmettre la mémoire des sites de stockage",
@@ -934,9 +1172,9 @@ thesis18 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-alice-sawicki.jpg"
+  cover: "2013-alice_sawicki.jpg"
 )
-thesis19 = Thesis.create!(
+thesis19 = Thesis.new(
   user_id: user19.id,
   title: "Vitesse",
   subtitle: "Terme contemporain du temps",
@@ -961,11 +1199,11 @@ thesis19 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2013-guillaume-vanpoucke.jpg"
+  cover: "2013-guillaume_vanpoucke.jpg"
 )
-thesis20 = Thesis.create!(
+thesis20 = Thesis.new(
   user_id: user20.id,
-  title: "Danser l'espace",
+  title: "Danser l’espace",
   subtitle: "",
   year: Date.new(2014),
   resume: "L’infinité des mouvements et des déplacements, les
@@ -990,9 +1228,9 @@ thesis20 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-elodie-correia.jpg"
+  cover: "2014-elodie_correia.jpg"
 )
-thesis21 = Thesis.create!(
+thesis21 = Thesis.new(
   user_id: user21.id,
   title: "Expériences déplaçantes",
   subtitle: "Déplacements de voyage et déplacements dans la création",
@@ -1026,27 +1264,27 @@ thesis21 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-priscillia-julien.jpg"
+  cover: "2014-priscillia_julien.jpg"
 )
-thesis22 = Thesis.create!(
+thesis22 = Thesis.new(
   user_id: user22.id,
   title: "Au-dela de la norme",
   subtitle: "",
   year: Date.new(2014),
   resume: "Enfant, j’ai fréquemment cherché à estomper ma différence, ma dyslexie.
-  En effet, elle est souvent assimilée comme un handicap 2 , peu visible, mais
+  En effet, elle est souvent assimilée comme un handicap, peu visible, mais
   certes, diagnostiquée par des spécialistes qui renforcent son caractère sévère.
   Si chaque individu est singulier, certains comportent des nuances notoires
   rompant avec les normes dominantes, là où se trouve le handicap 3 , mais cela
   reste une fois de plus une question de point de vue.
-  Dans le cas du handicap ou défi cience 4 , nous allons voir dans ce mémoire,
+  Dans le cas du handicap ou déficience, nous allons voir dans ce mémoire,
   de quelle manière une personne n’ayant pas les mêmes facultés d’obser-
   vation, d’objectivation, etc. peut insuffler un regard complémentaire
-  aux normes dominantes. Ayant des diffi cultés à communiquer de manière
+  aux normes dominantes. Ayant des difficultés à communiquer de manière
   verbale (écrit et oral), le design graphique m’a donné des outils d’une
   communication autre. L’un n’empêchant pas l’autre, mais ce mémoire fut pour
   moi un véritable challenge. N’étant pas scientifique, je n’ai nullement
-  la prétention d’off rir une solution universelle pour outrepasser quelconque
+  la prétention d’offrir une solution universelle pour outrepasser quelconque
   handicap, mais aborder la question de la dyslexie sous l’angle de l’organisation
   (qui est un problème chronique), qui présente selon moi des intérêts connexes
   transversaux. Dans une société où le temps est une valeur financière,
@@ -1056,12 +1294,12 @@ thesis22 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-morgane-kribs.jpg"
+  cover: "2014-morgane_kribs.jpg"
 )
-thesis23 = Thesis.create!(
+thesis23 = Thesis.new(
   user_id: user23.id,
   title: "De la pensée à la forme",
-  subtitle: "Processus de formalisation d'un espcace mental dans le champ de la création artistique",
+  subtitle: "Processus de formalisation d’un espace mental dans le champ de la création artistique",
   year: Date.new(2014),
   resume: " Commencer par la forme artistique ». Autrement dit, remonter
   à sa genèse en la considérant comme production de l’espace
@@ -1087,245 +1325,393 @@ thesis23 = Thesis.create!(
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-sudji-lascols.jpg"
+  cover: "2014-sudji_lascols.jpg"
 )
-thesis24 = Thesis.create!(
+thesis24 = Thesis.new(
   user_id: user24.id,
-  title: "L'enfance, de l'imaginaire au réel, du concept à la création",
+  title: "L’enfance, de l’imaginaire au réel, du concept à la création",
   subtitle: "",
   year: Date.new(2014),
-  resume: "La pulsion créative est indispensable
-  à l’artiste qui veut faire œuvre,
-  mais elle est aussi en chacun
-  de nous, dès le plus jeune âge,
-  comme le montrent les expérimentations
-  vocales ou manuelles des tout-petits
-  enfants. C’est ce qu’explique
-  Donald Winnicott — (1896 - 1971)
-  un pédiatre, psychiatre et psycha-
-  nalyste anglais — dans son œuvre
-  Jeu et Réalité. Pour lui, « voir le monde
-  de manière créative permet
-  à l’individu de ne pas se contenter
-  d’exister mais de vivre. » La « créativité
-  enrichit la vie au quotidien. »
-  Dans La cause des enfants, Françoise
-  Dolto — (1908 - 1988) une pédiatre
-  et psychanalyste française — explique
-  que l’enfant n’est pas le même
-  selon le lieu où il naît et que la famille
-  doit construire un capital pré-sensoriel
-  afin qu’il puisse le développer.
-  Cependant, au cours de l’éducation,
-  la société développe davantage
-  le mimétisme et atténue considéra-
-  blement la sensibilité artistique des enfants.",
+  resume: "La pulsion créative est indispensable à l’artiste qui veut faire œuvre, mais elle est aussi en chacun de nous, dès le plus jeune âge, comme le montrent les expérimentations vocales ou manuelles des tout-petits enfants. C’est ce qu’explique Donald Winnicott — (1896 - 1971) un pédiatre, psychiatre et psycha- nalyste anglais — dans son œuvre
+  Jeu et Réalité. Pour lui, « voir le monde de manière créative permet à l’individu de ne pas se contenter d’exister mais de vivre. » La « créativité enrichit la vie au quotidien. »
+  Dans La cause des enfants, Françoise Dolto — (1908 - 1988) une pédiatre et psychanalyste française — explique que l’enfant n’est pas le même selon le lieu où il naît et que la famille doit construire un capital pré-sensoriel afin qu’il puisse le développer.
+  Cependant, au cours de l’éducation, la société développe davantage le mimétisme et atténue considéra- blement la sensibilité artistique des enfants.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2014-lucie-trachet.jpg"
+  cover: "2014-lucie_trachet.jpg"
 )
-thesis25 = Thesis.create!(
+thesis25 = Thesis.new(
   user_id: user25.id,
   title: "Interfaces en mouvements",
   subtitle: "",
   year: Date.new(2011),
-  resume: "Il sera bientôt possible de transmettre sans fil des messages à travers le monde
-  tellement facilement que chacun pourra porter et utiliser son propre dispositif.
-  Nikola Tesla, 1909
-  À la fin des années 1980, quand les téléphones portables ont fait leur
-  apparition dans le cinéma hollywoodien, peu de gens étaient capables
-  d'imaginer l'ampleur de l'intégration de ces appareils dans nos vies deux
-  décennies plus tard. Dans le film Wall Street d'Oliver Stone de 1987, le
-  téléphone portable du magnat de la finance Gordon Gekko n'est jamais
-  loin de lui. C'est un des symboles de l'emprise qu'il exerce sur ses affaires
-  et de l'influence qu'il a sur le reste du monde. « L'argent ne dort jamais »,
-  Gordon Gekko et son téléphone non plus. Pour autant, avec la taille d'un
-  gros fer à repasser et un prix de 3995 $US, les avancées révolutionnaires
-  apportées par le DynaTAC de Motorola ne conviennent pas à toutes les
-  poches. Qui aurait envie de se balader avec un téléphone de 800 grammes
-  et 25 centimètres de haut sur lui ?
-  De nos jours, la plupart des portables tiennent dans le creux d'une main
-  et il y a, en France, plus d'abonnés mobiles que d'habitants (64,4 millions
-  d'abonnés en 2010 selon l'ARCEP, certaines personnes possédant deux
-  abonnements). Cela étant, l'existence dans la vie de chacun d'entre
-  nous de ces appareils ne tient pas seulement à la capacité de l'objet
-  à nous permettre de communiquer avec n'importe qui, n'importe quand
-  et n'importe où. Elle provient aussi de la multiplicité des usages qu'il est
-  possible d'en faire : agenda, mail, messagerie instantanée, accès à internet
-  permanent, navigation routière, baladeur mp3, radio FM, réveil, lampe de
-  poche, ou encore livre de recettes de cuisine, plan du métro, traducteur
-  vocal, interface de publication pour blog, réservation de billets de train,
-  système de montage audio ou vidéo, niveau à bulle... Il devient tellement
-  naturel de se servir de son téléphone pour toutes ces tâches qu'on
-  remarque à peine son existence dans notre vie quotidienne. Pour une",
+  resume: "Il sera bientôt possible de transmettre sans fil des messages à travers le monde tellement facilement que chacun pourra porter et utiliser son propre dispositif.
+  — Nikola Tesla, 1909
+
+  À la fin des années 1980, quand les téléphones portables ont fait leur apparition dans le cinéma hollywoodien, peu de gens étaient capables d’imaginer l’ampleur de l’intégration de ces appareils dans nos vies deux décennies plus tard. Dans le film Wall Street d’Oliver Stone de 1987, le téléphone portable du magnat de la finance Gordon Gekko n’est jamais loin de lui. C’est un des symboles de l’emprise qu’il exerce sur ses affaires et de l’influence qu’il a sur le reste du monde. « L’argent ne dort jamais », Gordon Gekko et son téléphone non plus. Pour autant, avec la taille d’un gros fer à repasser et un prix de 3995 $US, les avancées révolutionnaires apportées par le DynaTAC de Motorola ne conviennent pas à toutes les poches. Qui aurait envie de se balader avec un téléphone de 800 grammes et 25 centimètres de haut sur lui ?
+  De nos jours, la plupart des portables tiennent dans le creux d’une main et il y a, en France, plus d’abonnés mobiles que d’habitants (64,4 millions d’abonnés en 2010 selon l’ARCEP, certaines personnes possédant deux abonnements). Cela étant, l’existence dans la vie de chacun d’entre nous de ces appareils ne tient pas seulement à la capacité de l’objet à nous permettre de communiquer avec n’importe qui, n’importe quand et n’importe où. Elle provient aussi de la multiplicité des usages qu’il est possible d’en faire : agenda, mail, messagerie instantanée, accès à internet permanent, navigation routière, baladeur mp3, radio FM, réveil, lampe de poche, ou encore livre de recettes de cuisine, plan du métro, traducteur vocal, interface de publication pour blog, réservation de billets de train, système de montage audio ou vidéo, niveau à bulle... Il devient tellement naturel de se servir de son téléphone pour toutes ces tâches qu’on remarque à peine son existence dans notre vie quotidienne.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2012-louis-eveillard.jpg"
+  cover: "2012-louis_eveillard.jpg"
 )
-thesis26 = Thesis.create!(
+thesis26 = Thesis.new(
   user_id: user26.id,
   title: "La manipulation des statistiques",
   subtitle: "Comment les politiciens français crédibilisent leurs discours?",
   year: Date.new(2011),
-  resume: "Aujourd’hui, il est incontestable d’admettre
-  l’invasion des statistiques dans l’espace public. On
-  entend par « statistiques » les données produites par
-  le système statistique public français, autrement dit,
-  les chiffres. À ne pas confondre avec la statistique,
-  qui est la méthode utilisée pour les produire.
-     En France, certains de nos hommes politiques
-  manipulent les statistiques. Cela se sait de plus en
-  plus grâce à des informations diffusées à la télévi-
-  sion ou sur internet. Par exemple à travers des sites
-  web personnels, des blogs, des sites d’informations
-  générales ou de revues de presse politique comme
-  le monde, libération, l’humanité, le figaro, etc. Il y a
-  également des informations qui s’écoutent à la ra-
-  dio ou qui sont publiées sous forme de livres. Ces
-  derniers peuvent être écrits par des journalistes, des
-  politiciens ou encore des personnes qui, se sentant
-  particulièrement impliquées par un sujet, ont pris
-  la démarche d’enquêter eux-même. Qu’importent
-  leurs origines, nous ne pouvons affirmer la véracité
-  des informations recueillies. Par contre, la quantité
-  et la multitude de leurs présences nous permettent
-  certaines interrogations.",
+  resume: "Aujourd’hui, il est incontestable d’admettre l’invasion des statistiques dans l’espace public. On entend par « statistiques » les données produites par le système statistique public français, autrement dit, les chiffres. À ne pas confondre avec la statistique, qui est la méthode utilisée pour les produire.
+    En France, certains de nos hommes politiques manipulent les statistiques. Cela se sait de plus en plus grâce à des informations diffusées à la télévision ou sur internet. Par exemple à travers des sites web personnels, des blogs, des sites d’informations générales ou de revues de presse politique comme le monde, libération, l’humanité, le figaro, etc. Il y a également des informations qui s’écoutent à la radio ou qui sont publiées sous forme de livres. Ces derniers peuvent être écrits par des journalistes, des politiciens ou encore des personnes qui, se sentant particulièrement impliquées par un sujet, ont pris la démarche d’enquêter eux-même. Qu’importent leurs origines, nous ne pouvons affirmer la véracité des informations recueillies. Par contre, la quantité et la multitude de leurs présences nous permettent certaines interrogations.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2012-lucie-lauv.jpg"
+  cover: "2012-lucie_lauv.jpg"
 )
-thesis27 = Thesis.create!(
+thesis27 = Thesis.new(
   user_id: user27.id,
   title: "Les paradis artificiels",
   subtitle: "",
   year: Date.new(2011),
-  resume: "Tout commence par un fait, un statut : nous vivons dans une logis-
-  tique stable. En tant que citoyen bien inséré dans la société, on aura
-  élu un lieu comme son domicile, on en connaîtra éventuellement
-  un autre pour exercer sa profession ; on possèdera en dehors de cela
-  un petit cercle d’amis, du moins quelques fréquentations régulières
-  parmi lesquelles les membres proches de cet ensemble filial qu’est la
-  famille. Selon sa situation, que l’on soit plus ou moins pourvu, on
-  a bâti en soi un rythme quotidien où sont ancrés les repères néces-
-  saires pour mener une vie à peu près normale et satisfaisante. Ainsi,
-  si je devais me présenter, je pourrais dire que je m’appelle Jacques,
-  que j’habite Grenoble, que je travaille environ neuf heures par jour à
-  l’entreprise Schneider Électricité, cela en dehors de mes congés payés
-  où je pars rendre visite à mes petits enfants résidant en Autriche avec
-  ma fille aînée. Si l’enchaînement des données — identité, emploi,
-  situation familiale, loisirs — varie peu d’une personne à l’autre, c’est
-  qu’il correspond aussi à l’ordre logique d’une société où l’on trouve
-  sa place dans le travail, en l’échange duquel on perçoit son dû sous
-  forme d’argent : monnaie courante pour subsister à ses besoins,
-  des plus élémentaires aux plus superficiels. L’application de la loi
-  a fait que, s’il y a un temps consacré au travail, il existe forcément
-  un temps de vacance, où, comme l’indique le mot pris en son sens
-  littéral, on manque temporairement à son poste habituel, on prends
-  congé de son cadre de vie pour aller chercher autre chose, ailleurs.
-  Il s’agit alors de combler de la meilleure façon ce temps vacant
-  dont on dispose.",
+  resume: "Tout commence par un fait, un statut : nous vivons dans une logistique stable. En tant que citoyen bien inséré dans la société, on aura élu un lieu comme son domicile, on en connaîtra éventuellement un autre pour exercer sa profession ; on possèdera en dehors de cela un petit cercle d’amis, du moins quelques fréquentations régulières parmi lesquelles les membres proches de cet ensemble filial qu’est la famille. Selon sa situation, que l’on soit plus ou moins pourvu, on a bâti en soi un rythme quotidien où sont ancrés les repères nécessaires pour mener une vie à peu près normale et satisfaisante. Ainsi, si je devais me présenter, je pourrais dire que je m’appelle Jacques, que j’habite Grenoble, que je travaille environ neuf heures par jour à l’entreprise Schneider Électricité, cela en dehors de mes congés payés où je pars rendre visite à mes petits enfants résidant en Autriche avec ma fille aînée. Si l’enchaînement des données — identité, emploi, situation familiale, loisirs — varie peu d’une personne à l’autre, c’est qu’il correspond aussi à l’ordre logique d’une société où l’on trouve sa place dans le travail, en l’échange duquel on perçoit son dû sous forme d’argent : monnaie courante pour subsister à ses besoins, des plus élémentaires aux plus superficiels. L’application de la loi a fait que, s’il y a un temps consacré au travail, il existe forcément un temps de vacance, où, comme l’indique le mot pris en son sens littéral, on manque temporairement à son poste habituel, on prends congé de son cadre de vie pour aller chercher autre chose, ailleurs.
+  Il s’agit alors de combler de la meilleure façon ce temps vacant dont on dispose.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2012-laure-nivard.jpg"
+  cover: "2012-laure_nivard.jpg"
 )
-thesis28 = Thesis.create!(
+thesis28 = Thesis.new(
   user_id: user28.id,
   title: "Produire autrement",
   subtitle: "",
   year: Date.new(2011),
-  resume: "Inspirée par les terroirs, la nourriture est un élément central et fonda-
-  teur des sociétés humaines. Depuis les premières civilisations, l’homme a
-  toujours produit les aliments dont il avait besoin en fonction de son envi-
-  ronnement naturel, cependant, aujourd’hui, la production des ressources
-  agricoles semble être dictée par une politique échappant aux considéra-
-  tions locales.
-  La révolution industrielle, l’exode rural, et l’uniformisation des modes de
-  vies qui s’en suivit, ont profondément influencé la production agricole.
-  L’agriculture a peu à peu évolué en parallèle d’une mondialisation crois-
-  sante, et d’une course à la production de masse.
-  Le paysan rural, qui cultive ses terres au rythme de la nature pour nourrir
-  la population environnante est devenu une véritable image d’Épinal.
-  Cette société paysanne autonome autrefois a fait place à des exploitants
-  agricoles dépendants d’une part des nombreuses coopératives mais sur-
-  tout de la politique agricole et des multinationales du secteur.
-  Les terres agricoles sont devenues des « No Man’s Land », peuplées par
-  des machines toujours plus performantes. Les maîtres mots sont devenus :
-  immédiateté, rentabilité, et productivité.",
+  resume: "Inspirée par les terroirs, la nourriture est un élément central et fondateur des sociétés humaines. Depuis les premières civilisations, l’homme a toujours produit les aliments dont il avait besoin en fonction de son environnement naturel, cependant, aujourd’hui, la production des ressources agricoles semble être dictée par une politique échappant aux considéra- tions locales.
+  La révolution industrielle, l’exode rural, et l’uniformisation des modes de vies qui s’en suivit, ont profondément influencé la production agricole.
+  L’agriculture a peu à peu évolué en parallèle d’une mondialisation croissante, et d’une course à la production de masse.
+  Le paysan rural, qui cultive ses terres au rythme de la nature pour nourrir la population environnante est devenu une véritable image d’Épinal.
+  Cette société paysanne autonome autrefois a fait place à des exploitants agricoles dépendants d’une part des nombreuses coopératives mais sur tout de la politique agricole et des multinationales du secteur.
+  Les terres agricoles sont devenues des « No Man’s Land », peuplées par des machines toujours plus performantes. Les maîtres mots sont devenus : immédiateté, rentabilité, et productivité.",
   license: "",
   link: "",
   school_id: school1.id,
-  cover: "2012-amandine-richard.jpg"
+  cover: "2012-amandine_richard.jpg"
 )
-puts "✓ theses table seeded"
+thesis29 = Thesis.new(
+  user_id: user29.id,
+  title: "A l’abordage des délaissés",
+  subtitle: "Vers une nouvelle forme d’espace public",
+  year: Date.new(2014),
+  resume: "L’image de la ville a toujours été véhiculée par ses innombrables activités, sa lumière omniprésente, sa vitesse de développement et sa technicité. Cependant, qu’elle soit décrite dans un roman, dessinée dans un comic, ou bien même construite dans notre imaginaire lieux incertains, négligés et presque effrayants. Friches industrielles, terrains vagues, dents creuses, logements vacants, interstices ... Ces espaces en dérive se forment suite à la perte des fonctions originelles du lieu, aux intervalles d’aménagement urbain ou au désintérêt de son de ce mémoire, représentant alors les failles d’un système urbain rigide des années 70, pour cause, la crise pétrolière et la désindustrialisation qui s’en est suivie a laissé une part du territoire français miné de friches industrielles, mais aussi militaires, ferroviaires, portuaires et autres espaces vacants. Malgré ces espaces en attente, la ville continue de s’étendre au delà de ses limites et ne prend que très peu conscience du potentiel qu’elle abrite en son cœur. Ces espaces libres ne doivent plus être vécus comme un lieu en marge de la société, mais au contraire, comme une marge de recul, une réserve de disponibilité de la ville.",
+  license: "",
+  link: "",
+  school_id: school5.id,
+  cover: "2014-matthieu_lemarie-a_l_abordage_des_delaisses.jpg"
+)
+thesis30 = Thesis.new(
+  user_id: user30.id,
+  title: "Un conservatoire de musique et de danse à Antibes Juan les Pins",
+  subtitle: "",
+  year: Date.new(2012),
+  resume: "Mon projet de fin d’études est l’implantation d’un conservatoire de danse et de musique sur un site du littoral en reconversion à Antibes Juan les
+  Pins, dans les Alpes maritimes.
+  La mairie a décidé de faire évoluer un ilot proche du centre ville, le faisant passer d’un statut sportif (présence de la piscine olympique et du tennis club de la ville) à un statut de sportif et culturel, avec la construction d’une très grande salle de spectacle. Elle souhaite, dans les prochaines années, y construire un nouveau conservatoire ; le conservatoire de musique actuel étant situé dans des locaux inadaptés, l’enseignement n’y est pas facilité, et son développement impossible.
+  Une parcelle est proposée pour ce conservatoire mais sa position sur le site va à l’encontre de la volonté de la ville, qui est de faire de cet ilot un espace culturel et sportif, en lien avec le centre ville, en créant un véritable pôle d’attraction. En effet, cette parcelle est à l’opposé de la salle de spectacle et de la piscine, les deux éléments majeurs de l’ilot, et n’est que peu visible et peu accessible car il est encastré entre des logements collectifs et des entrepôts.
+  D’autre part, à quelques mètres de là, un workshop de l’atelier littoral a eu lieu. Il traite la marina et des abords du port en partant du centre ville jusqu’à un pôle historique et sportif, où sont situés le fort Vauban et le creps.
+  Il intégrerait des commerces, bureaux, parkings, logements et hôtels, et accueillerait un pôle multimodal : gare routière, et départ du nouveau tram bus. Ce projet redynamiserait le centre ville et réconcilierait les Antibois avec leur littoral, aujourd’hui beaucoup trop associé aux touristes et aux inconvénients que leur venue génère pendant la période estivale.
+  Je choisis de profiter de la réflexion menée sur cet espace tangent à mon site pour m’intégrer à ce regard porté vers le littoral et cet espace lié au centreville, au port, et à l’espace Vauban.",
+  license: "",
+  link: "",
+  school_id: school6.id,
+  cover: "2012-charlotte_bertrand.jpg"
+)
+thesis31 = Thesis.new(
+  user_id: user31.id,
+  title: "La ville-musée a-t-elle un avenir au XXIe siècle?",
+  subtitle: "Avant garde ou échec d’une conciliation entre passé et modernité?",
+  year: Date.new(2013),
+  resume: "Reconstruire la ville sur la ville. Peut-être l’enjeu architectural et urbain du XXIe siècle. À l’heure où l’urbanisation s’étend sur les périphéries des métropoles et participe vouloir tirer parti et surtout profit de la richesse au mitage sans précédent de l’espace rural, l’ensemble des acteurs de l’architecture et de l’urbanisme contemporain se tourne vers le centre-ville des villes.
+  Aujourd’hui les centres-villes anciens sont redécouverts, parfois après des années d’oubli, de mise à l’écart.",
+  license: "",
+  link: "",
+  school_id: school7.id,
+  cover: "2013-mickael_cuillerat-l_avenir_des_villes_musees.jpg"
+)
+thesis32 = Thesis.new(
+  user_id: user32.id,
+  title: "Florence",
+  subtitle: "La vi(ll)e sur papier glacé",
+  year: Date.new(2012),
+  resume: "Présenté sous forme de guide touristique, c’est un outil pour comprendre la ville, la construction de son image.
+  Mais pourquoi un guide touristique ?
+  Tout d’abord d’un point de vue historique, comme le montre la Timeline, l’étude trouve son point de départ à l’aube du XIXe siècle, époque marquée par le début des récits de voyage. Héritiers du Grand Tour, ils sont les ancêtres du nos guides.
+  Mais le guide touristique reste encore aujourd’hui un intermédiaire de choix entre la ville et le voyageur, regroupant des données culturelles, historiques, pratiques, c’est un compagnon de route pour le chasseur de ville, c’est un faiseur d’image.
+  La ville et l’image, son image, est un thème fondamental dans l’étude de l’architecture. En 4 ème année, il nous est donné la possibilité de partir pendant une année étudier à l’étranger. Mais parmi toutes les destinations… comment choisir ? Il s’agit ici de la première rencontre du possible avec la ville. Que connaissons-nous des villes à part leur image ? Pourquoi s’imagine-t-on vivre dans une ville plutôt qu’une autre ?
+  Tout ca n’est qu’affaire d’image.",
+  license: "",
+  link: "",
+  school_id: school8.id,
+  cover: "2012-anne_loiseau.jpg"
+)
+thesis33 = Thesis.new(
+  user_id: user33.id,
+  title: "Architectures du 20e siècle",
+  subtitle: "Enjeux et défis de la conservation d’un patrimoine récent",
+  year: Date.new(2014),
+  resume: "Depuis treize ans déjà, nous sommes entrés dans le 21e siècle, et l’architecture d’aujourd’hui a la pleine potentialité de devenir le patrimoine de demain.
+    Mais avant de nous projeter en avant, quel regard avons nous aujourd’hui sur le patrimoine d’hier ?
+    Le 20e siècle représente un véritable tournant dans l’histoire de l’humanité, et les innovations et découvertes qui ont pu y subvenir sont plus importantes et plus nombreuses que jamais alors. L’architecture n’y échappe pas, et depuis les débuts du développement des pensées modernistes jusqu’à l’apparition des premières architectures high tech, la production artistique et les innovations sociales n’ont cessé de s’accélérer.
+    Ainsi l’objet principal de ce mémoire sera l’architecture du 20e siècle, le rapport que nous pouvons y entretenir aujourd’hui, et les missions que nous avons pour la conserver. Nous chercherons alors à savoir dans quelles mesures le patrimoine du 20ème siècle peut partager les approches globales acceptées quant à la considération du patrimoine dit classique.",
+  license: "",
+  link: "",
+  school_id: school9.id,
+  cover: "2014-victor_martial.jpg"
+)
+thesis34 = Thesis.new(
+  user_id: user34.id,
+  title: "Les traces du passé dans la ville",
+  subtitle: "Quelle position adopter face à la question du patrimoine?",
+  year: Date.new(2015),
+  resume: "Pour m’aider dans mon projet de diplôme et dans ma réflexion sur les sites archéologiques, j’ai décidé d’orienter mon mémoire sur les rapports qu’entretiennent les villes contemporaines avec leur patrimoine historique. Le cadre de la ville d’Athènes, très dense et très urbanisé, fait ressortir le problème des villes musées. Nous sommes à une époque où le patrimoine est particulièrement mis en valeur. Les sociétés occidentales, dans lesquelles nous vivons, sont fortement attachées à la mémoire du passé, leur donnant une forte identité, un ancrage dans leur histoire.
+  Cependant, cette tendance à préserver et à sacraliser la moindre trace physique du passé, produit un phénomène de muséification des villes. Or une ville figée, qui n’évolue plus et qui ne se renouvelle pas, est condamnée à mourir.
+  Face à nos sociétés actuelles, qui ne cessent d’évoluer et ce de plus en plus vite, les traces du passé doivent trouver leur place. Cependant, l’importance de notre patrimoine doit-il prédominer sur l’évolution de la ville ? Sommes-nous obligés de faire un choix en privilégiant l’un au détriment de l’autre, ou peuvent-ils cohabiter ?
+  Il existe un juste équilibre entre la préservation à tout prix de ces vestiges et l’intervention de la ville future sur ces traces. Il nous faut alors trouver une manière de concilier vestiges et projets urbains, en intégrant les traces du passé à une logique urbaine actuelle.",
+  license: "",
+  link: "",
+  school_id: school10.id,
+  cover: "2015-pauline_bernard.jpg"
+)
+# thesis35 = Thesis.new(
+#   user_id: user35.id,
+#   title: "Les enjeux de la caméra portée",
+#   subtitle: "Un dispositif qui fait bouger le cinéma",
+#   year: Date.new(2010),
+#   resume: "Faire le choix de filmer à l’épaule n’est pas anodin, cela doit avoir un sens. Par ailleurs, cela
+#   ne veut pas dire forcément faire un cinéma réaliste ou pseudo documentaire. C’est un
+#   dispositif d’écriture cinématographie au service des metteurs en scène. Il permet d’envisager
+#   la création différemment et offre un outil de plus aux cinéastes, comme l’est le numérique
+#   aujourd’hui, ou le scope autrefois. Il s’agit avec ce travail de recherche, de s’interroger sur
+#   les spécificités de ce dispositif, et de définir plusieurs approches esthétiques liées à la
+#   caméra portée. Dans quelle mesure la caméra portée a-t-elle permis de renouveler les
+#   méthodes de mise en scène et notamment amené les cinéastes à repenser la notion de
+#   découpage technique ? Nous nous demanderons aussi s’il s’agit pour les cinéastes qui
+#   l’emploient, de faire advenir du réel ou des effets de réel ?
+#   Ce mémoire a pour objectif dans un premier temps, d’analyser dans quel contexte est né et
+#   s’est développé l’emploi de la caméra portée chez les documentaristes. En effet, avec
+#   l’arrivée des caméras légères au début des années 1960, les cinéastes ont appris à filmer et
+#   à voir le monde différemment. Ils se sont retrouvés en possession d’un nouvel outil de
+#   création, qui leur a permis de se renouveler, en proposant un geste et une écriture
+#   cinématographique différente grâce auxquels sujet et technique, forme et fond sont imbriqués.",
+#   license: "",
+#   link: "",
+#   school_id: school11.id,
+#   cover: ""
+# )
+# thesis36 = Thesis.new(
+#   user_id: user36.id,
+#   title: "Des studios de cinéma à Toulouse",
+#   subtitle: "",
+#   year: Date.new(2014),
+#   resume: "Le cinéma produit des images et fait rêver. Pour autant, les lieux où le cinéma se réalise, les
+#   lieux de fabrication, ont une image totalement à l’opposé de celle de l’industrie du cinéma.
+#   Loin du glamour du festival de Cannes, les studios sont des lieux démesurés, isolés, enclavés
+#   qui, la plupart du temps, ont été construits au fil des besoins sans planification.
+#   Le cinéma se développe, on en fabrique et visionne davantage dans le monde chaque année.
+#   L’’industrie de la production d’images s’étend, se rapproche de la télévision et du jeu vidéo,
+#   développe ses propres nouvelles technologies, compétences et métiers. Leur popularité gran-
+#   dissante rend d’autant plus importante l’image de l’industrie du cinéma et son rapport à la ville.
+#   L’annonce en 2012 à Toulouse de la potentielle construction de studios de cinéma sur une
+#   ancienne base aérienne a généré une grande excitation et a fait rêver l’agglomération. Le
+#   projet a été abandonné pour des raisons financières, mais le contexte, les partenariats et l’en-
+#   gouement populaire sont toujours là. Je me suis penchée sur ce projet, et après avoir étudié
+#   l’idée d’implanter des studios sur Toulouse, ai décidé de travailler sur ce sujet. J’ai choisi un
+#   site sur la commune de Balma, frontalière de Toulouse. Au terminus du métro, le long d’une
+#   rivière, la parcelle est actuellement inoccupée et présente une surface largement suffisante.
+#   Sa desserte doit être revue mais sa position stratégique, visible depuis la rocade, se prête to-
+#   talement à la problématique de l’image des studios.",
+#   license: "",
+#   link: "",
+#   school_id: school6.id,
+#   cover: ""
+# )
+thesis37 = Thesis.new(
+  user_id: user37.id,
+  title: "Je suis indépendant",
+  subtitle: "Médiation & cinéma",
+  year: Date.new(2016),
+  resume: "« Mainstream, Mot d’origine américaine. Littéralement « dominant »,
+  « grand public » ou « populaire ». Se dit par exemple pour un produit cultu-
+  rel qui vise une audience générale. L’expression « culture mainstream » peut
+  avoir une connotation positive, au sens de « culture pour tous », ou négative,
+  au sens de « culture hégémonique ». Un produit mainstream: qui se vend
+  massivement, « il veut être mainstream », il veut plaire à tout le monde. »",
+  license: "",
+  link: "",
+  school_id: school12.id,
+  cover: "2016-elise_hurtado.jpg"
+)
+thesis38 = Thesis.new(
+  user_id: user38.id,
+  title: "La communication culturelle",
+  subtitle: "Le théâtre: Quelles solutions pour faire face à la crise de l'art?",
+  year: Date.new(2016),
+  resume: "La culture peut être définie comme << l'ensemble des connaissances,
+  des savoir-faire, des traditions, des coutumes, propres à un groupe humain,à
+  une civilisation.>> L'art, en tant que patrimoine se transmettant de génération
+  en génération, en fait largement partie. Part <<Art>> on entendra <<expression
+  par des créations humaines d'un idéal esthétique.>> Cette définition assez
+  abstraite, permet donc d'associer à l'Art toute création réalisée dans une
+  recherche d'une esthétique quelle qu'elle soit. L'Art a su évoluer avec les
+  siècles et a entraîné avec lui la notion d'excellence qui lui est dû. C'est ainsi
+  que les genres artistiques sont appartus et que la notion d'art s'est élargie à
+  de nouveaux moyens d'expression, telles que le théâtre.",
+  license: "",
+  link: "",
+  school_id: school13.id,
+  cover: "2012-jousset_nina.jpg"
+)
+# thesis39 = Thesis.new(
+#   user_id: user39.id,
+#   title: "Le théâtre comme moyen déclencheur de parole en français langue étrangère",
+#   subtitle: "",
+#   year: Date.new(2006),
+#   resume: "C'est en démontrant dans un premier lieu que le théâtre est un moyen déclencheur
+#   d'expression, de parole qu’il sera possible de démontrer qu'il a le même pouvoir lors de l'acquisition
+#   d'une langue étrangère.
+#   La dramaturgie relationnelle a pour objectif le développement d'attitudes qui favorisent
+#   l'expression spontanée, la communication relationnelle dans les interactions et la créativité en
+#   pédagogie. Pour bien expliquer ce fait, j'aimerais parler brièvement d'un type de théâtre qui existe
+#   déjà depuis plusieurs années et qui illustre, pour moi, parfaitement le pouvoir libérateur qu'exerce le
+#   théâtre sur les gens; cela s'appelle le théâtre de l'opprimé. Il s'agit d'une méthode théâtrale inventée
+#   et développée par Augusto Boal dans les années soixante, d'abord au Brésil puis en Europe, et qui
+#   est maintenant répandue dans le monde entier. Cette méthode utilise le théâtre comme langage,
+#   comme moyen de connaissance et de transformation de la réalité intérieure, relationnelle et sociale.
+#   Il s'agit d'un théâtre qui rend le public actif et qui sert aux groupes de « spect-acteurs » à explorer, à
+#   mettre en scène, à analyser et à transformer la réalité qu'eux-mêmes vivent. Une des principales
+#   hypothèses de base est que « le corps pense », cela signifie une conception de l'être humain comme
+#   globalité de corps, d'esprit et d'émotion. Tout en touchant des aspects personnels et émotifs, le
+#   Théâtre de l'opprimé ne se pose pas comme thérapie, mais comme instrument de « libération »
+#   collective s’appuyant sur la prise de conscience autonome des personnes, sur le « miroir multiple du
+#   regard des autres ».",
+#   license: "",
+#   link: "",
+#   school_id: school13.id,
+#   cover: ""
+# )
+thesis40 = Thesis.new(
+  user_id: user40.id,
+  title: "Penser la typographie en couleur",
+  subtitle: "",
+  year: Date.new(2009),
+  resume: "Captivé par les lettres d’une part et la couleur d’autre part, c’est tout naturellement que ces deux passions se sont associées et ont mûri au fil des ans pour aboutir au mémoire ici présenté.
+  La couleur et les lettres nous environnent au quotidien. Nous les
+  rencontrons dès que nous ouvrons les yeux, sur l’écran de notre réveil
+  digital tout d’abord, sur les emballages de notre paquet de café ou
+  de notre gel douche ensuite, puis sur les enseignes des magasins et
+  les affiches publicitaires lorsque nous nous rendons à notre travail
+  ou en revenant à notre domicile. Ils sont encore présents sur les plans
+  de notre quartier et les panneaux de signalétique quand nous cherchons
+  à nous orienter, sur notre ordinateur, sur internet, etc. Et pourtant,
+  ces deux univers semblent vouloir garder leur indépendance, sans jamais
+  partager leurs qualités respectives. Qu’elles en sont les raisons ? Est-ce
+  la cause d’un héritage historique trop fortement ancré ou bien au
+  contraire d’une difficulté technologique que personne ne cherche
+  à surmonter ? N’est-il pas une seule application de la couleur qui puisse
+  enrichir la création d’alphabets ? Qu’en est-il de l’expérimentation
+  typographique, ne s’est-elle jamais intéressée à la couleur ?",
+  license: "",
+  link: "",
+  school_id: school3.id,
+  cover: "2009-thomas_lexcellent.jpg"
+)
+
+puts "✓ theses seeded"
 
 
 # tags (using act-as-taggable gem)
 
-tags = [ "mix","culture","DJing","radio","curating","commissaire d’exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain","comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie","réseau","livre","rhizome" ]
+# thesis1_tags = [ "mix","culture","DJing","radio","curating","commissaire d'exposition","processus créatif","editing","montage","cut","ellipse","cinéma","BD","narration","éclectisme","internet","web","folksonomie","Google","sérendipité","média","art contemporain" ]
+thesis2_tags = [ "comportement","lecture","traduction","écrit","langage","ponctuation","communication","poésie" ]
+thesis3_tags = [ "hommage" ]
+thesis4_tags = [ "mirages", "espage", "image", "simulation" ]
+thesis5_tags = [ "wesh", "puzzle", "mots", "pensées" ]
+thesis6_tags = [ "web","réseau","livre","rhizome" ]
+thesis7_tags = [ "exhibitionnisme", "culture", "confession", "normes" ]
+thesis8_tags = [ "simulations", "graphisme", "fiction", "perception" ]
+thesis9_tags = [ "atlas", "film", "action", "divertissement", "hollywood", "thèmes" ]
+thesis10_tags = [ "imaginer", "fin", "monde", "catastrophe", "urgence", "croyances" ]
+thesis11_tags = [ "data", "visualisation", "communication", "numérique", "monde", "connecté" ]
+thesis12_tags = [ "espaces", "jeux", "imagination", "enfants", "émulation", "apprentissage", "créativité" ]
+thesis13_tags = [ "réel", "transfiguré", "proust", "œuvre", "poésie", "sensibilité", "vision", "émerveillement" ]
+thesis14_tags = [ "langue", "signes", "pensée", "mouvement", "information", "communauté", "accès", "savoir" ]
+thesis15_tags = [ "immortalité", "éternité", "peur", "mythologie", "fascination" ]
+thesis16_tags = [ "standard", "non-conforme", "amateur", "signification", "aime", "cultiver" ]
+thesis17_tags = [ "décrypter", "langage", "difficultés", "unique", "universel" ]
+thesis18_tags = [ "déchets", "ultimes", "nucléaire", "stockages", "encombrants", "enjeux", "catastrophes" ]
+thesis19_tags = [ "vitesse", "temps", "immédiateté", "folie", "empressement", "fracture" ]
+thesis20_tags = [ "danser", "espace", "mouvements", "relations", "corps", "conscience", "diversité", 'culture' ]
+thesis21_tags = [ "expériences", "déplacements", "voyage", "expérience", "culture", "création" ]
+thesis22_tags = [ "norme", "dyslexie", "différence", "handicap", "point de vue" ]
+thesis23_tags = [ "pensée", "formalisation", "création", "artistique", "vision" ]
+thesis24_tags = [ "enfance", "imaginaire", "réel", "concept", "création", "expérimentations", "mimétisme", "sensibilité" ]
+thesis25_tags = [ "interfaces", "mouvements", "tesla", "mobile" ]
+thesis26_tags = [ "manipulation", "statistiques", "politique", "information" ]
+thesis27_tags = [ "paradis", "artificiels", "citoyen", "société", "repères" ]
+thesis28_tags = [ "produire", "autrement", "mondialisation", "immédiateté", "rentabilité", "productivité" ]
+thesis29_tags = [ "l'abordage", "délaissés", "espace", "public", "failles", "système", "désindustrialisation" ]
+thesis30_tags = [ "conservatoire", "musique", "danse", "antibes", "littoral" ]
+thesis31_tags = [ "ville-musée", "conciliation", "passé", "modernité", "urbanisation" ]
+thesis32_tags = [ "florence", "comprendre", "ville", "guide", "touristique" ]
+thesis33_tags = [ "architectures", "enjeux", "conservation", "patrimoine", "innovations" ]
+thesis34_tags = [ "traces", "passé", "ville", "patrimoine", "vestiges", "projets" ]
+thesis37_tags = [ "indépendant", "cinéma", "culture", "mainstream", "positive", "négative" ]
+thesis38_tags = [ "communication", "culturelle", "théâtre", "patrimoine", "esthétique" ]
+thesis40_tags = [ "penser", "typographie", "lettres", "couleur", "expérimentation", "indépendance", "héritage" ]
 
-tag_list_for_thesis1 = []
-tag_list_for_thesis2 = []
-tag_list_for_thesis6 = []
 
-for i in 0..21 do
-  tag_list_for_thesis1 << tags[i]
-end
-for i in 0..6 do
-  tag_list_for_thesis2 << tags[i]
-end
-for i in 0..4 do
-  tag_list_for_thesis6 << tags[i]
-end
-
-thesis1.tag_list.add(tag_list_for_thesis1.join(','), parse: true)
-thesis2.tag_list.add(tag_list_for_thesis2.join(','), parse: true)
-thesis6.tag_list.add(tag_list_for_thesis6.join(','), parse: true)
-
-thesis1.save!
-thesis2.save!
-thesis6.save!
+# thesis1.tag_list.add(thesis1_tags.join(','), parse: true)
+thesis2.tag_list.add(thesis2_tags.join(','), parse: true)
+thesis3.tag_list.add(thesis3_tags.join(','), parse: true)
+thesis4.tag_list.add(thesis4_tags.join(','), parse: true)
+thesis5.tag_list.add(thesis5_tags.join(','), parse: true)
+thesis6.tag_list.add(thesis6_tags.join(','), parse: true)
+thesis7.tag_list.add(thesis7_tags.join(','), parse: true)
+thesis8.tag_list.add(thesis8_tags.join(','), parse: true)
+thesis9.tag_list.add(thesis9_tags.join(','), parse: true)
+thesis10.tag_list.add(thesis10_tags.join(','), parse: true)
+thesis11.tag_list.add(thesis11_tags.join(','), parse: true)
+thesis12.tag_list.add(thesis12_tags.join(','), parse: true)
+thesis13.tag_list.add(thesis13_tags.join(','), parse: true)
+thesis14.tag_list.add(thesis14_tags.join(','), parse: true)
+thesis15.tag_list.add(thesis15_tags.join(','), parse: true)
+thesis16.tag_list.add(thesis16_tags.join(','), parse: true)
+thesis17.tag_list.add(thesis17_tags.join(','), parse: true)
+thesis18.tag_list.add(thesis18_tags.join(','), parse: true)
+thesis19.tag_list.add(thesis19_tags.join(','), parse: true)
+thesis20.tag_list.add(thesis20_tags.join(','), parse: true)
+thesis21.tag_list.add(thesis21_tags.join(','), parse: true)
+thesis22.tag_list.add(thesis22_tags.join(','), parse: true)
+thesis23.tag_list.add(thesis23_tags.join(','), parse: true)
+thesis24.tag_list.add(thesis24_tags.join(','), parse: true)
+thesis25.tag_list.add(thesis25_tags.join(','), parse: true)
+thesis26.tag_list.add(thesis26_tags.join(','), parse: true)
+thesis27.tag_list.add(thesis27_tags.join(','), parse: true)
+thesis28.tag_list.add(thesis28_tags.join(','), parse: true)
+thesis29.tag_list.add(thesis29_tags.join(','), parse: true)
+thesis30.tag_list.add(thesis30_tags.join(','), parse: true)
+thesis31.tag_list.add(thesis31_tags.join(','), parse: true)
+thesis32.tag_list.add(thesis32_tags.join(','), parse: true)
+thesis33.tag_list.add(thesis33_tags.join(','), parse: true)
+thesis34.tag_list.add(thesis34_tags.join(','), parse: true)
+thesis37.tag_list.add(thesis37_tags.join(','), parse: true)
+thesis38.tag_list.add(thesis38_tags.join(','), parse: true)
+thesis40.tag_list.add(thesis40_tags.join(','), parse: true)
 
 puts "✓ tags added"
 
-# tag1  = "mix"
-# tag2  = "culture"
-# tag3  = "DJing"
-# tag4  = "radio"
-# tag5  = "curating"
-# tag6  = "commissaire d’exposition"
-# tag7  = "processus créatif"
-# tag8  = "editing"
-# tag9  = "montage"
-# tag10 = "cut"
-# tag11 = "ellipse"
-# tag12 = "cinéma"
-# tag13 = "BD"
-# tag14 = "narration"
-# tag15 = "éclectisme"
-# tag16 = "internet"
-# tag17 = "web"
-# tag18 = "folksonomie"
-# tag19 = "Google"
-# tag20 = "sérendipité"
-# tag21 = "média"
-# tag22 = "art contemporain"
-# tag23 = "comportement"
-# tag24 = "lecture"
-# tag25 = "traduction"
-# tag26 = "écrit"
-# tag27 = "langage"
-# tag28 = "ponctuation"
-# tag29 = "communication"
-# tag30 = "poésie"
-# tag31 = "réseau"
-# tag32 = "livre"
-# tag33 = "rhizome"
 
 # subcategories table
+
+subcategories1a = Subcategory.create!( category_id: category1.id, name: "architecture" )
 
 subcategories2a = Subcategory.create!( category_id: category2.id, name: "musées" )
 subcategories2b = Subcategory.create!( category_id: category2.id, name: "archéologie" )
@@ -1358,7 +1744,7 @@ subcategories7c = Subcategory.create!( category_id: category7.id, name: "photogr
 subcategories8a = Subcategory.create!( category_id: category8.id, name: "gestion" )
 subcategories8b = Subcategory.create!( category_id: category8.id, name: "médiation" )
 
-puts "✓ subcategories table seeded"
+puts "✓ subcategories seeded"
 
 
 # school_diplomas table
@@ -1374,47 +1760,6 @@ school2_diploma5 = SchoolDiploma.create!(school_id: school2.id, diploma_id: cim2
 
 puts "✓ school_diplomas table seeded"
 
-
-# thesis_tags table
-
-# thesis1_tag1  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag1.id )
-# thesis1_tag2  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag2.id )
-# thesis1_tag3  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag3.id )
-# thesis1_tag4  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag4.id )
-# thesis1_tag5  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag5.id )
-# thesis1_tag6  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag6.id )
-# thesis1_tag7  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag7.id )
-# thesis1_tag8  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag8.id )
-# thesis1_tag9  = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag9.id )
-# thesis1_tag10 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag10.id )
-# thesis1_tag11 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag11.id )
-# thesis1_tag12 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag12.id )
-# thesis1_tag13 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag13.id )
-# thesis1_tag14 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag14.id )
-# thesis1_tag15 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag15.id )
-# thesis1_tag16 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag16.id )
-# thesis1_tag17 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag17.id )
-# thesis1_tag18 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag18.id )
-# thesis1_tag19 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag19.id )
-# thesis1_tag20 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag20.id )
-# thesis1_tag21 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag21.id )
-# thesis1_tag22 = ThesisTag.create!(thesis_id: thesis1.id, tag_id: tag22.id )
-# thesis2_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag23.id )
-# thesis2_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
-# thesis2_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag25.id )
-# thesis2_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag26.id )
-# thesis2_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag27.id )
-# thesis2_tag6 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag28.id )
-# thesis2_tag7 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag29.id )
-# thesis6_tag1 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag24.id )
-# thesis6_tag2 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag30.id )
-# thesis6_tag3 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag31.id )
-# thesis6_tag4 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag32.id )
-# thesis6_tag5 = ThesisTag.create!(thesis_id: thesis6.id, tag_id: tag33.id )
-
-# puts "✓ thesis_tags table seeded"
-
-
 # diploma_subcategories table
 
 dna_subcategory1   = DiplomaSubcategory.create!(diploma_id: dna.id, subcategory_id: subcategories3a.id)
@@ -1426,7 +1771,7 @@ dnsep_subcategory2 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategor
 dnsep_subcategory3 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategory_id: subcategories3c.id)
 dnsep_subcategory4 = DiplomaSubcategory.create!(diploma_id: dnsep.id, subcategory_id: subcategories3b.id)
 
-puts "✓ diploma_subcategories table seeded"
+puts "✓ diploma_subcategories seeded"
 
 
 # school_subcategories table
@@ -1439,90 +1784,209 @@ school3_subcategories3b = SchoolSubcategory.create!(school_id: school3.id, subca
 school4_subcategories6b = SchoolSubcategory.create!(school_id: school4.id, subcategory_id: subcategories6b.id)
 school4_subcategories6d = SchoolSubcategory.create!(school_id: school4.id, subcategory_id: subcategories6d.id)
 
-puts "✓ school_subcategories table seeded"
+puts "✓ school_subcategories seeded"
 
 
 # thesis_diplomas table
 
-thesis1_dnsep = ThesisDiploma.create!(thesis_id: thesis1.id, diploma_id: dnsep.id)
-thesis2_dnsep = ThesisDiploma.create!(thesis_id: thesis2.id, diploma_id: dnsep.id)
-thesis3_dnsep = ThesisDiploma.create!(thesis_id: thesis3.id, diploma_id: dnsep.id)
-thesis4_dnsep = ThesisDiploma.create!(thesis_id: thesis4.id, diploma_id: dnsep.id)
-thesis5_ensad = ThesisDiploma.create!(thesis_id: thesis5.id, diploma_id: ensad.id)
-thesis6_dnat  = ThesisDiploma.create!(thesis_id: thesis6.id, diploma_id: dnat.id)
-thesis7_dnat  = ThesisDiploma.create!(thesis_id: thesis7.id, diploma_id: dnat.id)
-thesis8_dnsep = ThesisDiploma.create!(thesis_id: thesis8.id, diploma_id: dnsep.id)
-thesis9_dsaa  = ThesisDiploma.create!(thesis_id: thesis9.id, diploma_id: dsaa.id)
-thesis10_dnsep = ThesisDiploma.create!(thesis_id: thesis10.id, diploma_id: dnsep.id)
-thesis11_dnsep = ThesisDiploma.create!(thesis_id: thesis11.id, diploma_id: dnsep.id)
-thesis12_dnsep = ThesisDiploma.create!(thesis_id: thesis12.id, diploma_id: dnsep.id)
-thesis13_dnsep = ThesisDiploma.create!(thesis_id: thesis13.id, diploma_id: dnsep.id)
-thesis14_dnsep = ThesisDiploma.create!(thesis_id: thesis14.id, diploma_id: dnsep.id)
-thesis15_dnsep = ThesisDiploma.create!(thesis_id: thesis15.id, diploma_id: dnsep.id)
-thesis16_dnsep = ThesisDiploma.create!(thesis_id: thesis16.id, diploma_id: dnsep.id)
-thesis17_dnsep = ThesisDiploma.create!(thesis_id: thesis17.id, diploma_id: dnsep.id)
-thesis18_dnsep = ThesisDiploma.create!(thesis_id: thesis18.id, diploma_id: dnsep.id)
-thesis19_dnsep = ThesisDiploma.create!(thesis_id: thesis19.id, diploma_id: dnsep.id)
-thesis20_dnsep = ThesisDiploma.create!(thesis_id: thesis20.id, diploma_id: dnsep.id)
-thesis21_dnsep = ThesisDiploma.create!(thesis_id: thesis21.id, diploma_id: dnsep.id)
-thesis22_dnsep = ThesisDiploma.create!(thesis_id: thesis22.id, diploma_id: dnsep.id)
-thesis23_dnsep = ThesisDiploma.create!(thesis_id: thesis23.id, diploma_id: dnsep.id)
-thesis24_dnsep = ThesisDiploma.create!(thesis_id: thesis24.id, diploma_id: dnsep.id)
-thesis25_dnsep = ThesisDiploma.create!(thesis_id: thesis25.id, diploma_id: dnsep.id)
-thesis26_dnsep = ThesisDiploma.create!(thesis_id: thesis26.id, diploma_id: dnsep.id)
-thesis27_dnsep = ThesisDiploma.create!(thesis_id: thesis27.id, diploma_id: dnsep.id)
-thesis28_dnsep = ThesisDiploma.create!(thesis_id: thesis28.id, diploma_id: dnsep.id)
+# thesis1.diploma = dnsep
+thesis2.diploma = dnsep
+thesis3.diploma = dnsep
+thesis4.diploma = dnsep
+thesis5.diploma = ensad
+thesis6.diploma = dnat
+thesis7.diploma = dnat
+thesis8.diploma = dnsep
+thesis9.diploma = dsaa
+thesis10.diploma = dnsep
+thesis11.diploma = dnsep
+thesis12.diploma = dnsep
+thesis13.diploma = dnsep
+thesis14.diploma = dnsep
+thesis15.diploma = dnsep
+thesis16.diploma = dnsep
+thesis17.diploma = dnsep
+thesis18.diploma = dnsep
+thesis19.diploma = dnsep
+thesis20.diploma = dnsep
+thesis21.diploma = dnsep
+thesis22.diploma = dnsep
+thesis23.diploma = dnsep
+thesis24.diploma = dnsep
+thesis25.diploma = dnsep
+thesis26.diploma = dnsep
+thesis27.diploma = dnsep
+thesis28.diploma = dnsep
+thesis29.diploma = dnsep
+thesis30.diploma = dnsep
+thesis31.diploma = dnsep
+thesis32.diploma = dnsep
+thesis33.diploma = dnsep
+thesis34.diploma = dnsep
+# thesis35.diploma = ens
+# thesis36.diploma = insa
+thesis37.diploma = dsaa
+thesis38.diploma = efap
+# thesis39.diploma = efap
+thesis40.diploma = ensad
 
-puts "✓ thesis_diplomas table seeded"
+puts "✓ thesis.diploma seeded"
+
+# thesis1.save!
+thesis2.save!
+thesis3.save!
+thesis4.save!
+thesis5.save!
+thesis6.save!
+thesis7.save!
+thesis8.save!
+thesis9.save!
+thesis10.save!
+thesis11.save!
+thesis12.save!
+thesis13.save!
+thesis14.save!
+thesis15.save!
+thesis16.save!
+thesis17.save!
+thesis18.save!
+thesis19.save!
+thesis20.save!
+thesis21.save!
+thesis22.save!
+thesis23.save!
+thesis24.save!
+thesis25.save!
+thesis26.save!
+thesis27.save!
+thesis28.save!
+thesis29.save!
+thesis30.save!
+thesis31.save!
+thesis32.save!
+thesis33.save!
+thesis34.save!
+# thesis35.save!
+# thesis36.save!
+thesis37.save!
+thesis38.save!
+# thesis39.save!
+thesis40.save!
+
+puts "✓ thesis saved!"
 
 
 # thesis_diploma_subcategories table
+# thesisDiploma1 = ThesisDiploma.find_by_thesis_id(thesis1.id)
+thesisDiploma2 = ThesisDiploma.find_by_thesis_id(thesis2.id)
+thesisDiploma3 = ThesisDiploma.find_by_thesis_id(thesis3.id)
+thesisDiploma4 = ThesisDiploma.find_by_thesis_id(thesis4.id)
+thesisDiploma5 = ThesisDiploma.find_by_thesis_id(thesis5.id)
+thesisDiploma6 = ThesisDiploma.find_by_thesis_id(thesis6.id)
+thesisDiploma7 = ThesisDiploma.find_by_thesis_id(thesis7.id)
+thesisDiploma8 = ThesisDiploma.find_by_thesis_id(thesis8.id)
+thesisDiploma9 = ThesisDiploma.find_by_thesis_id(thesis9.id)
+thesisDiploma10 = ThesisDiploma.find_by_thesis_id(thesis10.id)
+thesisDiploma11 = ThesisDiploma.find_by_thesis_id(thesis11.id)
+thesisDiploma12 = ThesisDiploma.find_by_thesis_id(thesis12.id)
+thesisDiploma13 = ThesisDiploma.find_by_thesis_id(thesis13.id)
+thesisDiploma14 = ThesisDiploma.find_by_thesis_id(thesis14.id)
+thesisDiploma15 = ThesisDiploma.find_by_thesis_id(thesis15.id)
+thesisDiploma16 = ThesisDiploma.find_by_thesis_id(thesis16.id)
+thesisDiploma17 = ThesisDiploma.find_by_thesis_id(thesis17.id)
+thesisDiploma18 = ThesisDiploma.find_by_thesis_id(thesis18.id)
+thesisDiploma19 = ThesisDiploma.find_by_thesis_id(thesis19.id)
+thesisDiploma20 = ThesisDiploma.find_by_thesis_id(thesis20.id)
+thesisDiploma21 = ThesisDiploma.find_by_thesis_id(thesis21.id)
+thesisDiploma22 = ThesisDiploma.find_by_thesis_id(thesis22.id)
+thesisDiploma23 = ThesisDiploma.find_by_thesis_id(thesis23.id)
+thesisDiploma24 = ThesisDiploma.find_by_thesis_id(thesis24.id)
+thesisDiploma25 = ThesisDiploma.find_by_thesis_id(thesis25.id)
+thesisDiploma26 = ThesisDiploma.find_by_thesis_id(thesis26.id)
+thesisDiploma27 = ThesisDiploma.find_by_thesis_id(thesis27.id)
+thesisDiploma28 = ThesisDiploma.find_by_thesis_id(thesis28.id)
+thesisDiploma29 = ThesisDiploma.find_by_thesis_id(thesis29.id)
+thesisDiploma30 = ThesisDiploma.find_by_thesis_id(thesis30.id)
+thesisDiploma31 = ThesisDiploma.find_by_thesis_id(thesis31.id)
+thesisDiploma32 = ThesisDiploma.find_by_thesis_id(thesis32.id)
+thesisDiploma33 = ThesisDiploma.find_by_thesis_id(thesis33.id)
+thesisDiploma34 = ThesisDiploma.find_by_thesis_id(thesis34.id)
+# thesisDiploma35 = ThesisDiploma.find_by_thesis_id(thesis35.id)
+# thesisDiploma36 = ThesisDiploma.find_by_thesis_id(thesis36.id)
+thesisDiploma37 = ThesisDiploma.find_by_thesis_id(thesis37.id)
+thesisDiploma38 = ThesisDiploma.find_by_thesis_id(thesis38.id)
+# thesisDiploma39 = ThesisDiploma.find_by_thesis_id(thesis39.id)
+thesisDiploma40 = ThesisDiploma.find_by_thesis_id(thesis40.id)
 
-thesis1_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories3b.id)
-thesis1_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories3c.id)
-thesis1_dnsep_subcategories2c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis1_dnsep.id, subcategory_id: subcategories2c.id)
-thesis2_dnsep_subcategories6a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis2_dnsep.id, subcategory_id: subcategories6a.id)
-thesis2_dnsep_subcategories6c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis2_dnsep.id, subcategory_id: subcategories6c.id)
-thesis9_dsaa_subcategories5a  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5a.id)
-thesis9_dsaa_subcategories5b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5b.id)
-thesis9_dsaa_subcategories5c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis9_dsaa.id, subcategory_id: subcategories5c.id)
-thesis10_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis10_dnsep.id, subcategory_id: subcategories3b.id)
-thesis10_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis10_dnsep.id, subcategory_id: subcategories3c.id)
-thesis11_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis11_dnsep.id, subcategory_id: subcategories3b.id)
-thesis11_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis11_dnsep.id, subcategory_id: subcategories3c.id)
-thesis12_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis12_dnsep.id, subcategory_id: subcategories3b.id)
-thesis12_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis12_dnsep.id, subcategory_id: subcategories3c.id)
-thesis13_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis13_dnsep.id, subcategory_id: subcategories3b.id)
-thesis13_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis13_dnsep.id, subcategory_id: subcategories3c.id)
-thesis14_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis14_dnsep.id, subcategory_id: subcategories3b.id)
-thesis14_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis14_dnsep.id, subcategory_id: subcategories3c.id)
-thesis15_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis15_dnsep.id, subcategory_id: subcategories3b.id)
-thesis15_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis15_dnsep.id, subcategory_id: subcategories3c.id)
-thesis16_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis16_dnsep.id, subcategory_id: subcategories3b.id)
-thesis16_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis16_dnsep.id, subcategory_id: subcategories3c.id)
-thesis17_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis17_dnsep.id, subcategory_id: subcategories3b.id)
-thesis17_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis17_dnsep.id, subcategory_id: subcategories3c.id)
-thesis18_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis18_dnsep.id, subcategory_id: subcategories3b.id)
-thesis18_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis18_dnsep.id, subcategory_id: subcategories3c.id)
-thesis19_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis19_dnsep.id, subcategory_id: subcategories3b.id)
-thesis19_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis19_dnsep.id, subcategory_id: subcategories3c.id)
-thesis20_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis20_dnsep.id, subcategory_id: subcategories3b.id)
-thesis20_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis20_dnsep.id, subcategory_id: subcategories3c.id)
-thesis21_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis21_dnsep.id, subcategory_id: subcategories3b.id)
-thesis21_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis21_dnsep.id, subcategory_id: subcategories3c.id)
-thesis22_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis22_dnsep.id, subcategory_id: subcategories3b.id)
-thesis22_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis22_dnsep.id, subcategory_id: subcategories3c.id)
-thesis23_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis23_dnsep.id, subcategory_id: subcategories3b.id)
-thesis23_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis23_dnsep.id, subcategory_id: subcategories3c.id)
-thesis24_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis24_dnsep.id, subcategory_id: subcategories3b.id)
-thesis24_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis24_dnsep.id, subcategory_id: subcategories3c.id)
-thesis25_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis25_dnsep.id, subcategory_id: subcategories3b.id)
-thesis25_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis25_dnsep.id, subcategory_id: subcategories3c.id)
-thesis26_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis26_dnsep.id, subcategory_id: subcategories3b.id)
-thesis26_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis26_dnsep.id, subcategory_id: subcategories3c.id)
-thesis27_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis27_dnsep.id, subcategory_id: subcategories3b.id)
-thesis27_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis27_dnsep.id, subcategory_id: subcategories3c.id)
-thesis28_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis28_dnsep.id, subcategory_id: subcategories3b.id)
-thesis28_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesis28_dnsep.id, subcategory_id: subcategories3c.id)
 
-puts "✓ thesis_diploma_subcategories table seeded"
+# thesis1_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3b.id)
+# thesis1_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma1.id,  subcategory_id: subcategories3c.id)
+thesis2_dnsep_subcategories6a  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma2.id,  subcategory_id: subcategories6a.id)
+thesis2_dnsep_subcategories6c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma2.id,  subcategory_id: subcategories6c.id)
+thesis3_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma3.id,  subcategory_id: subcategories3b.id)
+thesis3_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma3.id,  subcategory_id: subcategories3c.id)
+thesis4_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma4.id,  subcategory_id: subcategories3b.id)
+thesis4_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma4.id,  subcategory_id: subcategories3c.id)
+thesis5_dnsep_subcategories5b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma5.id,  subcategory_id: subcategories5b.id)
+thesis6_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma6.id,  subcategory_id: subcategories3b.id)
+thesis6_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma6.id,  subcategory_id: subcategories3c.id)
+thesis7_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma7.id,  subcategory_id: subcategories3b.id)
+thesis7_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma7.id,  subcategory_id: subcategories3c.id)
+thesis8_dnsep_subcategories3b  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma8.id,  subcategory_id: subcategories3b.id)
+thesis8_dnsep_subcategories3c  = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma8.id,  subcategory_id: subcategories3c.id)
+thesis9_dsaa_subcategories5a   = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma9.id,  subcategory_id: subcategories5a.id)
+thesis9_dsaa_subcategories5b   = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma9.id,  subcategory_id: subcategories5b.id)
+thesis9_dsaa_subcategories5c   = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma9.id,  subcategory_id: subcategories5c.id)
+thesis10_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma10.id, subcategory_id: subcategories3b.id)
+thesis10_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma10.id, subcategory_id: subcategories3c.id)
+thesis11_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma11.id, subcategory_id: subcategories3b.id)
+thesis11_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma11.id, subcategory_id: subcategories3c.id)
+thesis12_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma12.id, subcategory_id: subcategories3b.id)
+thesis12_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma12.id, subcategory_id: subcategories3c.id)
+thesis13_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma13.id, subcategory_id: subcategories3b.id)
+thesis13_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma13.id, subcategory_id: subcategories3c.id)
+thesis14_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma14.id, subcategory_id: subcategories3b.id)
+thesis14_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma14.id, subcategory_id: subcategories3c.id)
+thesis15_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma15.id, subcategory_id: subcategories3b.id)
+thesis15_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma15.id, subcategory_id: subcategories3c.id)
+thesis16_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma16.id, subcategory_id: subcategories3b.id)
+thesis16_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma16.id, subcategory_id: subcategories3c.id)
+thesis17_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma17.id, subcategory_id: subcategories3b.id)
+thesis17_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma17.id, subcategory_id: subcategories3c.id)
+thesis18_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma18.id, subcategory_id: subcategories3b.id)
+thesis18_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma18.id, subcategory_id: subcategories3c.id)
+thesis19_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma19.id, subcategory_id: subcategories3b.id)
+thesis19_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma19.id, subcategory_id: subcategories3c.id)
+thesis20_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma20.id, subcategory_id: subcategories3b.id)
+thesis20_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma20.id, subcategory_id: subcategories3c.id)
+thesis21_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma21.id, subcategory_id: subcategories3b.id)
+thesis21_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma21.id, subcategory_id: subcategories3c.id)
+thesis22_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma22.id, subcategory_id: subcategories3b.id)
+thesis22_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma22.id, subcategory_id: subcategories3c.id)
+thesis23_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma23.id, subcategory_id: subcategories3b.id)
+thesis23_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma23.id, subcategory_id: subcategories3c.id)
+thesis24_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma24.id, subcategory_id: subcategories3b.id)
+thesis24_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma24.id, subcategory_id: subcategories3c.id)
+thesis25_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma25.id, subcategory_id: subcategories3b.id)
+thesis25_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma25.id, subcategory_id: subcategories3c.id)
+thesis26_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma26.id, subcategory_id: subcategories3b.id)
+thesis26_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma26.id, subcategory_id: subcategories3c.id)
+thesis27_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma27.id, subcategory_id: subcategories3b.id)
+thesis27_dnsep_subcategories3c = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma27.id, subcategory_id: subcategories3c.id)
+thesis28_dnsep_subcategories3b = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma28.id, subcategory_id: subcategories3b.id)
+thesis29_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma29.id, subcategory_id: subcategories1a.id)
+thesis30_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma30.id, subcategory_id: subcategories1a.id)
+thesis31_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma31.id, subcategory_id: subcategories1a.id)
+thesis32_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma32.id, subcategory_id: subcategories1a.id)
+thesis33_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma33.id, subcategory_id: subcategories1a.id)
+thesis34_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma34.id, subcategory_id: subcategories1a.id)
+# thesis35_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma35.id, subcategory_id: subcategories5a.id)
+# thesis36_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma36.id, subcategory_id: subcategories5a.id)
+thesis37_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma37.id, subcategory_id: subcategories4c.id)
+thesis38_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma38.id, subcategory_id: subcategories4c.id)
+# thesis39_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma39.id, subcategory_id: subcategories4c.id)
+thesis40_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma40.id, subcategory_id: subcategories3b.id)
+thesis40_dnsep_subcategories1a = ThesisDiplomaSubcategory.create!(thesis_diploma_id: thesisDiploma40.id, subcategory_id: subcategories3c.id)
+
+
+puts "✓ thesis_diploma_subcategories seeded"

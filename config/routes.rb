@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  devise_for :users
+  devise_for :users,
+    controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  get '/auth/:provider/callback', to: 'sessions#create'
 
   scope '(:locale)', locale: /fr|en/ do
     root to: 'pages#home' # theses#index
@@ -13,7 +16,7 @@ Rails.application.routes.draw do
       end
     end
     get 'search', to: 'theses#search'
-    resources :theses, only: [:index, :new, :create, :search]
+    resources :theses, only: [:index, :new, :create, :search, :pdf]
     resources :schools, only: [ :index, :show, :edit, :update ]
   end
 

@@ -282,8 +282,8 @@ em, .italic {
   // font-style: italic !important;
 }
 strong, .strong {
-  font-family: "Thesaurus Bold", serif;
-  // font-weight: bold !important;
+  font-family: $text-font-family;
+  font-weight: bold;
 }
 strong em,
 em strong,

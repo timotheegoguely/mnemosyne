@@ -9,9 +9,9 @@
         </a>
         <div id="categories" class="collapse-box">
           <fieldset data-filter-group>
-            <button type="button" data-filter="all" class="category upper">Toutes <span class="category-counter">1024</span></button>
+            <button type="button" data-filter="all" class="category upper">Toutes <span class="category-counter"><%= Thesis.count %></span></button>
             <% Thesis::CATEGORIES.each do |category| %>
-              <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %> <span class="category-counter"><%= Thesis.joins(:categories).where(categories: { name: category }).count %></span></button>
+              <button type="button" data-filter=".<%= category %>" class="category upper"><%=category.gsub("-", " ").capitalize %> <span class="category-counter"><%= @theses_per_category.count([category]) %></span></button>
             <% end %>
           </fieldset>
         </div>
@@ -24,8 +24,12 @@
           <label>École</label>
           <select class="small">
             <option value="" selected>–</option>
-            <% @schools.each do |school| %>
-              <option value=".school-<%= school.id %>"><%= school.acronym? ? school.acronym : school.name %></option>
+            <% @school_cities.each do |city, schools| %>
+              <optgroup label="<%= city %>">
+                <%= schools.each do |school| %>
+                  <option value=".school-<%= school.id %>"><%= school.acronym? ? school.acronym : school.name %></option>
+                <% end %>
+              </optgroup>
             <% end %>
           </select>
         </fieldset>
@@ -53,7 +57,7 @@
     $(document).ready(function() {
       $("#filter-school").children().find("select.small").change(function(){
         var value = $(this).val();
-        console.log("school_id :" + value);
+        //console.log("school_id :" + value);
       });
     });
   </script>

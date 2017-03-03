@@ -42,11 +42,23 @@
       width: 32px;
       margin: 12px 0;
       text-align: right;
+      transition: opacity 0.2s ease;
+      &:hover {
+        width: 36px;
+      }
     }
     #bookmark-counter {
       margin: -26px;
       font-size: 24px;
       text-align: center;
+    }
+  }
+  #close {
+    position: absolute;
+    right: 32px;
+    top: 104px;
+    &:hover {
+      opacity: 0.5;
     }
   }
   #thesis-content {
@@ -142,5 +154,8 @@
     #thesis-content {
       padding-left: 64px;
     }
+  }
+  #close {
+    top: inherit;
   }
 }

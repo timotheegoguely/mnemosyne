@@ -24,6 +24,7 @@ class Thesis < ApplicationRecord
   validates :title, presence: true, allow_blank: false
   validates :year, presence: true
   validates :school, presence: true
+  validates :diploma, presence: true
   validates :user, presence: true
 
   # def subcategories
@@ -33,7 +34,7 @@ class Thesis < ApplicationRecord
   def categories_names
     categories = Set.new
     self.subcategories.each do |subcategory|
-      categories << subcategory.category.name.gsub(/\s+/, '-')
+      categories << subcategory.category.name.parameterize
       return categories.to_a
     end
   end

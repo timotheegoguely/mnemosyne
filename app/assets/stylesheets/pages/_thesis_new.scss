@@ -1,8 +1,8 @@
 #thesis-cover-wrapper {
-  #drop-pdf {
+  #drop-pdf-icon {
     margin: auto;
-    height: 50%;
-    opacity: 0.1;
+    height: 30%;
+    opacity: 0.05;
   }
 }
 
@@ -46,6 +46,39 @@
 .checked {
   background-color: $color-success;
   color: #fff !important;
+}
+
+#thesis_document {
+  display: none;
+}
+
+// Dropzone
+.thesis_document label {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  width: calc(38.2vw - 128px);
+  height: calc(100vh - 80px - 128px);
+  margin: 64px;
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  padding: 64px 32px;
+  color: transparentize($color-text, 0.5);
+  font-family: $text-font-family !important;
+}
+.dz-preview {
+  position: fixed;
+  left: 112px;
+  top: 256px;
+  color: transparentize($color-text, 0.5);
+  font-family: $text-font-family !important;
+  .dz-filename {
+    font-size: 13px;
+  }
+}
+.dz-default {
+  display: none;
 }
 
 .hidden {
