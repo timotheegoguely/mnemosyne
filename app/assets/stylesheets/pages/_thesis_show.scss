@@ -191,6 +191,11 @@
     .livre {
       background-color: lighten($color-livre, 40%) !important;
       border-color: lighten($color-livre, 40%) !important;
+      &:hover,
+      &.category {
+        background-color: lighten($color-livre, 40%) !important;
+        border-color: lighten($color-livre, 40%) !important;
+      }
     }
     .presse {
       border-color: $color-presse !important;
