@@ -8,7 +8,7 @@
   <% else %>
     <%= link_to user_thesis_path(thesis.user, thesis), class: "card mix #{thesis.categories_names.join(" ")} school-#{thesis.school.id} diploma-#{thesis.diploma.id}", :data => { :order => index + 1 } do %>
       <figure class="card-cover" data-target="#thesis-footer-<%= thesis.id %>">
-        <% if thesis.cover? %>
+        <% if thesis.cover %>
           <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "shadow" %>
         <% else %>
           <%= image_tag asset_path("/covers/2014-timothee_goguely.jpg"), class: "shadow" %>

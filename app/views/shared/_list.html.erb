@@ -15,8 +15,8 @@
           <%= link_to user_thesis_path(thesis.user, thesis) do %>
             <%#= image_tag "http://placehold.it/32x48" %>
             <div class="thumbnail">
-              <% if @thesis.cover? %>
-                <%= image_tag asset_path("/covers/#{@thesis.cover}"), class: "thesis-cover" %>
+              <% if thesis.cover? %>
+                <%= image_tag asset_path("/covers/#{thesis.cover}"), class: "thesis-cover" %>
               <% else %>
                 <%= image_tag asset_path("/covers/2014-timothee_goguely.jpg"), class: "thesis-cover" %>
               <%# else %>
