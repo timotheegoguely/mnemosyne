@@ -15,10 +15,12 @@
           <%= link_to user_thesis_path(thesis.user, thesis) do %>
             <%#= image_tag "http://placehold.it/32x48" %>
             <div class="thumbnail">
-              <% if thesis.document? %>
-                <%= cl_image_tag("#{thesis.document.file.public_id}.png", :width => 32, :crop => :fill, :page => 1, :class => "shadow") %>
+              <% if @thesis.cover? %>
+                <%= image_tag asset_path("/covers/#{@thesis.cover}"), class: "thesis-cover" %>
               <% else %>
-                <%= image_tag asset_path("/covers/#{thesis.cover}") %>
+                <%= image_tag asset_path("/covers/2014-timothee_goguely.jpg"), class: "thesis-cover" %>
+              <%# else %>
+                <%#= cl_image_tag("#{@thesis.document.file&.public_id}.png", :width => 400, :crop => :fill, :page => 1, :class => "thesis-cover") %>
               <% end %>
             </div>
           <% end %>
