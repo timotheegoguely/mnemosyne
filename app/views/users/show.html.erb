@@ -30,6 +30,7 @@
               <a href="#bookmarks">
                 <i class='material-icons md-18'>turned_in</i>
                 <%= @user == current_user ? t('.bookmarks_tab_title_my_account') : t('.bookmarks_tab_title') %>
+                <%= '(' + @user.find_voted_items.count.to_s + ')' unless @user.find_voted_items.count.zero? || @user.find_voted_items.count.nil? %>
               </a>
             </li>
           </div>
