@@ -53,6 +53,7 @@
               <li>
                 <%= link_to user_path(current_user, anchor: "bookmarks") do %>
                   <i class='material-icons md-18'>turned_in</i> <%= t(".my_bookmarks") %>
+                  <%= '(' + current_user.find_voted_items.count.to_s + ')' unless current_user.find_voted_items.count.zero? %>
                 <% end %>
                 <!--<span class="label primary"><%#= current_user.bookmarks.count %></span>-->
               </li>
